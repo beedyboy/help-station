@@ -1,7 +1,7 @@
 "use client";
 
-import ButtonGroup from "@/component/button/índex";
-import SwiperComponent from "@/component/swiper";
+import ButtonGroup from "@/components/button/índex";
+import SwiperComponent from "@/components/swiper";
 import { helpCount, swiperImages } from "@/constant";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { SwiperSlide } from "swiper/react";
