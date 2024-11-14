@@ -10,7 +10,7 @@ type LayoutProps = {
 };
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <div className="flex flex-col min-h-screen">
+  <div className="flex flex-col min-h-screen w-full">
     <div className='inline-flex justify-center bg-secondary h-60px] text-white gap-2 p-2'>
       <Image src="/icons/ic_outline-emergency.svg" alt="Emergency" width={20} height={20} />
       <span>How prepared are you for an emergency</span>
@@ -19,7 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       </Link>
     </div>
     <Header />
-    <main className="flex-grow">{children}</main>
+    <main className="flex-grow max-w-full">{children}</main>
     <Footer />
   </div>
 );
