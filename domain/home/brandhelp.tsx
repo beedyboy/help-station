@@ -29,7 +29,7 @@ export const helpDetails = [
 
 export default function BrandHelpBoard() {
   return (
-    <section className="relative w-full md:h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full md:h-[600px] flex items-center justify-center">
       <div className="absolute -z-10 inset-0">
         <Image
           src={helpImg}
@@ -57,7 +57,7 @@ export default function BrandHelpBoard() {
                   <p className="text-xl hover:text-[#fff]  font-semibold">
                     {content.header}
                   </p>
-                  <p className="hover:text-[#fff] text-sm text-primary">
+                  <p className="hover:text-[#fff] text-sm text-primary-1">
                     {content.text}
                   </p>
                 </div>
