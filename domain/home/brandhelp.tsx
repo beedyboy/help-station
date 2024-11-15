@@ -39,8 +39,8 @@ export default function BrandHelpBoard() {
         />
       </div>
       <div className="z-[1] flex gap-3 w-full">
-        <div className="md:w-[50%] "></div>
-        <div className="md:w-[60%] grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
+        <div className="md:w-[30%] "></div>
+        <div className="md:w-[60%] grid grid-cols-1 items-center justify-center md:grid-cols-[1fr_2fr] gap-6">
           {helpDetails.map(
             (
               content: { icon: React.ReactNode; header: string; text: string },

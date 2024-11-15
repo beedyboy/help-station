@@ -39,12 +39,12 @@ function BrandBoard() {
 
         <div className="flex items-center gap-5">
           <ButtonGroup bgColor="#3BAD6B" borderColor="#3BAD6B" width="204px">
-            <div className="flex p-4 justify-center items-center ">
+            <div className="flex p-2 justify-center items-center ">
               <p className="text-white">Get Started</p>
             </div>
           </ButtonGroup>
           <ButtonGroup bgColor="#fff" borderColor="#3BAD6B" width="204px">
-            <div className="flex p-4 justify-center items-center">
+            <div className="flex p-2 justify-center items-center">
               <p className="text-black">Call Us Now</p>
             </div>
           </ButtonGroup>
