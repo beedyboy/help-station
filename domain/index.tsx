@@ -3,11 +3,15 @@ import BrandBoard from "@/domain/home/brandboard";
 import Image from "next/image";
 import framer from "@/public/framer.svg";
 import BrandHelpBoard from "@/domain/home/brandhelp";
+import BrandService from "./home/brandservice";
+import BrandEmergencyAssessment from "./home/brandemergency";
+import BrandPartners from "./home/brandpartners";
+import BrandClients from "./home/brandclient";
 
 const HomePage: React.FC = () => (
-  <div className="w-[100%] flex flex-col justify-center items-center">
+  <div className="w-full flex flex-col justify-center items-center">
     {/* B */}
-    <div className="w-[85%]">
+    <div className="md:w-[85%] w-full">
       <BrandBoard />
     </div>
 
@@ -32,8 +36,33 @@ const HomePage: React.FC = () => (
     </div>
 
     {/* Help */}
-    <div className="w-full">
+    <div className="md:w-full w-full">
       <BrandHelpBoard />
+    </div>
+
+    {/* service */}
+    <div className="w-full flex justify-center items-center bg-[#FFF7F7]">
+      <div className="md:w-[85%]">
+        <BrandService />
+      </div>
+    </div>
+
+    {/* Emergency Assessment */}
+    <div className="w-full flex justify-center items-center bg-[#FFF7F7]">
+      <div className="md:w-[80%] w-full">
+        <BrandEmergencyAssessment />
+      </div>
+    </div>
+
+    {/* Partners */}
+    <div className="md:w-full w-full">
+      <BrandPartners />
+    </div>
+
+    <div className="w-full flex justify-center items-center bg-[#FFF]">
+      <div className="md:w-[85%]">
+        <BrandClients />
+      </div>
     </div>
   </div>
 );

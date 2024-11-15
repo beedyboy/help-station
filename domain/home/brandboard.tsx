@@ -9,8 +9,8 @@ import Image from "next/image";
 
 function BrandBoard() {
   return (
-    <div className="w-[100%] flex justify-start items-start gap-5 md:flex-row flex-col md:mb-10">
-      <div className="md:w-[50%] flex flex-col gap-5 h-auto">
+    <div className="w-full flex justify-start items-start gap-5 md:flex-row flex-col md:mb-10">
+      <div className="md:w-[50%] flex flex-col gap-5">
         <SwiperComponent>
           {swiperImages.map(
             (

@@ -15,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex justify-center items-center max-w-[1400] h-full">
-        <div className="w-full h-[100%] my-5">{children}</div>
         <Layout>{children}</Layout>
       </body>
     </html>

@@ -6,6 +6,9 @@ import image5 from "@/public/image5.svg";
 import image6 from "@/public/image6.svg";
 import image7 from "@/public/image7.svg";
 import image8 from "@/public/image8.svg";
+import partnersImageOne from "@/public/partners_images/help_clients_one.svg";
+import partnersImageTwo from "@/public/partners_images/help_client_two.svg";
+import partnersImageThree from "@/public/partners_images/help_client_three.svg";
 
 export const swiperImages = [
   {
@@ -54,4 +57,10 @@ export const helpCount = [
   { count: "200+", text: "Total Response" },
   { count: "60+", text: "Emergency Ready Hospital" },
   { count: "190+", text: "Number Of Ambulance " },
+];
+
+export const clientsImages = [
+  partnersImageOne,
+  partnersImageTwo,
+  partnersImageThree,
 ];
