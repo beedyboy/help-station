@@ -10,7 +10,6 @@ type ButtonProps = {
 };
 
 function ButtonGroup({
-  width = "204px",
   borderColor,
   bgColor = "btnColor",
   children,
@@ -20,9 +19,8 @@ function ButtonGroup({
   return (
     <button
       type="submit"
-      className={` rounded-md `}
+      className={`rounded-md md:w-[204] w-[167px] `}
       style={{
-        width,
         borderColor,
         backgroundColor: bgColor,
         border: `1px solid ${borderColor}`,

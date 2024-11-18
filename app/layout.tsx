@@ -14,8 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex justify-center items-center max-w-[1400] h-full">
-        <Layout>{children}</Layout>
+      <body className="flex justify-center items-center w-full h-full">
+        <div className="max-w-[1400px]">
+          <Layout>{children}</Layout>
+        </div>
       </body>
     </html>
   );
