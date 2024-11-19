@@ -1,5 +1,5 @@
 import Image from "next/image";
-import helpServiceImg from "@/public/help-station-service-image.svg";
+import helpServiceImg from "@/public/images/help-station-service-image.svg";
 import ButtonGroup from "@/components/button/índex";
 import HealthCare from "@/components/icons/healthcare";
 function BrandService() {
@@ -9,8 +9,6 @@ function BrandService() {
         <Image
           src={helpServiceImg}
           alt=""
-          // width={450}
-          // height={450}
           style={{ width: "80%", height: "80%" }}
         />
       </div>

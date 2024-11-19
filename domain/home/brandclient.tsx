@@ -3,7 +3,7 @@ import SwiperComponent from "@/components/swiper";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { clientsImages } from "@/constants/constantsValues";
+import { clientsImages } from "@/constants/homepageItems";
 
 function BrandClients() {
   return (

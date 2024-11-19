@@ -2,7 +2,7 @@
 
 import ButtonGroup from "@/components/button/índex";
 import SwiperComponent from "@/components/swiper";
-import { helpCount, swiperImages } from "@/constants/constantsValues";
+import { helpCount, swiperImages } from "@/constants/homepageItems";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { RiAlarmWarningFill } from "react-icons/ri";
 import { FaArrowRightLong } from "react-icons/fa6";

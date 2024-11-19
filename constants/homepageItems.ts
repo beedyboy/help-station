@@ -64,3 +64,27 @@ export const clientsImages = [
   partnersImageTwo,
   partnersImageThree,
 ];
+
+export const testimonials = [
+  {
+    title: "HelpStations Exceeds Expectations",
+    content:
+      "HelpStations' processes are seamless! Our medical emergency needs are always met in a timely manner. They are a health service provider I'll keep using and referring everyone!",
+    author: "Ayomikun",
+    role: "Lulu's Management - Creative Director",
+  },
+  {
+    title: "HelpStations’ Professional Paramedics",
+    content:
+      "HelpStations’ paramedics are extremely professional. They were very composed and swift in attending to the emergency situation at my event.",
+    author: "Mrs F.",
+    role: "Lulu's Management - Creative Director",
+  },
+  {
+    title: "Walure Capital Partners with HelpStation",
+    content:
+      "Walure Capital partnered with HelpStation for the WalureFit event. Their team provided essential care, unsurpassed peace of mind, and a successful event. We look forward to future collaborations.",
+    author: "GM, Walure Capital",
+    role: "Lulu's Management - Creative Director",
+  },
+];

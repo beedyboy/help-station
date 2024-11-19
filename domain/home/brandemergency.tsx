@@ -1,5 +1,5 @@
 import Image from "next/image";
-import helpEmergencyImg from "@/public/help-station-emergency.svg";
+import helpEmergencyImg from "@/public/images/help-station-emergency.svg";
 import { FaStarOfLife } from "react-icons/fa6";
 import ButtonGroup from "@/components/button/índex";
 
@@ -43,8 +43,6 @@ function BrandEmergencyAssessment() {
         <Image
           src={helpEmergencyImg}
           alt=""
-          // width={450}
-          // height={450}
           style={{ width: "80%", height: "80%" }}
         />
       </div>
