@@ -9,6 +9,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Source Sans 3", sans-serif;
+  /* height: 100vh; */
 }
 
 .source-sans-3-<uniquifier > {
@@ -29,3 +30,25 @@
   width: 50%;
   color: red;
 } */
+@media (max-width: 500px) {
+  .swipper-image {
+    width: 380px;
+  }
+}
+
+@media (max-width: 400px) {
+  .swipper-image {
+    width: 345px;
+  }
+}
+@media (max-width: 370px) {
+  .swipper-image {
+    width: 320px;
+  }
+}
+
+@media (max-width: 920px) {
+  .client-swiper {
+    width: 380px;
+  }
+}

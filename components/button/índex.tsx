@@ -5,24 +5,27 @@ type ButtonProps = {
   borderColor?: string;
   width?: string;
   children: React.ReactNode;
+  paddingX?: string;
+  paddingY?: string;
 };
 
 function ButtonGroup({
-  width = "204px",
   borderColor,
   bgColor = "btnColor",
   children,
+  paddingX = "px-5",
+  paddingY = "py-5",
 }: ButtonProps) {
   return (
     <button
       type="submit"
-      className={`px-5 py-5 rounded-md `}
+      className={`rounded-md md:w-[204] w-[167px] `}
       style={{
-        width,
         borderColor,
         backgroundColor: bgColor,
         border: `1px solid ${borderColor}`,
         borderRadius: "12px",
+        padding: `${paddingX} ${paddingY}`,
       }}
     >
       {children}

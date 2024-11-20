@@ -1,12 +1,12 @@
-'use client';
+"use client";
 import { menuItems } from "@/constants/menuItems";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
- 
+
   const isActiveLink = (href: string) => pathname === href;
 
   return (
@@ -49,7 +49,9 @@ const Header: React.FC = () => {
                   <>
                     <button
                       className={`flex items-center py-2 px-3 ${
-                        isActiveLink(item.href) ? "text-primary-4" : "text-secondary"
+                        isActiveLink(item.href)
+                          ? "text-primary-4"
+                          : "text-secondary"
                       } hover:text-blue-400 focus:outline-none`}
                     >
                       {item.name}

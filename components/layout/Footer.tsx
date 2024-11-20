@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer: React.FC = () => (
-  <footer className="bg-secondary flex justify-center p-4 text-white text-center">
+  <footer className=" w-full bg-secondary flex justify-center p-4 text-white text-center">
     <div className="flex flex-col">
       <div className="flex ">
         <div className="flex flex-col gap-2">
@@ -36,7 +36,7 @@ const Footer: React.FC = () => (
           </div>
         </div>
 
-          <div className="flex flex-wrap justify-around gap-8 flex-grow md:gap-16"> 
+        <div className="flex flex-wrap justify-around gap-8 flex-grow md:gap-16">
           {footerMenuItems.map((item) => (
             <div key={item.category} className="flex flex-col  text-left">
               <h4 className="text-primary-4 pb-4">{item.category}</h4>
@@ -59,8 +59,8 @@ const Footer: React.FC = () => (
         {/* divider */}
         <hr className="border-t-2 border-[#4D4D4F] my-4" />
         <p className="pt-5 pb-5">
-        Copyright &copy; HELP {new Date().getFullYear()}. All Rights Reserved.{" "}
-      </p>
+          Copyright &copy; HELP {new Date().getFullYear()}. All Rights Reserved.{" "}
+        </p>
       </div>
     </div>
   </footer>
