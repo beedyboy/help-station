@@ -59,9 +59,9 @@ export const footerMenuItems: { category: string; menu: MenuItem[] }[] = [
    
 
 export const socials: Social[] = [
-    { name: "Twitter", href: "/", icon: "/icons/twitter.svg" },
-    { name: "Facebook", href: "/", icon: "/icons/facebook.svg" },
-    { name: "Instagram", href: "/", icon: "/icons/instagram.svg" },
-    { name: "LinkedIn", href: "/", icon: "/icons/linkedin.svg" },
+    { name: "Twitter", href: "https://x.com/help_station_?s=21&t=19V3dJbyyA0Rx0GBcBebsg", icon: "/icons/twitter.svg" },
+    { name: "Facebook", href: "https://www.facebook.com/HelpStation1?mibextid=LQQJ4d", icon: "/icons/facebook.svg" },
+    { name: "Instagram", href: "https://www.instagram.com/helpstation.ng", icon: "/icons/instagram.svg" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/help-station-ng", icon: "/icons/linkedin.svg" },
 
 ];
