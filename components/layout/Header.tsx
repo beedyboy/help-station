@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const isActiveLink = (href: string) => pathname === href;
 
   return (
-    <header className="p-4 text-white w-full bg-white">
+    <header className="md:p-4 p-2 text-white w-full bg-white">
       <nav className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3">
           <Image
