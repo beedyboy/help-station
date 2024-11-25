@@ -1,7 +1,5 @@
-"use client";
-
-import { EventProps } from "@/app/services/event-form/page";
 import InputTemplate from "@/components/input";
+import { EventProps } from "@/constants/our-service";
 
 function EventFormOne({
   eventForm,

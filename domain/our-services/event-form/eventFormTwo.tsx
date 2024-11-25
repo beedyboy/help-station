@@ -1,6 +1,6 @@
-import { EventProps } from "@/app/services/event-form/page";
 import InputTemplate from "@/components/input";
 import RadioInputTemplate from "@/components/input/radio";
+import { EventProps } from "@/constants/our-service";
 import React from "react";
 
 function EventFormTwo({

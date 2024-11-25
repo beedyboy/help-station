@@ -2,6 +2,7 @@
 
 import FormTemplate from "@/components/formTemplate";
 import FirstAidFormOne from "@/domain/our-services/firstAid-form/aidFormOne";
+import FirstAidFormTwo from "@/domain/our-services/firstAid-form/aidFormTwo";
 import React, { useState } from "react";
 
 export type FirstAidProps = {
@@ -11,6 +12,9 @@ export type FirstAidProps = {
   preferredLocation: string;
   preferredTraining: string;
   onSiteAddress: string;
+  trainingDate: string;
+  trainingTime: string;
+  traineesNumber: number;
 };
 
 const FirstAidForm = () => {
@@ -21,6 +25,9 @@ const FirstAidForm = () => {
     preferredLocation: "on-Site",
     preferredTraining: "on-site",
     onSiteAddress: "",
+    trainingDate: "",
+    trainingTime: "",
+    traineesNumber: 0,
   });
 
   const handleFirstAid = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +44,12 @@ const FirstAidForm = () => {
               onchange={handleFirstAid}
             />
           }
-          componentTwo={<div>Form Two</div>}
+          componentTwo={
+            <FirstAidFormTwo
+              firstAidForm={firstAid}
+              onchange={handleFirstAid}
+            />
+          }
           bg="#FFEBE4"
           heading="Request Form For First Aid Training "
           headingText="Thank you for choosing HelpStation for your First Aid Training. Our comprehensive training program cover sessential First Aid, CPR, and AED skills."

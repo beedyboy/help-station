@@ -1,13 +1,13 @@
-import { FirstAidProps } from "@/app/services/firstaid-form/page";
+import { FoodHandlerFormProps } from "@/app/services/foodhandler-form/page";
 import InputTemplate from "@/components/input";
 import RadioInputTemplate from "@/components/input/radio";
 
-type FirstAidFormProps = {
-  firstAidForm: FirstAidProps;
+type FoodHandleFormTwoProps = {
+  formInput: FoodHandlerFormProps;
   onchange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
+function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
   return (
     <div className="w-full">
       <form
@@ -17,8 +17,8 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
         <div className="w-full flex flex-col gap-5 md:w-[50%] ">
           <div>
             <InputTemplate
-              value={firstAidForm.trainingDate}
-              labelName="Preferred Training DateEmail Address"
+              value={formInput.email}
+              labelName="If location is onsite, kindly provide the address"
               name="email"
               onchange={onchange}
               type="date"
@@ -26,8 +26,8 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
           </div>
           <div>
             <InputTemplate
-              value={firstAidForm.traineesNumber}
-              labelName="Proposed number of Trainees"
+              value={formInput.email}
+              labelName="Preferred Test Time"
               name="traineesNumber"
               onchange={onchange}
               type="text"
@@ -41,24 +41,24 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
             <RadioInputTemplate
               labelName="Email"
               name="standByAmbulance"
-              value={firstAidForm.preferredTraining}
+              value={formInput.email}
               onchange={onchange}
             />
             <RadioInputTemplate
-              labelName="Phone"
+              labelName="Call/Text"
               name=""
-              value={firstAidForm.preferredTraining}
+              value={formInput.email}
               onchange={onchange}
             />
           </div>
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-3">
+        <div className="w-full flex flex-col md:w-[50%] gap-5">
           <div>
             <InputTemplate
-              value={firstAidForm.trainingTime}
-              labelName=" Preferred Training Time "
+              value={formInput.email}
+              labelName=" Preferred Test Date "
               name="trainingTime"
               onchange={onchange}
               type="text"
@@ -67,32 +67,26 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
 
           <div className="flex flex-col justify-start gap-5 ">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
-              Is this training a first time course or a refresher course?*
+              Would you be interested in a food safety training for your staff?
             </p>
             <RadioInputTemplate
-              labelName="First time"
+              labelName="Yes"
               name="standByAmbulance"
-              value={firstAidForm.preferredTraining}
+              value={formInput.email}
               onchange={onchange}
             />
             <RadioInputTemplate
-              labelName="Refresh Course"
+              labelName="No"
               name=""
-              value={firstAidForm.preferredTraining}
-              onchange={onchange}
-            />
-            <RadioInputTemplate
-              labelName="Both First time and Refresher"
-              name=""
-              value={firstAidForm.preferredTraining}
+              value={formInput.email}
               onchange={onchange}
             />
           </div>
 
           <div className="md:h-[200px]">
             <InputTemplate
-              value={firstAidForm.preferredLocation}
-              labelName=" If it's a refresher course when was the last training conducted"
+              value={formInput.email}
+              labelName=" Additional comment or note"
               name="preferredLocation"
               onchange={onchange}
               type="text"
@@ -104,4 +98,4 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
   );
 }
 
-export default FirstAidFormTwo;
+export default FoodHandlerFormTwo;
