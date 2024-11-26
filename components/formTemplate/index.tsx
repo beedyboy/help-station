@@ -91,7 +91,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
               : " bg-[#3BAD6B] text-[#fff] "
           }  shadow-md rounded-lg `}
         >
-          {view === 1 ? "Next" : "Pervious"}
+          {view === 1 ? "Next" : "Previous"}
         </button>
         {view === 2 ? (
           <button

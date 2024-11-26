@@ -13,7 +13,6 @@ const InputTemplate: React.FC<InputProps> = ({
   labelName,
   onchange,
 }) => {
-  console.log("Coming from inputTem", name, value);
   return (
     <div className="w-full flex flex-col gap-2">
       <label className="md:text-lg text-base font-semibold leading-6 md:leading-7">

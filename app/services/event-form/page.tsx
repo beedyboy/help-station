@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import FormTemplate from "@/components/formTemplate";
 import EventFormOne from "@/domain/our-services/event-form/eventFormOne";
-import EventFormTwo from "@/domain/our-services/event-form/event-form-stepTwo";
+import EventFormTwo from "@/domain/our-services/event-form/eventFormTwo";
 import { EventProps } from "@/constants/our-service";
 
 function EventForm() {
