@@ -1,6 +1,4 @@
-const HealthCare = ({ size = 24 }: { size: number }) => {
-  return (
-    <svg
+   <svg
       width={`size`}
       height={size}
       viewBox="0 0 20 20"
@@ -14,7 +12,3 @@ const HealthCare = ({ size = 24 }: { size: number }) => {
         fill="white"
       />
     </svg>
-  );
-};
-
-export default HealthCare;
