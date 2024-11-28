@@ -47,6 +47,9 @@ export default {
         // Secondary Color
         secondary: "#2A3735",
       },
+      fontFamily: {
+        'br-firma': ['BR Firma', 'sans-serif'],
+      },
     },
   },
   plugins: [],

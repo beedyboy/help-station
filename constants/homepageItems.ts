@@ -12,6 +12,11 @@ import partnersImageThree from "@/public/images/help_client_three.svg";
 
 export const swiperImages = [
   {
+    header: "Traffic is no barrier, at HELP we got you covered ",
+    text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
+    img: image7,
+  },
+  {
     header: "Who can you bank on when an emergency happens?",
     text: " HelpStation is your trusted partner in any medical emergency. We are here to provide you with prompt end-to-end emergency care, ensuring your safety and peaceof mind, always.",
     img: workerImg,

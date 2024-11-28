@@ -14,33 +14,40 @@ import ClientAvatars from "@/components/avatar";
 function BrandBoard() {
   return (
     <div className="w-full flex justify-start items-start gap-5 md:flex-row flex-col">
-      <div className="md:w-[50%] w-full flex flex-col gap-3">
+      <div className="md:w-[60%] w-full flex flex-col flex-grow-1">
         <SwiperComponent>
           {swiperImages.map(
             (
               content: { header: string; text: string; img: string },
               index: number
             ) => (
-              <SwiperSlide key={index} className="">
-                <div className="flex flex-col justify-start items-center gap-5 md:mt-7">
-                  <p className="md:text-[64px] text-3xl leading-9 md:leading-[74px] font-bold">
-                    {content.header.includes("HELP") ? (
-                      <span>
-                        Traffic is no barrier, at{" "}
-                        <span className="text-[#3BAD6B]">HELP </span> we got you
-                        covered
-                      </span>
-                    ) : (
-                      content.header
-                    )}
-                    <span className="bg-btnColor flex justify-center items-center rounded-full md:w-[45px] md:h-[45px]  w-[30px] h-[30px]">
-                      <RiAlarmWarningFill size={18} />
-                    </span>{" "}
-                  </p>
-                  <p className="text-primary md:text-base text-sm">
-                    {content.text}
-                  </p>
+              <SwiperSlide key={index} className="gap-8">
+                <div className="flex flex-col w-full md:mt-7 max-h-80 h-auto">
+                  <div className="flex w-full">
+                    <div className="flex items-end">
+                      <div className="flex md:text-[64px]  font-br-firma whitespace-normal font-bold leading-tight">
+                        {content.header.includes("HELP") ? (
+                          <span>
+                            Traffic is no barrier, at{" "}
+                            <span className="text-[#3BAD6B]">HELP </span> we got
+                            you covered
+                          </span>
+                        ) : (
+                          content.header
+                        )}
+                      </div>
+                      <div className="mr-4 mb-4">
+                        <span className="bg-btnColor flex items-center justify-center rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]">
+                          <RiAlarmWarningFill />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <p className="text-primary md:text-base text-sm">
+                  {content.text}
+                </p>
               </SwiperSlide>
             )
           )}
@@ -92,8 +99,8 @@ function BrandBoard() {
         </div>
       </div>
 
-      <div className="md:w-[50%] flex justify-end items-end ">
-        <div className="">
+      <div className="md:w-[40%] flex md:h-[657px]">
+        <div className="w-full">
           <SwiperComponent>
             <div>
               {swiperImages.map(
@@ -110,7 +117,7 @@ function BrandBoard() {
                       <Image
                         src={image.img}
                         alt={`Slide image ${index + 1}`}
-                        width={540}
+                        width={544}
                         height={400}
                         style={{
                           objectFit: "cover",
