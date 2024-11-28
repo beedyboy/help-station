@@ -71,8 +71,9 @@ const Herat: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<number, string>>({});
 
-  const currentQuestion = questionsArray[currentQuestionIndex];
-  const totalQuestions = questionsArray.length;
+  const currentSection = questionsArray[currentQuestionIndex];
+  const currentQuestion = currentSection.questions[currentQuestionIndex];
+  const totalQuestions = questionsArray.reduce((acc, section) => acc + section.questions.length, 0);
 
   // Load previous answers from localStorage on component mount
   useEffect(() => {
