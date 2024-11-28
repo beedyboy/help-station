@@ -12,7 +12,7 @@ interface SwiperComponentProps {
 
 const SwiperComponent: React.FC<SwiperComponentProps> = ({ children }) => {
   return (
-    <div className="md:w-[540px] w-full flex justify-center items-center">
+    <div className="w-full flex">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
@@ -22,7 +22,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ children }) => {
           disableOnInteraction: false,
         }}
         loop={true}
-        className="md:w-[540px] swipper-image"
+        className="w-full swipper-image"
       >
         {children}
       </Swiper>
