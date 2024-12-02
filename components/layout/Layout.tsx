@@ -10,7 +10,7 @@ type LayoutProps = {
 };
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <div className="flex flex-col min-h-screen w-full">
+  <div className="flex flex-col min-h-screen w-full h-auto">
     <div className="inline-flex justify-center bg-secondary h-60px] text-white gap-2 p-2">
       <Image
         src="/icons/ic_outline-emergency.svg"
