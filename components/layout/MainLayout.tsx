@@ -2,8 +2,6 @@
 import { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Link from "next/link";
-import Image from "next/image";
 
 type LayoutProps = {
   children: ReactNode;
