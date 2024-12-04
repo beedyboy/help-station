@@ -11,6 +11,20 @@
   font-family: "Source Sans 3", sans-serif;
   /* height: 100vh; */
 }
+@font-face {
+  font-family: 'BR Firma';
+  src: url('/fonts/br-firma/BR-Firma-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BR Firma';
+  src: url('/fonts/br-firma/BR-Firma-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 .source-sans-3-<uniquifier > {
   font-family: "Source Sans 3", sans-serif;

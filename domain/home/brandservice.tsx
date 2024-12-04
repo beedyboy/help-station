@@ -1,7 +1,7 @@
 import Image from "next/image";
 import helpServiceImg from "@/public/images/help-station-service-image.svg";
 import ButtonGroup from "@/components/button/índex";
-import HealthCare from "@/components/icons/healthcare";
+import serviceIcon from "@/public/icons/service.svg";
 function BrandService() {
   return (
     <div className="md:h-[600px]w-full flex flex-col gap-5 md:flex-row items-center md:p-0 py-3">
@@ -16,7 +16,12 @@ function BrandService() {
       <div className="md:w-[50%] w-full justify-start flex gap-2 flex-col">
         <div className="bg-[#EFF0F5] rounded-full w-[60px] h-[60px] flex justify-center items-center ">
           <div className="flex justify-center items-center w-[60%] h-[60%] rounded-full p-2 bg-btnColor">
-            <HealthCare size={24} />
+            <Image
+              src={serviceIcon}
+              alt="Help Station Logo"
+              width={50}
+              height={50}
+            />
           </div>
         </div>
         <p className="font-bold md:text-4xl text-neutral-1 text-3xl  leading-9">

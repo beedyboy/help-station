@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             {menuItems.map((item) => (
               <li key={item.name} className="relative group">
                 {item.dropdownItems ? (
-                  <>
+                  <div className="relative">
                     <button
                       className={`flex items-center py-2 px-3 ${
                         isActiveLink(item.href)
@@ -70,7 +70,8 @@ const Header: React.FC = () => {
                         />
                       </svg>
                     </button>
-                    <div className="hidden group-hover:block absolute z-10 mt-2 w-44 bg-white rounded-lg shadow-lg">
+                    <div className="absolute hidden group-hover:block top-full mt-1 w-44 bg-white rounded-lg shadow-lg z-10">
+                      {" "}
                       <ul className="py-2 text-gray-700">
                         {item.dropdownItems.map((subItem) => (
                           <li key={subItem.name}>
@@ -84,7 +85,7 @@ const Header: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-                  </>
+                  </div>
                 ) : (
                   <Link
                     href={item.href}

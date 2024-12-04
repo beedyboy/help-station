@@ -14,6 +14,7 @@ export default {
         // primary: "#70727F",
         btnColor: "#3BAD6B",
         // Neutral Colors
+
         neutral: {
           1: "#1B1C20",
           2: "#383A47",
@@ -28,6 +29,8 @@ export default {
           3: "#E8E9ED",
           4: "#F8F8FA",
           5: "#FFFEFC",
+          6: "#E7F7EB",
+          7: "#F9F9FC",
         },
         // Primary Colors
         primary: {
@@ -36,6 +39,7 @@ export default {
           3: "#DA2750",
           4: "#3BAD6B",
           5: "#2D2E2C",
+          6: "#32A061",
         },
         // Primary Light Colors
         "primary-light": {
@@ -46,6 +50,9 @@ export default {
         },
         // Secondary Color
         secondary: "#2A3735",
+      },
+      fontFamily: {
+        "br-firma": ["BR Firma", "sans-serif"],
       },
     },
   },
