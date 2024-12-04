@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }) {
   return (
     <html lang="en">
-      <body className="flex justify-center items-center w-full h-full">
+      <body className="flex w-full h-full">
         {children}
       </body>
     </html>

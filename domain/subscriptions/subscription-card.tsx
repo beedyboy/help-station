@@ -21,9 +21,9 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   onGetStarted,
 }) => {
   return (
-    <div className="w-[296px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
+    <div className="w-[360px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
       {/* Top Section */}
-      <div className="self-stretch h-[252px] px-8 pt-10 pb-8 flex-col justify-start items-start gap-4 flex">
+      <div className="self-stretch h-[296px] px-8 pt-10 pb-8 flex-col justify-start items-start gap-4 flex">
         <div className="self-stretch h-[116px] flex-col justify-start items-center gap-4 flex">
           <div className="justify-start items-start inline-flex">
             <div
@@ -58,13 +58,13 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
         </div>
       </div>
       {/* Bottom Section */}
-      <div className="self-stretch h-[441px] px-8 pb-10 flex-col justify-start items-start gap-8 flex">
+      <div className="self-stretch  px-8 pb-10 flex-col justify-start items-start gap-8 flex">
         <div className="w-full h-px bg-[#c5c7d2]"></div>
         <div className="self-stretch h-[368px] flex-col justify-start items-start gap-4 flex">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="self-stretch justify-start items-start gap-3 inline-flex leading-normal"
+              className="self-stretch justify-start items-start gap-3 inline-flex leading-[24px]"
             >
               <Image
                 src={icon}
@@ -74,8 +74,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
               />
               <div className="grow shrink basis-0 flex-col justify-start items-start inline-flex">
                 <div
-                  className="self-stretch text-base font-normal"
-                  //   style={{ color: "#373946" }}
+                  className="self-stretch text-base font-[16px] font-weight-400 "
                   dangerouslySetInnerHTML={{ __html: benefit }}
                 />
               </div>
