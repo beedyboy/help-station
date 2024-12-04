@@ -29,7 +29,7 @@ const contactInfo = [
 
 function ContactUsPage() {
   return (
-    <main className="w-full flex justify-center flex-col md:gap-10 items-center ">
+    <main className="w-full flex justify-center flex-col md:gap-12 items-center ">
       <section className="relative h-[400px] flex justify-center items-center w-[100%]">
         <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[400px]">
           <Image
@@ -71,7 +71,7 @@ function ContactUsPage() {
             {contactInfo.map((info, i) => (
               <div
                 key={i}
-                className=" w-[100%] h-[216px] md:p-8 p-4 bg-background-6 flex flex-col gap-2 items-center rounded-xl"
+                className=" w-[100%] h-[216px] md:p-8 p-4 bg-background-7 flex flex-col gap-2 items-center rounded-xl"
               >
                 <div className="bg-[#AEDEBC] rounded-full w-[50px] h-[50px] flex justify-center items-center ">
                   <div className="flex justify-center items-center w-[65%] h-[65%] rounded-full p-2 bg-[#3BAD6B]">
@@ -165,7 +165,7 @@ function ContactUsPage() {
       </section>
 
       <section className=" flex justify-center flex-col items-center">
-        <div className="md:w-[70%] text-center flex flex-col justify-center items-center">
+        <div className="md:w-[70%] p-4  md:p-0 text-center gap-2 md:gap-3 flex flex-col justify-center items-center">
           <p className="text-primary-6 text-base">Location Map</p>
           <h3 className="text-primary-5 font-semibold md:text-3xl">
             Find Us On Google Map
@@ -180,6 +180,7 @@ function ContactUsPage() {
       <div className="w-[100%]">
         <MapEmbed />
       </div>
+      <div className="w-full p-2"></div>
     </main>
   );
 }

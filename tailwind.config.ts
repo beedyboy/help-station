@@ -30,8 +30,8 @@ export default {
           4: "#F8F8FA",
           5: "#FFFEFC",
           6: "#F9FAFB",
-          6: "#E7F7EB",
-          7: "#F9F9FC",
+          7: "#E7F7EB",
+          8: "#F9F9FC",
         },
         // Primary Colors
         primary: {
