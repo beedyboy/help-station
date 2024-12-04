@@ -1,7 +1,8 @@
+"use client";
 import OurService from "@/domain/our-services";
 
 function Service() {
-  return <OurService />;
+  return  <OurService />;
 }
 
 export default Service;

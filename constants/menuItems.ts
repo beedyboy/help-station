@@ -2,7 +2,7 @@ export const menuItems: MenuItem[] = [
   { name: "Home", href: "/" },
   { name: "Our Services", href: "/services" },
   { name: "Emergency Store", href: "/emergency-store" },
-  { name: "Subscription Plan", href: "/subscription-plan" },
+  { name: "Subscription Plan", href: "/subscriptions" },
   {
     name: "About Us",
     href: "#",
