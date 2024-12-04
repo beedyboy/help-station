@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer: React.FC = () => (
-  <footer className="w-full h-auto overflow-y-auto bg-secondary flex justify-center p-4 text-white text-center">
+  <footer className="w-full bg-secondary flex justify-center p-4 text-white text-center h-auto">
     <div className="flex flex-col">
-      <div className="flex md:flex-col flex-row">
+      <div className="flex flex-col md:flex-row gap-5 md:gap-0">
+        
         <div className="flex md:flex-col flex-row gap-2">
+
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src="/images/help_station_logo2.svg"

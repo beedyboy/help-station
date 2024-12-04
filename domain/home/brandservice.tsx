@@ -2,6 +2,8 @@ import Image from "next/image";
 import helpServiceImg from "@/public/images/help-station-service-image.svg";
 import ButtonGroup from "@/components/button/índex";
 import serviceIcon from "@/public/icons/service.svg";
+import Link from "next/link";
+
 function BrandService() {
   return (
     <div className="md:h-[600px]w-full flex flex-col gap-5 md:flex-row items-center md:p-0 py-3">
@@ -37,15 +39,17 @@ function BrandService() {
             Visit our services page to learn more.
           </p>
         </div>
-        <ButtonGroup
-          bgColor="#3BAD6B"
-          borderColor="#3BAD6B"
-          width="158px"
-          paddingX="10px"
-          paddingY="5px"
-        >
-          <p className="text-white">Services</p>
-        </ButtonGroup>
+        <Link href="/services" className="text-primary-4 space-x-3">
+          <ButtonGroup
+            bgColor="#3BAD6B"
+            borderColor="#3BAD6B"
+            width="158px"
+            paddingX="10px"
+            paddingY="5px"
+          >
+            <p className="text-white">Services</p>
+          </ButtonGroup>
+        </Link>
       </div>
     </div>
   );
