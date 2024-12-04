@@ -8,7 +8,7 @@ type LayoutProps = {
 };
 
 const MainLayout: React.FC<LayoutProps> = ({ children }) => (
-  <div className="flex flex-col min-h-screen w-full ">
+  <div className="flex flex-col justify-center items-center min-h-screen w-full ">
     <Header />
     <main className="flex-grow max-w-full md:mt-[150px] mt-[120px]">{children}</main>
     <Footer />
