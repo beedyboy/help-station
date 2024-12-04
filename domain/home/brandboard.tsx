@@ -54,7 +54,7 @@ function BrandBoard() {
         </SwiperComponent>
 
         <div className="w-[100%] flex md:items-center md:justify-start gap-4">
-          <ButtonGroup bgColor="#3BAD6B" borderColor="#3BAD6B">
+          <ButtonGroup bgColor="#3BAD6B" borderColor="#3BAD6B" link="subscriptions">
             <div className="flex p-2 gap-4 justify-center items-center ">
               <p className="text-white">Get Started</p>
               <FaArrowRightLong size={18} color="white" />

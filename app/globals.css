@@ -25,13 +25,16 @@
   font-style: normal;
 }
 
+html {
+  font-family: 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
 
-.source-sans-3-<uniquifier > {
+/* .source-sans-3-<uniquifier > {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-}
+} */
 
 /* .brandboard {
   width: 100%;

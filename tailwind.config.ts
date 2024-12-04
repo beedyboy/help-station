@@ -28,6 +28,7 @@ export default {
           3: "#E8E9ED",
           4: "#F8F8FA",
           5: "#FFFEFC",
+          6: "#F9FAFB",
         },
         // Primary Colors
         primary: {
@@ -49,6 +50,8 @@ export default {
       },
       fontFamily: {
         'br-firma': ['BR Firma', 'sans-serif'],
+        sans: ['var(--font-source-sans-pro)', 'ui-sans-serif', 'system-ui'],
+   
       },
     },
   },

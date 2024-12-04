@@ -51,7 +51,7 @@ function OurService() {
 
         {/*  */}
 
-        <ServiceLayout bgColor="#ffeaea">
+        <ServiceLayout bgColor="[#ffeaea]">
           <div className=" p-6 w-full flex rounded-lg flex-col-reverse items-center md:flex-row gap-3 md:gap-6 justify-center">
             <div className="md:w-[40%] md:h-[70%] h-[350px] justify-end items-end w-full rounded-lg overflow-hidden">
               <div className="md:w-[386px]  md:h-[386px]">
@@ -93,7 +93,7 @@ function OurService() {
 
         {/*  */}
 
-        <ServiceLayout bgColor="#c5e9cf">
+        <ServiceLayout bgColor="[#c5e9cf]">
           <div className=" p-6 w-full flex rounded-lg flex-col-reverse items-center md:flex-row  md:gap-3 justify-center">
             <div className="md:w-[60%] w-full flex md:pl-8 justify-start items-center md:gap-2 md:justify-center flex-col ">
               <ServiceTextTemplate
@@ -138,7 +138,7 @@ function OurService() {
 
         {/*  */}
 
-        <ServiceLayout bgColor="#D7D9E3">
+        <ServiceLayout bgColor="[#D7D9E3]">
           <div className="p-6 w-full flex rounded-lg flex-col-reverse items-center md:flex-row  md:gap-3 justify-center">
             <div className="md:w-[60%] w-full flex md:pl-8 justify-start items-center md:gap-2 md:justify-center flex-col ">
               <ServiceTextTemplate

@@ -5,7 +5,7 @@ type ServiceLayoutProps = {
 
 const ServiceLayout: React.FC<ServiceLayoutProps> = ({ children, bgColor }) => {
   return (
-    <div className={` bg-[${bgColor}] rounded-lg overflow-hidden`}>
+    <div className={`bg-${bgColor} rounded-lg overflow-hidden`}>
       {children}
     </div>
   );
