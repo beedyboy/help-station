@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Source_Sans_3 } from 'next/font/google';
-
-// Configure Source Sans 3
-const sourceSans3 = Source_Sans_3({
-  subsets: ['latin'], 
-  weight: ['400', '600', '700'], 
-  display: 'swap', 
-});
 
 
 export const metadata: Metadata = {
