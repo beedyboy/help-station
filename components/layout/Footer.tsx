@@ -3,12 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer: React.FC = () => (
-  <footer className="w-full bg-secondary flex justify-center p-4 text-white text-center h-auto">
+  <footer className="w-full bg-secondary flex justify-center p-4 text-white text-center max:h-[500px] h-auto">
     <div className="flex flex-col">
       <div className="flex flex-col md:flex-row gap-5 md:gap-0">
-        
         <div className="flex md:flex-col flex-row gap-2">
-
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src="/images/help_station_logo2.svg"
@@ -18,8 +16,8 @@ const Footer: React.FC = () => (
             />
           </Link>
 
-          <p className="md:flex flex-wrap w-1/3 text-justify hidden">
-            HelpStation is a healthcare logistics company that leverages
+          <p className="md:flex w-1/3 text-justify hidden">
+            HelpStation is a healthcare logistics company that leverages
             technology to provide access to quality and efficient healthcare
             services.
           </p>

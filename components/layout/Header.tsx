@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import is from "typescript";
 
 const Menu = () => {
   const pathname = usePathname();
@@ -88,8 +87,8 @@ const Header: React.FC = () => {
             Find Out
           </Link>
         </div>
-        <div className="md:p-4 p-2 bg-white">
-          <nav className="max-w-screen-xl flex flex-col md:flex-row md:items-center justify-between md:mx-auto p-4 ">
+        <div className="md:p-2 p-2 bg-white">
+          <nav className="max-w-screen-xl flex flex-col md:flex-row md:items-center justify-between md:mx-auto p-2">
             <div className="flex justify-between">
               <Link href="/" className="flex items-center space-x-3">
                 <Image
