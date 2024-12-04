@@ -24,9 +24,7 @@ export const metadata: Metadata = {
   return (
     <html lang="en">
       <body className="flex justify-center items-center w-full h-full">
-        {/* <div className="w-full"> */}
         {children}
-        {/* </div> */}
       </body>
     </html>
   );

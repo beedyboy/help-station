@@ -21,7 +21,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   onGetStarted,
 }) => {
   return (
-    <div className="w-[360px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
+    <div className="w-[296px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
       {/* Top Section */}
       <div className="self-stretch h-[252px] px-8 pt-10 pb-8 flex-col justify-start items-start gap-4 flex">
         <div className="self-stretch h-[116px] flex-col justify-start items-center gap-4 flex">
