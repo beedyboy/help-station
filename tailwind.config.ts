@@ -14,6 +14,7 @@ const config: Config = {
         // primary: "#70727F",
         btnColor: "#3BAD6B",
         // Neutral Colors
+
         neutral: {
           1: "#1B1C20",
           2: "#383A47",
@@ -29,6 +30,8 @@ const config: Config = {
           4: "#F8F8FA",
           5: "#FFFEFC",
           6: "#F9FAFB",
+          7: "#E7F7EB",
+          8: "#F9F9FC",
         },
         // Primary Colors
         primary: {
@@ -37,6 +40,7 @@ const config: Config = {
           3: "#DA2750",
           4: "#3BAD6B",
           5: "#2D2E2C",
+          6: "#32A061",
         },
         // Primary Light Colors
         "primary-light": {
@@ -49,9 +53,7 @@ const config: Config = {
         secondary: "#2A3735",
       },
       fontFamily: {
-        'br-firma': ['BR Firma', 'sans-serif'],
-        sans: ['var(--font-source-sans-pro)', 'ui-sans-serif', 'system-ui'],
-   
+        "br-firma": ["BR Firma", "sans-serif"],
       },
     },
   },
