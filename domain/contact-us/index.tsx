@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import aboutImg from "@/public/images/help_station_about.svg";
 import { IoIosCall } from "react-icons/io";
@@ -5,6 +6,7 @@ import { AiOutlineInbox } from "react-icons/ai";
 import { LuMapPin } from "react-icons/lu";
 import getInTouchImg from "@/public/images/help_station_get_in_touch.svg";
 import MapEmbed from "@/components/map";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -28,6 +30,19 @@ const contactInfo = [
 ];
 
 function ContactUsPage() {
+  const [input, setInput] = useState({
+    firstName: "",
+    lastName: "",
+    message: "",
+    email: "",
+  });
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setInput((prev) => ({ ...prev, [name]: value }));
+  };
   return (
     <main className="w-full flex justify-center flex-col md:gap-12 items-center ">
       <section className="relative h-[400px] flex justify-center items-center w-[100%]">
@@ -59,15 +74,17 @@ function ContactUsPage() {
       </section>
 
       <section className="w-full gap-4 md:gap-8 flex justify-center items-center">
-        <div className="md:w-[80%] text-center">
-          <p className="text-lg text-primary-6 font-semibold leaidng-8">
-            Stay In Touch With Us
-          </p>
-          <h3 className="font-bold py-2 text-3xl leading-10 text-[#1B1C20]">
-            We’d love to hear from you
-          </h3>
+        <div className="md:w-[80%] text-center flex justify-center flex-col items-center">
+          <div className="flex flex-col gap-3 py-4 md:py-0">
+            <p className="md:text-lg text-sm text-primary-6 font-semibold leaidng-8">
+              Stay In Touch With Us
+            </p>
+            <h3 className="font-bold text-[35px] px-2 md:px-0 md:text-3xl leading-10 text-[#1B1C20]">
+              We’d love to hear from you
+            </h3>
+          </div>
 
-          <div className="flex flex-col md:flex-row py-4 gap-3">
+          <div className="flex flex-col md:flex-row py-4 gap-3 w-[80%] md:w-full">
             {contactInfo.map((info, i) => (
               <div
                 key={i}
@@ -121,6 +138,9 @@ function ContactUsPage() {
                   <input
                     className="w-full p-2 text-sm placeholder:text-[#CCCEDB] outline-none border-[1px] border-[#CCCEDB] rounded-lg"
                     placeholder="First name"
+                    name="firstName"
+                    onChange={handleChange}
+                    value={input.lastName}
                   />
                 </div>
                 <div className="flex flex-col gap-2 w-[50%]">
@@ -130,6 +150,9 @@ function ContactUsPage() {
                   <input
                     className="w-full p-2 text-sm placeholder:text-[#CCCEDB] outline-none border-[1px] border-[#CCCEDB] rounded-lg"
                     placeholder="Last name"
+                    name="lastName"
+                    onChange={handleChange}
+                    value={input.lastName}
                   />
                 </div>
               </div>
@@ -141,6 +164,10 @@ function ContactUsPage() {
                 <input
                   className="w-full p-2 text-sm placeholder:text-[#CCCEDB] outline-none border-[1px] border-[#CCCEDB] rounded-lg"
                   placeholder="you@company.com"
+                  name="email"
+                  type="email"
+                  value={input.email}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -151,6 +178,9 @@ function ContactUsPage() {
                 <textarea
                   className="w-full h-[128px] p-2 text-sm placeholder:text-[#CCCEDB] outline-none border-[1px] border-[#CCCEDB] rounded-lg"
                   placeholder=""
+                  value={input.message}
+                  name="message"
+                  onChange={handleChange}
                 ></textarea>
               </div>
 
@@ -166,11 +196,11 @@ function ContactUsPage() {
 
       <section className=" flex justify-center flex-col items-center">
         <div className="md:w-[70%] p-4  md:p-0 text-center gap-2 md:gap-3 flex flex-col justify-center items-center">
-          <p className="text-primary-6 text-base">Location Map</p>
-          <h3 className="text-primary-5 font-semibold md:text-3xl">
+          <p className="text-primary-6 text-base font-semibold">Location Map</p>
+          <h3 className="text-primary-5 text-[24px] leading-8  font-bold md:text-3xl">
             Find Us On Google Map
           </h3>
-          <p className="text-[#70727F] text-base">
+          <p className="text-[#70727F] p-2 md:p-0 font-normal text-base">
             Easily locate us by using the Google Maps. Get directions and see
             our exact location to visit us conveniently.
           </p>
@@ -180,7 +210,7 @@ function ContactUsPage() {
       <div className="w-[100%]">
         <MapEmbed />
       </div>
-      <div className="w-full p-2"></div>
+      <div className="w-full p-1"></div>
     </main>
   );
 }
