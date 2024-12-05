@@ -64,7 +64,7 @@ function AboutUsPage() {
               {" "}
             </div>
           </div>
-          <div className=" w-[90%] z-10 md:mt-20">
+          <div className=" w-[95%] z-10 md:mt-20">
             <div className=" flex items-center md:gap-10 md:flex-row flex-col w-full">
               <div className="w-full  h-[350px] md:w-[700px] md:h-[480px]">
                 <ImageTemplate src={CEOImg} />
@@ -72,7 +72,7 @@ function AboutUsPage() {
               <div className="w-full">
                 <ServiceTextTemplate
                   subHeading="CEO/Co-Founder"
-                  headingText="DEJI FABORODE, MD, MHA"
+                  name="DEJI FABORODE, MD, MHA"
                   description="Deji Faborode, MD, MHA, is the Chief Executive Officer (CEO) and Co-Founder of HelpStation, bringing over 12 years of expertise in healthcare to the team. With a robust background in clinical practice, healthcare administration, and strategic initiatives, Deji excels in leading product development and business growth. His leadership has been pivotal in securing funding and managing finances, driving the company's mission forward. Deji's career includes significant roles such as Associate Director at Merck, where he oversaw a $5M market research budget for oncology, and Director of Market Access Strategy at Ipsos, managing a $2M retainer. He has also led impactful projects at Avalere Health and AmeriHealth Caritas, demonstrating his proficiency in market access and quality improvement. An alumnus of the University of North Carolina and Obafemi Awolowo University, Deji holds an MHA and an MBChB, complemented by certifications in Six Sigma and quality improvement. His strategic vision and commitment to healthcare transformation make him an invaluable leader at HelpStation."
                 />
               </div>
@@ -87,12 +87,12 @@ function AboutUsPage() {
             <div className="h-[80%] w-[80%] bg-[#F9F9FC] rounded-full"> </div>
           </div>
 
-          <div className=" w-[90%] z-10 md:mt-20">
+          <div className=" w-[95%] z-10 md:mt-20">
             <div className=" flex items-center md:gap-10 md:flex-row flex-col-reverse w-full">
               <div className="w-full">
                 <ServiceTextTemplate
                   subHeading="COO / Co - Founder"
-                  headingText="YEWANDE ALEBIOSU, MD"
+                  name="YEWANDE ALEBIOSU, MD"
                   description="Yewande Alebiosu, MD, is the Chief Operations Officer and Co-Founder of HelpStation, leveraging her extensive medical background and strategic acumen to drive operational excellence. With a Bachelor of Medicine and Surgery from the University of Lagos, Yewande has been instrumental in reducing operational costs through optimising capabilities and minimising waste.
 Her leadership has been key in cultivating strategic relationships with stakeholders, leading to policy changes that enhance emergency healthcare services. Yewande's strategic initiatives have boosted HelpStation's revenue and her expertise in product development, process optimization, and market strategy has been crucial in expanding telemedicine services across Nigeria.
 With a proven track record in leading teams and driving organisational growth, Yewande is committed to ensuring equitable access to quality healthcare for all communities. Her dedication to healthcare innovation and operational efficiency makes her a cornerstone of HelpStation's mission and success."
@@ -114,7 +114,7 @@ With a proven track record in leading teams and driving organisational growth, Y
               {" "}
             </div>
           </div>
-          <div className=" w-[90%] z-10 md:mt-20 mt-10">
+          <div className=" w-[95%] z-10 md:mt-20 mt-10">
             <div className=" flex items-center md:gap-10 md:flex-row flex-col w-full">
               <div className="w-full h-[350px] md:w-[700px] md:h-[480px]">
                 <ImageTemplate src={marketingLeadImg} />
@@ -122,7 +122,7 @@ With a proven track record in leading teams and driving organisational growth, Y
               <div className="w-full">
                 <ServiceTextTemplate
                   subHeading="Marketing and Growth Lead"
-                  headingText="MARTINS MOMAH "
+                  name="MARTINS MOMAH "
                   description="Martins is the Marketing and Growth Lead at HelpStation, bringing over 15 years of experience in sales, marketing, and growth within the HealthTech and pharma sectors. A seasoned pharmacist consultant, Martins excels in driving organisational goals through innovative strategies and efficient team management. At HelpStation, Martins leverages his extensive background in international business negotiations and brand activations to spearhead growth initiatives. His leadership has been pivotal in managing a team of over 100 sales representatives across Nigeria and Ghana, achieving significant market penetration and brand recognition. With a  B. Pharm degree from the University of Lagos, Martins has a  proven track record in product pricing, positioning, and data-driven decision-making, Martins has successfully executed nationwide campaigns that drive brand visibility and customer engagement. His entrepreneurial ventures, including founding Lokal Broda Limited and LB Pharmacy Limited, demonstrate his commitment to healthcare innovation and community wellness."
                 />
               </div>
@@ -137,12 +137,12 @@ With a proven track record in leading teams and driving organisational growth, Y
             <div className="h-[80%] w-[80%] bg-[#F9F9FC] rounded-full"> </div>
           </div>
 
-          <div className=" w-[90%] z-10 md:mt-20 mt-10">
+          <div className=" w-[95%] z-10 md:mt-20 mt-10">
             <div className=" flex items-center md:gap-10 md:flex-row flex-col-reverse w-full">
               <div className="w-full">
                 <ServiceTextTemplate
                   subHeading="Product and Process Lead"
-                  headingText="MICHAEL FARONBI"
+                  name="MICHAEL FARONBI"
                   description="Michael is the Product and Process Lead at HelpStation. He is skilled in modelling, simulating, and optimizing solutions and thrives in driving operational efficiency and effectiveness. He has successfully managed  large-scale projects across continents, collaborating closely with diverse teams and stakeholders to deliver impactful results. 
 At HelpStation, Michael leads the product development lifecycle from ideation through to launch, leveraging research insights to inform product strategy and development. He is committed to implementing innovative solutions that enhance performance and align with our business objectives.
 With a Master's in Engineering from the University of Victoria and a Bachelor's in Science from Ternopil National Technical University, He combines technical expertise with a creative problem-solving approach. 
@@ -196,7 +196,7 @@ With a Master's in Engineering from the University of Victoria and a Bachelor's 
           <div className="flex  md:flex-row flex-col md:justify-between items-center gap-32 md:gap-7 ">
             {/*  */}
             <div className="relative md:w-[40%] flex flex-col gap-5 items-center justity-center mt-7">
-              <div className="absolute md:-top-2 left-5 md:left-3 -z-10 bottom-0 border-dashed border-2 border-btnColor h-[200px] "></div>
+              <div className="absolute md:-top-2 left-5 md:left-4 -z-10 bottom-0 border-dashed border-2 border-btnColor h-[200px] "></div>
               <div className="-left-36 flex justify-between gap-5 w-full  ">
                 <div className="md:w-7 md:h-7 p-4 w-12 h-12 bg-btnColor flex  justify-center items-center rounded-full">
                   <div className="">
