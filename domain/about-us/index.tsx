@@ -14,13 +14,14 @@ import { aboutImages } from "@/constants/about";
 
 function AboutUsPage() {
   return (
-    <main className=" flex flex-col gap-3 md:gap-20 max-w-[1440px] overflow-hidden">
+    <main className="w-full flex justify-center flex-col md:gap-12 items-center -mt-4 ">
       <section className="relative h-[600px] flex justify-center items-center w-full">
         <div className=" absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[600px]">
           <Image
             src={aboutImg}
             alt="about_us"
             style={{
+              width: "100%",
               background: "#3BAD6B",
               objectFit: "contain",
               height: "600px",
@@ -56,7 +57,7 @@ function AboutUsPage() {
         </div>
       </section>
 
-      <section className=" bg-[#F9F9FC] flex flex-col justify-cente  p-2 md:gap-20 md:p-16 items-center w-full ">
+      <section className="bg-[#F9F9FC] flex flex-col justify-center  p-2 md:gap-20 md:p-16 items-center w-full ">
         {/*1  */}
         <div className=" relative flex justify-center items-center bg-[#F9F9FC] w-full py-6 md:py-0 ">
           <div className="absolute  flex justify-center items-center md:w-[254px] md:h-[254px] h-[183px] w-[183px] rounded-full bg-[#D7F1DE] -top-6 md:-top-3  -left-[150px] md:-left-[250px]">
@@ -177,7 +178,7 @@ With a Master's in Engineering from the University of Victoria and a Bachelor's 
         </div>
       </section>
 
-      <section className=" w-full flex justify-center items-center ">
+      <section className=" w-full flex justify-center items-center pb-4">
         <div className="md:w-[80%] w-[85%] flex flex-col gap-4 py-10">
           {/*  */}
           <div className="flex   md:flex-row flex-col justify-start gap-3 md:gap-8">

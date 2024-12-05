@@ -4,7 +4,7 @@ export const menuItems: MenuItem[] = [
   { name: "Emergency Store", href: "/emergency-store" },
   { name: "Subscription Plan", href: "/subscriptions" },
   {
-    name: "About Us",
+    name: "About Help",
     href: "#",
     dropdownItems: [
       { name: "About Us", href: "/about-us" },

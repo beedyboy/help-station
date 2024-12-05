@@ -7,13 +7,12 @@ import { LuMapPin } from "react-icons/lu";
 import getInTouchImg from "@/public/images/help_station_get_in_touch.svg";
 import MapEmbed from "@/components/map";
 import { useState } from "react";
-
 const contactInfo = [
   {
     icon: <IoIosCall size={24} fill="white" color="white" />,
     heading: "Call Centre  (24/7)",
-    description: "+23480123456789",
-    otherText: "+23480123456789",
+    description: "+2349132000013",
+    otherText: "+2349132000014",
   },
   {
     icon: <AiOutlineInbox color="white" size={24} fill="white" />,
@@ -45,11 +44,11 @@ function ContactUsPage() {
   };
   return (
     <main className="w-full flex justify-center flex-col md:gap-12 items-center ">
-      <section className="relative h-[400px] flex justify-center items-center w-[100%]">
+      <section className="relative h-[400px] flex justify-center items-center w-full">
         <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[400px]">
           <Image
             src={aboutImg}
-            alt="about_us"
+            alt="contact_us"
             style={{
               width: "100%",
               background: "#3BAD6B",
