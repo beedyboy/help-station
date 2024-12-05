@@ -1,29 +1,26 @@
 import Image from "next/image";
 import helpServiceImg from "@/public/images/help-station-service-image.svg";
 import ButtonGroup from "@/components/button/índex";
-import serviceIcon from "@/public/icons/service.svg";
+
 import Link from "next/link";
 
 function BrandService() {
   return (
-    <div className="md:h-[600px]w-full flex flex-col gap-5 md:flex-row items-center md:p-0 py-3">
+    <div className="md:h-[600px]w-full flex flex-col md:justify-between gap-3 md:flex-row items-center md:p-2 py-3">
       <div className="md:w-[45%] lg:w-[400] w-full h-[350px] md:h-[400px] flex justify-center items-center">
         <Image
           src={helpServiceImg}
           alt=""
-          style={{ width: "80%", height: "80%" }}
+          width={100}
+          height={100}
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
 
       <div className="md:w-[50%] w-full justify-start flex gap-2 flex-col">
         <div className="bg-[#EFF0F5] rounded-full w-[60px] h-[60px] flex justify-center items-center ">
           <div className="flex justify-center items-center w-[60%] h-[60%] rounded-full p-2 bg-btnColor">
-            <Image
-              src={serviceIcon}
-              alt="Help Station Logo"
-              width={50}
-              height={50}
-            />
+            <Image src="/icons/healthcare.svg" alt="" width={50} height={50} />
           </div>
         </div>
         <p className="font-bold md:text-4xl text-neutral-1 text-3xl  leading-9">

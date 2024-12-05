@@ -5,13 +5,14 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import styles from "./swiper.module.css";
 import { testimonials } from "@/constants/homepageItems";
+
 export default function CustomSwiper() {
   return (
     <div className={styles.container}>
       <Swiper
         effect="coverflow"
         grabCursor={true}
-        centeredSlides={true}
+        // centeredSlides={true}
         slidesPerView={3} // 1 active slide and 2 smaller inactive slides
         coverflowEffect={{
           rotate: 0,
@@ -20,18 +21,18 @@ export default function CustomSwiper() {
           modifier: 1,
           slideShadows: false,
         }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         loop={true}
         modules={[EffectCoverflow, Autoplay]}
         className={`${styles.swiper} ${styles} `}
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index} className={`${styles.slide} lg:w-536px`}>
+          <SwiperSlide key={index} className={`${styles.slide} lg:w-[30%]`}>
             <div
-              className={`${styles.card} w-[100%] md:h-[290px] flex justify-center flex-col items-center`}
+              className={`${styles.card} md:w-[100%] md:h-[290px] flex justify-center flex-col items-center`}
             >
               <h3 className={styles.title}>{testimonial.title}</h3>
               <p className={styles.content}>{testimonial.content}</p>
