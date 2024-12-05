@@ -1,36 +1,37 @@
 import Image from "next/image";
-import client1 from "@/public/images/help_station_hearse.svg";
+// import client1 from "@/public/images/help_station_hearse.svg";
+import clientAvatarOne from "@/public/images/help_station_clientAvatar.svg";
 
 const ClientAvatars = () => {
   return (
-    <div className="flex -space-x-1 overflow-hidden">
+    <div className="flex -space-x-3 overflow-hidden">
       <Image
-        className="inline-block size-6 rounded-full ring-2 ring-white"
-        src={client1}
+        className="inline-block md:size-[40px] size-8 rounded-full ring-2 ring-white"
+        src={clientAvatarOne}
         alt=""
-        width={8}
-        height={8}
+        width={12}
+        height={12}
       />
       <Image
-        className="inline-block size-6 rounded-full ring-2 ring-white"
-        src={client1}
+        className="inline-block md:size-[40px] size-8 rounded-full ring-2 ring-white"
+        src={clientAvatarOne}
         alt=""
-        width={8}
-        height={8}
+        width={12}
+        height={12}
       />
       <Image
-        className="inline-block size-6 rounded-full ring-2 ring-white"
-        src={client1}
+        className="inline-block md:size-[40px] size-8 rounded-full ring-2 ring-white"
+        src={clientAvatarOne}
         alt=""
-        width={8}
-        height={8}
+        width={12}
+        height={12}
       />
       <Image
-        className="inline-block size-6 rounded-full ring-2 ring-white"
-        src={client1}
+        className="inline-block md:size-[40px] size-8 rounded-full ring-2 ring-white"
+        src={clientAvatarOne}
         alt=""
-        width={8}
-        height={8}
+        width={12}
+        height={12}
       />
     </div>
   );

@@ -14,7 +14,7 @@ import ClientAvatars from "@/components/avatar";
 function BrandBoard() {
   return (
     <div className="w-full flex justify-start items-start gap-5 md:flex-row flex-col">
-      <div className="md:w-[60%] w-full flex flex-col flex-grow-1">
+      <div className="md:w-[50%] w-full flex flex-col flex-grow-1">
         <SwiperComponent>
           {swiperImages.map(
             (
@@ -54,18 +54,31 @@ function BrandBoard() {
         </SwiperComponent>
 
         <div className="w-[100%] flex md:items-center md:justify-start gap-4">
-          <ButtonGroup bgColor="#3BAD6B" borderColor="#3BAD6B" link="subscriptions">
-            <div className="flex p-2 gap-4 justify-center items-center ">
-              <p className="text-white">Get Started</p>
-              <FaArrowRightLong size={18} color="white" />
-            </div>
-          </ButtonGroup>
-          <ButtonGroup bgColor="#fff" borderColor="#3BAD6B">
-            <div className="flex p-2 gap-4 justify-center items-center">
-              <IoCall />
-              <p className="text-black">Call Us Now</p>
-            </div>
-          </ButtonGroup>
+          <div>
+            <ButtonGroup
+              bgColor="#3BAD6B"
+              borderColor="#3BAD6B"
+              link="subscriptions"
+            >
+              <div className="flex p-2 gap-4 justify-center items-center ">
+                <p className="text-white font-semibold text-lg leading-9">
+                  Get Started
+                </p>
+                <FaArrowRightLong size={18} color="white" />
+              </div>
+            </ButtonGroup>
+          </div>
+
+          <div className="">
+            <ButtonGroup bgColor="#fff" borderColor="#3BAD6B">
+              <div className="flex p-2 gap-4 justify-center items-center">
+                <IoCall />
+                <p className="text-neutral-1 font-semibold text-lg leading-9">
+                  Call Us Now
+                </p>
+              </div>
+            </ButtonGroup>
+          </div>
         </div>
 
         <div className="flex justify-start items-center gap-5 py-3">
@@ -99,7 +112,7 @@ function BrandBoard() {
         </div>
       </div>
 
-      <div className="md:w-[40%] flex md:h-[657px]">
+      <div className="md:w-[50%] flex md:h-[657px]">
         <div className="w-full">
           <SwiperComponent>
             <div>

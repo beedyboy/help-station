@@ -10,6 +10,7 @@ import BrandClients from "./home/brandclient";
 // import CustomSwiper from "@/components/swiper/testimonySwiper";
 import ConnectWithUs from "./home/connectwithus";
 import MainLayout from "@/components/layout/MainLayout";
+import BrandTestimony from "./home/brandtestimony";
 
 const HomePage: React.FC = () => (
   <MainLayout>
@@ -51,7 +52,7 @@ const HomePage: React.FC = () => (
       </div>
 
       <div className="w-full flex py-3 md:py-0 justify-center items-center bg-[#FFF7F7]">
-        <div className="w-[90%] ">
+        <div className="w-[90%] md:w-[85%] ">
           <BrandEmergencyAssessment />
         </div>
       </div>
@@ -63,6 +64,12 @@ const HomePage: React.FC = () => (
       <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
         <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
           <BrandClients />
+        </div>
+      </div>
+
+      <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
+        <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
+          <BrandTestimony />
         </div>
       </div>
 

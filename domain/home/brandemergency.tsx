@@ -5,7 +5,7 @@ import ButtonGroup from "@/components/button/índex";
 
 function BrandEmergencyAssessment() {
   return (
-    <div className="md:h-[600px] flex flex-col gap-3 md:flex-row items-center">
+    <div className="md:h-[600px] flex flex-col md:justify-between gap-3 md:flex-row items-center">
       <div className="md:w-[50%] flex gap-2 flex-col">
         <div className="bg-[#EFF0F5] rounded-full w-[60px] h-[60px] flex justify-center items-center ">
           <div className="flex justify-center items-center w-[60%] h-[60%] rounded-full p-2 bg-btnColor">
@@ -43,7 +43,7 @@ function BrandEmergencyAssessment() {
         <Image
           src={helpEmergencyImg}
           alt=""
-          style={{ width: "80%", height: "80%" }}
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
     </div>
