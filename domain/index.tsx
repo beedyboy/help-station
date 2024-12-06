@@ -77,9 +77,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
+        <div className="w-full flex justify-center items-center bg-[#F9F9FC]">
           <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
-            <BrandTestimony />
+            {/* <BrandTestimony /> */}
           </div>
         </div>
 
