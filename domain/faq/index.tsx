@@ -1,0 +1,103 @@
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import aboutImg from "@/public/images/help_station_about.svg";
+import FAQDropdown from "@/components/dropdown/faqDropdown";
+import { faqData } from "@/constants/faq";
+import shrugBroImg from "@/public/images/help_station_shrug_bro.svg";
+import ImageTemplate from "@/components/image";
+import ServiceLayout from "@/components/layout/our-services/serviceLayout";
+import ServiceTextTemplate from "@/components/layout/our-services/serviceTextTemplate";
+
+function FAQ() {
+  const [faq, setFaq] = useState(faqData);
+
+  const handleFAQ = (id: number) => {
+    const arr = faq.map((faq) => {
+      if (faq.id == id) {
+        return { ...faq, isOpen: !faq.isOpen };
+      } else return faq;
+    });
+
+    setFaq(arr);
+  };
+  return (
+    <main className="w-full flex justify-center flex-col gap-7 md:gap-12 items-center ">
+      <section className="relative h-[400px] flex justify-center items-center w-full">
+        <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[400px]">
+          <Image
+            src={aboutImg}
+            alt="contact_us"
+            style={{
+              width: "100%",
+              background: "#3BAD6B",
+              objectFit: "contain",
+              height: "400px",
+            }}
+          />
+        </div>
+
+        <div className="z-10 md:w-[55%] w-[90%] text-white text-center flex justify-center items-center flex-col gap-2 md:gap-3">
+          <div className=" h-[46px] w-[46px]">
+            <Image
+              src="/icons/wpf_faq.svg"
+              alt=""
+              width={100}
+              height={100}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+          <h2 className="pb-3 md:pb-0 leading-10 font-bold md:text-6xl text-[36px] md:leading-[80px]">
+            Frequently Asked Questions
+          </h2>
+          <div className="flex text-center flex-col gap-3">
+            <p className="font-normal md:text-[20px] leading-10">
+              Everything you need to know about our products and billings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className=" w-full flex justify-center items-center p-2">
+        <div className="md:w-[85%] w-[90%] flex flex-col gap-3">
+          {faq.map((faq) => (
+            <div key={faq.id}>
+              <FAQDropdown
+                id={faq.id}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={faq.isOpen}
+                onClick={(id: number) => handleFAQ(id)}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="md:w-[85%] w-[90%] bg-[#c5e9cf] rounded-2xl">
+        <ServiceLayout bgColor="#c5e9cf">
+          <div className="py-2 md:p-6  w-full flex rounded-lg flex-col items-center lg:flex-row gap-2  lg:gap-3 justify-center">
+            <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
+              <div className=" overflow-hidden md:h-full">
+                <ImageTemplate src={shrugBroImg} />
+              </div>
+            </div>
+            <div className="lg:w-[60%] w-full flex lg:pl-8 justify-start items-center lg:gap-2 lg:justify-center flex-col ">
+              <div className="w-[80%]">
+                <ServiceTextTemplate
+                  heading="Didn’t Find the Answer You Need"
+                  headingText="Swift Medical Evacuation Anytime, Anywhere"
+                  description="For more detailed information and additional resources, please visit our website. Our team is also available to assist you with any further questions you may have."
+                  linkText="www.Helpstationfaq.com"
+                  linkColor="#32A061"
+                />
+              </div>
+            </div>
+          </div>
+        </ServiceLayout>
+      </div>
+    </main>
+  );
+}
+
+export default FAQ;
