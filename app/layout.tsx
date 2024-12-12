@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ModalProvider } from "@/context/ModalContext";
 
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   return (
     <html lang="en">
       <body className="flex w-full h-full">
-        {children}
+      <ModalProvider>{children}</ModalProvider>
       </body>
     </html>
   );

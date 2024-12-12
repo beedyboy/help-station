@@ -4,6 +4,7 @@ import Image from "next/image";
 import aboutImg from "@/public/images/help_station_about.svg";
 import FAQDropdown from "@/components/dropdown/faqDropdown";
 import { faqData } from "@/constants/faq";
+import { RiSearch2Line } from "react-icons/ri";
 import shrugBroImg from "@/public/images/help_station_shrug_bro.svg";
 import ImageTemplate from "@/components/image";
 import ServiceLayout from "@/components/layout/our-services/serviceLayout";
@@ -38,22 +39,39 @@ function FAQ() {
         </div>
 
         <div className="z-10 md:w-[55%] w-[90%] text-white text-center flex justify-center items-center flex-col gap-2 md:gap-3">
-          <div className=" h-[46px] w-[46px]">
-            <Image
-              src="/icons/wpf_faq.svg"
-              alt=""
-              width={100}
-              height={100}
-              style={{ width: "100%", height: "100%" }}
-            />
+          <div className="flex justify-center items-center flex-col w-[70%]">
+            <div className=" h-[46px] w-[46px]">
+              <Image
+                src="/icons/wpf_faq.svg"
+                alt=""
+                width={100}
+                height={100}
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+            <h2 className="pb-3 md:pb-0 leading-10 font-bold md:text-6xl text-[36px] md:leading-[80px]">
+              Frequently Asked Questions
+            </h2>
+            <div className="flex text-center flex-col gap-3">
+              <p className="font-normal md:text-[20px] leading-10">
+                Everything you need to know about our products and billings.
+              </p>
+            </div>
           </div>
-          <h2 className="pb-3 md:pb-0 leading-10 font-bold md:text-6xl text-[36px] md:leading-[80px]">
-            Frequently Asked Questions
-          </h2>
-          <div className="flex text-center flex-col gap-3">
-            <p className="font-normal md:text-[20px] leading-10">
-              Everything you need to know about our products and billings.
-            </p>
+
+          <div className="w-full relative border-none">
+            <div className="absolute left-2 top-3">
+              <RiSearch2Line color="black" fill="black" size={28} />
+            </div>
+            <div className="absolute right-2 top-1 p-2 px-3 md:px-8 text-center rounded-lg bg-primary-4 ">
+              <p className="text-white">Search</p>
+            </div>
+            <input
+              name="search"
+              type="text"
+              className="rounded-lg outline bg-white px-10 p-3 w-[100%] border-white border-[1px] outline-white placeholder:text-sm text-primary-5"
+              placeholder="Type your question here"
+            />
           </div>
         </div>
       </section>
