@@ -10,7 +10,7 @@ import BrandClients from "./home/brandclient";
 // import CustomSwiper from "@/components/swiper/testimonySwiper";
 import ConnectWithUs from "./home/connectwithus";
 import MainLayout from "@/components/layout/MainLayout";
-import BrandTestimony from "./home/brandtestimony";
+// import BrandTestimony from "./home/brandtestimony";
 import Modal from "@/components/modal";
 import { useEffect } from "react";
 import { useModal } from "@/context/ModalContext";
@@ -77,9 +77,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
+        <div className="w-full flex justify-center items-center bg-[#F9F9FC]">
           <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
-            <BrandTestimony />
+            {/* <BrandTestimony /> */}
           </div>
         </div>
 
