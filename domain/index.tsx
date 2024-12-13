@@ -10,7 +10,7 @@ import BrandClients from "./home/brandclient";
 // import CustomSwiper from "@/components/swiper/testimonySwiper";
 import ConnectWithUs from "./home/connectwithus";
 import MainLayout from "@/components/layout/MainLayout";
-import BrandTestimony from "./home/brandtestimony";
+// import BrandTestimony from "./home/brandtestimony";
 import Modal from "@/components/modal";
 import { useEffect } from "react";
 import { useModal } from "@/context/ModalContext";

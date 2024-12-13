@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useRouter } from "next/navigation";
 
@@ -19,11 +21,10 @@ function ButtonGroup({
   paddingX = "px-5",
   paddingY = "py-5",
 }: ButtonProps) {
-
   const router = useRouter();
   const handleClick = () => {
-   if (link) {
-      router.push(link); 
+    if (link) {
+      router.push(link);
     }
   };
   return (
@@ -37,7 +38,7 @@ function ButtonGroup({
         borderRadius: "12px",
         padding: `${paddingX} ${paddingY}`,
       }}
-      onClick={handleClick} 
+      onClick={handleClick}
     >
       {children}
     </button>
