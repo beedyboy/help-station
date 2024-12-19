@@ -37,7 +37,7 @@ export const resourcesMenuItems: MenuItem[] = [
 ];
 
 export const privacyAndSecurityMenuItems: MenuItem[] = [
-  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Privacy Policy", href: "/policy" },
   { name: "Security Policy", href: "/security-policy" },
 ];
 

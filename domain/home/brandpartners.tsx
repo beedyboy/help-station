@@ -43,6 +43,8 @@ function BrandPartners() {
             width="158px"
             paddingX="10px"
             paddingY="5px"
+            link="/become-a-partner"
+
           >
             <p className="text-white">Become a partner</p>
           </ButtonGroup>

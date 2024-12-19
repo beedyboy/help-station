@@ -5,6 +5,7 @@ import ResourceSideBar from "@/domain/resources/sidebar";
 import Pagination from "@/components/pagination";
 import { usePathname } from "next/navigation";
 import aboutImg from "@/public/images/help_station_about.svg";
+import MainLayout from "@/components/layout/MainLayout";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -12,6 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="w-full h-full">
+        <MainLayout>
         <main className="w-full flex-col gap-7 flex justify-center items-center">
           <section className="w-full">
             <Header aboutImg={aboutImg}>
@@ -45,6 +47,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </section>
           )}
         </main>
+          
+        </MainLayout>
       </body>
     </html>
   );
