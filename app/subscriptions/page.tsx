@@ -23,7 +23,7 @@ const MainContent: React.FC = () => {
                 price={plan.price}
                 benefits={plan.features}
                 icon={plan.icon}
-                onGetStarted={() => alert("Get Started clicked!")}
+                // onGetStarted={() => alert("Get Started clicked!")}
               />
             ))}
           </div>

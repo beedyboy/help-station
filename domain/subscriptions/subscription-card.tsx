@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface SubscriptionCardProps {
@@ -8,7 +10,6 @@ interface SubscriptionCardProps {
   price: string;
   benefits: Array<string>;
   icon: string;
-  onGetStarted: () => void;
 }
 
 const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
@@ -18,8 +19,9 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   price,
   benefits,
   icon,
-  onGetStarted,
 }) => {
+  const formattedTitle = title.replace(/\s+/g, "-").toLowerCase(); 
+  
   return (
     <div className="w-[360px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
       {/* Top Section */}
@@ -46,14 +48,20 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
         </div>
         <div className="self-stretch h-12 flex-col justify-start items-start gap-3 flex">
           <div className="self-stretch rounded-lg justify-start items-start inline-flex">
-            <button
+          <Link
+              href={`/subscriptions/${formattedTitle}`}
+              className={`grow shrink basis-0 h-12 px-5 py-3 text-center rounded-lg shadow border bg-${color}`}
+            >
+              <span className="text-white text-base font-semibold">Get started</span>
+            </Link>
+            {/* <button
               className={`grow shrink basis-0 h-12 px-5 py-3 rounded-lg shadow border bg-${color}`}
-              onClick={onGetStarted}
+              onClick={handleNavigation}
             >
               <span className="text-white text-base font-semibold">
                 Get started
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
