@@ -9,7 +9,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import ClientAvatars from "@/components/avatar";
 
 function BrandBoard() {
   return (
@@ -82,7 +81,7 @@ function BrandBoard() {
         </div>
 
         <div className="flex justify-start items-center gap-5 py-3">
-          <ClientAvatars />
+          <Image src="/images/group_avatars.png" width={100} height={100} alt="satisfied client" />
           <p className="font-semibold text-base leading-6">
             25+ Satisfied Client
           </p>
