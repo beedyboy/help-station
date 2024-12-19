@@ -11,6 +11,33 @@ interface SubscriptionCardProps {
   benefits: Array<string>;
   icon: string;
 }
+ 
+const bgClasses = {
+  green: 'bg-[#d9efe5]/50',
+  orange: 'bg-[#fee3d5]/50',
+  yellow: 'bg-[#F7C436]/50',
+  wine: 'bg-[#fbd6da]/50',
+};
+
+const textClasses = {
+  green: {
+    text: 'text-primary-4',
+    bg: 'bg-primary-4'
+  },
+  orange: {
+    text: 'text-primary-1',
+    bg: 'bg-primary-1'
+  },
+  yellow: {
+    text: 'text-primary-light-2',
+    bg: 'bg-primary-light-2'
+  },
+  wine: {
+    text: 'text-primary-3',
+    bg: 'bg-primary-3'
+  },
+};
+
 
 const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   color,
@@ -29,9 +56,9 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
         <div className="self-stretch h-[116px] flex-col justify-start items-center gap-4 flex">
           <div className="justify-start items-start inline-flex">
             <div
-              className={`px-3 py-1 rounded-2xl justify-center items-center flex bg-${bgColor}`}
+              className={`px-3 py-1 rounded-2xl justify-center items-center flex ${bgClasses[bgColor as keyof typeof bgClasses]}`}
             >
-              <div className={`text-center text-sm font-medium text-${color}`}>
+              <div className={`text-center text-sm font-medium ${textClasses[color as keyof typeof textClasses]?.text}`}>
                 {title}
               </div>
             </div>
@@ -50,18 +77,10 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
           <div className="self-stretch rounded-lg justify-start items-start inline-flex">
           <Link
               href={`/subscriptions/${formattedTitle}`}
-              className={`grow shrink basis-0 h-12 px-5 py-3 text-center rounded-lg shadow border bg-${color}`}
+              className={`grow shrink basis-0 h-12 px-5 py-3 text-center rounded-lg shadow border ${textClasses[color as keyof typeof textClasses]?.bg}`}
             >
               <span className="text-white text-base font-semibold">Get started</span>
             </Link>
-            {/* <button
-              className={`grow shrink basis-0 h-12 px-5 py-3 rounded-lg shadow border bg-${color}`}
-              onClick={handleNavigation}
-            >
-              <span className="text-white text-base font-semibold">
-                Get started
-              </span>
-            </button> */}
           </div>
         </div>
       </div>

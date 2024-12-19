@@ -1,13 +1,16 @@
+import { useSubscription } from "@/context/SubscriptionContext";
 import Image from "next/image";
+import { useState } from "react";
 
 interface PlanProps {
   title: string;
   isOpen: boolean;
+  onClick: () => void;
 }
 
-const PlanItem: React.FC<PlanProps> = ({ title, isOpen }) => {
+const PlanItem: React.FC<PlanProps> = ({ title, isOpen, onClick }) => {
   return (
-    <div className="w-full py-4 flex justify-start gap-2">
+    <div className="w-full py-4 flex justify-start gap-2 cursor-pointer" onClick={onClick}>
       <div className="w-8 h-8  border-[#373946] flex-col justify-center items-center flex">
         <Image
           src="/icons/step_radio.svg"
@@ -36,6 +39,7 @@ const PlanItem: React.FC<PlanProps> = ({ title, isOpen }) => {
 };
 
 const Sidebar: React.FC = () => {
+  const { activeIndex, setActiveIndex } = useSubscription();
   const plans = [
     { title: "Ambucycle Subscription Plan", isOpen: true },
     { title: "Ambulance Subscription Plans", isOpen: false },
@@ -44,7 +48,12 @@ const Sidebar: React.FC = () => {
   return (
     <div className="flex flex-col justify-start md:w-[366px] w-full pl-5 pt-12 bg-background-6 items-start">
       {plans.map((plan, index) => (
-        <PlanItem key={index} title={plan.title} isOpen={plan.isOpen} />
+        <PlanItem
+          key={index}
+          title={plan.title}
+          isOpen={activeIndex === index}
+          onClick={() => setActiveIndex(index)}
+        />
       ))}
     </div>
   );

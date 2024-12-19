@@ -1,19 +1,25 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 import Image from "next/image";
+import { SimpleFooter } from "@/components/layout/SimpleFooter";
 
 const SUBSCRIPTION_HINT = [
   "Because time can be the difference between life and death, the First Responder plan ensures quicker response time through the use of Ambu cycles dispatched with paramedics to beat the usual Lagos traffic.",
   "Our highly trained paramedics provide basic life support at the scene of an emergency to stabilize the victim before the arrival of advanced treatment or transportation to a certified health center.",
   "The first responder plan is currently available within Lagos Island",
 ];
-const Plan: React.FC = () => {
+function Plan() {
+  const router = useRouter();
   return (
-    <div className="w-full flex flex-col md:flex-row min-h-screen">
+    <div className="w-full flex flex-col md:flex-row min-h-screen  mt-[120px] ">
       {/* Left Content */}
       <div className="w-full md:w-1/2 p-6 flex flex-col items-center gap-4">
         <div className="w-[440px] h-[790px] flex flex-col justify-center items-start gap-12">
-          <div className="flex items-center justify-start gap-4">
+          <div
+            className="flex items-center justify-start gap-4 cursor-pointer"
+            onClick={() => router.push("/subscriptions")}
+          >
             <div className="w-10 h-10 p-2 bg-[#f8f8fa] rounded-lg flex justify-center items-center">
               <Image
                 src="/icons/chevron-left.svg"
@@ -90,7 +96,6 @@ const Plan: React.FC = () => {
                   />
                 </div>
 
-                {/* do a flex with select option fields for genotype and gender */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-[#1b1b20]">
@@ -122,10 +127,52 @@ const Plan: React.FC = () => {
                     </select>
                   </div>
                 </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-[#1b1b20]">
+                      Do you have Allergies?
+                    </label>
+                    <select
+                      className="w-full border border-[#c5c7d2] rounded-lg p-2"
+                      name="allergies"
+                    >
+                      <option value="">Select Option</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-[#1b1b20]">
+                      Are you on any medication?
+                    </label>
+                    <select
+                      className="w-full border border-[#c5c7d2] rounded-lg p-2"
+                      name="medication"
+                    >
+                      <option value="">Select Option </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="w-[100%]">
+                  <button className=" w-[100%] flex justify-center gap-3 bg-primary-4 p-4 rounded-lg text-white text-center">
+                    <Image
+                      src="/icons/send.svg"
+                      width={20}
+                      height={20}
+                      alt="send"
+                    />{" "}
+                    <span>Get Plan</span>
+                  </button>
+                </div>
               </div>
             </form>
           </div>
         </div>
+        <SimpleFooter />
       </div>
 
       {/* Right Content (Hidden on Mobile) */}
@@ -164,6 +211,6 @@ const Plan: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Plan;
