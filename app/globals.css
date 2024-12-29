@@ -12,21 +12,22 @@
   /* height: 100vh; */
 }
 @font-face {
-  font-family: 'BR Firma';
-  src: url('/fonts/br-firma/BR-Firma-Regular.otf') format('opentype');
+  font-family: "BR Firma";
+  src: url("/fonts/br-firma/BR-Firma-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BR Firma';
-  src: url('/fonts/br-firma/BR-Firma-Bold.otf') format('opentype');
+  font-family: "BR Firma";
+  src: url("/fonts/br-firma/BR-Firma-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 html {
-  font-family: 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-family: "Source Sans Pro", ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
 }
 
 /* .source-sans-3-<uniquifier > {
@@ -47,6 +48,11 @@ html {
   width: 50%;
   color: red;
 } */
+
+.swipper-image {
+  transition: all 0.5s ease-in;
+}
+
 @media (max-width: 500px) {
   .swipper-image {
     width: 380px;
