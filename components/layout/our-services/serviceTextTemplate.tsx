@@ -9,6 +9,7 @@ type ServiceTextProps = {
   description?: string;
   linkText?: string;
   linkColor?: string;
+  link?: string;
 };
 
 const ServiceTextTemplate = ({
@@ -19,6 +20,7 @@ const ServiceTextTemplate = ({
   linkText = "",
   linkColor = "",
   name = "",
+  link = "/",
 }: ServiceTextProps) => {
   return (
     <div className="h-full w-full flex flex-col justify-start gap-4">
@@ -55,7 +57,7 @@ const ServiceTextTemplate = ({
         {description}
       </p>
       {linkText ? (
-        <Link href={""} className={`text-[${linkColor}]`}>
+        <Link href={link} className={`text-[${linkColor}] cursor-pointer`}>
           {linkText}
         </Link>
       ) : null}

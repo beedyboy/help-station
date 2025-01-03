@@ -82,6 +82,7 @@ function OurService() {
                 heading="Emergency Coverage at Event"
                 linkColor=""
                 linkText="Request Now"
+                link="/services/event-form"
               />
             </div>
             <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
@@ -133,6 +134,7 @@ function OurService() {
                 heading="Health, Safety, and Environment"
                 linkColor="#e26336"
                 linkText="Find Out More"
+                link="/services/HSETraining-form"
               />
             </div>
           </div>
@@ -149,6 +151,7 @@ function OurService() {
                   description="Your customers trust you to keep their food safe and delicious. Our food handlers screening ensures you’re equipped with the knowledge and skills to protect their health and your reputation. Take the step towards excellence and show your commitment to safety. Discover how our screening can help you make a difference."
                   linkText="Book Now"
                   linkColor="#1B1C20"
+                  link="/services/foodhandler-form"
                 />
               </div>
               <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">

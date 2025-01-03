@@ -26,7 +26,7 @@ export type AmbulanceProps = {
   numberOfAmbulance: number;
   location: string;
   avalability: number;
-  HEFAMAAAccreditation: string;
+  HEFAMAAAccreditation: boolean;
 };
 
 export type HearseProps = {
