@@ -37,20 +37,14 @@ function AmbulanceFormTwo({
             <RadioInputTemplate
               labelName="No"
               name="HEFAMAAAccreditation"
-              value={
-                ambulanceInput.HEFAMAAAccreditation === "No" ? "true" : "false"
-              }
+              value={ambulanceInput.HEFAMAAAccreditation ? "true" : "false"}
               onchange={handleChange}
-             
             />
             <RadioInputTemplate
               labelName="Yes"
               name="HEFAMAAAccreditation"
-              value={
-                ambulanceInput.HEFAMAAAccreditation === "Yes" ? "true" : "false"
-              }
+              value={ambulanceInput.HEFAMAAAccreditation ? "true" : "false"}
               onchange={handleChange}
-         
             />
           </div>
         </div>
