@@ -21,6 +21,7 @@ function HSEFormTwo({ formInput, onchange }: HSEFormTwoProps) {
               labelName="If location is on site kindly provide the address"
               name="email"
               onchange={onchange}
+              placeholder="Enter email"
               type="text"
             />
           </div>
@@ -76,6 +77,7 @@ function HSEFormTwo({ formInput, onchange }: HSEFormTwoProps) {
               labelName=" Preferred Date"
               name="trainingTime"
               onchange={onchange}
+              placeholder="Enter preferred date"
               type="date"
             />
           </div>
@@ -86,6 +88,7 @@ function HSEFormTwo({ formInput, onchange }: HSEFormTwoProps) {
               labelName="Preferred Time"
               name="preferredLocation"
               onchange={onchange}
+              placeholder="Enter preferred time"
               type="text"
             />
           </div>
@@ -96,6 +99,7 @@ function HSEFormTwo({ formInput, onchange }: HSEFormTwoProps) {
               labelName="Any other information"
               name="preferredLocation"
               onchange={onchange}
+              placeholder="Enter any other information"
               type="text"
             />
           </div>

@@ -21,6 +21,7 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
               labelName="If location is onsite, kindly provide the address"
               name="email"
               onchange={onchange}
+              placeholder="Enter email"
               type="date"
             />
           </div>
@@ -30,6 +31,7 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
               labelName="Preferred Test Time"
               name="traineesNumber"
               onchange={onchange}
+              placeholder="Enter prefferred test time"
               type="text"
             />
           </div>
@@ -61,6 +63,7 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
               labelName=" Preferred Test Date "
               name="trainingTime"
               onchange={onchange}
+              placeholder="Enter preffered test date"
               type="text"
             />
           </div>
@@ -89,6 +92,7 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
               labelName=" Additional comment or note"
               name="preferredLocation"
               onchange={onchange}
+              placeholder="Enter additional comment or note"
               type="text"
             />
           </div>

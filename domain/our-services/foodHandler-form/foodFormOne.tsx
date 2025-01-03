@@ -21,6 +21,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               labelName="Email Address"
               name="email"
               onchange={onchange}
+              placeholder="Enter email"
               type="text"
             />
           </div>
@@ -30,6 +31,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               labelName="Phone Number"
               name="phoneNumber"
               onchange={onchange}
+              placeholder="Enter phone number"
               type="text"
             />
           </div>
@@ -102,6 +104,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               labelName=" Name of the client/company "
               name="clientOrCompanyName"
               onchange={onchange}
+              placeholder="Enter client or company name"
               type="text"
             />
           </div>
@@ -112,6 +115,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               labelName="How many individuals need to take the Food Handlers Test?"
               name="preferredLocation"
               onchange={onchange}
+              placeholder="Enter prefferred location"
               type="text"
             />
           </div>
