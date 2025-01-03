@@ -21,6 +21,7 @@ function HSEFormOne({ formInput, onchange }: HSEFormTwoProps) {
               labelName="Name of the client/company "
               name="email"
               onchange={onchange}
+              placeholder="Enter name of client or company"
               type="text"
             />
           </div>
@@ -31,6 +32,7 @@ function HSEFormOne({ formInput, onchange }: HSEFormTwoProps) {
               labelName="Email Address"
               name="email"
               onchange={onchange}
+              placeholder="Enter email address"
               type="text"
             />
           </div>
@@ -41,6 +43,7 @@ function HSEFormOne({ formInput, onchange }: HSEFormTwoProps) {
               labelName="Phone Number "
               name="email"
               onchange={onchange}
+              placeholder="Enter phone number"
               type="text"
             />
           </div>

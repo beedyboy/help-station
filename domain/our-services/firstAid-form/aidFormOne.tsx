@@ -23,6 +23,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName="Email Address"
               name="email"
               onchange={onchange}
+              placeholder="Enter email"
               type="text"
             />
           </div>
@@ -32,6 +33,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName="Phone Number"
               name="phoneNumber"
               onchange={onchange}
+              placeholder="Enter phone number"
               type="text"
             />
           </div>
@@ -63,6 +65,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName=" Name of the client/company "
               name="clientOrCompanyName"
               onchange={onchange}
+              placeholder="Enter name of the clien or company"
               type="text"
             />
           </div>
@@ -73,13 +76,13 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
             </p>
             <RadioInputTemplate
               labelName="On-site"
-              name="standByAmbulance"
+              name="preferredTraining"
               value={firstAidForm.preferredTraining}
               onchange={onchange}
             />
             <RadioInputTemplate
               labelName="vitual"
-              name=""
+              name="preferredTraining"
               value={firstAidForm.preferredTraining}
               onchange={onchange}
             />
@@ -91,6 +94,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName=" If location is onsite, kindly provide the address"
               name="preferredLocation"
               onchange={onchange}
+              placeholder="Enter perferred location"
               type="text"
             />
           </div>

@@ -9,6 +9,9 @@ import image8 from "@/public/images/help_station_hearse.svg";
 import partnersImageOne from "@/public/images/help_clients_one.svg";
 import partnersImageTwo from "@/public/images/help_client_two.svg";
 import partnersImageThree from "@/public/images/help_client_three.svg";
+import testimonyOne from "@/public/images/testimony_one.svg";
+import testimonyTwo from "@/public/images/testomony_two.svg";
+import testimonyThree from "@/public/images/testimoney_three.svg";
 
 export const swiperImages = [
   {
@@ -72,6 +75,7 @@ export const clientsImages = [
 
 export const testimonials = [
   {
+    image: testimonyOne,
     title: "HelpStations Exceeds Expectations",
     content:
       "HelpStations' processes are seamless! Our medical emergency needs are always met in a timely manner. They are a health service provider I'll keep using and referring everyone!",
@@ -79,17 +83,19 @@ export const testimonials = [
     role: "Lulu's Management - Creative Director",
   },
   {
-    title: "HelpStations’ Professional Paramedics",
+    image: testimonyTwo,
+    title: "‘HelpStations’ Professional Paramedics",
     content:
-      "HelpStations’ paramedics are extremely professional. They were very composed and swift in attending to the emergency situation at my event.",
-    author: "Mrs F.",
-    role: "Lulu's Management - Creative Director",
+      "HelpStations’ paramedics are extremely professional. They were very composed and swift in attending to the emergency situation at my event",
+    author: "Mr F.",
+    role: "(Lala’s Management - Creative Director)",
   },
   {
+    image: testimonyThree,
     title: "Walure Capital Partners with HelpStation",
     content:
-      "Walure Capital partnered with HelpStation for the WalureFit event. Their team provided essential care, unsurpassed peace of mind, and a successful event. We look forward to future collaborations.",
-    author: "GM, Walure Capital",
-    role: "Lulu's Management - Creative Director",
+      "Walure Capital partnered with HelpStation for the WalureFit Event, impressed by their dedication and medical support. Their team provided essential care, ensuring peace of mind and a successful event. We look forward to future collaborations.",
+    author: "GM , Walure Capital ",
+    role: "(Lala’s Management - Creative Director)",
   },
 ];

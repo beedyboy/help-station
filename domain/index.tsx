@@ -7,10 +7,9 @@ import BrandService from "./home/brandservice";
 import BrandEmergencyAssessment from "./home/brandemergency";
 import BrandPartners from "./home/brandpartners";
 import BrandClients from "./home/brandclient";
-// import CustomSwiper from "@/components/swiper/testimonySwiper";
 import ConnectWithUs from "./home/connectwithus";
 import MainLayout from "@/components/layout/MainLayout";
-// import BrandTestimony from "./home/brandtestimony";
+import BrandTestimony from "./home/brandtestimony";
 import Modal from "@/components/modal";
 import { useEffect } from "react";
 import { useModal } from "@/context/ModalContext";
@@ -78,12 +77,10 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="w-full flex justify-center items-center bg-[#F9F9FC]">
-          <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
-            {/* <BrandTestimony /> */}
+          <div className="w-[95%] md:w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
+            <BrandTestimony />
           </div>
         </div>
-
-        {/* Custom Swiper comes */}
 
         <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
           <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
@@ -91,8 +88,16 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50">
-          <a href="tel:+2349132000013" className="flex justify-center items-center w-14 h-14 rounded-full bg-[#3BAD6B] shadow-lg hover:bg-[#2e9458] transition">
-            <Image src="icons/call_icon.svg" alt="Call Icon" width={32} height={32} />
+          <a
+            href="tel:+2349132000013"
+            className="flex justify-center items-center w-14 h-14 rounded-full bg-[#3BAD6B] shadow-lg hover:bg-[#2e9458] transition"
+          >
+            <Image
+              src="icons/call_icon.svg"
+              alt="Call Icon"
+              width={32}
+              height={32}
+            />
           </a>
         </div>
       </main>

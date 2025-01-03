@@ -1,5 +1,5 @@
 import InputTemplate from "@/components/input";
-import { EventProps } from "@/constants/our-service";
+import { EventProps } from "@/constants/types";
 
 function EventFormOne({
   eventForm,
@@ -22,6 +22,7 @@ function EventFormOne({
               name="email"
               value={eventForm.email}
               onchange={handleChange}
+              placeholder="Enter email"
             />
           </div>
 
@@ -32,6 +33,7 @@ function EventFormOne({
               type="number"
               value={eventForm.phoneNumber}
               onchange={handleChange}
+              placeholder="Enter phone number"
             />
           </div>
 
@@ -42,6 +44,7 @@ function EventFormOne({
               type="text"
               value={eventForm.eventLocation}
               onchange={handleChange}
+              placeholder="Enter event location"
             />
           </div>
 
@@ -52,6 +55,7 @@ function EventFormOne({
               type="date"
               value={eventForm.eventDate}
               onchange={handleChange}
+              placeholder="Enter event date"
             />
           </div>
         </div>
@@ -67,6 +71,7 @@ function EventFormOne({
               name="clientOrCompanyName"
               value={eventForm.clientOrCompanyName}
               onchange={handleChange}
+              placeholder="Enter client or company name"
             />
           </div>
           {/*  */}
@@ -78,6 +83,7 @@ function EventFormOne({
               name="eventType"
               value={eventForm.eventType}
               onchange={handleChange}
+              placeholder="Enter event type"
             />
           </div>
 
@@ -88,6 +94,7 @@ function EventFormOne({
               name="eventCapacity"
               value={eventForm.eventCapacity}
               onchange={handleChange}
+              placeholder="Enter event capacity"
             />
           </div>
 
@@ -98,6 +105,7 @@ function EventFormOne({
               name="eventStart"
               value={eventForm.eventCapacity}
               onchange={handleChange}
+              placeholder="Enter event start time"
             />
           </div>
         </div>

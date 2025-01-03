@@ -26,7 +26,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
   const [view, setView] = useState<number>(1);
   const router = useRouter();
   return (
-    <div className="flex flex-col gap-4 w-full pb-5">
+    <div className="flex flex-col gap-4 w-full pb-5 z-40 ">
       {/* Header Section */}
       <div className="flex flex-col gap-2 md:gap-4">
         <div className="" onClick={() => router.back()}>
@@ -43,7 +43,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
       </div>
 
       {/* Main Form Area */}
-      <div className="shadow-[0px_40px_70px_0px_rgba(176,183,195,0.22)] border-[1px] border-[#CCCEDB] rounded-md">
+      <div className="shadow-[0px_40px_70px_0px_rgba(176,183,195,0.22)] border-[1px] border-[#CCCEDB] rounded-md z-10 bg-white">
         {/* Step Indicator */}
         <div className="flex flex-col justify-between items-center w-full">
           <div className="md:px-6 md:py-4 p-2 flex justify-between items-center w-full">

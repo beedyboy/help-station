@@ -1,6 +1,6 @@
 type RadioProps = {
   name: string;
-  value: string;
+  value: any;
   labelName: string;
   onchange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };

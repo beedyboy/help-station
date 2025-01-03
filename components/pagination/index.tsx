@@ -40,14 +40,14 @@ const Pagination = () => {
           return i === middleIndex ||
             i === middleIndex - 1 ||
             i === middleIndex + 1 ? (
-            <p className="p-1">.</p>
+            <p className="p-1git ">.</p>
           ) : (
             <p
               onClick={() => handlePage(index)}
               key={i}
               className={`rounded-lg  p-2 px-6 ${
                 index === page
-                  ? "bg-primary-light-4 text-white "
+                  ? "bg-[#D9EFE5] text-primary-4 "
                   : " text-neutral-3"
               }  text-center font-semibold `}
             >

@@ -1,6 +1,6 @@
 import InputTemplate from "@/components/input";
 import RadioInputTemplate from "@/components/input/radio";
-import { EventProps } from "@/constants/our-service";
+import { EventProps } from "@/constants/types";
 import React from "react";
 
 function EventFormTwo({

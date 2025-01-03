@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import FormTemplate from "@/components/formTemplate";
 import EventFormOne from "@/domain/our-services/event-form/eventFormOne";
 import EventFormTwo from "@/domain/our-services/event-form/eventFormTwo";
-import { EventProps } from "@/constants/our-service";
+import { EventProps } from "@/constants/types";
 
 function EventForm() {
   const [input, setInput] = useState<EventProps>({

@@ -21,6 +21,7 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName="Preferred Training DateEmail Address"
               name="email"
               onchange={onchange}
+              placeholder="Enter email"
               type="date"
             />
           </div>
@@ -30,6 +31,7 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName="Proposed number of Trainees"
               name="traineesNumber"
               onchange={onchange}
+              placeholder="Enter number of trainees"
               type="text"
             />
           </div>
@@ -61,6 +63,7 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName=" Preferred Training Time "
               name="trainingTime"
               onchange={onchange}
+              placeholder="Enter prefferred training time"
               type="text"
             />
           </div>
@@ -95,6 +98,7 @@ function FirstAidFormTwo({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName=" If it's a refresher course when was the last training conducted"
               name="preferredLocation"
               onchange={onchange}
+              placeholder="Enter prefferred location"
               type="text"
             />
           </div>
