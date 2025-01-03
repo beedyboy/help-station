@@ -1,6 +1,6 @@
 type RadioProps = {
   name: string;
-  value: boolean | string ;
+  value: string | number | readonly string[] | undefined;
   labelName: string;
   onchange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
@@ -16,7 +16,7 @@ const RadioInputTemplate: React.FC<RadioProps> = ({
       <input
         type="checkbox"
         name={name}
-        // value={value}
+        value={value}
         checked={value ? true : false}
         className="rounded-lg py-2 px-4 border-[#CCCEDB] border-[1px]"
         onChange={onchange}

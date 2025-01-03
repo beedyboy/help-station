@@ -16,7 +16,7 @@ function AmbulanceForm() {
     contactPhoneNumber: 234,
     location: "",
     avalability: 24,
-    HEFAMAAAccreditation: "",
+    HEFAMAAAccreditation: false,
     numberOfAmbulance: 0,
   });
 
