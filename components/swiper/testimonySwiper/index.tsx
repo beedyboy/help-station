@@ -26,7 +26,7 @@ export default function CustomSwiper() {
 
   return (
     <>
-      {size > 780 ? (
+      {size && size > 780 ? (
         <div className="container md:flex-row flex-col flex h-full ">
           {testimonials.map((testimonial, index: number) => {
             let className = "items flex justify-center items-center flex-col";

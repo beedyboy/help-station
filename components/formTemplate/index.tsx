@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { MdOutlineMail } from "react-icons/md";
 
 type FormTemplateProps = {
   componentOne: React.ReactNode;
@@ -12,6 +13,7 @@ type FormTemplateProps = {
   headingText?: string;
   formHeading?: string;
   formText?: string;
+  handleSubmit?: () => void;
 };
 
 const FormTemplate: React.FC<FormTemplateProps> = ({
@@ -22,9 +24,13 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
   headingText,
   formHeading,
   formText,
+  handleSubmit = () => {
+    console.log("hello");
+  },
 }) => {
   const [view, setView] = useState<number>(1);
   const router = useRouter();
+  const year = new Date().getFullYear();
   return (
     <div className="flex flex-col gap-4 w-full pb-5 z-40 ">
       {/* Header Section */}
@@ -76,7 +82,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
         </div>
 
         {/* Content Area */}
-        <div className={`md:px-6 md:py-4 p-2`}>
+        <div className={`md:px-6 md:py-10 p-2`}>
           {view === 1 ? componentOne : componentTwo}
         </div>
       </div>
@@ -96,12 +102,20 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
         {view === 2 ? (
           <button
             type="submit"
-            onClick={() => console.log("Hello Event form")}
+            onClick={() => handleSubmit()}
             className={`w-[150px] self-end md:px-6 py-2 p-2 bg-[#3BAD6B] text-white rounded-lg shadow-md `}
           >
             submit
           </button>
         ) : null}
+      </div>
+
+      <div className=" text-[#70727F] text-[14px] font-normal flex flex-col md:flex-row md:justify-between w-full mt-10 justify-start gap-4  md:items-center">
+        <p>© Help Station {year}</p>
+        <div className="flex items-center gap-2">
+          <MdOutlineMail color="#70727F" />
+          <p>info@helpstation.ng</p>
+        </div>
       </div>
     </div>
   );

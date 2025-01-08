@@ -12,9 +12,9 @@ function EventFormOne({
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row flex-col  gap-3 md:gap-16 items-start"
+        className="flex md:flex-row flex-col  gap-4 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-3 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
             <InputTemplate
               type="email"
@@ -62,7 +62,7 @@ function EventFormOne({
 
         {/*  */}
 
-        <div className="w-full flex flex-col  md:w-[50%] gap-3">
+        <div className="w-full flex flex-col  md:w-[50%] gap-4">
           {/*  */}
           <div className="w-full">
             <InputTemplate
@@ -102,8 +102,8 @@ function EventFormOne({
             <InputTemplate
               type="text"
               labelName="Event Start Time"
-              name="eventStart"
-              value={eventForm.eventCapacity}
+              name="eventStartTime"
+              value={eventForm.eventStartTime}
               onchange={handleChange}
               placeholder="Enter event start time"
             />

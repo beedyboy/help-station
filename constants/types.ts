@@ -4,41 +4,44 @@ export type EventProps = {
   clientOrCompanyName: string;
   eventType: string;
   eventLocation: string;
-  eventDate: "";
+  eventDate: Date;
   eventCapacity: string;
-  eventStart: string;
+  eventStartTime: string;
   eventDuration: string;
-  NumberOfAmbulanceParamedic: number;
-  eventDays: number;
+  NumberOfAmbulanceParamedic: string;
+  eventDays: string;
   otherInformation: string;
-  standByAmbulance: string;
-  standByParamedic: string;
+  typeOfserviceRequired: {
+    standByAmbulance: string;
+    standByParamedic: string;
+  };
+  extraNurseOrDoctorOrParamedic: string;
 };
 
 export type AmbulanceProps = {
   companyName: string;
-  contactName: string;
+
   contactEmail: string;
-  CACRegistrationNumber: number;
+  CACRegistrationNumber: string;
   typeOfAmbulance: string;
   contactPersonName: string;
-  contactPhoneNumber: number;
-  numberOfAmbulance: number;
+  contactPhoneNumber: string;
+  numberOfAmbulance: string;
   location: string;
-  avalability: number;
-  HEFAMAAAccreditation: boolean;
+  avalability: string;
+  HEFAMAAAccreditation: string;
 };
 
 export type HearseProps = {
   companyName: string;
   contactEmail: string;
-  Website: string;
+  website: string;
   contactPersonName: string;
-  contactPhoneNumber: number;
+  contactPhoneNumber: string;
   typeOfHearse: string;
-  numberOfHearse: number;
+  numberOfHearse: string;
   geographicCoverageArea: string;
-  availability: number;
+  availability: string;
   insuranceDetails: string;
   contractWithFuneralHomes: string;
   certificationAndAccreditation: string;
@@ -47,19 +50,101 @@ export type HearseProps = {
 };
 
 export type EmergencyHositalProps = {
-  facilityName: string;
+  companyName: string;
   contactEmail: string;
-  Website: string;
+  website: string;
   contactPersonName: string;
-  contactPhoneNumber: number;
-  facilityAddress: string;
+  contactPhoneNumber: string;
+  address: string;
   location: string;
-  otherLocation: boolean;
+  otherLocation: string;
   specifyIfAnyOtherLocation: string;
-  HEFAMAAAccreditation: boolean;
+  HEFAMAAAccreditation: string;
   checkfacility: {
-    operatingTheatre: boolean;
-    intensiveCareUnit: boolean;
-    highDependencyUnit: boolean;
+    facilityOperatingTheatre: string;
+    facilityIntensiveCareUnit: string;
+    facilityHighDependencyUnit: string;
   };
+};
+
+export type HSETrainingProps = {
+  cleintOrCompanyName: string;
+  email: string;
+  phoneNumber: string;
+  prefferredLocation: string;
+  specificHSETraining: {
+    specialHSELevel1_AwardHealthAndSafety: string;
+    specialHSELevel2_RiskAssessmentPractical: string;
+    specialHSELevel3_AwardEnvironmentalManagement: string;
+    specialfireSafetyAwarenessPrinciples: string;
+    specialHSEforConstructionSiteWorkers: string;
+    specialHSEforConstructionSiteManagers: string;
+    specialHSECompetence: string;
+    specialHIRA: string;
+    specialFSH: string;
+    specialofficeSafety: string;
+  };
+  locationAddress: string;
+  firstTimeCourseOrRefresherCourse: {
+    firstTimeCourse: string;
+    refresherCourse: string;
+    bothCourse: string;
+  };
+  modeOfCommunication: string;
+  preferredDate: Date;
+  preferredTime: string;
+  otherInformation: string;
+};
+
+export type FoodHandlerFormProps = {
+  email: string;
+  phoneNumber: string;
+  testsinterestedIn: {
+    HIVTest: string;
+    HepatitisBTest: string;
+    HepatitisCTest: string;
+    SerumTuberculosisTest: string;
+    PregnancyTest: string;
+    UrinalysisTest: string;
+    WidalTest: string;
+    StoolAnalysisTest: string;
+  };
+  clientOrcompanyName: string;
+  numberOfIndividualsTakingFoodHandlers: string;
+  preferredLocation: {
+    clientsLocation: string;
+    recommendedByHELPStation: string;
+  };
+  locationIsOnsiteProvideAddress: string;
+  preferredTime: string;
+  modeOfCommunicationForFollowUp: string;
+  preferredDate: Date;
+  FSHTraining: string;
+  additionalCommentOrNote: string;
+};
+
+export type FirstAidProps = {
+  email: string;
+  clientOrCompanyName: string;
+  phoneNumber: string;
+  preferredLocation: string;
+  firstAidTraining: {
+    onsite: string;
+    venueRecommendedByHelpStaion: string;
+  };
+  firstAidTrainingRequest: {
+    onsiteTraning: string;
+    virtualTraining: string;
+  };
+
+  firstTimeCourseOrRefresherCourse: {
+    firstTimeCourse: string;
+    refresherCourse: string;
+    bothCourse: string;
+  };
+  trainingDate: Date;
+  trainingTime: string;
+  traineesNumber: string;
+  modeOfCommunication: string;
+  lastTrainingConducted: string;
 };

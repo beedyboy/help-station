@@ -14,25 +14,57 @@ function EventForm() {
     clientOrCompanyName: "",
     eventType: "",
     eventLocation: "",
-    eventDate: "",
+    eventDate: new Date(),
     eventCapacity: "",
-    eventStart: "",
+    eventStartTime: "",
     eventDuration: "",
-    NumberOfAmbulanceParamedic: 0,
-    eventDays: 0,
+    NumberOfAmbulanceParamedic: "",
+    eventDays: "",
     otherInformation: "",
-    standByAmbulance: "No",
-    standByParamedic: "No",
+    typeOfserviceRequired: {
+      standByAmbulance: "No",
+      standByParamedic: "No",
+    },
+    extraNurseOrDoctorOrParamedic: "No",
   });
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
 
-    if (name === "standByAmbulance") {
+    if (name === "extraNurseOrDoctorOrParamedic") {
       return setInput((prev: EventProps) => ({
         ...prev,
-        [name]: value == "No" ? "Yes" : "No",
+        [name]: input.extraNurseOrDoctorOrParamedic === "No" ? "Yes" : "No",
       }));
     }
+
+    if (name === "standByAmbulance") {
+      return setInput((prev) => ({
+        ...prev,
+        typeOfserviceRequired: {
+          ...prev.typeOfserviceRequired,
+          standByParamedic: "No",
+          [name]:
+            input.typeOfserviceRequired.standByAmbulance === "No"
+              ? "Yes"
+              : "No",
+        },
+      }));
+    }
+
+    if (name === "standByParamedic") {
+      return setInput((prev) => ({
+        ...prev,
+        typeOfserviceRequired: {
+          ...prev.typeOfserviceRequired,
+          standByAmbulance: "No",
+          [name]:
+            input.typeOfserviceRequired.standByParamedic === "No"
+              ? "Yes"
+              : "No",
+        },
+      }));
+    }
+
     return setInput((prev) => ({ ...prev, [name]: value }));
   };
   return (
@@ -45,6 +77,7 @@ function EventForm() {
           componentTwo={
             <EventFormTwo eventForm={input} handleChange={handleChange} />
           }
+          handleSubmit={() => console.log(input)}
           bg="#FFEAEA"
           heading="Request Form For Event"
           headingText="When you choose us, you’re not just renting an ambulance; you’re choosing peace of mind."

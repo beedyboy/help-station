@@ -1,7 +1,7 @@
 type InputProps = {
   placeholder: string;
   name: string;
-  value: string | number;
+  value: string | Date;
   labelName: string;
   type: "text" | "number" | "email" | "password" | "date";
   onchange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -24,8 +24,8 @@ const InputTemplate: React.FC<InputProps> = ({
         placeholder={placeholder}
         type={type}
         name={name}
-        value={value}
-        className="rounded-lg placeholder:text-background-2 placeholder:text-xs py-2 px-4 border-[#CCCEDB] border-[1px] outline-none"
+        value={value as string}
+        className="rounded-lg placeholder:text-background-2 placeholder:text-sm py-2 px-4 border-[#CCCEDB] border-[1px] outline-none"
         onChange={onchange}
       />
     </div>

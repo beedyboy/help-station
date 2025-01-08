@@ -1,4 +1,4 @@
-import { FoodHandlerFormProps } from "@/app/services/foodhandler-form/page";
+import { FoodHandlerFormProps } from "@/constants/types";
 import InputTemplate from "@/components/input";
 import RadioInputTemplate from "@/components/input/radio";
 
@@ -12,9 +12,9 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row md:justify-start flex-col  gap-3 md:gap-16 items-start"
+        className="flex md:flex-row md:justify-start flex-col  gap-4 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-5 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
             <InputTemplate
               value={formInput.email}
@@ -37,7 +37,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
           </div>
 
           {/*  */}
-          <div className="flex flex-col justify-start gap-5 ">
+          <div className="flex flex-col justify-start gap-4 ">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               What specific tests are you interested in? (Please select all
               options you are interested in)
@@ -45,20 +45,20 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
             <div className="grid grid-cols-2 justify-between items-center">
               <RadioInputTemplate
                 labelName="HIV"
-                name="standByAmbulance"
-                value={formInput.email}
+                name="HIVTest"
+                value={formInput.testsinterestedIn.HIVTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Pregnancy Test"
-                name=""
-                value={formInput.email}
+                name="PregnancyTest"
+                value={formInput.testsinterestedIn.PregnancyTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Hepatitis B"
-                name=""
-                value={formInput.email}
+                name="HepatitisBTest"
+                value={formInput.testsinterestedIn.HepatitisBTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
@@ -97,10 +97,10 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-3">
+        <div className="w-full flex flex-col md:w-[50%] gap-4">
           <div>
             <InputTemplate
-              value={formInput.email}
+              value={formInput.clientOrcompanyName}
               labelName=" Name of the client/company "
               name="clientOrCompanyName"
               onchange={onchange}
@@ -111,30 +111,38 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
 
           <div className="">
             <InputTemplate
-              value={formInput.email}
+              value={formInput.numberOfIndividualsTakingFoodHandlers}
               labelName="How many individuals need to take the Food Handlers Test?"
-              name="preferredLocation"
+              name="numberOfIndividualsTakingFoodHandlers"
               onchange={onchange}
               placeholder="Enter prefferred location"
               type="text"
             />
           </div>
 
-          <div className="flex flex-col justify-start gap-3 md:h-[200px]">
+          <div className="flex flex-col justify-start gap-4 md:h-[200px]">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               Preferred Location for Test
             </p>
             <div className="grid grid-col-2 gap-2">
               <RadioInputTemplate
                 labelName="Collect Sample at clients’ location"
-                name="standByAmbulance"
-                value={formInput.email}
+                name="clientsLocation"
+                value={
+                  formInput.preferredLocation.clientsLocation === "Yes"
+                    ? "Yes"
+                    : "No"
+                }
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Medical Laboratory recommended by HELP Station"
-                name=""
-                value={formInput.email}
+                name="recommendedByHELPStation"
+                value={
+                  formInput.preferredLocation.recommendedByHELPStation === "Yes"
+                    ? "Yes"
+                    : "No"
+                }
                 onchange={onchange}
               />
             </div>
