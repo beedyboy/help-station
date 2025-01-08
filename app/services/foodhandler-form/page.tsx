@@ -1,19 +1,97 @@
 "use client";
 import React, { useState } from "react";
 import FormTemplate from "@/components/formTemplate";
+import { FoodHandlerFormProps } from "@/constants/types";
 import FoodHandlerFormOne from "@/domain/our-services/foodHandler-form/foodFormOne";
 import FoodHandlerFormTwo from "@/domain/our-services/foodHandler-form/foodFormTwo";
-
-export type FoodHandlerFormProps = { email: string; phoneNumber: number };
 
 function FoodHandleForm() {
   const [input, setInput] = useState<FoodHandlerFormProps>({
     email: "",
-    phoneNumber: 234,
+    phoneNumber: "",
+    testsinterestedIn: {
+      HIVTest: "No",
+      HepatitisBTest: "No",
+      HepatitisCTest: "No",
+      SerumTuberculosisTest: "No",
+      PregnancyTest: "No",
+      UrinalysisTest: "No",
+      WidalTest: "No",
+      StoolAnalysisTest: "No",
+    },
+    clientOrcompanyName: "",
+    numberOfIndividualsTakingFoodHandlers: "",
+    preferredLocation: {
+      clientsLocation: "No",
+      recommendedByHELPStation: "No",
+    },
+    locationIsOnsiteProvideAddress: "",
+    preferredTime: "",
+    modeOfCommunicationForFollowUp: "Call/Text",
+    preferredDate: new Date(),
+    FSHTraining: "No",
+    additionalCommentOrNote: "",
   });
 
   const handleFoodHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
+    if (name.includes("Test")) {
+      return setInput((prev) => ({
+        ...prev,
+        testsinterestedIn: {
+          ...prev.testsinterestedIn,
+          [name]:
+            input.testsinterestedIn[
+              name as keyof typeof input.testsinterestedIn
+            ] === "Yes"
+              ? "No"
+              : "Yes",
+        },
+      }));
+    }
+
+    if (name === "FSHTraining") {
+      return setInput((prev) => ({
+        ...prev,
+        FSHTraining: input.FSHTraining === "Yes" ? "No" : "Yes",
+      }));
+    }
+
+    if (name === "Call/Text") {
+      return setInput((prev) => ({
+        ...prev,
+        modeOfCommunicationForFollowUp: "Call/Text",
+      }));
+    }
+
+    if (name === "emailAddress") {
+      return setInput((prev) => ({
+        ...prev,
+        modeOfCommunicationForFollowUp: "Email",
+      }));
+    }
+
+    if (name === "clientsLocation") {
+      return setInput((prev) => ({
+        ...prev,
+        preferredLocation: {
+          ...prev.preferredLocation,
+          clientsLocation: "Yes",
+          recommendedByHELPStation: "No",
+        },
+      }));
+    }
+
+    if (name === "recommendedByHELPStation") {
+      return setInput((prev) => ({
+        ...prev,
+        preferredLocation: {
+          ...prev.preferredLocation,
+          clientsLocation: "No",
+          recommendedByHELPStation: "Yes",
+        },
+      }));
+    }
 
     return setInput((prev) => ({ ...prev, [name]: value }));
   };
@@ -34,6 +112,7 @@ function FoodHandleForm() {
               formInput={input}
             />
           }
+          handleSubmit={() => console.log(input)}
           bg="#FFF4D2"
           heading="Request Form For Food Handlers Test"
           headingText="Thank you for choosing HelpStation for your Food Handlers Test. To streamline the process and ensure we fulfil your requirements accurately, please fill out the following request form."

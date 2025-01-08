@@ -2,7 +2,7 @@ import CustomSwiper from "@/components/swiper/testimonySwiper";
 import Image from "next/image";
 function BrandTestimony() {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-8 gap-10">
+    <div className="flex w-full flex-col items-center justify-center py-8 ">
       <div className="md:w-[70%] flex flex-col  justify-center items-center">
         <div className="flex items-centern justify-center w-full">
           <div className="w-[20%] hidden  md:flex justify-center items-center ">

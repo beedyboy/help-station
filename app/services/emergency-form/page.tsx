@@ -7,25 +7,47 @@ import { EmergencyHositalProps } from "@/constants/types";
 
 function EmergencyForm() {
   const [input, setInput] = useState<EmergencyHositalProps>({
-    facilityName: "",
+    companyName: "",
     contactEmail: "",
-    Website: "",
+    website: "",
     contactPersonName: "",
-    contactPhoneNumber: 234,
-    facilityAddress: "",
+    contactPhoneNumber: "",
+    address: "",
     location: "",
-    otherLocation: false,
+    otherLocation: "",
     specifyIfAnyOtherLocation: "",
-    HEFAMAAAccreditation: false,
+    HEFAMAAAccreditation: "Yes",
     checkfacility: {
-      operatingTheatre: false,
-      intensiveCareUnit: false,
-      highDependencyUnit: false,
+      facilityOperatingTheatre: "No",
+      facilityIntensiveCareUnit: "No",
+      facilityHighDependencyUnit: "No",
     },
   });
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setInput((prev) => ({ ...prev, [name]: value }));
+    if (name === "HEFAMAAAccreditation") {
+      return setInput((prev) => ({
+        ...prev,
+        HEFAMAAAccreditation:
+          input.HEFAMAAAccreditation === "Yes" ? "No" : "Yes",
+      }));
+    }
+
+    if (name.includes("facility")) {
+      return setInput((prev) => ({
+        ...prev,
+        checkfacility: {
+          ...prev.checkfacility,
+          [name]:
+            input.checkfacility[name as keyof typeof input.checkfacility] ===
+            "Yes"
+              ? "No"
+              : "Yes",
+        },
+      }));
+    }
+
+    return setInput((prev) => ({ ...prev, [name]: value }));
   };
   return (
     <div className="w-full flex justify-center  items-center relative">
@@ -45,6 +67,7 @@ function EmergencyForm() {
               handleChange={handleChange}
             />
           }
+          handleSubmit={() => console.log(input)}
           bg="#F9F9FC"
           heading="Emergency  Ready Hospital Partner  Form"
           headingText="Thank you for choosing Help Station as an ambulance partner. To streamline the process and ensure we fulfill your requirements accurately"

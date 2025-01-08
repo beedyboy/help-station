@@ -14,7 +14,7 @@ function AmbulanceFormOne({
         action=""
         className="flex md:flex-row flex-col  gap-3 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-3 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
             <InputTemplate
               type="text"
@@ -61,7 +61,7 @@ function AmbulanceFormOne({
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col  md:w-[50%] gap-3">
+        <div className="w-full flex flex-col  md:w-[50%] gap-4">
           <div>
             <InputTemplate
               type="text"

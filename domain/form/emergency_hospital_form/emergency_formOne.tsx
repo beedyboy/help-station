@@ -12,15 +12,15 @@ function EmergencyFormOne({
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row flex-col  gap-3 md:gap-16 items-start"
+        className="flex md:flex-row flex-col  gap-4 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-3 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
             <InputTemplate
               type="text"
               labelName="Company Name"
               name="companyName"
-              value={emergencyInput.facilityName}
+              value={emergencyInput.companyName}
               onchange={handleChange}
               placeholder="Enter comapny name "
             />
@@ -42,15 +42,15 @@ function EmergencyFormOne({
               type="text"
               labelName="Website"
               name="website"
-              value={emergencyInput.Website}
+              value={emergencyInput.website}
               onchange={handleChange}
-              placeholder="Enter website"
+              placeholder="Enter website address"
             />
           </div>
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col  md:w-[50%] gap-3">
+        <div className="w-full flex flex-col  md:w-[50%] gap-4">
           <div>
             <InputTemplate
               type="text"
@@ -77,8 +77,8 @@ function EmergencyFormOne({
             <InputTemplate
               type="text"
               labelName="Facility Address"
-              name="facilityAddress"
-              value={emergencyInput.facilityAddress}
+              name="address"
+              value={emergencyInput.address}
               onchange={handleChange}
               placeholder="Enter facility addresss"
             />

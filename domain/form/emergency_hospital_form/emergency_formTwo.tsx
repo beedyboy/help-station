@@ -13,9 +13,9 @@ function EmergencyFormTwo({
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row flex-col  gap-3 md:gap-16 items-start"
+        className="flex md:flex-row flex-col  gap-4 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-3 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
             <InputTemplate
               type="text"
@@ -27,20 +27,20 @@ function EmergencyFormTwo({
             />
           </div>
 
-          <div className="flex flex-col justify-start gap-3 md:h-[200px]">
+          <div className="flex flex-col justify-start gap-4 md:h-[200px]">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               Other Location(s)
             </p>
             <RadioInputTemplate
               labelName="Yes"
-              name="standByAmbulance"
-              value={emergencyInput.otherLocation}
+              name="otherLocation"
+              value={emergencyInput.otherLocation === "Yes" ? "Yes" : "NO"}
               onchange={handleChange}
             />
             <RadioInputTemplate
-              labelName="Paramedic on standby"
-              name="standByParamedic"
-              value={!emergencyInput.otherLocation}
+              labelName="No"
+              name="otherLocation"
+              value={emergencyInput.otherLocation === "Yes" ? "No" : "Yes"}
               onchange={handleChange}
             />
           </div>
@@ -50,7 +50,7 @@ function EmergencyFormTwo({
               type="text"
               labelName="Website"
               name="website"
-              value={emergencyInput.Website}
+              value={emergencyInput.website}
               onchange={handleChange}
               placeholder="Enter website"
             />
@@ -58,46 +58,65 @@ function EmergencyFormTwo({
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col  md:w-[50%] gap-3">
+        <div className="w-full flex flex-col  md:w-[50%] gap-4">
           <div className="flex flex-col justify-start gap-3 md:h-[200px]">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               HEFAMAA Accreditation
             </p>
             <RadioInputTemplate
               labelName="Yes"
-              name="standByAmbulance"
-              value={emergencyInput.otherLocation}
+              name=" HEFAMAAAccreditation"
+              value={
+                emergencyInput.HEFAMAAAccreditation === "Yes" ? "Yes" : "No"
+              }
               onchange={handleChange}
             />
             <RadioInputTemplate
-              labelName="Paramedic on standby"
-              name="standByParamedic"
-              value={!emergencyInput.otherLocation}
+              labelName="No"
+              name=" HEFAMAAAccreditation"
+              value={
+                emergencyInput.HEFAMAAAccreditation === "Yes" ? "No" : "Yes"
+              }
               onchange={handleChange}
             />
           </div>
 
-          <div className="w-full flex flex-col  md:w-[50%] gap-3">
+          <div className="w-full flex flex-col  md:w-[50%] gap-4">
             <div className="flex flex-col justify-start gap-3 md:h-[200px]">
               <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
                 Check all that applies to your facility
               </p>
               <RadioInputTemplate
                 labelName="Operating Theatre"
-                name="OperatingTheatre"
-                value={emergencyInput.checkfacility.operatingTheatre}
+                name="facilityOperatingTheatre"
+                value={
+                  emergencyInput.checkfacility.facilityOperatingTheatre ===
+                  "Yes"
+                    ? "No"
+                    : "Yes"
+                }
                 onchange={handleChange}
               />
               <RadioInputTemplate
                 labelName="Intensive Care Unit"
-                name="intensiveCareUnit"
-                value={emergencyInput.checkfacility.intensiveCareUnit}
+                name="facilityIntensiveCareUnit"
+                value={
+                  emergencyInput.checkfacility.facilityIntensiveCareUnit ===
+                  "Yes"
+                    ? "No"
+                    : "Yes"
+                }
                 onchange={handleChange}
               />
               <RadioInputTemplate
                 labelName="High Dependency Unit"
-                name="standByParamedic"
-                value={emergencyInput.checkfacility.highDependencyUnit}
+                name="facilityHighDependencyUnit"
+                value={
+                  emergencyInput.checkfacility.facilityHighDependencyUnit ===
+                  "Yes"
+                    ? "No"
+                    : "Yes"
+                }
                 onchange={handleChange}
               />
             </div>

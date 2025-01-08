@@ -22,7 +22,7 @@ const Modal = ({ children }: ModalProps) => {
         className="flex flex-col md:w-[895px] w-[350px] md:h-[470px] h-auto bg-white p-6 rounded-lg shadow-lg "
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-end items-start gap-6 ml-auto cursor-pointer ">
+        <div className="hidden md:flex justify-end items-start gap-6 ml-auto cursor-pointer ">
           <Image
             src="icons/close_round.svg"
             width={29}

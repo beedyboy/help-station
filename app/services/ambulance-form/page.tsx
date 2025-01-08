@@ -9,20 +9,27 @@ function AmbulanceForm() {
   const [input, setInput] = useState<AmbulanceProps>({
     companyName: "",
     contactEmail: "",
-    contactName: "",
-    CACRegistrationNumber: 122,
+    CACRegistrationNumber: "",
     typeOfAmbulance: "",
     contactPersonName: "",
-    contactPhoneNumber: 234,
+    contactPhoneNumber: "",
     location: "",
-    avalability: 24,
-    HEFAMAAAccreditation: "",
-    numberOfAmbulance: 0,
+    avalability: "",
+    HEFAMAAAccreditation: "Yes",
+    numberOfAmbulance: "",
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setInput((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "HEFAMAAAccreditation") {
+      return setInput((prev) => ({
+        ...prev,
+        HEFAMAAAccreditation:
+          input.HEFAMAAAccreditation === "Yes" ? "No" : "Yes",
+      }));
+    }
+    return setInput((prev) => ({ ...prev, [name]: value }));
   };
   return (
     <div className="w-full flex justify-center  items-center relative">
@@ -42,6 +49,7 @@ function AmbulanceForm() {
               handleChange={handleChange}
             />
           }
+          handleSubmit={() => console.log(input)}
           bg="#F9F9FC"
           heading="Ambulance Partner Form"
           headingText="Thank you for choosing Help Station as an ambulance partner. To streamline the process and ensure we fulfill your requirements accurately, please fill out the following request form."

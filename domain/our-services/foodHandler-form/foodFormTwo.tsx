@@ -1,4 +1,4 @@
-import { FoodHandlerFormProps } from "@/app/services/foodhandler-form/page";
+import { FoodHandlerFormProps } from "@/constants/types";
 import InputTemplate from "@/components/input";
 import RadioInputTemplate from "@/components/input/radio";
 
@@ -12,85 +12,93 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row md:justify-start flex-col  gap-3 md:gap-16 items-start"
+        className="flex md:flex-row md:justify-start flex-col  gap-4 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-5 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
             <InputTemplate
-              value={formInput.email}
+              value={formInput.locationIsOnsiteProvideAddress}
               labelName="If location is onsite, kindly provide the address"
-              name="email"
+              name="locationIsOnsiteProvideAddress"
               onchange={onchange}
-              placeholder="Enter email"
-              type="date"
+              placeholder="Provide on site location"
+              type="text"
             />
           </div>
           <div>
             <InputTemplate
-              value={formInput.email}
-              labelName="Preferred Test Time"
-              name="traineesNumber"
+              value={formInput.phoneNumber}
+              labelName="Phone number"
+              name="phoneNumber"
               onchange={onchange}
-              placeholder="Enter prefferred test time"
+              placeholder="Enter preferred test time"
               type="text"
             />
           </div>
 
-          <div className="flex flex-col justify-start gap-5 md:h-[200px]">
+          <div className="flex flex-col justify-start gap-4 md:h-[200px]">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               What is your preferred mode of communication for follow-up?
             </p>
             <RadioInputTemplate
-              labelName="Email"
+              labelName="Call/Text"
               name="standByAmbulance"
-              value={formInput.email}
+              value={
+                formInput.modeOfCommunicationForFollowUp === "Call/Text"
+                  ? "Yes"
+                  : "No"
+              }
               onchange={onchange}
             />
             <RadioInputTemplate
               labelName="Call/Text"
               name=""
-              value={formInput.email}
+              value={
+                formInput.modeOfCommunicationForFollowUp !== "Call/Text"
+                  ? "Yes"
+                  : "No"
+              }
               onchange={onchange}
             />
           </div>
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-5">
+        <div className="w-full flex flex-col md:w-[50%] gap-4">
           <div>
             <InputTemplate
-              value={formInput.email}
+              value={formInput.preferredDate}
               labelName=" Preferred Test Date "
-              name="trainingTime"
+              name="preferredDate"
               onchange={onchange}
               placeholder="Enter preffered test date"
-              type="text"
+              type="date"
             />
           </div>
 
-          <div className="flex flex-col justify-start gap-5 ">
+          <div className="flex flex-col justify-start gap-4 ">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               Would you be interested in a food safety training for your staff?
             </p>
             <RadioInputTemplate
               labelName="Yes"
-              name="standByAmbulance"
-              value={formInput.email}
+              name="FSHTraining"
+              value={formInput.FSHTraining === "Yes" ? "Yes" : "No"}
               onchange={onchange}
             />
             <RadioInputTemplate
               labelName="No"
-              name=""
-              value={formInput.email}
+              name="FSHTraining"
+              value={formInput.FSHTraining === "Yes" ? "No" : "Yes"}
               onchange={onchange}
             />
           </div>
 
           <div className="md:h-[200px]">
             <InputTemplate
-              value={formInput.email}
+              value={formInput.additionalCommentOrNote}
               labelName=" Additional comment or note"
-              name="preferredLocation"
+              name="additionalCommentOrNote"
               onchange={onchange}
               placeholder="Enter additional comment or note"
               type="text"
