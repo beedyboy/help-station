@@ -19,20 +19,22 @@ const Modal = ({ children }: ModalProps) => {
       onClick={closeModal}
     >
       <div
-        className="flex flex-col md:w-[895px] w-[350px] md:h-[470px] h-auto bg-white p-6 rounded-lg shadow-lg "
+        className="flex justify-center flex-col gap-4 items-center md:w-[895px] overflow-hidden relative w-[350px]  md:h-[470px] h-auto bg-white p-6 md:p-0 rounded-lg md:shadow-lg "
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="hidden md:flex justify-end items-start gap-6 ml-auto cursor-pointer ">
+        <div className="md:absolute flex justify-end items-end top-4 right-6 cursor-pointer md:w-8 w-full h-8 z-10">
           <Image
             src="icons/close_round.svg"
             width={29}
             height={29}
             onClick={closeModal}
-            className="py-2 text-white rounded"
+            className="py-2 text-white rounded md:block"
             alt={"close_modal"}
           />
         </div>
-        <div>{children}</div>
+        <div className=" w-full h-full flex justify-center items-center">
+          {children}
+        </div>
       </div>
     </div>
   );
