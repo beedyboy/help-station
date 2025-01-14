@@ -6,6 +6,7 @@ import React from "react";
 interface SubscriptionCardProps {
   color: string;
   bgColor: string;
+  category: string;
   title: string;
   price: string;
   benefits: Array<string>;
@@ -42,13 +43,17 @@ const textClasses = {
 const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   color,
   bgColor,
+  category,
   title,
   price,
   benefits,
   icon,
 }) => {
-  const formattedTitle = title.replace(/\s+/g, "-").toLowerCase(); 
-  
+  // const formattedTitle = title.replace(/\s+/g, "-").toLowerCase(); 
+  const slugify = (text: string) =>
+    text.toLowerCase().replace(/ /g, "-").replace(/[^a-z0-9-]/g, "");
+
+ 
   return (
     <div className="w-[360px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
       {/* Top Section */}
@@ -76,7 +81,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
         <div className="self-stretch h-12 flex-col justify-start items-start gap-3 flex">
           <div className="self-stretch rounded-lg justify-start items-start inline-flex">
           <Link
-              href={`/subscriptions/${formattedTitle}`}
+              href={`/subscriptions/${slugify(category)}/${slugify(title)}`}
               className={`grow shrink basis-0 h-12 px-5 py-3 text-center rounded-lg shadow border ${textClasses[color as keyof typeof textClasses]?.bg}`}
             >
               <span className="text-white text-base font-semibold">Get started</span>

@@ -1,7 +1,7 @@
-export const AMBUCYCLE_PLANS = [
+export const AMBUCYCLE_PLANS: IPlan[] = [
   {
     title: "Basic Responder Plan",
-    price: "20,000",
+    price: 20000,
     features: [
       "First responder dispatch to site for care treatment & coordination <strong>(5 call out per year) </strong>",
       "24/7 coverage and response through the Help Station Call Center (available for support)",
@@ -16,7 +16,7 @@ export const AMBUCYCLE_PLANS = [
   },
   {
     title: "Advanced Responder Plan",
-    price: "35,000",
+    price: 35000,
     features: [
       "First responder dispatch to site for care treatment & coordination  <strong>(7 call-outs per year) </strong>",
       "24/7 coverage and response through the Help Station Call Center (available for support)",
@@ -30,7 +30,7 @@ export const AMBUCYCLE_PLANS = [
   },
   {
     title: "Family Responder Plan",
-    price: "55,000",
+    price: 55000,
     features: [
       "First responder dispatch to site for care treatment & coordination <strong>(10 call-outs per year)</strong>",
       "24/7 coverage and response through the Help Station Call Center (available for support)",
@@ -44,10 +44,10 @@ export const AMBUCYCLE_PLANS = [
   },
 ];
 
-export const AMBULANCE_SUBSCRIPTION_PLANS = [
+export const AMBULANCE_SUBSCRIPTION_PLANS: IPlan[] = [
   {
     title: "Basic Ambulance Plan",
-    price: "55,000",
+    price: 55000,
     features: [
       "Ambulance dispatch to site for medical care and transfer <strong>(1 call out per year) </strong>",
       "First responder dispatch to site for care treatment & coordination <strong>(1 call out per year) </strong>",
@@ -62,7 +62,7 @@ export const AMBULANCE_SUBSCRIPTION_PLANS = [
   },
   {
     title: "Deluxe Ambulance Plan",
-    price: "65,000",
+    price: 65000,
     features: [
       "Ambulance dispatch to site for medical care and transfer <strong>(1 call out per year) </strong>",
       "First responder dispatch to site for care treatment & coordination <strong>(3 call out per year) </strong>",
@@ -77,7 +77,7 @@ export const AMBULANCE_SUBSCRIPTION_PLANS = [
   },
   {
     title: "Premium Ambulance Plan",
-    price: "110,000",
+    price: 110000,
     features: [
       "Ambulance dispatch to site for care treatment & coordination <strong>(10 call-outs per year)</strong>",
       "First responder dispatch to site for care treatment & coordination <strong>(5 call out per year) </strong>",
@@ -91,3 +91,6 @@ export const AMBULANCE_SUBSCRIPTION_PLANS = [
     icon: "icons/golden_wine_check_circle.svg",
   },
 ];
+
+
+export const plansData = [AMBUCYCLE_PLANS, AMBULANCE_SUBSCRIPTION_PLANS];
