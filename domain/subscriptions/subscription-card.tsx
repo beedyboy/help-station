@@ -1,4 +1,5 @@
 "use client";
+import { formatCurrency } from "@/utils/string";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,7 +9,7 @@ interface SubscriptionCardProps {
   bgColor: string;
   category: string;
   title: string;
-  price: string;
+  price: number;
   benefits: Array<string>;
   icon: string;
 }
@@ -71,7 +72,8 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
 
           <div className="self-stretch h-[72px] flex-col justify-start items-center gap-2 flex">
             <div className="self-stretch text-center text-[#1b1b20] text-[32px] font-bold">
-              ₦{price}
+              {/* ₦{price} */}
+              {formatCurrency(Number(price))}
             </div>
             <div className="self-stretch text-center text-[#373946] text-base font-normal">
               per year
