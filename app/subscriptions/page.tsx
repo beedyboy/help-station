@@ -1,8 +1,7 @@
 "use client";
 import { SimpleFooter } from "@/components/layout/SimpleFooter";
 import {
-  AMBUCYCLE_PLANS,
-  AMBULANCE_SUBSCRIPTION_PLANS,
+  plansData,
 } from "@/constants/subscriptions";
 import {
   SubscriptionProvider,
@@ -13,7 +12,6 @@ import SubscriptionCard from "@/domain/subscriptions/subscription-card";
 
 const MainContent: React.FC = () => {
   const { activeIndex } = useSubscription();
-  const plansData = [AMBUCYCLE_PLANS, AMBULANCE_SUBSCRIPTION_PLANS];
   const titles = ["Ambucycle Plan", "Ambulance Subscription Plans"];
 
   return (
@@ -32,6 +30,7 @@ const MainContent: React.FC = () => {
                   key={index}
                   color={plan.color}
                   bgColor={plan.bgColor}
+                  category={titles[activeIndex]}
                   title={plan.title}
                   price={plan.price}
                   benefits={plan.features}

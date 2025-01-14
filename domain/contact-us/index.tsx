@@ -29,19 +29,52 @@ const contactInfo = [
 ];
 
 function ContactUsPage() {
-  const [input, setInput] = useState({
+  const [form, setForm] = useState({
     firstName: "",
     lastName: "",
     message: "",
     email: "",
   });
 
+  const [status, setStatus] = useState<boolean>(false);
+
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
-    setInput((prev) => ({ ...prev, [name]: value }));
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setStatus(true);
+    try {
+      const payload = {
+        name: `${form.firstName} ${form.lastName}`,
+        email: form.email,
+        message: form.message
+      }
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus(false);
+        setForm({ firstName: '', lastName: '', email: '', message: '' });
+      } else {
+        setStatus(result.message || 'Failed to send message.');
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus(false);
+    }
+  };
+
   return (
     <main className="w-full flex justify-center flex-col md:gap-12 items-center ">
       <section className="relative h-[400px] flex justify-center items-center w-full">
@@ -128,7 +161,7 @@ function ContactUsPage() {
             <p className="text-[#70727F] text-base">
               We’d love to hear from you. Please fill out this form.
             </p>
-            <form className="flex flex-col items-center gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col items-center gap-3">
               <div className="flex w-full items-center gap-7">
                 <div className="flex flex-col gap-2 w-[50%]">
                   <label className="text-base leading-6 text-primary-5">
@@ -139,7 +172,7 @@ function ContactUsPage() {
                     placeholder="First name"
                     name="firstName"
                     onChange={handleChange}
-                    value={input.lastName}
+                    value={form.firstName}
                   />
                 </div>
                 <div className="flex flex-col gap-2 w-[50%]">
@@ -151,7 +184,7 @@ function ContactUsPage() {
                     placeholder="Last name"
                     name="lastName"
                     onChange={handleChange}
-                    value={input.lastName}
+                    value={form.lastName}
                   />
                 </div>
               </div>
@@ -165,7 +198,7 @@ function ContactUsPage() {
                   placeholder="you@company.com"
                   name="email"
                   type="email"
-                  value={input.email}
+                  value={form.email}
                   onChange={handleChange}
                 />
               </div>
@@ -177,15 +210,15 @@ function ContactUsPage() {
                 <textarea
                   className="w-full h-[128px] p-2 text-sm placeholder:text-[#CCCEDB] outline-none border-[1px] border-[#CCCEDB] rounded-lg"
                   placeholder=""
-                  value={input.message}
+                  value={form.message}
                   name="message"
                   onChange={handleChange}
                 ></textarea>
               </div>
 
               <div className="w-[100%]">
-                <button className=" w-[100%] bg-primary-4 p-4 rounded-lg text-white text-center">
-                  Submit
+                <button type="submit" disabled={status} className=" w-[100%] bg-primary-4 p-4 rounded-lg text-white text-center">
+                   {status ? 'Sending...' : 'Submit'}
                 </button>
               </div>
             </form>
