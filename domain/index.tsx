@@ -102,8 +102,8 @@ const HomePage: React.FC = () => {
         </div>
       </main>
       <Modal>
-        <div className="w-full bg-white rounded-2xl shadow relative">
-          <div className="w-[357px] h-full bg-[#f9f9fc] absolute left-0 top-0">
+        <div className="flex w-full h-full justify-center items-center bg-white rounded-2xl md:shadow relative">
+          <div className="hidden md:flex justify-center items-center w-[357px] h-full bg-[#f9f9fc] absolute left-0 top-0">
             <Image
               src="images/emergency_call_pana.svg"
               alt="framer"
@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
             />
           </div>
 
-          <div className="h-[268px] flex flex-col gap-6 absolute left-[369px] top-[101px]">
+          <div className="h-[268px] flex flex-col gap-6 md:absolute left-[369px] top-[101px]">
             <div className="flex flex-col gap-2">
               <h1 className="text-[#1b1c20] text-5xl font-bold font-['BR Firma']">
                 How prepared are you for an emergency
