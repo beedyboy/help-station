@@ -4,16 +4,7 @@ import * as Yup from "yup";
 import Image from "next/image";
 import { SimpleFooter } from "@/components/layout/SimpleFooter";
 import React, {
-  AwaitedReactNode,
-  JSXElementConstructor,
-  ReactElement,
-  ReactNode,
-  AwaitedReactNode,
-  JSXElementConstructor,
-  Key,
-  ReactElement,
-  ReactNode,
-  useEffect,
+  use,
   useState,
 } from "react";
 import {
@@ -38,31 +29,23 @@ const SUBSCRIPTION_HINT = [
   "Our highly trained paramedics provide basic life support at the scene of an emergency to stabilize the victim before the arrival of advanced treatment or transportation to a certified health center.",
   "The first responder plan is currently available within Lagos Island",
 ];
-const plansMap = {
+
+const plansMap : Record<string, IPlan[]>= {
   "ambucycle-plan": AMBUCYCLE_PLANS,
   "ambulance-subscription-plans": AMBULANCE_SUBSCRIPTION_PLANS,
 };
 
-function Plan({ params }: { params: { category: string; planName: string } }) {
-  const resolvedParams = React.use(params);
+
+interface PageProps {
+  params: Promise<{ category: string; planName: string }>;
+}
+
+export default  function Page({ params }: PageProps) {
+  const resolvedParams = use(params);
   const { category, planName } = resolvedParams;
 
-  const planData = plansMap[category]?.find(
-    (plan: { title: string }) =>
-      plan.title
-        .toLowerCase()
-        .replace(/ /g, "-")
-        .replace(/[^a-z0-9-]/g, "") === planName
-  );
-
-  useEffect(() => {
-    if (!planData) {
-      notFound();
-    }
-  }, [planData]);
-
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Record<string, string>>({
     email: "",
     firstName: "",
     lastName: "",
@@ -70,8 +53,20 @@ function Plan({ params }: { params: { category: string; planName: string } }) {
     phone: "",
     plan: "First user plan",
   });
-  const [errors, setErrors] = useState<any>({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const router = useRouter();
+
+  const planData: IPlan | null | undefined = plansMap[category]?.find(
+    (plan: { title: string }) =>
+      plan.title
+        .toLowerCase()
+        .replace(/ /g, "-")
+        .replace(/[^a-z0-9-]/g, "") === planName
+  );
+
+  if (!planData) {
+    notFound();
+  }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -85,32 +80,24 @@ function Plan({ params }: { params: { category: string; planName: string } }) {
       setErrors({});
       return true;
     } catch (validationErrors) {
-      const newErrors = validationErrors.inner.reduce(
-        (acc: any, error: any) => {
-          acc[error.path] = error.message;
-          return acc;
-        },
-        {}
-      );
-      console.log({ newErrors });
+      if (validationErrors instanceof Yup.ValidationError) {
+        const newErrors = validationErrors.inner.reduce(
+          (acc: Record<string, string>, error) => {
+            if (error.path) acc[error.path] = error.message;
+            return acc;
+          },
+          {}
+        );
       setErrors(newErrors);
-      return false;
     }
+    return false;
+  } 
   };
 
   const renderSelect = (
-    label:
-      | string
-      | number
-      | bigint
-      | boolean
-      | ReactElement<any, string | JSXElementConstructor<any>>
-      | Iterable<ReactNode>
-      | Promise<AwaitedReactNode>
-      | null
-      | undefined,
-    name: string | undefined,
-    options: any[]
+    label: string,
+    name: string,
+    options: string[]
   ) => (
     <div>
       <label className="block text-xs font-semibold text-[#1b1b20]">
@@ -119,20 +106,13 @@ function Plan({ params }: { params: { category: string; planName: string } }) {
       <select
         className="w-full border border-[#c5c7d2] rounded-lg p-2"
         name={name}
-        value={formData[name]}
+        value={formData[name as keyof typeof formData]}
         onChange={handleChange}
       >
         <option value="">Select {label}</option>
         {options.map(
           (
-            option:
-              | boolean
-              | ReactElement<any, string | JSXElementConstructor<any>>
-              | Iterable<ReactNode>
-              | Promise<AwaitedReactNode>
-              | Key
-              | null
-              | undefined
+            option: string
           ) => (
             <option key={option} value={option}>
               {option}
@@ -161,7 +141,7 @@ function Plan({ params }: { params: { category: string; planName: string } }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: formData.email,
-          amount: parseFloat(planData.price),
+          amount: Number(planData.price),
           metadata,
           callback_url: callbackUrl,
         }),
@@ -372,5 +352,3 @@ function Plan({ params }: { params: { category: string; planName: string } }) {
     </div>
   );
 }
-
-export default Plan;
