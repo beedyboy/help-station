@@ -9,6 +9,11 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+/.env
+/example.env
+/env
+
+
 
 # testing
 /coverage
