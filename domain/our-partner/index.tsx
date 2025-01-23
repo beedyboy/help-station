@@ -20,6 +20,15 @@ function OurPartner() {
                   description=" At HelpStation, we believe in the power of partnerships to ensure everyone has access to essential medical emergency services. By joining forces with us, you can help expand our reach and enhance the quality of emergency response in our communities. As a partner, you'll gain access to exclusive resources, support, and opportunities to make a meaningful impact."
                   subHeading="Join Us Today"
                   heading="Become a partner "
+                  subDescription=""
+                  hasOnclickFn={false}
+                  link=""
+                  name=""
+                  onClick={() => console.log("")}
+                  text=""
+                  headingText=""
+                  linkColor=""
+                  linkText=""
                 />
               </div>
               <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
@@ -57,11 +66,11 @@ function OurPartner() {
         </section>
 
         <section className="lg:w-[85%] w-[90%] flex md:justify-between flex-col md:flex-row gap-20 lg:gap-28 items-center">
-          <div className="flex justify-start flex-col gap-3 md:w-[40%] w-[100%] ">
-            <h3 className="text-primary-4 font-bold md:text-[48px] md:leading-[60px] text-[32px] leading-10">
+          <div className="flex justify-start flex-col gap-3 md:w-[40%] w-[100%]  ">
+            <h3 className="text-primary-4 md:p-2 font-bold md:text-[48px] md:leading-[60px] text-[32px] leading-10">
               Step 1
             </h3>
-            <p className="md:text-[18px] text-base leading-6  text-primary-5">
+            <p className="md:text-[18px] text-base leading-6 md:p-2 text-primary-5">
               Click on this {""}
               <span className="font-semibold">
                 &quot;Get started&quot;

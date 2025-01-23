@@ -1,5 +1,11 @@
 import Image from "next/image";
 import connectImg from "@/public/images/help_station_connectwithus.svg";
+import ImageTemplate from "@/components/image";
+import facebookImg from "@/public/images/facebook .svg";
+import tikTokImg from "@/public/images/tiktok.svg";
+import instargramImg from "@/public/images/instagram.svg";
+import linkedInImg from "@/public/images/linkedIn.svg";
+import Link from "next/link";
 
 function ConnectWithUs() {
   return (
@@ -15,7 +21,25 @@ function ConnectWithUs() {
           Follow us on our social media pages for the latest updates in
           emergency preparedness, medical insights and more.
         </p>
-        <div></div>
+        <div className="flex gap-2 items-center">
+          <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
+            <Link href="https://www.facebook.com/HelpStation1?mibextid=LQQJ4d">
+              <ImageTemplate src={facebookImg} />
+            </Link>
+          </div>
+          <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
+            <Link href="https://x.com/help_station_?s=21&t=19V3dJbyyA0Rx0GBcBebsg"></Link>
+            <ImageTemplate src={tikTokImg} />
+          </div>
+          <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
+            <Link href="https://www.instagram.com/helpstation.ng"></Link>
+            <ImageTemplate src={instargramImg} />
+          </div>
+          <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
+            <Link href="https://www.linkedin.com/company/help-station-ng"></Link>
+            <ImageTemplate src={linkedInImg} />
+          </div>
+        </div>
       </div>
 
       <div className="md:w-[50%] flex justify-end items-end">

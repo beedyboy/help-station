@@ -148,3 +148,14 @@ export type FirstAidProps = {
   modeOfCommunication: string;
   lastTrainingConducted: string;
 };
+
+export interface IQuestionItem {
+  id: number;
+  question: string;
+  options: string[];
+  correctAnswer?: string;
+}
+export interface IQuestion {
+  section: string;
+  questions: IQuestionItem[];
+}
