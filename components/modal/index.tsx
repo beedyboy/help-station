@@ -16,7 +16,7 @@ const Modal = ({ children }: ModalProps) => {
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-      onClick={closeModal}
+      onClick={() => closeModal()}
     >
       <div
         className="flex justify-center flex-col gap-4 items-center md:w-[895px] overflow-hidden relative w-[350px]  md:h-[470px] h-auto bg-white p-6 md:p-0 rounded-lg md:shadow-lg "

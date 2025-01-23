@@ -17,14 +17,20 @@ function BrandPartners() {
           Partnership for greater impact
         </h3>
 
-        <div className="md:w-[46%] text-base leading-7 font-semibold flex flex-col justify-center items-center gap-3">
+        <div className="md:w-[46%] text-base leading-7 p-2 font-semibold flex flex-col justify-center items-center gap-3">
           <p>At HELP, we are passionate about </p>
-          <p className="text-btnColor">
+          <p className="text- md:hidden">
             1. Saving lives by ensuring that prompt pre-hospital care is
             available to all
           </p>
-          <p className="text-btnColor">
+          <p className="text-btnColor md:hidden">
             2. Reversing the trends of needless deaths due to lack of access.
+          </p>
+
+          <p className="hidden md:block text-btnColor">
+            Saving lives by ensuring that prompt pre-hospital care is available
+            to all and reversing the trends of needless deaths due to lack of
+            access.
           </p>
         </div>
         <p className="md:w-[74%] text-center">
@@ -44,7 +50,6 @@ function BrandPartners() {
             paddingX="10px"
             paddingY="5px"
             link="/become-a-partner"
-
           >
             <p className="text-white">Become a partner</p>
           </ButtonGroup>

@@ -6,14 +6,19 @@ import serviceCallImg from "@/public/images/help_station_call_center.svg";
 import serviceEmergencyCenterimg from "@/public/images/help_station_emergency_station.svg";
 import serviceHealthImg from "@/public/images/help_station_health.svg";
 import serviceLabImg from "@/public/images/help_station_laboratory.svg";
+import firstAidImg from "@/public/images/firstaidcpr.svg";
+import hearseImg from "@/public/images/hearse.svg";
+import aboutImg from "@/public/images/help_station_about.svg";
+import Image from "next/image";
+import Link from "next/link";
 
-function OurService() {
+function OurService({ openModal }: { openModal: () => void }) {
   return (
-    <main className="w-full flex justify-center items-center">
+    <main className="w-full flex justify-center md:gap-6 flex-col items-center">
       <section className="lg:w-[85%] w-full flex flex-col gap-3 lg:gap-28 items-center">
         {/*  */}
         <ServiceLayout bgColor="white">
-          <div className="p-6 lg:p-0 w-full flex flex-col lg:justify-between items-center lg:flex-row gap-3 lg:gap-6 justify-center">
+          <div className="p-6 lg:p-0 w-full flex flex-col lg:justify-between items-center lg:flex-row gap-5 lg:gap-6 justify-center">
             <div className="lg:w-[50%]  w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
               <ServiceTextTemplate
                 description=" With our network of ambulances, first responders and emergency-ready
@@ -24,6 +29,7 @@ function OurService() {
                 subHeading="Our Service"
                 heading="HELP in emergency
             situations"
+                subDescription=""
               />
             </div>
             <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
@@ -52,7 +58,7 @@ function OurService() {
         {/*  */}
         <div className="lg:w-[100%] bg-[#ffeaea] lg:px-5  rounded-2xl">
           <ServiceLayout bgColor="#ffeaea">
-            <div className=" p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-3 lg:gap-6 justify-center">
+            <div className=" p-6 w-full flex rounded-lg flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-center">
               <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-end items-end w-full rounded-lg overflow-hidden">
                 <div className="lg:w-[386px]  lg:h-[386px]">
                   <ImageTemplate src={serviceCallImg} />
@@ -60,6 +66,7 @@ function OurService() {
               </div>
               <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
                 <ServiceTextTemplate
+                  subDescription=""
                   heading="Instant ambulance request."
                   headingText="Swift Medical Evacuation Anytime, Anywhere"
                   description="Trust HelpStation to provide rapid and reliable ambulance services for critical medical emergencies, whether on the ground or in the air. With our fully equipped ambulance or state-of-the-art aircraft and experienced medical personnel, we ensure swift evacuation, following a medical emergency, to the nearest emergency ready facility, no matter where you are. Your safety and well-being are our top priority. Count on HelpStation to be your lifeline in times of urgent medical care."
@@ -74,7 +81,7 @@ function OurService() {
         {/*  */}
 
         <ServiceLayout bgColor="white">
-          <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-3 lg:gap-6 justify-center">
+          <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
             <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
               <ServiceTextTemplate
                 description=" Creating long lasting memories for your client and guest need not be tainted with mishaps. When you choose us, you’re not just renting an ambulance; you’re choosing peace of mind. Our team of highly skilled and certified paramedics and equipment are ready to provide immediate medical assistance whenever the need arises."
@@ -82,6 +89,7 @@ function OurService() {
                 heading="Emergency Coverage at Event"
                 linkColor=""
                 linkText="Request Now"
+                subDescription=""
                 link="/services/event-form"
               />
             </div>
@@ -97,19 +105,22 @@ function OurService() {
 
         <div className="lg:w-[100%] bg-[#c5e9cf] rounded-2xl">
           <ServiceLayout bgColor="#c5e9cf">
-            <div className=" p-6 w-full flex rounded-lg flex-col-reverse items-center lg:flex-row  lg:gap-3 justify-center">
+            <div className=" p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
               <div className="lg:w-[60%] w-full flex lg:pl-8 justify-start items-center lg:gap-2 lg:justify-center flex-col ">
                 <ServiceTextTemplate
-                  heading="Instant ambulance request."
-                  headingText="Swift Medical Evacuation Anytime, Anywhere"
-                  description="Trust HelpStation to provide rapid and reliable ambulance services for critical medical emergencies, whether on the ground or in the air. With our fully equipped ambulance or state-of-the-art aircraft and experienced medical personnel, we ensure swift evacuation, following a medical emergency, to the nearest emergency ready facility, no matter where you are. Your safety and well-being are our top priority. Count on HelpStation to be your lifeline in times of urgent medical care."
+                  subDescription="Be the difference between panic and action."
+                  heading="First Aid Training"
+                  headingText="Be more than just a bystander."
+                  description="At home, work, school or wherever you find yourself, your knowledge and emergency readiness skill might just be the tipping factor needed to save a life in an otherwise tragic situation. The outcome of a medical emergency is heavily dependent on prompt intervention of skilled bystanders, before the arrival of a medic."
                   linkText="Find Out More"
                   linkColor="#32A061"
+                  hasOnclickFn={true}
+                  onClick={() => openModal()}
                 />
               </div>
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
                 <div className="lg:w-[386px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
-                  <ImageTemplate src={serviceLabImg} />
+                  <ImageTemplate src={firstAidImg} />
                 </div>
               </div>
             </div>
@@ -120,7 +131,7 @@ function OurService() {
         {/*  */}
 
         <ServiceLayout bgColor="white">
-          <div className="p-6 lg:p-0 w-full flex flex-col-reverse items-center lg:flex-row gap-3 lg:gap-6 justify-center">
+          <div className="p-6 lg:p-0 w-full flex flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-center">
             <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
               <div className="lg:w-[500px]  lg:h-[500px]">
                 <ImageTemplate src={serviceHealthImg} />
@@ -132,9 +143,10 @@ function OurService() {
                 description="Maximize efficiency and minimize risk with HelpStation’s comprehensive Health, Safety, and  Environment (HSE) services. Our integrated approach simplifies safety management, offering tailored solutions to meet your unique needs. From incident response to employee training, rely on HelpStation to elevate your safety standards and protect your organizations most valuable assets while empowering you to focus on your core mission."
                 headingText="Ensure safety at every turn"
                 heading="Health, Safety, and Environment"
-                linkColor="#e26336"
+                linkColor="#E26336"
                 linkText="Find Out More"
                 link="/services/HSETraining-form"
+                subDescription=""
               />
             </div>
           </div>
@@ -143,9 +155,10 @@ function OurService() {
         {/*  */}
         <div className="lg:w-[100%] bg-[#D7D9E3] rounded-2xl">
           <ServiceLayout bgColor="[#D7D9E3]">
-            <div className="p-6 w-full flex rounded-lg flex-col-reverse items-center lg:flex-row  lg:gap-3 justify-center">
+            <div className="p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
               <div className="lg:w-[60%] w-full flex lg:pl-8 justify-start items-center lg:gap-2 lg:justify-center flex-col ">
                 <ServiceTextTemplate
+                  subDescription=""
                   heading="Food Handlers’ Screening"
                   headingText="Norem ipsum dolor sit amet, consectetur "
                   description="Your customers trust you to keep their food safe and delicious. Our food handlers screening ensures you’re equipped with the knowledge and skills to protect their health and your reputation. Take the step towards excellence and show your commitment to safety. Discover how our screening can help you make a difference."
@@ -156,7 +169,7 @@ function OurService() {
               </div>
               <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
                 <div className="lg:w-[386px] w-full h-full lg:h-[386px]">
-                  <ImageTemplate src={serviceCallImg} />
+                  <ImageTemplate src={serviceLabImg} />
                 </div>
               </div>
             </div>
@@ -168,23 +181,50 @@ function OurService() {
 
         <div className="lg:pb-8">
           <ServiceLayout bgColor="white">
-            <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-3 lg:gap-6 justify-center">
+            <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5 lg:gap-6 justify-center">
               <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
                 <ServiceTextTemplate
+                  subDescription=""
                   description="Here at HelpStation, we know how important it is to treat your loved one with respect and dignity during their final journey. Our dedicated team will be there for you every step of the way, offering compassionate support and professional hearse services. We want to help you give them the send-off they deserve."
                   headingText="Honoring Your Loved One with Dignity and Respect"
                   heading="Hearse Services"
-                  linkColor=""
+                  linkColor="#F7C027"
                   linkText="Request a quote"
+                  link="/services/hearse-form"
                 />
               </div>
               <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
                 <div className="lg:w-[500px]  lg:h-[500px]">
-                  <ImageTemplate src={serviceEmergencyCenterimg} />
+                  <ImageTemplate src={hearseImg} />
                 </div>
               </div>
             </div>
           </ServiceLayout>
+        </div>
+      </section>
+
+      <section className="relative h-[400px] flex justify-center items-center w-full">
+        <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[362px] md:h-[463px]">
+          <ImageTemplate src={aboutImg} />
+        </div>
+
+        <div className="z-10 md:w-[58%] w-[90%] h-full text-white text-center flex justify-center items-center flex-col">
+          <div className="flex justify-center h-full font-br-firma items-center gap-5 flex-col w-[80%]">
+            <h2 className=" leading-10 text-primary-5 font-bold md:text-[48px] text-[32px] ">
+              Explore more of our services and offerings here and
+              <span className="text-primary-4"> contact us</span>
+            </h2>
+            <p className="md:hidden text-[#70727F] text-base leading-6 font-semibold">
+              (090132000013, 090132000014, 02013304357)
+            </p>
+            <div className="w-[199px] h-[56px] flex justify-center items-center rounded-xl bg-primary-4">
+              <Link href="/contact-us">
+                <p className="font-bold text-[18px]  leading-10">
+                  Explore More
+                </p>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

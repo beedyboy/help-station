@@ -1,18 +1,18 @@
 "use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface IQuestionItem {
   id: number;
   question: string;
   options: string[];
-  correctAnswer?: string;
+  correctAnswer?: string; // Tracks the selected answer
 }
 interface IQuestion {
   section: string;
   questions: IQuestionItem[];
 }
-const questionsArray: IQuestion[] = [
+
+export const questionData: IQuestion[] = [
   {
     section: "Section 1",
     questions: [
@@ -20,32 +20,19 @@ const questionsArray: IQuestion[] = [
         id: 1,
         question: "How old are you?",
         options: ["Under 18", "Above 50"],
+        correctAnswer: "",
       },
       {
         id: 2,
-        question: "What is your age?",
-        options: [
-          "Under 18",
-          "18-24",
-          "25-34",
-          "35-44",
-          "45-54",
-          "55-64",
-          "65 or older",
-        ],
+        question: "How are you?",
+        options: ["Good", "Bad"],
+        correctAnswer: "",
       },
       {
-        id: 2,
-        question: "What is your age?",
-        options: [
-          "Under 18",
-          "18-24",
-          "25-34",
-          "35-44",
-          "45-54",
-          "55-64",
-          "65 or older",
-        ],
+        id: 3,
+        question: "What is your favorite color?",
+        options: ["Blue", "Red", "Green"],
+        correctAnswer: "",
       },
     ],
   },
@@ -53,173 +40,133 @@ const questionsArray: IQuestion[] = [
     section: "Section 2",
     questions: [
       {
-        id: 3,
-        question: "Any known allergies?",
-        options: ["Yes", "No"],
-      },
-      {
         id: 4,
-        question: "Do you have any chronic conditions?",
-        options: ["Yes", "No"],
+        question: "Your Info?",
+        options: ["Confidential", "Public"],
+        correctAnswer: "",
       },
     ],
   },
 ];
 
-const Herat: React.FC = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [answers, setAnswers] = useState<Record<number, string>>({});
+function Herat() {
+  const section = "Section 1";
+  const [data, setData] = useState<IQuestion[]>(questionData);
+  const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
+  const [pickedQuestions, setPickedQuestions] = useState<IQuestionItem[]>([]);
 
-  const currentSection = questionsArray[currentQuestionIndex];
-  const currentQuestion = currentSection.questions[currentQuestionIndex];
-  const totalQuestions = questionsArray.reduce((acc, section) => acc + section.questions.length, 0);
+  const activeSection = data.find((item) => item.section === section);
 
-  // Load previous answers from localStorage on component mount
+  // Update displayed questions whenever `currentSelectedIndex` changes
   useEffect(() => {
-    const savedAnswers = localStorage.getItem("heratAnswers");
-    if (savedAnswers) {
-      setAnswers(JSON.parse(savedAnswers));
+    if (activeSection) {
+      const questionsToDisplay = activeSection.questions.slice(
+        currentSelectedIndex,
+        currentSelectedIndex + 2
+      );
+      setPickedQuestions(questionsToDisplay);
     }
-  }, []);
+  }, [currentSelectedIndex, activeSection]);
 
-  // Save answers to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("heratAnswers", JSON.stringify(answers));
-  }, [answers]);
-
-  // Handle answer selection
-  const handleAnswerSelection = (answer: string) => {
-    setSelectedAnswer(answer);
-  };
-
-  // Handle "Next" button click
-  const handleNext = () => {
-    if (selectedAnswer) {
-      // Save the answer to the state
-      setAnswers((prev) => ({
-        ...prev,
-        [currentQuestion.id]: selectedAnswer,
-      }));
-      // Move to the next question
-      setSelectedAnswer(null); // Clear the selected answer for the next question
-      if (currentQuestionIndex < totalQuestions - 1) {
-        setCurrentQuestionIndex((prev) => prev + 1);
-      } else {
-        alert("Assessment complete!");
-        // Here you could handle final submission to a Google Sheet
-      }
-    } else {
-      alert("Please select an answer before proceeding.");
-    }
+  // Handler to update the selected answer
+  const handleAnswerSelection = (
+    questionId: number,
+    selectedOption: string
+  ) => {
+    setData((prevData) =>
+      prevData.map((section) =>
+        section.section === activeSection?.section
+          ? {
+              ...section,
+              questions: section.questions.map((question) =>
+                question.id === questionId
+                  ? { ...question, correctAnswer: selectedOption }
+                  : question
+              ),
+            }
+          : section
+      )
+    );
   };
 
   return (
-    <div className="container mx-auto p-4">
-      {/* Title */}
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Welcome to the HELP Emergency Risk Assessment Tool
-      </h1>
+    <div className="w-full md:p-8">
+      <div>
+        <h1 className="text-3xl font-bold">
+          Welcome to the HELP Emergency Risk Assessment Tool
+        </h1>
+        <h2 className="text-xl font-semibold mb-4 text-secondary">
+          Take this survey to determine your emergency risk level.
+        </h2>
+      </div>
 
-      {/* Main Layout: Responsive grid */}
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Left Column */}
-        <div className="flex-1 bg-gray-100 p-4 rounded-lg">
-          {/* Subtitle */}
-          <h2 className="text-xl font-semibold mb-4 text-secondary">
-            Take this survey to determine your emergency risk level.
-          </h2>
-
-          {/* Progress Indicator */}
-          <div className="flex items-center gap-2 mb-4">
-            <Image
-              src="/icons/ambulance.svg"
-              alt="Ambulance Icon"
-              width={30}
-              height={30}
-            />
-            <span className="text-secondary">
-              Question {currentQuestionIndex + 1} of {totalQuestions}
-            </span>
-            <Image
-              src="/icons/teenyicons_hospital-solid"
-              alt="Hospital Icon"
-              width={30}
-              height={30}
-            />
-            <span>
-              You can earn up to 1000 points by completing each section
-            </span>
-          </div>
-
-          {questionsArray.map((section, index) => (
-            <div key={index} className="mb-4">
-              <h3 className="text-lg font-semibold text-secondary">
-                {section.section}
-              </h3>
-              <div className="flex flex-col gap-2">
-                {section.questions.map((question) => (
-                  <>
-                    <div
-                      key={question.id}
-                      className="bg-gray-200 p-4 rounded-lg"
-                    >
-                      <p className="text-sm font-medium">{question.question}</p>
-                    </div>
-
-                    <div className="flex flex-col gap-2 mb-8 bg-[#D7F1DE]">
-                      {question.options.map((option, index) => (
-                        <label
-                          key={index}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <input
-                            type="radio"
-                            name={`question-${question.id}`}
-                            className="form-radio text-primary focus:ring-primary-light"
-                            checked={answers[question.id] === option}
-                            onChange={() => handleAnswerSelection(option)}
-                          />
-                          <span className="text-secondary">{option}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </>
+      <div className="flex flex-col md:flex-row items-center w-full gap-4">
+        {/* Left container */}
+        <div className="border-[1px] border-secondary w-full md:w-[60%]">
+          <h2 className="text-lg font-bold p-4">Questions</h2>
+          <div className="flex flex-col gap-4 bg-[#D7F1DE] p-4">
+            {pickedQuestions.map((item) => (
+              <div className="flex flex-col gap-2" key={item.id}>
+                <p>
+                  {item.id}. {item.question}
+                </p>
+                {item.options.map((option, i) => (
+                  <label
+                    key={i}
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name={`question-${item.id}`}
+                      className="form-radio text-primary focus:ring-primary-light"
+                      value={option}
+                      checked={item.correctAnswer === option}
+                      onChange={() => handleAnswerSelection(item.id, option)}
+                    />
+                    <span className="text-secondary">{option}</span>
+                  </label>
                 ))}
               </div>
-            </div>
-          ))}
-
-          {/* Next Button */}
-          <button
-            onClick={handleNext}
-            className="bg-primary-4 text-white py-2 px-6 rounded-lg hover:bg-primary transition"
-          >
-            Next
-          </button>
-        </div>
-
-        {/* Right Column */}
-        <div className="flex-1 md:w-1/3 bg-secondary p-6 rounded-lg text-white">
-          <h3 className="text-xl font-bold mb-4">
-            Check out your current points
-          </h3>
-          <div>
-            <Image
-              src="/images/point_board.svg"
-              alt="Medal Icon"
-              width={50}
-              height={50}
-            />
-            <span>
-              You currently have a 100 points in your wallet! Complete this
-              survey to keep gaining points.
-            </span>
+            ))}
           </div>
         </div>
+
+        {/* Right container */}
+        <div className="border-[1px] border-secondary p-4 h-full w-full md:w-[40%]">
+          <p>Additional content or instructions can go here.</p>
+        </div>
+      </div>
+
+      <div className="flex justify-between mt-4">
+        <button
+          onClick={() =>
+            setCurrentSelectedIndex((prev) => (prev - 2 >= 0 ? prev - 2 : 0))
+          }
+          disabled={currentSelectedIndex === 0}
+          className="px-4 py-2 bg-primary-4 text-white rounded disabled:opacity-50"
+        >
+          Previous
+        </button>
+
+        <button
+          onClick={() =>
+            setCurrentSelectedIndex((prev) =>
+              prev + 2 >= (activeSection?.questions.length || 0)
+                ? prev
+                : prev + 2
+            )
+          }
+          disabled={
+            !activeSection ||
+            currentSelectedIndex + 2 >= activeSection.questions.length
+          }
+          className="px-4 py-2 bg-primary-4 text-white rounded disabled:opacity-50"
+        >
+          Next
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default Herat;
