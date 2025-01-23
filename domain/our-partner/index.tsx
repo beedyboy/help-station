@@ -20,6 +20,15 @@ function OurPartner() {
                   description=" At HelpStation, we believe in the power of partnerships to ensure everyone has access to essential medical emergency services. By joining forces with us, you can help expand our reach and enhance the quality of emergency response in our communities. As a partner, you'll gain access to exclusive resources, support, and opportunities to make a meaningful impact."
                   subHeading="Join Us Today"
                   heading="Become a partner "
+                  subDescription=""
+                  hasOnclickFn={false}
+                  link=""
+                  name=""
+                  onClick={() => console.log("")}
+                  text=""
+                  headingText=""
+                  linkColor=""
+                  linkText=""
                 />
               </div>
               <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">

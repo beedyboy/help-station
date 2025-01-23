@@ -1,53 +1,7 @@
 "use client";
+import { questionData } from "@/constants/herat";
+import { IQuestion, IQuestionItem } from "@/constants/types";
 import { useEffect, useState } from "react";
-
-interface IQuestionItem {
-  id: number;
-  question: string;
-  options: string[];
-  correctAnswer?: string; // Tracks the selected answer
-}
-interface IQuestion {
-  section: string;
-  questions: IQuestionItem[];
-}
-
-export const questionData: IQuestion[] = [
-  {
-    section: "Section 1",
-    questions: [
-      {
-        id: 1,
-        question: "How old are you?",
-        options: ["Under 18", "Above 50"],
-        correctAnswer: "",
-      },
-      {
-        id: 2,
-        question: "How are you?",
-        options: ["Good", "Bad"],
-        correctAnswer: "",
-      },
-      {
-        id: 3,
-        question: "What is your favorite color?",
-        options: ["Blue", "Red", "Green"],
-        correctAnswer: "",
-      },
-    ],
-  },
-  {
-    section: "Section 2",
-    questions: [
-      {
-        id: 4,
-        question: "Your Info?",
-        options: ["Confidential", "Public"],
-        correctAnswer: "",
-      },
-    ],
-  },
-];
 
 function Herat() {
   const section = "Section 1";
@@ -57,7 +11,6 @@ function Herat() {
 
   const activeSection = data.find((item) => item.section === section);
 
-  // Update displayed questions whenever `currentSelectedIndex` changes
   useEffect(() => {
     if (activeSection) {
       const questionsToDisplay = activeSection.questions.slice(
@@ -68,7 +21,6 @@ function Herat() {
     }
   }, [currentSelectedIndex, activeSection]);
 
-  // Handler to update the selected answer
   const handleAnswerSelection = (
     questionId: number,
     selectedOption: string

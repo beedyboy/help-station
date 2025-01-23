@@ -4,7 +4,6 @@ import Modal from "@/components/modal";
 import Image from "next/image";
 import { useModal } from "@/context/ModalContext";
 import OurService from "@/domain/our-services";
-import aboutImg from "@/public/images/help_station_about.svg";
 
 function Service() {
   const { openModal } = useModal();
@@ -12,7 +11,7 @@ function Service() {
   return (
     <>
       <OurService openModal={() => openModal()} />
-     
+
       <Modal>
         <div className="w-full flex md:gap-0 gap-5  md:flex-row flex-col h-[100%] bg-white rounded-2xl shadow relative">
           <div className="md:w-[50%] -z-0  h-full flex justify-center items-center md:bg-[#5DBA7F] rounded-lg  border-[1px] border-[#70727F] relative">

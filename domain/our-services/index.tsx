@@ -30,6 +30,14 @@ function OurService({ openModal }: { openModal: () => void }) {
                 heading="HELP in emergency
             situations"
                 subDescription=""
+                hasOnclickFn={false}
+                linkColor=""
+                linkText=""
+                onClick={() => console.log("")}
+                headingText=""
+                name=""
+                link=""
+                text=""
               />
             </div>
             <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
@@ -72,6 +80,12 @@ function OurService({ openModal }: { openModal: () => void }) {
                   description="Trust HelpStation to provide rapid and reliable ambulance services for critical medical emergencies, whether on the ground or in the air. With our fully equipped ambulance or state-of-the-art aircraft and experienced medical personnel, we ensure swift evacuation, following a medical emergency, to the nearest emergency ready facility, no matter where you are. Your safety and well-being are our top priority. Count on HelpStation to be your lifeline in times of urgent medical care."
                   linkText="Find Out More"
                   linkColor="#DA2750"
+                  hasOnclickFn={false}
+                  link=""
+                  subHeading=""
+                  name=""
+                  onClick={() => console.log()}
+                  text=""
                 />
               </div>
             </div>
@@ -91,6 +105,11 @@ function OurService({ openModal }: { openModal: () => void }) {
                 linkText="Request Now"
                 subDescription=""
                 link="/services/event-form"
+                hasOnclickFn={false}
+                name=""
+                onClick={() => console.log()}
+                subHeading=""
+                text=""
               />
             </div>
             <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
@@ -116,6 +135,10 @@ function OurService({ openModal }: { openModal: () => void }) {
                   linkColor="#32A061"
                   hasOnclickFn={true}
                   onClick={() => openModal()}
+                  link=""
+                  name=""
+                  subHeading=""
+                  text=""
                 />
               </div>
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
@@ -147,6 +170,11 @@ function OurService({ openModal }: { openModal: () => void }) {
                 linkText="Find Out More"
                 link="/services/HSETraining-form"
                 subDescription=""
+                hasOnclickFn={false}
+                name=""
+                onClick={() => console.log()}
+                subHeading=""
+                text=""
               />
             </div>
           </div>
@@ -165,6 +193,11 @@ function OurService({ openModal }: { openModal: () => void }) {
                   linkText="Book Now"
                   linkColor="#1B1C20"
                   link="/services/foodhandler-form"
+                  hasOnclickFn={false}
+                  name=""
+                  onClick={() => console.log()}
+                  subHeading=""
+                  text=""
                 />
               </div>
               <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
@@ -191,6 +224,11 @@ function OurService({ openModal }: { openModal: () => void }) {
                   linkColor="#F7C027"
                   linkText="Request a quote"
                   link="/services/hearse-form"
+                  hasOnclickFn={false}
+                  name=""
+                  onClick={() => console.log()}
+                  subHeading=""
+                  text=""
                 />
               </div>
               <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">

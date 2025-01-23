@@ -110,6 +110,13 @@ function FAQ() {
                     description="For more detailed information and additional resources, please visit our website. Our team is also available to assist you with any further questions you may have."
                     linkText="www.Helpstationfaq.com"
                     linkColor="#32A061"
+                    subDescription=""
+                    hasOnclickFn={false}
+                    link=""
+                    name=""
+                    onClick={() => console.log("")}
+                    subHeading=""
+                    text=""
                   />
                 </div>
               </div>
