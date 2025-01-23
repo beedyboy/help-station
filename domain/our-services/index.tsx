@@ -20,25 +20,27 @@ function OurService({ openModal }: { openModal: () => void }) {
         <ServiceLayout bgColor="white">
           <div className="p-6 lg:p-0 w-full flex flex-col lg:justify-between items-center lg:flex-row gap-5 lg:gap-6 justify-center">
             <div className="lg:w-[50%]  w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
-              <ServiceTextTemplate
-                description=" With our network of ambulances, first responders and emergency-ready
+              <div className="md:w-[95%] w-full">
+                <ServiceTextTemplate
+                  description=" With our network of ambulances, first responders and emergency-ready
         hospitals, we are equipped to provide you with prompt and efficient
         access to emergency services, to ensure no more life is lost due to lack
         of access to pre-hospital care and provide safety for you and your loved
         ones when every second counts."
-                subHeading="Our Service"
-                heading="HELP in emergency
+                  subHeading="Our Service"
+                  heading="HELP in emergency
             situations"
-                subDescription=""
-                hasOnclickFn={false}
-                linkColor=""
-                linkText=""
-                onClick={() => console.log("")}
-                headingText=""
-                name=""
-                link=""
-                text=""
-              />
+                  subDescription=""
+                  hasOnclickFn={false}
+                  linkColor=""
+                  linkText=""
+                  onClick={() => console.log("")}
+                  headingText=""
+                  name=""
+                  link=""
+                  text=""
+                />
+              </div>
             </div>
             <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
               <div className="lg:full  lg:h-[500px]">
@@ -73,20 +75,22 @@ function OurService({ openModal }: { openModal: () => void }) {
                 </div>
               </div>
               <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
-                <ServiceTextTemplate
-                  subDescription=""
-                  heading="Instant ambulance request."
-                  headingText="Swift Medical Evacuation Anytime, Anywhere"
-                  description="Trust HelpStation to provide rapid and reliable ambulance services for critical medical emergencies, whether on the ground or in the air. With our fully equipped ambulance or state-of-the-art aircraft and experienced medical personnel, we ensure swift evacuation, following a medical emergency, to the nearest emergency ready facility, no matter where you are. Your safety and well-being are our top priority. Count on HelpStation to be your lifeline in times of urgent medical care."
-                  linkText="Find Out More"
-                  linkColor="#DA2750"
-                  hasOnclickFn={false}
-                  link=""
-                  subHeading=""
-                  name=""
-                  onClick={() => console.log()}
-                  text=""
-                />
+                <div className="md:w-[90%] w-full">
+                  <ServiceTextTemplate
+                    subDescription=""
+                    heading="Instant ambulance request."
+                    headingText="Swift Medical Evacuation Anytime, Anywhere"
+                    description="Trust HelpStation to provide rapid and reliable ambulance services for critical medical emergencies, whether on the ground or in the air. With our fully equipped ambulance or state-of-the-art aircraft and experienced medical personnel, we ensure swift evacuation, following a medical emergency, to the nearest emergency ready facility, no matter where you are. Your safety and well-being are our top priority. Count on HelpStation to be your lifeline in times of urgent medical care."
+                    linkText="Find Out More"
+                    linkColor="#DA2750"
+                    hasOnclickFn={false}
+                    link=""
+                    subHeading=""
+                    name=""
+                    onClick={() => console.log()}
+                    text=""
+                  />
+                </div>
               </div>
             </div>
           </ServiceLayout>
@@ -125,24 +129,26 @@ function OurService({ openModal }: { openModal: () => void }) {
         <div className="lg:w-[100%] bg-[#c5e9cf] rounded-2xl">
           <ServiceLayout bgColor="#c5e9cf">
             <div className=" p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
-              <div className="lg:w-[60%] w-full flex lg:pl-8 justify-start items-center lg:gap-2 lg:justify-center flex-col ">
-                <ServiceTextTemplate
-                  subDescription="Be the difference between panic and action."
-                  heading="First Aid Training"
-                  headingText="Be more than just a bystander."
-                  description="At home, work, school or wherever you find yourself, your knowledge and emergency readiness skill might just be the tipping factor needed to save a life in an otherwise tragic situation. The outcome of a medical emergency is heavily dependent on prompt intervention of skilled bystanders, before the arrival of a medic."
-                  linkText="Find Out More"
-                  linkColor="#32A061"
-                  hasOnclickFn={true}
-                  onClick={() => openModal()}
-                  link=""
-                  name=""
-                  subHeading=""
-                  text=""
-                />
+              <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-2 lg:justify-center flex-col ">
+                <div className="md:w-[90%] w-full">
+                  <ServiceTextTemplate
+                    subDescription="Be the difference between panic and action."
+                    heading="First Aid Training"
+                    headingText="Be more than just a bystander."
+                    description="At home, work, school or wherever you find yourself, your knowledge and emergency readiness skill might just be the tipping factor needed to save a life in an otherwise tragic situation. The outcome of a medical emergency is heavily dependent on prompt intervention of skilled bystanders, before the arrival of a medic."
+                    linkText="Find Out More"
+                    linkColor="#32A061"
+                    hasOnclickFn={true}
+                    onClick={() => openModal()}
+                    link=""
+                    name=""
+                    subHeading=""
+                    text=""
+                  />
+                </div>
               </div>
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[386px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
+                <div className="lg:w-[400px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={firstAidImg} />
                 </div>
               </div>
@@ -154,28 +160,30 @@ function OurService({ openModal }: { openModal: () => void }) {
         {/*  */}
 
         <ServiceLayout bgColor="white">
-          <div className="p-6 lg:p-0 w-full flex flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-center">
-            <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
-              <div className="lg:w-[500px]  lg:h-[500px]">
+          <div className="p-6 lg:p-0 w-full flex flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-start ro">
+            <div className="lg:w-[40%]  lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
+              <div className="lg:w-[600px] rounded-lg overflow-hidden lg:h-[500px]">
                 <ImageTemplate src={serviceHealthImg} />
               </div>
             </div>
 
-            <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
-              <ServiceTextTemplate
-                description="Maximize efficiency and minimize risk with HelpStation’s comprehensive Health, Safety, and  Environment (HSE) services. Our integrated approach simplifies safety management, offering tailored solutions to meet your unique needs. From incident response to employee training, rely on HelpStation to elevate your safety standards and protect your organizations most valuable assets while empowering you to focus on your core mission."
-                headingText="Ensure safety at every turn"
-                heading="Health, Safety, and Environment"
-                linkColor="#E26336"
-                linkText="Find Out More"
-                link="/services/HSETraining-form"
-                subDescription=""
-                hasOnclickFn={false}
-                name=""
-                onClick={() => console.log()}
-                subHeading=""
-                text=""
-              />
+            <div className="lg:w-[60%]  w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
+              <div className="md:w-[75%] w-full">
+                <ServiceTextTemplate
+                  description="Maximize efficiency and minimize risk with HelpStation’s comprehensive Health, Safety, and  Environment (HSE) services. Our integrated approach simplifies safety management, offering tailored solutions to meet your unique needs. From incident response to employee training, rely on HelpStation to elevate your safety standards and protect your organizations most valuable assets while empowering you to focus on your core mission."
+                  headingText="Ensure safety at every turn"
+                  heading="Health, Safety, and Environment"
+                  linkColor="#E26336"
+                  linkText="Find Out More"
+                  link="/services/HSETraining-form"
+                  subDescription=""
+                  hasOnclickFn={false}
+                  name=""
+                  onClick={() => console.log()}
+                  subHeading=""
+                  text=""
+                />
+              </div>
             </div>
           </div>
         </ServiceLayout>
@@ -184,24 +192,26 @@ function OurService({ openModal }: { openModal: () => void }) {
         <div className="lg:w-[100%] bg-[#D7D9E3] rounded-2xl">
           <ServiceLayout bgColor="[#D7D9E3]">
             <div className="p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
-              <div className="lg:w-[60%] w-full flex lg:pl-8 justify-start items-center lg:gap-2 lg:justify-center flex-col ">
-                <ServiceTextTemplate
-                  subDescription=""
-                  heading="Food Handlers’ Screening"
-                  headingText="Norem ipsum dolor sit amet, consectetur "
-                  description="Your customers trust you to keep their food safe and delicious. Our food handlers screening ensures you’re equipped with the knowledge and skills to protect their health and your reputation. Take the step towards excellence and show your commitment to safety. Discover how our screening can help you make a difference."
-                  linkText="Book Now"
-                  linkColor="#1B1C20"
-                  link="/services/foodhandler-form"
-                  hasOnclickFn={false}
-                  name=""
-                  onClick={() => console.log()}
-                  subHeading=""
-                  text=""
-                />
+              <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-2 lg:justify-center flex-col ">
+                <div className="md:w-[90%] w-full">
+                  <ServiceTextTemplate
+                    subDescription=""
+                    heading="Food Handlers’ Screening"
+                    headingText="Norem ipsum dolor sit amet, consectetur "
+                    description="Your customers trust you to keep their food safe and delicious. Our food handlers screening ensures you’re equipped with the knowledge and skills to protect their health and your reputation. Take the step towards excellence and show your commitment to safety. Discover how our screening can help you make a difference."
+                    linkText="Book Now"
+                    linkColor="#1B1C20"
+                    link="/services/foodhandler-form"
+                    hasOnclickFn={false}
+                    name=""
+                    onClick={() => console.log()}
+                    subHeading=""
+                    text=""
+                  />
+                </div>
               </div>
               <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[386px] w-full h-full lg:h-[386px]">
+                <div className="lg:w-[400px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={serviceLabImg} />
                 </div>
               </div>
@@ -216,20 +226,22 @@ function OurService({ openModal }: { openModal: () => void }) {
           <ServiceLayout bgColor="white">
             <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5 lg:gap-6 justify-center">
               <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
-                <ServiceTextTemplate
-                  subDescription=""
-                  description="Here at HelpStation, we know how important it is to treat your loved one with respect and dignity during their final journey. Our dedicated team will be there for you every step of the way, offering compassionate support and professional hearse services. We want to help you give them the send-off they deserve."
-                  headingText="Honoring Your Loved One with Dignity and Respect"
-                  heading="Hearse Services"
-                  linkColor="#F7C027"
-                  linkText="Request a quote"
-                  link="/services/hearse-form"
-                  hasOnclickFn={false}
-                  name=""
-                  onClick={() => console.log()}
-                  subHeading=""
-                  text=""
-                />
+                <div className="md:w-[95%] w-full">
+                  <ServiceTextTemplate
+                    subDescription=""
+                    description="Here at HelpStation, we know how important it is to treat your loved one with respect and dignity during their final journey. Our dedicated team will be there for you every step of the way, offering compassionate support and professional hearse services. We want to help you give them the send-off they deserve."
+                    headingText="Honoring Your Loved One with Dignity and Respect"
+                    heading="Hearse Services"
+                    linkColor="#F7C027"
+                    linkText="Request a quote"
+                    link="/services/hearse-form"
+                    hasOnclickFn={false}
+                    name=""
+                    onClick={() => console.log()}
+                    subHeading=""
+                    text=""
+                  />
+                </div>
               </div>
               <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
                 <div className="lg:w-[500px]  lg:h-[500px]">

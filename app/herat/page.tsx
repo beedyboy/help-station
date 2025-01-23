@@ -54,9 +54,9 @@ function Herat() {
 
       <div className="flex flex-col md:flex-row items-center w-full gap-4">
         {/* Left container */}
-        <div className="border-[1px] border-secondary w-full md:w-[60%]">
+        <div className=" md:border-r-[1px] md:border-[#C6C8D3] w-full md:w-[60%]">
           <h2 className="text-lg font-bold p-4">Questions</h2>
-          <div className="flex flex-col gap-4 bg-[#D7F1DE] p-4">
+          <div className="flex flex-col gap-4 bg-[#D7F1DE] p-4 md:w-[595px] md:px-[36px] py-[26px]">
             {pickedQuestions.map((item) => (
               <div className="flex flex-col gap-2" key={item.id}>
                 <p>
@@ -95,7 +95,7 @@ function Herat() {
             setCurrentSelectedIndex((prev) => (prev - 2 >= 0 ? prev - 2 : 0))
           }
           disabled={currentSelectedIndex === 0}
-          className="px-4 py-2 bg-primary-4 text-white rounded disabled:opacity-50"
+          className="px-4 py-2 bg-primary-4 md:w-[204px] text-white rounded disabled:opacity-50"
         >
           Previous
         </button>
