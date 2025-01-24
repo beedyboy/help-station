@@ -149,12 +149,19 @@ export type FirstAidProps = {
   lastTrainingConducted: string;
 };
 
+export type IOption = {
+  list: string;
+  listAnswers: string[];
+  correctAnswer: string;
+};
+
 export interface IQuestionItem {
   id: number;
   question: string;
-  options: string[];
+  options: string[] | IOption[];
   correctAnswer?: string;
 }
+
 export interface IQuestion {
   section: string;
   questions: IQuestionItem[];
