@@ -153,16 +153,23 @@ export type IOption = {
   list: string;
   listAnswers: string[];
   correctAnswer: string;
+  answerValue: (correctAnswer: string) => number;
+  previousValue: number;
 };
 
 export interface IQuestionItem {
   id: number;
+  subQuestion?: string;
   question: string;
   options: string[] | IOption[];
   correctAnswer?: string;
+  answerValue: () => number;
+  previousValue: number;
 }
 
 export interface IQuestion {
   section: string;
   questions: IQuestionItem[];
+  tractAnswersIndex: number[];
+  title: string;
 }

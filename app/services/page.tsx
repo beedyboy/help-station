@@ -10,7 +10,7 @@ function Service() {
 
   return (
     <>
-      <OurService openModal={() => openModal()} />
+      <OurService openModal={() => openModal("modal 1")} />
 
       <Modal>
         <div className="w-full flex md:gap-0 gap-5  md:flex-row flex-col h-[100%] bg-white rounded-2xl shadow relative">
