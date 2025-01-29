@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
   const { openModal } = useModal();
 
   useEffect(() => {
-    openModal();
+    openModal("modal 1");
   }, []);
 
   return (

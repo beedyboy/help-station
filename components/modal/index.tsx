@@ -6,9 +6,10 @@ import React, { ReactNode } from "react";
 
 interface ModalProps {
   children: ReactNode;
+  width?: number;
 }
 
-const Modal = ({ children }: ModalProps) => {
+const Modal = ({ children, width = 895 }: ModalProps) => {
   const { isOpen, closeModal } = useModal();
 
   if (!isOpen) return null;
@@ -19,7 +20,7 @@ const Modal = ({ children }: ModalProps) => {
       onClick={() => closeModal()}
     >
       <div
-        className="flex justify-center flex-col gap-4 items-center md:w-[895px] overflow-hidden relative w-[350px]  md:h-[470px] h-auto bg-white p-6 md:p-0 rounded-lg md:shadow-lg "
+        className={`flex justify-center flex-col gap-4 items-center md:w-[${width}px] overflow-hidden relative w-[350px]  md:h-[470px] h-auto bg-white p-6 md:p-0 rounded-lg md:shadow-lg `}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="md:absolute flex justify-end items-end top-4 right-6 cursor-pointer md:w-8 w-full h-8 z-10">
