@@ -56,16 +56,8 @@ function AmbulanceForm() {
         body: JSON.stringify(payload),
       });
 
-      // Check if the response is OK (status code 200-299)
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
       const result = await response.json();
-
-      // Handle the API response
       if (result.success) {
-        // Reset form fields on success
         setInput({
           companyName: "",
           contactEmail: "",
@@ -81,10 +73,10 @@ function AmbulanceForm() {
 
         setStatus(false);
       } else {
-        setStatus(result.message || "Failed to send message.");
+        setStatus(result.success || "Failed to send message.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.log("Error submitting form:", error);
       setStatus(false);
     }
   };

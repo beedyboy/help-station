@@ -6,6 +6,7 @@ import EmergencyFormTwo from "@/domain/form/emergency_hospital_form/emergency_fo
 import { EmergencyHositalProps } from "@/constants/types";
 
 function EmergencyForm() {
+  const [status, setStatus] = useState(false);
   const [input, setInput] = useState<EmergencyHositalProps>({
     companyName: "",
     contactEmail: "",
@@ -16,13 +17,53 @@ function EmergencyForm() {
     location: "",
     otherLocation: "",
     specifyIfAnyOtherLocation: "",
-    HEFAMAAAccreditation: "Yes",
+    HEFAMAAAccreditation: "",
     checkfacility: {
       facilityOperatingTheatre: "No",
       facilityIntensiveCareUnit: "No",
       facilityHighDependencyUnit: "No",
     },
   });
+
+  const handleSubmit = async () => {
+    try {
+      setStatus(true);
+      const response = await fetch("/api/emergency", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus(false);
+        setInput({
+          companyName: "",
+          contactEmail: "",
+          website: "",
+          contactPersonName: "",
+          contactPhoneNumber: "",
+          address: "",
+          location: "",
+          otherLocation: "",
+          specifyIfAnyOtherLocation: "",
+          HEFAMAAAccreditation: "",
+          checkfacility: {
+            facilityOperatingTheatre: "No",
+            facilityIntensiveCareUnit: "No",
+            facilityHighDependencyUnit: "No",
+          },
+        });
+      } else {
+        setStatus(result.message || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus(false);
+    }
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     if (name === "HEFAMAAAccreditation") {
@@ -30,6 +71,13 @@ function EmergencyForm() {
         ...prev,
         HEFAMAAAccreditation:
           input.HEFAMAAAccreditation === "Yes" ? "No" : "Yes",
+      }));
+    }
+
+    if (name === "otherLocation") {
+      return setInput((prev) => ({
+        ...prev,
+        otherLocation: input.otherLocation === "Yes" ? "No" : "Yes",
       }));
     }
 
@@ -67,7 +115,8 @@ function EmergencyForm() {
               handleChange={handleChange}
             />
           }
-          handleSubmit={() => console.log(input)}
+          handleSubmit={() => handleSubmit()}
+          status={status}
           bg="#F9F9FC"
           heading="Emergency  Ready Hospital Partner  Form"
           headingText="Thank you for choosing Help Station as an ambulance partner. To streamline the process and ensure we fulfill your requirements accurately"

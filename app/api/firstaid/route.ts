@@ -5,26 +5,26 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const {
-      companyName,
-      contactEmail,
-      CACRegistrationNumber,
-      typeOfAmbulance,
-
-      contactPhoneNumber,
-
-      numberOfAmbulance,
+      clientOrCompanyName,
+      email,
+      phoneNumber,
+      preferredLocation,
+      // firstAidTraining: { onsite, venueRecommendedByHelpStaion },
+      // firstAidTrainingRequest: { onsiteTraning, virtualTraining },
+      // trainingDate,
+      // trainingTime,
+      // traineesNumber,
+      // modeOfCommunication,
+      // firstTimeCourseOrRefresherCourse: {
+      //   firstTimeCourse,
+      //   refresherCourse,
+      //   bothCourse,
+      // },
+      // lastTrainingConducted,
     } = body;
 
     // Example validation
-    if (
-      !companyName ||
-      !contactEmail ||
-      !CACRegistrationNumber ||
-      !typeOfAmbulance ||
-      !contactEmail ||
-      !contactPhoneNumber ||
-      !numberOfAmbulance
-    ) {
+    if (!clientOrCompanyName || !email || !phoneNumber || !preferredLocation) {
       return NextResponse.json(
         {
           success: false,

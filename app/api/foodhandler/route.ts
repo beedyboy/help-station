@@ -3,28 +3,33 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
+    console.log("food body: ", body);
 
     const {
-      companyName,
-      contactEmail,
-      CACRegistrationNumber,
-      typeOfAmbulance,
-
-      contactPhoneNumber,
-
-      numberOfAmbulance,
+      email,
+      phoneNumber,
+      // testsinterestedIn: {
+      //   HIVTest,
+      //   HepatitisBTest,
+      //   HepatitisCTest,
+      //   SerumTuberculosisTest,
+      //   PregnancyTest,
+      //   UrinalysisTest,
+      //   WidalTest,
+      //   StoolAnalysisTest,
+      // },
+      // clientOrcompanyName,
+      // numberOfIndividualsTakingFoodHandlers,
+      // preferredLocation: { clientsLocation, recommendedByHELPStation },
+      // locationIsOnsiteProvideAddress,
+      // preferredTime,
+      // modeOfCommunicationForFollowUp,
+      // preferredDate,
+      // FSHTraining,
+      // additionalCommentOrNote,
     } = body;
 
-    // Example validation
-    if (
-      !companyName ||
-      !contactEmail ||
-      !CACRegistrationNumber ||
-      !typeOfAmbulance ||
-      !contactEmail ||
-      !contactPhoneNumber ||
-      !numberOfAmbulance
-    ) {
+    if (!email || !phoneNumber) {
       return NextResponse.json(
         {
           success: false,

@@ -11,9 +11,9 @@ function Herat() {
     setCurrent((prev) => (prev == 3 ? 3 : prev + 1));
   };
 
-  const previousSection = () => {
-    setCurrent((prev) => (prev == 1 ? 1 : prev - 1));
-  };
+  // const previousSection = () => {
+  //   setCurrent((prev) => (prev == 1 ? 1 : prev - 1));
+  // };
 
   return (
     <div className="w-full h-full">

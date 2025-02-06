@@ -39,15 +39,19 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
           <IoIosArrowRoundBack size={18} />
         </div>
         <div className="w-full gap-2 flex flex-col items-center md:justify-center">
-          <div className="md:w-[50%] md:text-center">
+          <div className=" md:w-[70%] md:text-center flex justify-center items-center flex-col">
             {heading && (
               <h3 className="md:text-[48px] text-[28px] font-bold">
                 {heading}
               </h3>
             )}
-            {headingText && (
-              <p className="text-xs md:text-sm text-gray-500">{headingText}</p>
-            )}
+            <div className="md:w-[65%]">
+              {headingText && (
+                <p className=" text-xs md:text-sm text-gray-500">
+                  {headingText}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -86,7 +90,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
         </div>
 
         {/* Content Area */}
-        <div className={`md:px-6 md:py-10 p-2`}>
+        <div className={`md:px-6 md:py-10 px-2 py-4`}>
           {view === 1 ? componentOne : componentTwo}
         </div>
       </div>

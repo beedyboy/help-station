@@ -12,9 +12,9 @@ function EmergencyFormOne({
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row flex-col  gap-4 md:gap-16 items-start"
+        className="flex md:flex-row flex-col  gap-8 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               type="text"
@@ -50,7 +50,7 @@ function EmergencyFormOne({
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col  md:w-[50%] gap-4">
+        <div className="w-full flex flex-col  md:w-[50%] gap-8">
           <div>
             <InputTemplate
               type="text"

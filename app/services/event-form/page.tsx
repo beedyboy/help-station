@@ -8,6 +8,7 @@ import EventFormTwo from "@/domain/our-services/event-form/eventFormTwo";
 import { EventProps } from "@/constants/types";
 
 function EventForm() {
+  const [status, setStatus] = useState(false);
   const [input, setInput] = useState<EventProps>({
     email: "",
     phoneNumber: "",
@@ -27,6 +28,47 @@ function EventForm() {
     },
     extraNurseOrDoctorOrParamedic: "No",
   });
+  const handleSubmit = async () => {
+    try {
+      setStatus(true);
+      const response = await fetch("/api/event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus(false);
+        setInput({
+          email: "",
+          phoneNumber: "",
+          clientOrCompanyName: "",
+          eventType: "",
+          eventLocation: "",
+          eventDate: new Date(),
+          eventCapacity: "",
+          eventStartTime: "",
+          eventDuration: "",
+          NumberOfAmbulanceParamedic: "",
+          eventDays: "",
+          otherInformation: "",
+          typeOfserviceRequired: {
+            standByAmbulance: "No",
+            standByParamedic: "No",
+          },
+          extraNurseOrDoctorOrParamedic: "No",
+        });
+      } else {
+        setStatus(false || result.success);
+      }
+    } catch (error) {
+      setStatus(false);
+      console.error(error);
+    }
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
 
@@ -77,7 +119,8 @@ function EventForm() {
           componentTwo={
             <EventFormTwo eventForm={input} handleChange={handleChange} />
           }
-          handleSubmit={() => console.log(input)}
+          handleSubmit={() => handleSubmit()}
+          status={status}
           bg="#FFEAEA"
           heading="Request Form For Event"
           headingText="When you choose us, you’re not just renting an ambulance; you’re choosing peace of mind."

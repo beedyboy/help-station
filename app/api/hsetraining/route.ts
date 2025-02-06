@@ -5,26 +5,36 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const {
-      companyName,
-      contactEmail,
-      CACRegistrationNumber,
-      typeOfAmbulance,
-
-      contactPhoneNumber,
-
-      numberOfAmbulance,
+      email,
+      phoneNumber,
+      cleintOrCompanyName,
+      // prefferredLocation,
+      // specificHSETraining: {
+      //   specialHSELevel1_AwardHealthAndSafety,
+      //   specialHSELevel2_RiskAssessmentPractical,
+      //   specialHSELevel3_AwardEnvironmentalManagement,
+      //   specialfireSafetyAwarenessPrinciples,
+      //   specialHSEforConstructionSiteWorkers,
+      //   specialHSEforConstructionSiteManagers,
+      //   specialHSECompetence,
+      //   specialHIRA,
+      //   specialFSH,
+      //   specialofficeSafety,
+      // },
+      // locationAddress,
+      // firstTimeCourseOrRefresherCourse: {
+      //   firstTimeCourse,
+      //   refresherCourse,
+      //   bothCourse,
+      // },
+      // modeOfCommunication,
+      // preferredDat,
+      // preferredTime,
+      // otherInformation,
     } = body;
 
     // Example validation
-    if (
-      !companyName ||
-      !contactEmail ||
-      !CACRegistrationNumber ||
-      !typeOfAmbulance ||
-      !contactEmail ||
-      !contactPhoneNumber ||
-      !numberOfAmbulance
-    ) {
+    if (!email || !phoneNumber || !cleintOrCompanyName) {
       return NextResponse.json(
         {
           success: false,

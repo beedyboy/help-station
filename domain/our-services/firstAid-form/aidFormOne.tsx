@@ -14,7 +14,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
         action=""
         className="flex md:flex-row md:justify-start flex-col  gap-4 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               value={firstAidForm.email}
@@ -63,7 +63,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-4">
+        <div className="w-full flex flex-col md:w-[50%] gap-8">
           <div>
             <InputTemplate
               value={firstAidForm.clientOrCompanyName}

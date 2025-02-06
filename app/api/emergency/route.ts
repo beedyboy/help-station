@@ -7,24 +7,23 @@ export async function POST(req: Request) {
     const {
       companyName,
       contactEmail,
-      CACRegistrationNumber,
-      typeOfAmbulance,
-
-      contactPhoneNumber,
-
-      numberOfAmbulance,
+      // website,
+      // contactPersonName,
+      // contactPhoneNumber,
+      // address,
+      // location,
+      // otherLocation,
+      // specifyIfAnyOtherLocation,
+      // HEFAMAAAccreditation,
+      // checkfacility: {
+      //   facilityOperatingTheatre,
+      //   facilityIntensiveCareUnit,
+      //   facilityHighDependencyUnit,
+      // },
     } = body;
 
     // Example validation
-    if (
-      !companyName ||
-      !contactEmail ||
-      !CACRegistrationNumber ||
-      !typeOfAmbulance ||
-      !contactEmail ||
-      !contactPhoneNumber ||
-      !numberOfAmbulance
-    ) {
+    if (!companyName || !contactEmail || !contactEmail) {
       return NextResponse.json(
         {
           success: false,

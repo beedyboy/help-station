@@ -6,6 +6,7 @@ import FoodHandlerFormOne from "@/domain/our-services/foodHandler-form/foodFormO
 import FoodHandlerFormTwo from "@/domain/our-services/foodHandler-form/foodFormTwo";
 
 function FoodHandleForm() {
+  const [status, setStatus] = useState(false);
   const [input, setInput] = useState<FoodHandlerFormProps>({
     email: "",
     phoneNumber: "",
@@ -32,6 +33,54 @@ function FoodHandleForm() {
     FSHTraining: "No",
     additionalCommentOrNote: "",
   });
+
+  const handleSubmit = async () => {
+    try {
+      setStatus(true);
+      const response = await fetch("/api/firstaid", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      const result = await response.json();
+      if (!result.success) {
+        return new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      setStatus(false);
+
+      return setInput({
+        email: "",
+        phoneNumber: "",
+        testsinterestedIn: {
+          HIVTest: "No",
+          HepatitisBTest: "No",
+          HepatitisCTest: "No",
+          SerumTuberculosisTest: "No",
+          PregnancyTest: "No",
+          UrinalysisTest: "No",
+          WidalTest: "No",
+          StoolAnalysisTest: "No",
+        },
+        clientOrcompanyName: "",
+        numberOfIndividualsTakingFoodHandlers: "",
+        preferredLocation: {
+          clientsLocation: "No",
+          recommendedByHELPStation: "No",
+        },
+        locationIsOnsiteProvideAddress: "",
+        preferredTime: "",
+        modeOfCommunicationForFollowUp: "",
+        preferredDate: new Date(),
+        FSHTraining: "No",
+        additionalCommentOrNote: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus(false);
+    }
+  };
 
   const handleFoodHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -60,7 +109,13 @@ function FoodHandleForm() {
     if (name === "Call/Text") {
       return setInput((prev) => ({
         ...prev,
-        modeOfCommunicationForFollowUp: "Call/Text",
+        modeOfCommunicationForFollowUp: "call",
+      }));
+    }
+    if (name === "Email/Text") {
+      return setInput((prev) => ({
+        ...prev,
+        modeOfCommunicationForFollowUp: "email",
       }));
     }
 
@@ -112,7 +167,8 @@ function FoodHandleForm() {
               formInput={input}
             />
           }
-          handleSubmit={() => console.log(input)}
+          handleSubmit={() => handleSubmit()}
+          status={status}
           bg="#FFF4D2"
           heading="Request Form For Food Handlers Test"
           headingText="Thank you for choosing HelpStation for your Food Handlers Test. To streamline the process and ensure we fulfil your requirements accurately, please fill out the following request form."

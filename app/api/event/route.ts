@@ -3,27 +3,32 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-
     const {
-      companyName,
-      contactEmail,
-      CACRegistrationNumber,
-      typeOfAmbulance,
-
-      contactPhoneNumber,
-
-      numberOfAmbulance,
+      email,
+      phoneNumber,
+      clientOrCompanyName,
+      eventType,
+      eventLocation,
+      eventDate,
+      // eventCapacity,
+      // eventStartTime,
+      // eventDuration,
+      // NumberOfAmbulanceParamedic,
+      // eventDays,
+      // otherInformation,
+      // typeOfserviceRequired: { standByAmbulance, standByParamedic },
+      // extraNurseOrDoctorOrParamedic,
     } = body;
 
-    // Example validation
+    console.log("Checking body: ", body);
+
     if (
-      !companyName ||
-      !contactEmail ||
-      !CACRegistrationNumber ||
-      !typeOfAmbulance ||
-      !contactEmail ||
-      !contactPhoneNumber ||
-      !numberOfAmbulance
+      !email ||
+      !phoneNumber ||
+      !clientOrCompanyName ||
+      !eventType ||
+      !eventLocation ||
+      !eventDate
     ) {
       return NextResponse.json(
         {

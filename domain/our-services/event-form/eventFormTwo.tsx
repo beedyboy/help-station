@@ -16,7 +16,7 @@ function EventFormTwo({
         action=""
         className="flex md:flex-row flex-col gap-4 md:gap-16 items-center"
       >
-        <div className="w-full flex flex-col justify-start gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col justify-start gap-4 md:gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               labelName="Event Duration (e.g 10am-10pm)"
@@ -65,7 +65,7 @@ function EventFormTwo({
           </div>
         </div>
 
-        <div className="w-full flex flex-col justify-start  md:w-[50%] gap-4">
+        <div className="w-full flex flex-col justify-start  md:w-[50%] gap-4 md:gap-8">
           <div>
             <InputTemplate
               labelName="Number of Ambulance/Paramedic required "

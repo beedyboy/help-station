@@ -9,21 +9,20 @@ export async function POST(req: Request) {
       contactEmail,
       CACRegistrationNumber,
       typeOfAmbulance,
-
-      contactPhoneNumber,
-
-      numberOfAmbulance,
+      // contactPersonName,
+      // contactPhoneNumber,
+      // location,
+      // avalability,
+      // HEFAMAAAccreditation,
+      // numberOfAmbulance,
     } = body;
 
-    // Example validation
     if (
       !companyName ||
       !contactEmail ||
       !CACRegistrationNumber ||
       !typeOfAmbulance ||
-      !contactEmail ||
-      !contactPhoneNumber ||
-      !numberOfAmbulance
+      !contactEmail
     ) {
       return NextResponse.json(
         {
