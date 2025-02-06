@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import helpEmergencyImg from "@/public/images/help-station-emergency.svg";
 import { FaStarOfLife } from "react-icons/fa6";
 import ButtonGroup from "@/components/button/índex";
@@ -27,16 +28,17 @@ function BrandEmergencyAssessment() {
         <p className="py-3 text-sm md:text-base leading-6 text-[#DA2750]">
           Know your risk status.
         </p>
-
-        <ButtonGroup
-          bgColor="#3BAD6B"
-          borderColor="#3BAD6B"
-          width="158px"
-          paddingX="10px"
-          paddingY="5px"
-        >
-          <p className="text-white">Take The Survey Now</p>
-        </ButtonGroup>
+        <Link href="/herat">
+          <ButtonGroup
+            bgColor="#3BAD6B"
+            borderColor="#3BAD6B"
+            width="158px"
+            paddingX="10px"
+            paddingY="5px"
+          >
+            <p className="text-white">Take The Survey Now</p>
+          </ButtonGroup>
+        </Link>
       </div>
 
       <div className="md:w-[45%] lg:w-[400] w-full h-[350px] md:h-[400px] flex justify-center items-center">

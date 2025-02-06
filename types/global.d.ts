@@ -7,6 +7,5 @@ declare global {
     bgColor: string;
     icon: string;
   }
- 
 }
 export default global;

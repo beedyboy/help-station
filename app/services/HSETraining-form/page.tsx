@@ -116,7 +116,7 @@ function HSETrainingForm({}) {
           handleSubmit={() => console.log(input)}
           bg="#E7F7EB"
           heading="Request Form For HSE Training"
-          headingText="Thank you for choosing HelpStation for your HSE (Health, Safety and Environment) Training."
+          headingText="Thank you for choosing HelpStation for your Food Handlers Test. To streamline the process and ensure we fulfil your requirements accurately, please fill out the following request form."
           formHeading="HSE "
           formText="Discover a new level of preparedness with Helpstation"
         />

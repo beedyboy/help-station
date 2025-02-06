@@ -14,6 +14,7 @@ function Herat() {
   const previousSection = () => {
     setCurrent((prev) => (prev == 1 ? 1 : prev - 1));
   };
+
   return (
     <div className="w-full h-full">
       {current === 1 ? (
@@ -21,10 +22,12 @@ function Herat() {
       ) : current === 2 ? (
         <SectionTwo
           nextSection={nextSection}
-          previousSection={previousSection}
+          // previousSection={previousSection}
         />
       ) : (
-        <SectionThree previousSection={previousSection} />
+        <SectionThree
+        // previousSection={previousSection}
+        />
       )}
     </div>
   );

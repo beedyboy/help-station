@@ -13,20 +13,20 @@ type FormTemplateProps = {
   headingText?: string;
   formHeading?: string;
   formText?: string;
-  handleSubmit?: () => void;
+  status?: boolean | string;
+  handleSubmit: () => void;
 };
 
 const FormTemplate: React.FC<FormTemplateProps> = ({
   componentOne,
+  status,
   componentTwo,
   bg = "#ffffff",
   heading,
   headingText,
   formHeading,
   formText,
-  handleSubmit = () => {
-    console.log("hello");
-  },
+  handleSubmit,
 }) => {
   const [view, setView] = useState<number>(1);
   const router = useRouter();
@@ -38,9 +38,13 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
         <div className="" onClick={() => router.back()}>
           <IoIosArrowRoundBack size={18} />
         </div>
-        <div className="w-full flex flex-col items-center md:justify-center">
+        <div className="w-full gap-2 flex flex-col items-center md:justify-center">
           <div className="md:w-[50%] md:text-center">
-            {heading && <h3 className="text-xl font-bold">{heading}</h3>}
+            {heading && (
+              <h3 className="md:text-[48px] text-[28px] font-bold">
+                {heading}
+              </h3>
+            )}
             {headingText && (
               <p className="text-xs md:text-sm text-gray-500">{headingText}</p>
             )}
@@ -105,7 +109,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
             onClick={() => handleSubmit()}
             className={`w-[150px] self-end md:px-6 py-2 p-2 bg-[#3BAD6B] text-white rounded-lg shadow-md `}
           >
-            submit
+            {status ? "Sending" : "Submit"}
           </button>
         ) : null}
       </div>

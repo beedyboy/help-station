@@ -11,15 +11,17 @@ import Modal from "@/components/modal";
 import { useModal } from "@/context/ModalContext";
 import sectionOneImg from "@/public/images/help_station_section_one.svg";
 import ButtonGroup from "@/components/button/índex";
+import UserForm from "@/components/form";
 
 function SectionTwo({
   nextSection,
-  previousSection,
-}: {
+}: // previousSection,
+{
   nextSection: () => void;
-  previousSection: () => void;
+  // previousSection: () => void;
 }) {
   const section = "Section 2";
+
   const [data, setData] = useState<IQuestion[]>(questionData);
   const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
   const [pickedQuestions, setPickedQuestions] = useState<IQuestionItem[]>([]);
@@ -152,6 +154,15 @@ function SectionTwo({
   useEffect(() => {
     closeModal();
   }, []);
+
+  useEffect(() => {
+    const pickedData = data.find((sec) => sec.section === section);
+    if (pickedData?.questions[7].question === pickedQuestions[1]?.question) {
+      if (pickedData?.questions[7].correctAnswer === "") {
+        openModal("modal 2");
+      }
+    }
+  }, [pickedQuestions]);
   return (
     <>
       <div className="w-full flex flex-col md:p-8 p-4">
@@ -220,12 +231,19 @@ function SectionTwo({
             </h2>
 
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-4 bg-[#D7F1DE] rounded-lg p-4 md:w-[70%] md:px-[36px] py-[26px]">
+              <div className="flex flex-col gap-4 bg-[#D7F1DE] rounded-lg p-4 md:w-[90%] md:px-[36px] py-[26px]">
                 {pickedQuestions.map((item) => (
                   <div className="flex flex-col gap-2" key={item.id}>
-                    <p>
-                      {item.id}. {item.question}
-                    </p>
+                    <div className="flex flex-col ">
+                      <p className="font-semibold md:text-lg md:leading-7 text-base text-[#383A47]">
+                        {item.id}. {item.question}
+                      </p>
+                      {item.subQuestion && (
+                        <p className="italic font-normal text-sm leading-4 text-[#383A47]">
+                          {item.subQuestion}
+                        </p>
+                      )}
+                    </div>
                     {Array.isArray(item.options) &&
                       item.options.map((option, i) =>
                         typeof option === "string" ? (
@@ -313,10 +331,6 @@ function SectionTwo({
                       );
                     }
                   }}
-                  //   disabled={
-                  //     !activeSection ||
-                  //     currentSelectedIndex + 2 >= activeSection.questions.length
-                  //   }
                   className="px-4 py-2 bg-primary-4 md:w-[150px] w-[50%] text-white rounded-xl disabled:opacity-50"
                 >
                   {currentSelectedIndex + 2 >= 12 ? "Completed" : "Next"}
@@ -355,7 +369,7 @@ function SectionTwo({
                 <ImageTemplate src={sectionOneImg} />
               </div>
             </div>
-            <div className="md:p-6 p-2 md:text-start text-center font-bold leading-[24px] border-[#D9EFE5] border-[1px] text-base md:text-[26px] rounded-[6px]">
+            <div className="md:p-6 p-2 md:text-start text-center md:text-[22px] font-bold leading-[24px] border-[#D9EFE5] border-[1px] text-base  rounded-[6px]">
               <p>
                 Hey, based on your responses, you are rated medium risk for
                 “Your lifestyle choices” section. Keep going! You just need to
@@ -366,15 +380,21 @@ function SectionTwo({
             </div>
 
             <div className="flex justify-center text-center flex-col w-full items-center">
-              <p className="font-semibold text-xl md:text-2xl md:pt-3 text-[#383A47]">
+              <p className="font-semibold text-xl md:text-xl md:pt-3 text-[#383A47]">
                 You’ve successfully completed Section 2
               </p>
-              <p className="text-[#797B89] text-lg leading-10 ">
+              <p className="text-[#797B8                                                                                                                                                                                                  9] text-base leading-10 ">
                 You currently have a total of {score} points
               </p>
-              <div className="" onClick={() => nextSection()}>
+              <div
+                className=""
+                onClick={() => {
+                  nextSection();
+                  closeModal();
+                }}
+              >
                 <ButtonGroup bgColor="#3BAD6B">
-                  <p className="text-white p-2 text-base leading-5 font-bold">
+                  <p className="text-white p-2 text-sm leading-5 font-bold">
                     Proceed to Section 3
                   </p>
                 </ButtonGroup>
@@ -387,22 +407,8 @@ function SectionTwo({
       {/* Modal Two */}
       {activeModal == "modal 2" && (
         <Modal width={518}>
-          <div className="w-[100%] h-full flex justify-start items-center flex-col">
-            <h3>Please fill in these details</h3>
-            <form>
-              <div className="w-[100%] flex flex-col gap-2">
-                <label>Email Address</label>
-                <input className="border-[#C6C8D3] border-[1px] rounded-lg p-4" />
-              </div>
-
-              <div>
-                <ButtonGroup bgColor="#3BAD6B">
-                  <p className="text-white p-2 text-base leading-5 font-bold">
-                    submit
-                  </p>
-                </ButtonGroup>
-              </div>
-            </form>
+          <div className="w-[100%] flex justify-start items-center flex-col">
+            <UserForm closeModal={() => closeModal()} />
           </div>
         </Modal>
       )}
