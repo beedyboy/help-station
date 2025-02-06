@@ -5,29 +5,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     console.log("food body: ", body);
 
-    const {
-      email,
-      phoneNumber,
-      // testsinterestedIn: {
-      //   HIVTest,
-      //   HepatitisBTest,
-      //   HepatitisCTest,
-      //   SerumTuberculosisTest,
-      //   PregnancyTest,
-      //   UrinalysisTest,
-      //   WidalTest,
-      //   StoolAnalysisTest,
-      // },
-      // clientOrcompanyName,
-      // numberOfIndividualsTakingFoodHandlers,
-      // preferredLocation: { clientsLocation, recommendedByHELPStation },
-      // locationIsOnsiteProvideAddress,
-      // preferredTime,
-      // modeOfCommunicationForFollowUp,
-      // preferredDate,
-      // FSHTraining,
-      // additionalCommentOrNote,
-    } = body;
+    const { email, phoneNumber } = body;
 
     if (!email || !phoneNumber) {
       return NextResponse.json(

@@ -10,14 +10,6 @@ export async function POST(req: Request) {
       eventType,
       eventLocation,
       eventDate,
-      // eventCapacity,
-      // eventStartTime,
-      // eventDuration,
-      // NumberOfAmbulanceParamedic,
-      // eventDays,
-      // otherInformation,
-      // typeOfserviceRequired: { standByAmbulance, standByParamedic },
-      // extraNurseOrDoctorOrParamedic,
     } = body;
 
     console.log("Checking body: ", body);

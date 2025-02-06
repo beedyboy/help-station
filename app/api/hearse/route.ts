@@ -4,22 +4,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const {
-      companyName,
-      contactEmail,
-      // website,
-      // contactPersonName,
-      // contactPhoneNumber,
-      // typeOfHearse,
-      // numberOfHearse,
-      // geographicCoverageArea,
-      // availability,
-      // insuranceDetails,
-      // contractWithFuneralHomes,
-      // certificationAndAccreditation,
-      // yearsOfExperienceInAmbulance,
-      // additionServicesOffered,
-    } = body;
+    const { companyName, contactEmail } = body;
 
     if (!companyName || !contactEmail || !contactEmail) {
       return NextResponse.json(

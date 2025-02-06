@@ -4,34 +4,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const {
-      email,
-      phoneNumber,
-      cleintOrCompanyName,
-      // prefferredLocation,
-      // specificHSETraining: {
-      //   specialHSELevel1_AwardHealthAndSafety,
-      //   specialHSELevel2_RiskAssessmentPractical,
-      //   specialHSELevel3_AwardEnvironmentalManagement,
-      //   specialfireSafetyAwarenessPrinciples,
-      //   specialHSEforConstructionSiteWorkers,
-      //   specialHSEforConstructionSiteManagers,
-      //   specialHSECompetence,
-      //   specialHIRA,
-      //   specialFSH,
-      //   specialofficeSafety,
-      // },
-      // locationAddress,
-      // firstTimeCourseOrRefresherCourse: {
-      //   firstTimeCourse,
-      //   refresherCourse,
-      //   bothCourse,
-      // },
-      // modeOfCommunication,
-      // preferredDat,
-      // preferredTime,
-      // otherInformation,
-    } = body;
+    const { email, phoneNumber, cleintOrCompanyName } = body;
 
     // Example validation
     if (!email || !phoneNumber || !cleintOrCompanyName) {

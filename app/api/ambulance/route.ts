@@ -9,12 +9,6 @@ export async function POST(req: Request) {
       contactEmail,
       CACRegistrationNumber,
       typeOfAmbulance,
-      // contactPersonName,
-      // contactPhoneNumber,
-      // location,
-      // avalability,
-      // HEFAMAAAccreditation,
-      // numberOfAmbulance,
     } = body;
 
     if (

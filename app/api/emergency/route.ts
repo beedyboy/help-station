@@ -4,25 +4,8 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const {
-      companyName,
-      contactEmail,
-      // website,
-      // contactPersonName,
-      // contactPhoneNumber,
-      // address,
-      // location,
-      // otherLocation,
-      // specifyIfAnyOtherLocation,
-      // HEFAMAAAccreditation,
-      // checkfacility: {
-      //   facilityOperatingTheatre,
-      //   facilityIntensiveCareUnit,
-      //   facilityHighDependencyUnit,
-      // },
-    } = body;
+    const { companyName, contactEmail } = body;
 
-    // Example validation
     if (!companyName || !contactEmail || !contactEmail) {
       return NextResponse.json(
         {
