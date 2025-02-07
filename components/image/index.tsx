@@ -9,7 +9,9 @@ const ImageTemplate = ({ src }: ImageProps) => {
   return (
     <Image
       src={src}
-      alt=""
+      alt="blog-img"
+      width={100}
+      height={100}
       style={{ objectFit: "cover", width: "100%", height: "100%" }}
     />
   );

@@ -1,7 +1,7 @@
 export const menuItems: MenuItem[] = [
   { name: "Home", href: "/" },
   { name: "Our Services", href: "/services" },
-  { name: "Emergency Store", href: "/emergency-store" },
+  { name: "Emergency Store", href: "https://helpstationng.bumpa.shop" },
   { name: "Subscription Plan", href: "/subscriptions" },
   {
     name: "About Help",
