@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ModalProvider } from "@/context/ModalContext";
-import { ResourceProvider } from "@/context/ResourceContext";
 
 export const metadata: Metadata = {
   title: "Help-station",
@@ -16,10 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex w-full h-full">
-        <ResourceProvider>
-          <ModalProvider>{children}</ModalProvider>
-        </ResourceProvider>
+      <body className="flex w-full h-full"> 
+          <ModalProvider>{children}</ModalProvider> 
       </body>
     </html>
   );
