@@ -5,11 +5,11 @@ interface BlogContextType {
   page: number;
   limit: number;
   query: string;
-  category: string;
+  category: number;
   handleQuery: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handlePage: (value: number) => void;
   handleLimit: (value: number) => void;
-  handleCategory: (category: string) => void;
+  handleCategory: (category: number) => void;
 }
 
 const BlogContext = createContext<BlogContextType | undefined>(undefined);
@@ -18,7 +18,7 @@ export const BlogProvider = ({ children }: { children: ReactNode }) => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(1);
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("View all");
+  const [category, setCategory] = useState(0);
 
   const handleQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
@@ -32,7 +32,7 @@ export const BlogProvider = ({ children }: { children: ReactNode }) => {
     setLimit(value);
   };
 
-  const handleCategory = (category: string) => {
+  const handleCategory = (category: number) => {
     setCategory(category);
   };
 

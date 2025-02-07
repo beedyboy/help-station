@@ -7,7 +7,8 @@ export const fetcher = async <T>(endpoint: string): Promise<{ data: T; total: nu
   }
   // return res.json();
    // Get the total number of posts from the header
-   const totalPosts = res.headers.get("X-WP-Total");
+  //  const totalPosts = res.headers.get("X-WP-Total");
+   const totalPosts = res.headers.get("x-wp-totalpages");
   
    // Parse the response body as JSON
    const data = await res.json();
@@ -26,17 +27,10 @@ export const fetchPosts = async (pageNumber: number = 1, perPage: number = 2, se
   return { posts: data, totalPosts: total };
 };
 
-export const fetchPostsByCategory = async (category: string, page: number) => {
+export const fetchPostsByCategory = async (category: number, page: number) => {
   const { data, total } = await fetcher<WordPressPost[]>(`/posts?_embed=true&categories=${category}&page=${page}`);
   return { posts: data, totalPosts: total };
-};
-
-// export const fetchPosts = (page: number) =>
-//   fetcher<WordPressPost[]>(`/posts?_embed=true&page=${page}`);
-
-// export const fetchPostsByCategory = (category: string, page: number) =>
-//   fetcher<WordPressPost[]>(`/posts?_embed=true&categories=${category}&page=${page}`);
-
+}; 
 
 export const fetchPostBySlug = (slug: string) =>
   fetcher<WordPressPost[]>(`/posts?slug=${slug}&_embed=true`);

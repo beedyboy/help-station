@@ -44,9 +44,9 @@ const ResourceSideBar = () => {
         <div className="flex flex-col ">
           {/* Static Item for "View All" */}
           <div
-             onClick={() => handleCategory("View all")}
+             onClick={() => handleCategory(0)}
             className={`${
-              category === "View all"
+              category === 0
                 ? "bg-[#D9EFE5] text-primary-4 font-semibold"
                 : "text-[#797B89]"
             } p-3 text-lg rounded-lg`}
@@ -57,12 +57,12 @@ const ResourceSideBar = () => {
           {/* Dynamically Render Categories */}
           {categories.map((categoryItem) => (
             <div
-            onClick={() => handleCategory(categoryItem.name)}
+            onClick={() => handleCategory(categoryItem.id)}
               key={categoryItem.id}
               className={`${
-                category === categoryItem.name
+                category === categoryItem.id
                   ? "bg-[#D9EFE5] text-primary-4 font-semibold"
-                  : "text-[#797B89]"
+                  : "text-[#797B89] cursor-pointer"
               } p-3 text-lg rounded-lg`}
             >
               <p>{categoryItem.name}</p>

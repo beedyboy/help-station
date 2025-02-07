@@ -17,12 +17,12 @@ const ResourcePage =  () => {
   useEffect(() => {
     const fetchPostData = async () => {
       let fetchedPosts;
-
       if (query) {
         // fetchedPosts = await fetchPostsBySearch(query, page);
-      } else if (category === "View all") {
+      } else if (category === 0 || !category) {
         fetchedPosts = await fetchPosts(page);
       } else {
+        // alert(`{category} ${category} - {query} ${query}`);
         fetchedPosts = await fetchPostsByCategory(category, page);
       }
 
@@ -37,7 +37,9 @@ const ResourcePage =  () => {
 
   const handlePageChange = (page: number) => {
     handlePage(page);
-    router.push(`/blog?page=${page}&category=${category}`);
+    router.push(`/blog?page=${page}&category=${category === 0 ? "" : category}`);
+
+    // router.push(`/blog?page=${page}&category=${category}`);
   };
 
   return (

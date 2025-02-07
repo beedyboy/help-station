@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const BlogPagination = ({ totalPosts }: { totalPosts: number }) => {
-  const { page, limit, handlePage } = useBlog();
+  const {  page, limit, handlePage } = useBlog();
   const totalPages = Math.ceil(totalPosts / limit);
 
   // Function to generate pagination numbers
@@ -53,8 +53,7 @@ const BlogPagination = ({ totalPosts }: { totalPosts: number }) => {
         <FaArrowLeft />
         <p>Previous</p>
       </div>
-
-      {/* Pagination Numbers */}
+ 
       <div className="flex items-center">
         {paginationNumbers.map((index) => (
           <p
