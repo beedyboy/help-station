@@ -25,12 +25,14 @@ const Modal = ({ children, width = 895 }: ModalProps) => {
         style={{ width: `${width}px` }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="md:absolute flex justify-end items-end top-4 right-6 cursor-pointer md:w-8 w-full h-8 z-10">
+        <div
+          onClick={closeModal}
+          className="md:absolute flex justify-end items-end top-4 right-6 cursor-pointer md:w-8 w-full h-8 z-10"
+        >
           <Image
             src="/icons/close_round.svg"
             width={29}
             height={29}
-            onClick={closeModal}
             className="py-2 text-white rounded md:block"
             alt="Close modal"
             aria-label="Close modal"
