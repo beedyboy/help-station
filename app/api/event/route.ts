@@ -20,8 +20,6 @@ export async function POST(req: Request) {
     extraNurseOrDoctorOrParamedic,
   } = body;
 
-  console.log("Checking body: ", body);
-
   if (
     !email ||
     !phoneNumber ||
