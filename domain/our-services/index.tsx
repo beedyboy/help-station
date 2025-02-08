@@ -83,7 +83,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                     linkText="Find Out More"
                     linkColor="#DA2750"
                     hasOnclickFn={false}
-                    link=""
+                    link="/services/ambulance-form"
                     subHeading=""
                     name=""
                     onClick={() => console.log()}

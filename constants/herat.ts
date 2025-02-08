@@ -248,10 +248,11 @@ export const questionData: IQuestion[] = [
         options: ["0-6hrs", "7-13hrs", "13-19hrs", "19-24hrs"],
         correctAnswer: "",
         answerValue: function () {
+          if (this.correctAnswer == "0-6hrs") return 1;
           if (this.correctAnswer == "7-13hrs") return 2;
           if (this.correctAnswer == "13-19hrs") return 3;
           if (this.correctAnswer == "19-24hrs") return 4;
-          return 1;
+          return 0;
         },
         previousValue: 0,
       },
@@ -280,6 +281,7 @@ export const questionData: IQuestion[] = [
         ],
         correctAnswer: "",
         answerValue: function () {
+          if (this.correctAnswer == "Frequent alcohol consumption") return 1;
           if (this.correctAnswer == "Cigarette smoking") return 2;
           if (this.correctAnswer == "Use of  shisha") return 3;
           if (this.correctAnswer == "Use of aphrodisiac") return 4;
@@ -287,7 +289,7 @@ export const questionData: IQuestion[] = [
             return 5;
           if (this.correctAnswer == "Drug abuse") return 6;
           if (this.correctAnswer == "Use of skin whitening products") return 7;
-          return 1;
+          return 0;
         },
         previousValue: 0,
       },
