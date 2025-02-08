@@ -7,6 +7,7 @@ import HearseFormOne from "@/domain/form/hearse_form/hearse_formOne";
 import HearseFormTwo from "@/domain/form/hearse_form/hearse_formTwo";
 
 function HearseForm() {
+  const [status, setStatus] = useState(false);
   const [input, setInput] = useState<HearseProps>({
     companyName: "",
     contactEmail: "",
@@ -23,6 +24,42 @@ function HearseForm() {
     yearsOfExperienceInAmbulance: "",
     additionServicesOffered: "",
   });
+
+  const handleSubmit = async () => {
+    try {
+      setStatus(true);
+      const response = await fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus(false);
+        setInput({
+          companyName: "",
+          contactEmail: "",
+          website: "",
+          contactPersonName: "",
+          contactPhoneNumber: "",
+          typeOfHearse: "",
+          numberOfHearse: "",
+          geographicCoverageArea: "",
+          availability: "",
+          insuranceDetails: "",
+          contractWithFuneralHomes: "",
+          certificationAndAccreditation: "",
+          yearsOfExperienceInAmbulance: "",
+          additionServicesOffered: "",
+        });
+      }
+    } catch (error) {
+      setStatus(false);
+      console.error(error);
+    }
+  };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setInput((prev) => ({ ...prev, [name]: value }));
@@ -39,6 +76,8 @@ function HearseForm() {
           componentTwo={
             <HearseFormTwo hearseInput={input} handleChange={handleChange} />
           }
+          handleSubmit={() => handleSubmit()}
+          status={status}
           bg="#F9F9FC"
           heading="Hearse Partner Form"
           headingText="Thank you for choosing Help Station as an ambulance partner. To streamline the process and ensure we fulfill your requirements accurately, please fill out the following request form."

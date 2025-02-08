@@ -12,9 +12,9 @@ function HSEFormTwo({ formInput, onchange }: HSEFormTwoProps) {
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row md:justify-start flex-col  gap-3 md:gap-16 items-start"
+        className="flex md:flex-row md:justify-start flex-col  gap-8 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-5 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               value={formInput.locationAddress}
@@ -84,7 +84,7 @@ function HSEFormTwo({ formInput, onchange }: HSEFormTwoProps) {
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-5">
+        <div className="w-full flex flex-col md:w-[50%] gap-8">
           <div>
             <InputTemplate
               value={formInput.preferredDate.toLocaleDateString()}

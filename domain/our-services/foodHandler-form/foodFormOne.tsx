@@ -12,9 +12,9 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row md:justify-start flex-col  gap-4 md:gap-16 items-start"
+        className="flex md:flex-row md:justify-start flex-col  gap-8 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               value={formInput.email}
@@ -63,32 +63,32 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               />
               <RadioInputTemplate
                 labelName="Urinalysis"
-                name=""
-                value={formInput.email}
+                name="UrinalysisTest"
+                value={formInput.testsinterestedIn.UrinalysisTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Hepatitis C"
-                name=""
-                value={formInput.email}
+                name="HepatitisCTest"
+                value={formInput.testsinterestedIn.HepatitisCTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Widal Test"
-                name=""
-                value={formInput.email}
+                name="WidalTest"
+                value={formInput.testsinterestedIn.WidalTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Serum Tuberculosis"
-                name=""
-                value={formInput.email}
+                name="SerumTuberculosisTest"
+                value={formInput.testsinterestedIn.SerumTuberculosisTest}
                 onchange={onchange}
               />
               <RadioInputTemplate
                 labelName="Stool Analysis"
-                name=""
-                value={formInput.email}
+                name="StoolAnalysisTest"
+                value={formInput.testsinterestedIn.StoolAnalysisTest}
                 onchange={onchange}
               />
             </div>
@@ -97,7 +97,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-4">
+        <div className="w-full flex flex-col md:w-[50%] gap-8">
           <div>
             <InputTemplate
               value={formInput.clientOrcompanyName}

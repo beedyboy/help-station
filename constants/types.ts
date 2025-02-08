@@ -1,3 +1,5 @@
+import { COUNTRIES } from "./countries";
+
 export type EventProps = {
   email: string;
   phoneNumber: string;
@@ -173,3 +175,5 @@ export interface IQuestion {
   tractAnswersIndex: number[];
   title: string;
 }
+
+export type SelectMenuOption = (typeof COUNTRIES)[number];

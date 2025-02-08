@@ -62,6 +62,8 @@ export const questionData: IQuestion[] = [
       },
       {
         id: 5,
+        subQuestion:
+          "For example, High Blood Pressure, Diabetes, Asthma, Epilepsy, Cancer, Sickle Cell Carrier",
         question: "Living with any underlying condition?",
         options: [
           "No condition",
@@ -158,6 +160,8 @@ export const questionData: IQuestion[] = [
         id: 8,
         question:
           "Do you have any medical implant or foreign body inserted in you?",
+        subQuestion:
+          "For example, Pacemaker, colostomy tube, catheter, prosthesis",
         options: ["Yes", "No"],
         correctAnswer: "",
         answerValue: function () {
@@ -228,22 +232,28 @@ export const questionData: IQuestion[] = [
           "Over 8 hours",
         ],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          if (this.correctAnswer == "6-8 hours") return 1;
+          if (this.correctAnswer == "4-6 hours") return 2;
+          if (this.correctAnswer == "3 hours and below") return 3;
+          return 0;
+        },
         previousValue: 0,
       },
       {
         id: 2,
-        subQuestion: "0-6hrs,7-13hrs,13-19hrs ,19-24hrs",
+        subQuestion: "",
         question:
           "How many hours do you sit or lie down in a 24hr period, inclusive of sleep time?",
-        options: [
-          "3 hours and below",
-          "4-6 hours",
-          "6-8 hours",
-          "Over 8 hours",
-        ],
+        options: ["0-6hrs", "7-13hrs", "13-19hrs", "19-24hrs"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          if (this.correctAnswer == "0-6hrs") return 1;
+          if (this.correctAnswer == "7-13hrs") return 2;
+          if (this.correctAnswer == "13-19hrs") return 3;
+          if (this.correctAnswer == "19-24hrs") return 4;
+          return 0;
+        },
         previousValue: 0,
       },
       {
@@ -251,13 +261,15 @@ export const questionData: IQuestion[] = [
         question: "Marital Status",
         options: ["Single", "Married"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Single" ? 2 : 1;
+        },
         previousValue: 0,
       },
       {
         id: 4,
         question: "Please tick any of the options that apply to you?",
-        subQuestion: "Tick where applicable;",
+        subQuestion: "You can select more than one option",
         options: [
           "Frequent alcohol consumption",
           "Cigarette smoking",
@@ -268,7 +280,17 @@ export const questionData: IQuestion[] = [
           "Use of skin whitening products",
         ],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          if (this.correctAnswer == "Frequent alcohol consumption") return 1;
+          if (this.correctAnswer == "Cigarette smoking") return 2;
+          if (this.correctAnswer == "Use of  shisha") return 3;
+          if (this.correctAnswer == "Use of aphrodisiac") return 4;
+          if (this.correctAnswer == "Frequent use of herbal concoction")
+            return 5;
+          if (this.correctAnswer == "Drug abuse") return 6;
+          if (this.correctAnswer == "Use of skin whitening products") return 7;
+          return 0;
+        },
         previousValue: 0,
       },
       {
@@ -277,7 +299,9 @@ export const questionData: IQuestion[] = [
         subQuestion: "Tick where applicable;",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -286,7 +310,9 @@ export const questionData: IQuestion[] = [
 
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -295,7 +321,9 @@ export const questionData: IQuestion[] = [
 
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -304,7 +332,12 @@ export const questionData: IQuestion[] = [
 
         options: ["Frequently", "Sometimes", "Rarely", "Never"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          if (this.correctAnswer == "Rarely") return 1;
+          if (this.correctAnswer == "Sometimes") return 2;
+          if (this.correctAnswer == "Frequently") return 3;
+          return 0;
+        },
         previousValue: 0,
       },
       {
@@ -313,7 +346,12 @@ export const questionData: IQuestion[] = [
 
         options: ["Frequently", "Sometimes", "Never"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          if (this.correctAnswer == "Never") return 1;
+          if (this.correctAnswer == "Sometimes") return 2;
+          if (this.correctAnswer == "Frequently") return 3;
+          return 0;
+        },
         previousValue: 0,
       },
       {
@@ -321,7 +359,9 @@ export const questionData: IQuestion[] = [
         question: "Do you self medicate?",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -329,7 +369,9 @@ export const questionData: IQuestion[] = [
         question: "Are you sexually active?",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -337,7 +379,9 @@ export const questionData: IQuestion[] = [
         question: "Do you have multiple sexual partners?",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
     ],
@@ -351,6 +395,7 @@ export const questionData: IQuestion[] = [
       {
         id: 1,
         question: "Kindly indicate, your average Sleep time per day",
+        subQuestion: "Kindly select where appropriate",
         options: [
           {
             list: "Car?",
@@ -405,12 +450,14 @@ export const questionData: IQuestion[] = [
 
       {
         id: 2,
-        subQuestion: "(E.g Asbestos, dye, radiation, soot etc)",
+        subQuestion: "For example, Asbestos, dye, radiation, soot",
         question:
           "Does your work or environment expose you to any of the following hazardous compounds?",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -418,7 +465,9 @@ export const questionData: IQuestion[] = [
         question: "Do you consider yourself living in an overcrowded space?",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
       {
@@ -426,7 +475,9 @@ export const questionData: IQuestion[] = [
         question: "Do you live alone?",
         options: ["Yes", "No"],
         correctAnswer: "",
-        answerValue: () => 0,
+        answerValue: function () {
+          return this.correctAnswer === "Yes" ? 1 : 0;
+        },
         previousValue: 0,
       },
     ],

@@ -7,30 +7,77 @@ import FirstAidFormTwo from "@/domain/our-services/firstAid-form/aidFormTwo";
 import React, { useState } from "react";
 
 const FirstAidForm = () => {
+  const [status, setStatus] = useState(false);
   const [input, setInput] = useState<FirstAidProps>({
     clientOrCompanyName: "",
     email: "",
     phoneNumber: "",
     preferredLocation: "",
     firstAidTraining: {
-      onsite: "No",
-      venueRecommendedByHelpStaion: "No",
+      onsite: "",
+      venueRecommendedByHelpStaion: "",
     },
     firstAidTrainingRequest: {
-      onsiteTraning: "No",
-      virtualTraining: "No",
+      onsiteTraning: "",
+      virtualTraining: "",
     },
     trainingDate: new Date(),
     trainingTime: "",
     traineesNumber: "",
-    modeOfCommunication: "Email",
+    modeOfCommunication: "",
     firstTimeCourseOrRefresherCourse: {
-      firstTimeCourse: "No",
-      refresherCourse: "No",
-      bothCourse: "No",
+      firstTimeCourse: "",
+      refresherCourse: "",
+      bothCourse: "",
     },
     lastTrainingConducted: "",
   });
+
+  const handleSubmit = async () => {
+    try {
+      setStatus(true);
+      const response = await fetch("/api/firstaid", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      const result = await response.json();
+      if (!result.success) {
+        return new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      setStatus(false);
+
+      return setInput({
+        clientOrCompanyName: "",
+        email: "",
+        phoneNumber: "",
+        preferredLocation: "",
+        firstAidTraining: {
+          onsite: "",
+          venueRecommendedByHelpStaion: "",
+        },
+        firstAidTrainingRequest: {
+          onsiteTraning: "",
+          virtualTraining: "",
+        },
+        trainingDate: new Date(),
+        trainingTime: "",
+        traineesNumber: "",
+        modeOfCommunication: "",
+        firstTimeCourseOrRefresherCourse: {
+          firstTimeCourse: "",
+          refresherCourse: "",
+          bothCourse: "",
+        },
+        lastTrainingConducted: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus(false);
+    }
+  };
 
   const handleFirstAid = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -68,7 +115,7 @@ const FirstAidForm = () => {
       }));
     }
 
-    if (name === "OnsiteTraning") {
+    if (name === "onsiteTraning") {
       return setInput((prev) => ({
         ...prev,
         firstAidTrainingRequest: {
@@ -131,6 +178,7 @@ const FirstAidForm = () => {
     }
     return setInput((prev) => ({ ...prev, [name]: value }));
   };
+
   return (
     <div className="w-full flex justify-center items-center">
       <div className="md:w-[90%] w-full p-4 md:p-0">
@@ -141,8 +189,9 @@ const FirstAidForm = () => {
           componentTwo={
             <FirstAidFormTwo input={input} onchange={handleFirstAid} />
           }
-          handleSubmit={() => console.log(input)}
+          handleSubmit={() => handleSubmit()}
           bg="#FFEBE4"
+          status={status}
           heading="Request Form For First Aid Training "
           headingText="Thank you for choosing HelpStation for your First Aid Training. Our comprehensive training program cover sessential First Aid, CPR, and AED skills."
           formHeading="First Aid Training "

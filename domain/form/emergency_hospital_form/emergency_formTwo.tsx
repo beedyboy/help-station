@@ -13,9 +13,9 @@ function EmergencyFormTwo({
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row flex-col  gap-4 md:gap-16 items-start"
+        className="flex md:flex-row flex-col  gap-8 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               type="text"
@@ -34,7 +34,7 @@ function EmergencyFormTwo({
             <RadioInputTemplate
               labelName="Yes"
               name="otherLocation"
-              value={emergencyInput.otherLocation === "Yes" ? "Yes" : "NO"}
+              value={emergencyInput.otherLocation === "Yes" ? "Yes" : "No"}
               onchange={handleChange}
             />
             <RadioInputTemplate
@@ -59,13 +59,13 @@ function EmergencyFormTwo({
 
         {/*  */}
         <div className="w-full flex flex-col  md:w-[50%] gap-4">
-          <div className="flex flex-col justify-start gap-3 md:h-[200px]">
+          <div className="flex flex-col justify-start gap-3">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               HEFAMAA Accreditation
             </p>
             <RadioInputTemplate
               labelName="Yes"
-              name=" HEFAMAAAccreditation"
+              name="HEFAMAAAccreditation"
               value={
                 emergencyInput.HEFAMAAAccreditation === "Yes" ? "Yes" : "No"
               }
@@ -73,7 +73,7 @@ function EmergencyFormTwo({
             />
             <RadioInputTemplate
               labelName="No"
-              name=" HEFAMAAAccreditation"
+              name="HEFAMAAAccreditation"
               value={
                 emergencyInput.HEFAMAAAccreditation === "Yes" ? "No" : "Yes"
               }
@@ -82,7 +82,7 @@ function EmergencyFormTwo({
           </div>
 
           <div className="w-full flex flex-col  md:w-[50%] gap-4">
-            <div className="flex flex-col justify-start gap-3 md:h-[200px]">
+            <div className="flex flex-col justify-start gap-3">
               <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
                 Check all that applies to your facility
               </p>

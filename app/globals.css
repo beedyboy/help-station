@@ -49,6 +49,17 @@ html {
   color: red;
 } */
 
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
 .swipper-image {
   transition: all 0.5s ease-in;
 }
@@ -75,5 +86,3 @@ html {
     width: 380px;
   }
 }
-
-

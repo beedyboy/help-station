@@ -41,7 +41,7 @@ function Service() {
             </div>
           </div>
 
-          <div className="md:w-[50%] z-50 h-full flex justify-center items-center  relative">
+          <div className="md:w-[50%] z-50 h-full flex justify-center overflow-hidden items-center  relative">
             <div className="md:w-[74%] text-center flex flex-col justify-center items-center gap-2 p-6 md:h-[50%] border-[1px] border-[#70727F] rounded-lg">
               <div className="  cursor-pointer w-8 h-8 z-10">
                 <Image

@@ -12,9 +12,9 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row md:justify-start flex-col  gap-4 md:gap-16 items-start"
+        className="flex md:flex-row md:justify-start flex-col  gap-8 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               value={formInput.locationIsOnsiteProvideAddress}
@@ -41,10 +41,10 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
               What is your preferred mode of communication for follow-up?
             </p>
             <RadioInputTemplate
-              labelName="Call/Text"
-              name="standByAmbulance"
+              labelName="Email"
+              name="Email/Text"
               value={
-                formInput.modeOfCommunicationForFollowUp === "Call/Text"
+                formInput.modeOfCommunicationForFollowUp === "email"
                   ? "Yes"
                   : "No"
               }
@@ -52,9 +52,9 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
             />
             <RadioInputTemplate
               labelName="Call/Text"
-              name=""
+              name="Call/Text"
               value={
-                formInput.modeOfCommunicationForFollowUp !== "Call/Text"
+                formInput.modeOfCommunicationForFollowUp == "call"
                   ? "Yes"
                   : "No"
               }
@@ -64,7 +64,7 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-4">
+        <div className="w-full flex flex-col md:w-[50%] gap-8">
           <div>
             <InputTemplate
               value={formInput.preferredDate}

@@ -15,7 +15,7 @@ function AmbulanceFormTwo({
     <div className="w-full ">
       <form
         action=""
-        className="flex md:flex-row flex-col  gap-4 md:gap-16 items-start"
+        className="flex md:flex-row flex-col  gap-8 md:gap-16 items-start"
       >
         <div className="w-full flex flex-col gap-4 md:w-[50%] ">
           <div>
@@ -29,7 +29,7 @@ function AmbulanceFormTwo({
             />
           </div>
         </div>
-        <div className="w-full flex flex-col gap-4 md:w-[50%]">
+        <div className="w-full flex flex-col gap-4 md:gap-8 md:w-[50%]">
           <div className="flex flex-col justify-start gap-3 md:h-[200px]">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               HEFAMAA Accreditation

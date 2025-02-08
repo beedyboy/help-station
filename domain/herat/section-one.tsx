@@ -207,18 +207,25 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
             </h2>
 
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-4 bg-[#D7F1DE] rounded-lg p-4 md:w-[70%] md:px-[36px] py-[26px]">
+              <div className="flex flex-col gap-4 bg-[#D7F1DE] rounded-lg p-4 md:w-[90%] md:px-[36px] py-[26px]">
                 {pickedQuestions.map((item) => (
                   <div className="flex flex-col gap-2" key={item.id}>
-                    <p>
-                      {item.id}. {item.question}
-                    </p>
+                    <div className="flex flex-col ">
+                      <p className="font-semibold md:text-lg md:leading-7 text-base text-[#383A47]">
+                        {item.id}. {item.question}
+                      </p>
+                      {item.subQuestion && (
+                        <p className="italic font-normal text-sm leading-4 text-[#383A47]">
+                          {item.subQuestion}
+                        </p>
+                      )}
+                    </div>
                     {Array.isArray(item.options) &&
                       item.options.map((option, i) =>
                         typeof option === "string" ? (
                           <label
                             key={i}
-                            className="flex items-center gap-2 cursor-pointer"
+                            className="flex text-base md:font-normal text-[#000000] items-center gap-2 cursor-pointer"
                           >
                             <input
                               type="radio"
@@ -349,7 +356,7 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
           </div>
 
           <div className="flex justify-center text-center flex-col w-full items-center">
-            <p className="font-semibold text-xl md:text-2xl md:pt-3 text-[#383A47]">
+            <p className="font-semibold text-xl md:text-xl md:pt-3 text-[#383A47]">
               You’ve successfully completed Section 1
             </p>
             <p className="text-[#797B89] text-lg leading-10 ">
@@ -357,7 +364,7 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
             </p>
             <div className="" onClick={() => nextSection()}>
               <ButtonGroup bgColor="#3BAD6B">
-                <p className="text-white p-2 text-base leading-5 font-bold">
+                <p className="text-white p-2 text-sm leading-5 font-bold">
                   Proceed to Section 2
                 </p>
               </ButtonGroup>

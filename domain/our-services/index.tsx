@@ -9,7 +9,6 @@ import serviceLabImg from "@/public/images/help_station_laboratory.svg";
 import firstAidImg from "@/public/images/firstaidcpr.svg";
 import hearseImg from "@/public/images/hearse.svg";
 import aboutImg from "@/public/images/help_station_about.svg";
-import Image from "next/image";
 import Link from "next/link";
 
 function OurService({ openModal }: { openModal: () => void }) {
@@ -84,7 +83,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                     linkText="Find Out More"
                     linkColor="#DA2750"
                     hasOnclickFn={false}
-                    link=""
+                    link="/services/ambulance-form"
                     subHeading=""
                     name=""
                     onClick={() => console.log()}
@@ -105,7 +104,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                 description=" Creating long lasting memories for your client and guest need not be tainted with mishaps. When you choose us, you’re not just renting an ambulance; you’re choosing peace of mind. Our team of highly skilled and certified paramedics and equipment are ready to provide immediate medical assistance whenever the need arises."
                 headingText="Creating memories with peace of mind, secure that event!"
                 heading="Emergency Coverage at Event"
-                linkColor=""
+                linkColor="#DA2750"
                 linkText="Request Now"
                 subDescription=""
                 link="/services/event-form"
@@ -260,7 +259,7 @@ function OurService({ openModal }: { openModal: () => void }) {
 
         <div className="z-10 md:w-[58%] w-[90%] h-full text-white text-center flex justify-center items-center flex-col">
           <div className="flex justify-center h-full font-br-firma items-center gap-5 flex-col w-[80%]">
-            <h2 className=" leading-10 text-primary-5 font-bold md:text-[48px] text-[32px] ">
+            <h2 className=" md:leading-[55px] leading-10 text-primary-5 font-bold md:text-[48px] text-[32px] ">
               Explore more of our services and offerings here and
               <span className="text-primary-4"> contact us</span>
             </h2>

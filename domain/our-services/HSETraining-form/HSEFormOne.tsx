@@ -12,9 +12,9 @@ function HSEFormOne({ formInput, onchange }: HSEFormTwoProps) {
     <div className="w-full">
       <form
         action=""
-        className="flex md:flex-row md:justify-start flex-col  gap-4 md:gap-16 items-start"
+        className="flex md:flex-row md:justify-start flex-col  gap-8 md:gap-16 items-start"
       >
-        <div className="w-full flex flex-col gap-4 md:w-[50%] ">
+        <div className="w-full flex flex-col gap-8 md:w-[50%] ">
           <div>
             <InputTemplate
               value={formInput.cleintOrCompanyName}
@@ -68,7 +68,7 @@ function HSEFormOne({ formInput, onchange }: HSEFormTwoProps) {
         </div>
 
         {/*  */}
-        <div className="w-full flex flex-col md:w-[50%] gap-4">
+        <div className="w-full flex flex-col md:w-[50%] gap-8">
           <div className="flex flex-col justify-start gap-4 ">
             <p className="md:text-lg text-base font-semibold leading-6 md:leading-7">
               What specific HSE Training(s) are you interested in? (Please
