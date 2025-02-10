@@ -37,7 +37,7 @@ function AmbulanceForm() {
     const payload = {
       companyName: input.companyName,
       contactEmail: input.contactEmail,
-      CACRegistrationNumber: input.CACRegistrationNumber, // Fixed: Access the correct property
+      CACRegistrationNumber: input.CACRegistrationNumber,
       typeOfAmbulance: input.typeOfAmbulance,
       contactPersonName: input.contactPersonName,
       contactPhoneNumber: input.contactPhoneNumber,
@@ -52,7 +52,10 @@ function AmbulanceForm() {
 
       const response = await fetch("/api/ambulance", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
@@ -70,7 +73,6 @@ function AmbulanceForm() {
           HEFAMAAAccreditation: "No",
           numberOfAmbulance: "",
         });
-
         setStatus(false);
       } else {
         setStatus(result.success || "Failed to send message.");
@@ -82,7 +84,7 @@ function AmbulanceForm() {
   };
 
   return (
-    <div className="w-full flex justify-center  items-center relative">
+    <div className="w-full flex justify-center  items-center relative ">
       <div className="absolute -z-20 h-[100%] bg-[#e1efe6] md:w-[380px] w-[200px] right-0 top-0"></div>
       <div className="absolute -z-10 h-[100%] bg-[#c4d9cc] md:w-[170px] w-[75px] right-12 md:right-[6rem] top-0"></div>
       <div className="md:w-[90%] w-full p-4 md:p-0 ">

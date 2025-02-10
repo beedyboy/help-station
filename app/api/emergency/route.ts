@@ -34,8 +34,8 @@ export async function POST(req: Request) {
 
   try {
     await sendEmail({
-      to: process.env.EMERGENCY_AMIN as string,
-      subject: "New Emergency Form",
+      to: process.env.CONTACT_ADMIN as string,
+      subject: "Emergency Form",
       html: `<h1>Emergency Form</h1>
 <table>
   <tr>

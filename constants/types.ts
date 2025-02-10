@@ -22,7 +22,6 @@ export type EventProps = {
 
 export type AmbulanceProps = {
   companyName: string;
-
   contactEmail: string;
   CACRegistrationNumber: string;
   typeOfAmbulance: string;

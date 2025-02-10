@@ -32,7 +32,7 @@ export async function POST(req: Request) {
   }
   try {
     await sendEmail({
-      to: process.env.HEARSE_AMIN as string,
+      to: process.env.CONTACT_ADMIN as string,
       subject: "New Hearse Form",
       html: `<h1>New Hearse Service Registration</h1>
 <table>

@@ -180,7 +180,7 @@ const FirstAidForm = () => {
   };
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center ">
       <div className="md:w-[90%] w-full p-4 md:p-0">
         <FormTemplate
           componentOne={

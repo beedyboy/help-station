@@ -40,8 +40,8 @@ export async function POST(req: Request) {
 
   try {
     await sendEmail({
-      to: process.env.FOODHANDLER_ADMIN as string,
-      subject: "New Food Handler Form",
+      to: process.env.CONTACT_ADMIN as string as string,
+      subject: "Food Handler Form",
       html: `<h1>New Food Handler and Medical Test Request</h1>
 <table>
   <tr>

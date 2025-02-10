@@ -32,7 +32,7 @@ function FirstAidFormTwo({ input, onchange }: FirstAidFormProps) {
               name="traineesNumber"
               onchange={onchange}
               placeholder="Enter number of trainees"
-              type="text"
+              type="number"
             />
           </div>
 

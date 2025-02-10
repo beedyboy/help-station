@@ -32,10 +32,10 @@ function EventFormTwo({
             <InputTemplate
               labelName="How many days is your event? "
               name="eventDays"
-              type="number"
+              type="text"
               value={eventForm.eventDays}
               onchange={handleChange}
-              placeholder="Enter here"
+              placeholder="Enter here (e.g 1 day, 1 week ....)"
             />
           </div>
           <div className="flex flex-col justify-start gap-4 md:h-[200px]">

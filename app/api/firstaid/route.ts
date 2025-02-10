@@ -35,7 +35,7 @@ export async function POST(req: Request) {
 
   try {
     await sendEmail({
-      to: process.env.FIRSTAID_AMIN as string,
+      to: process.env.CONTACT_ADMIN as string,
       subject: "New First Aid Form",
       html: `<h1>New First Aid Training Request</h1>
 <table>
