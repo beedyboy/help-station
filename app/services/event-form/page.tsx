@@ -28,9 +28,11 @@ function EventForm() {
     },
     extraNurseOrDoctorOrParamedic: "No",
   });
+
   const handleSubmit = async () => {
     try {
       setStatus(true);
+
       const response = await fetch("/api/event", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -38,6 +40,7 @@ function EventForm() {
       });
 
       const result = await response.json();
+      console.log("result: ", result);
 
       if (result.success) {
         setStatus(false);

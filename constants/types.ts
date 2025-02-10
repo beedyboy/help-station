@@ -170,6 +170,13 @@ export interface IQuestionItem {
 }
 
 export interface IQuestion {
+  [x: string]: any;
+  correctAnswer: any;
+  previousValue: any;
+  id: any;
+  answerValue: () => number;
+  answerValueCode: boolean;
+  options: any;
   section: string;
   questions: IQuestionItem[];
   tractAnswersIndex: number[];

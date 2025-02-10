@@ -14,10 +14,12 @@ import TextSlider from "@/components/swiper/textSlider";
 function BrandBoard() {
   return (
     <div className="w-full flex justify-start items-start gap-5 md:flex-row flex-col">
-      <div className="md:w-[50%] w-full flex flex-col flex-grow-1">
-        <TextSlider />
+      <div className="md:w-[50%] w-full  h-auto">
+        <div className="h-auto">
+          <TextSlider />
+        </div>
 
-        <div className="w-[100%] flex md:items-center md:justify-start gap-4">
+        <div className="w-[100%] flex md:items-center md:justify-start gap-4 py-2">
           <div>
             <ButtonGroup
               bgColor="#3BAD6B"

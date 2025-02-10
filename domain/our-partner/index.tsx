@@ -8,7 +8,8 @@ import officeImg from "@/public/images/help_station_office_pana.svg";
 import contractImg from "@/public/images/help_station_contract_pana.svg";
 import ButtonGroup from "@/components/button/índex";
 import MainLayout from "@/components/layout/MainLayout";
-function OurPartner() {
+
+function OurPartner({ openModal }: { openModal: () => void }) {
   return (
     <MainLayout>
       <main className="w-full flex-col gap-7 flex justify-center items-center">
@@ -27,12 +28,12 @@ function OurPartner() {
                   onClick={() => console.log("")}
                   text=""
                   headingText=""
-                  linkColor=""
+                  linkColor="#fff"
                   linkText=""
                 />
               </div>
-              <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
-                <div className="lg:full  lg:h-[500px] md:h-[100%] h-[350px] ">
+              <div className="lg:w-[45%] lg:h-fit z-10 md:h-[350px] w-full flex justify-center items-center rounded-lg ">
+                <div className="lg:full lg:h-[500px] md:h-[100%] h-[360px] ">
                   <ImageTemplate src={ourPartnerImg} />
                 </div>
               </div>
@@ -54,11 +55,11 @@ function OurPartner() {
         </section>
 
         <section className="lg:w-[85%] w-full flex flex-col gap-3 lg:gap-28 items-center">
-          <div className="md:p-16 p-4  md:w-[65%] text-center flex justify-center flex-col items-center gap-4 ">
-            <p className="  font-bold md:text-5xl  md:leading-[50px] text-3xl leading-9">
+          <div className="md:p-16 p-6  md:w-[65%] text-center  flex justify-center flex-col items-center gap-4 ">
+            <p className="  font-bold md:text-5xl text-[32px] md:leading-[50px] text-3xl leading-9">
               Become a Partner in 3 Easy Steps
             </p>
-            <p className="text-[#70727F] text-sm leading-5 md:px-24">
+            <p className="text-[#70727F] text-sm leading-5 md:px-24 px-10">
               Discover how simple it is get started in 3 minutes, following the
               steps below.
             </p>
@@ -79,9 +80,13 @@ function OurPartner() {
               company and all the required information.
             </p>
 
-            <ButtonGroup bgColor="#3BAD6B">
-              <p className="p-1 text-white leading-10 font-bold">Get Started</p>
-            </ButtonGroup>
+            <div onClick={() => openModal()}>
+              <ButtonGroup bgColor="#3BAD6B">
+                <p className="p-1 text-white leading-10 font-bold">
+                  Get Started
+                </p>
+              </ButtonGroup>
+            </div>
           </div>
 
           <div className="flex justify-center items-center  md:w-[50%] w-[100%]">

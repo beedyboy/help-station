@@ -14,7 +14,9 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import Link from "next/link";
 
 function SectionThree() {
-// { previousSection }: { previousSection: () => void }
+  // { previousSection }: { previousSection: () => void }
+
+  const [totalScore, setTotalScore] = useState(0);
   const section = "Section 3";
   const [data, setData] = useState<IQuestion[]>(questionData);
   const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
@@ -132,7 +134,13 @@ function SectionThree() {
     console.log("sum of the selected index: ", sumArr);
 
     setScore(() => sumFiltered ?? 0);
-  }, [data]);
+
+    // Save to local storage
+    if (pickedQuestions[1]?.id == 4) {
+      localStorage.setItem("section 3", JSON.stringify(sumFiltered));
+      setTotalScore((prev) => prev + score);
+    }
+  }, [data, pickedQuestions]);
 
   useEffect(() => {
     if (activeSection) {
@@ -143,6 +151,28 @@ function SectionThree() {
       setPickedQuestions(questionsToDisplay);
     }
   }, [currentSelectedIndex, activeSection]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const sectionOne = localStorage.getItem("section 1");
+      const sectionTwo = localStorage.getItem("section 2");
+
+      if (sectionOne && sectionTwo) {
+        console.log(
+          "section 1:",
+          JSON.parse(sectionOne),
+          "section 2:",
+          JSON.parse(sectionTwo)
+        );
+
+        setTotalScore(
+          (prev) => prev + JSON.parse(sectionOne) + JSON.parse(sectionTwo)
+        );
+      } else {
+        console.log("Section One and/or Section Two results not available");
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -355,7 +385,7 @@ function SectionThree() {
               You’ve successfully completed Section 1
             </p>
             <p className="text-primary-4 text-lg leading-10 ">
-              You have a total of 1500 points in your wallet
+              You have a total of {totalScore} points in your wallet
             </p>
             <p className="text-[#797B89] text-lg leading-10 ">
               Thank you for your patience!
