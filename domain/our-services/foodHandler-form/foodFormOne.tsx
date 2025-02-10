@@ -32,7 +32,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               name="phoneNumber"
               onchange={onchange}
               placeholder="Enter phone number"
-              type="text"
+              type="number"
             />
           </div>
 

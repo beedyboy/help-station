@@ -139,7 +139,12 @@ function SectionTwo({
     console.log("sum of the selected index: ", sumArr);
 
     setScore(() => sumFiltered ?? 0);
-  }, [data]);
+    // save score to localstorage
+
+    if (pickedQuestions[1]?.id == 12) {
+      localStorage.setItem("section 2", JSON.stringify(sumFiltered));
+    }
+  }, [data, pickedQuestions]);
 
   useEffect(() => {
     if (activeSection) {
@@ -369,7 +374,7 @@ function SectionTwo({
                 <ImageTemplate src={sectionOneImg} />
               </div>
             </div>
-            <div className="md:p-6 p-2 md:text-start text-center md:text-[22px] font-bold leading-[24px] border-[#D9EFE5] border-[1px] text-base  rounded-[6px]">
+            <div className="md:p-6 p-2 md:text-start text-center md:text-[22px] font-bold leading-[24px] border-[#D9EFE5] shadow-sm shadow-[#D9EFE5] border-[1px] text-base  rounded-[6px]">
               <p>
                 Hey, based on your responses, you are rated medium risk for
                 “Your lifestyle choices” section. Keep going! You just need to

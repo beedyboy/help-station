@@ -6,18 +6,32 @@ import { SelectMenuOption } from "@/constants/types";
 export default function UserForm({ closeModal }: { closeModal: () => void }) {
   const [email, setEmail] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [country, setCountry] = useState<SelectMenuOption["value"]>(
-    COUNTRIES[0].value
+  const [status, setStatus] = useState(false);
+  const [country, setCountry] = useState<SelectMenuOption["title"]>(
+    COUNTRIES[0].title
   );
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Email:", email);
-    console.log("Country:", country);
-    // Handle form submission logic here
 
-    if (email && country) {
-      closeModal();
+    setStatus(true);
+    try {
+      const response = await fetch("/api/userdetails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, country: country }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setStatus(false);
+        closeModal();
+      }
+
+      setStatus(false);
+    } catch (error) {
+      console.log(error);
+      setStatus(false);
     }
   };
 
@@ -56,9 +70,14 @@ export default function UserForm({ closeModal }: { closeModal: () => void }) {
               id="country-selector"
               open={isOpen}
               onToggle={() => setIsOpen(!isOpen)}
-              onChange={setCountry}
+              onChange={(value) =>
+                setCountry(
+                  COUNTRIES.find((country) => country.value === value)?.title ||
+                    COUNTRIES[0].title
+                )
+              }
               selectedValue={
-                COUNTRIES.find((option) => option.value === country) ||
+                COUNTRIES.find((option) => option.title === country) ||
                 COUNTRIES[0]
               }
             />
@@ -67,7 +86,7 @@ export default function UserForm({ closeModal }: { closeModal: () => void }) {
             type="submit"
             className="w-full bg-primary-6 text-white py-2 px-4 rounded-md  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            Submit
+            {status ? "Loading.." : "Submit"}
           </button>
         </form>
       </div>

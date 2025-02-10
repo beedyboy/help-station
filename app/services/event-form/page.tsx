@@ -28,9 +28,11 @@ function EventForm() {
     },
     extraNurseOrDoctorOrParamedic: "No",
   });
+
   const handleSubmit = async () => {
     try {
       setStatus(true);
+
       const response = await fetch("/api/event", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -38,6 +40,7 @@ function EventForm() {
       });
 
       const result = await response.json();
+      console.log("result: ", result);
 
       if (result.success) {
         setStatus(false);
@@ -110,7 +113,7 @@ function EventForm() {
     return setInput((prev) => ({ ...prev, [name]: value }));
   };
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center ">
       <div className="md:w-[90%] w-full p-4 md:p-0">
         <FormTemplate
           componentOne={

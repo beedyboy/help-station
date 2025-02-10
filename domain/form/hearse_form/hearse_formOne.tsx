@@ -75,7 +75,7 @@ function HearseFormOne({
 
           <div>
             <InputTemplate
-              type="text"
+              type="number"
               labelName="Contact Phone Number"
               placeholder="Enter contact phone number"
               name="contactPhoneNumber"
@@ -86,7 +86,7 @@ function HearseFormOne({
 
           <div>
             <InputTemplate
-              type="text"
+              type="number"
               labelName="Number Of Hearse"
               placeholder="Enter number of hearse"
               name="numberOfHearse"

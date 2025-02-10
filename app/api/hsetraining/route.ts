@@ -45,7 +45,7 @@ export async function POST(req: Request) {
 
   try {
     await sendEmail({
-      to: process.env.HSETRAINING_ADMIN as string,
+      to: process.env.CONTACT_ADMIN as string,
       subject: "New HSETraining Form",
       html: `<h1>New HSE Training Request</h1>
 <table>

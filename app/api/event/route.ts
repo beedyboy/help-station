@@ -3,6 +3,7 @@ import { sendEmail } from "@/lib/email";
 
 export async function POST(req: Request) {
   const body = await req.json();
+
   const {
     email,
     phoneNumber,
@@ -39,7 +40,7 @@ export async function POST(req: Request) {
 
   try {
     await sendEmail({
-      to: process.env.EVENT_AMIN as string,
+      to: process.env.CONTACT_ADMIN as string,
       subject: "New Event Form",
       html: `<h1>New Event Ambulance Service Request</h1>
 <table>

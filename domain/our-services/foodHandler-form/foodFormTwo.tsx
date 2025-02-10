@@ -32,7 +32,7 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
               name="phoneNumber"
               onchange={onchange}
               placeholder="Enter preferred test time"
-              type="text"
+              type="number"
             />
           </div>
 

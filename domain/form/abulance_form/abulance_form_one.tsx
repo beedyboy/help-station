@@ -39,7 +39,7 @@ function AmbulanceFormOne({
 
           <div>
             <InputTemplate
-              type="number"
+              type="text"
               labelName="CAC Registration No."
               name="CACRegistrationNumber"
               value={ambulanceInput.CACRegistrationNumber}

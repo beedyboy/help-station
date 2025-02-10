@@ -15,7 +15,7 @@ const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen w-full ">
       <Header />
-      <main className="flex-grow w-[100%] md:mt-[150px] mt-[120px]">
+      <main className="flex-grow w-[100%] md:mt-[100px] mt-[80px]">
         {children}
       </main>
       {isFooterActive ? null : <Footer />}

@@ -32,7 +32,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
               name="phoneNumber"
               onchange={onchange}
               placeholder="Enter phone number"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -70,7 +70,7 @@ function FirstAidFormOne({ firstAidForm, onchange }: FirstAidFormProps) {
               labelName=" Name of the client/company "
               name="clientOrCompanyName"
               onchange={onchange}
-              placeholder="Enter name of the clien or company"
+              placeholder="Enter name of client or company"
               type="text"
             />
           </div>

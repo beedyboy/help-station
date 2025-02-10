@@ -24,7 +24,7 @@ function EventFormTwo({
               type="text"
               value={eventForm.eventDuration}
               onchange={handleChange}
-              placeholder={""}
+              placeholder="Enter here"
             />
           </div>
 
@@ -32,10 +32,10 @@ function EventFormTwo({
             <InputTemplate
               labelName="How many days is your event? "
               name="eventDays"
-              type="number"
+              type="text"
               value={eventForm.eventDays}
               onchange={handleChange}
-              placeholder={""}
+              placeholder="Enter here (e.g 1 day, 1 week ....)"
             />
           </div>
           <div className="flex flex-col justify-start gap-4 md:h-[200px]">
@@ -73,7 +73,7 @@ function EventFormTwo({
               type="number"
               value={eventForm.NumberOfAmbulanceParamedic}
               onchange={handleChange}
-              placeholder="Enter number of ambulance"
+              placeholder="Enter number"
             />
           </div>
 
@@ -83,7 +83,7 @@ function EventFormTwo({
             type="text"
             value={eventForm.otherInformation}
             onchange={handleChange}
-            placeholder={""}
+            placeholder="Enter here"
           />
 
           <div className="flex flex-col justify-start gap-4 md:h-[200px]">

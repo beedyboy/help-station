@@ -14,7 +14,16 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import Link from "next/link";
 
 function SectionThree() {
-// { previousSection }: { previousSection: () => void }
+  const [totalScore, setTotalScore] = useState(0);
+
+  const sectionOne = localStorage.getItem("section 1");
+  const sectionTwo = localStorage.getItem("section 2");
+
+  const scoreOneandTwo =
+    sectionOne && sectionTwo
+      ? JSON.parse(sectionOne) + JSON.parse(sectionTwo)
+      : 0;
+
   const section = "Section 3";
   const [data, setData] = useState<IQuestion[]>(questionData);
   const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
@@ -132,7 +141,12 @@ function SectionThree() {
     console.log("sum of the selected index: ", sumArr);
 
     setScore(() => sumFiltered ?? 0);
-  }, [data]);
+
+    // Save to local storage
+    if (pickedQuestions[1]?.id == 4) {
+      localStorage.setItem("section 3", JSON.stringify(sumFiltered));
+    }
+  }, [data, pickedQuestions]);
 
   useEffect(() => {
     if (activeSection) {
@@ -301,16 +315,13 @@ function SectionThree() {
 
                     if (currentSelectedIndex + 2 >= 4) {
                       openModal("modal 1");
+                      setTotalScore(scoreOneandTwo + score);
                     } else {
                       setCurrentSelectedIndex((prev) =>
                         prev + 2 >= 4 ? prev : prev + 2
                       );
                     }
                   }}
-                  // disabled={
-                  //   !activeSection ||
-                  //   currentSelectedIndex + 2 >= activeSection.questions.length
-                  // }
                   className="px-4 py-2 bg-primary-4 md:w-[150px] w-[50%] text-white rounded-xl disabled:opacity-50"
                 >
                   {currentSelectedIndex + 2 >= 4 ? "Completed" : "Next"}
@@ -355,7 +366,7 @@ function SectionThree() {
               You’ve successfully completed Section 1
             </p>
             <p className="text-primary-4 text-lg leading-10 ">
-              You have a total of 1500 points in your wallet
+              You have a total of {totalScore} points in your wallet
             </p>
             <p className="text-[#797B89] text-lg leading-10 ">
               Thank you for your patience!

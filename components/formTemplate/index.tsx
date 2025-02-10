@@ -34,9 +34,9 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
   return (
     <div className="flex flex-col gap-4 w-full pb-5 z-40 ">
       {/* Header Section */}
-      <div className="flex flex-col gap-2 md:gap-4">
+      <div className="flex flex-col gap-2 md:gap-4 md:py-10">
         <div className="" onClick={() => router.back()}>
-          <IoIosArrowRoundBack size={18} />
+          <IoIosArrowRoundBack size={24} />
         </div>
         <div className="w-full gap-2 flex flex-col items-center md:justify-center">
           <div className=" md:w-[70%] md:text-center flex justify-center items-center flex-col">

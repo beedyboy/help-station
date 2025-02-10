@@ -4,7 +4,7 @@ import { questionData } from "@/constants/herat";
 import { IQuestion, IQuestionItem, IOption } from "@/constants/types";
 import pointBoardImg from "@/public/images/point_board.svg";
 import hospitalIcon from "@/public/images/help-staion_hospital.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ImageTemplate from "@/components/image";
 import Image from "next/image";
 import Modal from "@/components/modal";
@@ -15,14 +15,18 @@ import ButtonGroup from "@/components/button/índex";
 function SectionOne({ nextSection }: { nextSection: () => void }) {
   const section = "Section 1";
   const [data, setData] = useState<IQuestion[]>(questionData);
+
   const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
   const [pickedQuestions, setPickedQuestions] = useState<IQuestionItem[]>([]);
   const [paginationNumber, setPaginationNumber] = useState(0);
 
   const [score, setScore] = useState(0);
-  const { openModal } = useModal();
+  const { openModal, closeModal } = useModal();
 
-  const activeSection = data.find((item) => item.section === section);
+  const activeSection = useMemo(() => {
+    return data.find((item) => item.section === section);
+  }, [data, section]);
+
   const weights = [2, 1, 2, 2, 3, 2, 4, 2, 2, 2, 2, 1];
 
   const handleAnswerSelection = (
@@ -95,6 +99,7 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
       if (typeof question.options[0] === "string") {
         const score = question.answerValue() * weights[question.id - 1];
         arr[question.id] = score;
+
         return score;
       }
 
@@ -130,7 +135,12 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
     console.log("sum of the selected index: ", sumArr);
 
     setScore(() => sumFiltered ?? 0);
-  }, [data]);
+    // save score to localstorage
+
+    if (pickedQuestions[1]?.id == 12) {
+      localStorage.setItem("section 1", JSON.stringify(sumFiltered));
+    }
+  }, [data, pickedQuestions]);
 
   useEffect(() => {
     if (activeSection) {
@@ -141,6 +151,11 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
       setPickedQuestions(questionsToDisplay);
     }
   }, [currentSelectedIndex, activeSection]);
+
+  useEffect(() => {
+    closeModal();
+    console.log("section One: ", data);
+  }, []);
 
   return (
     <>
@@ -344,7 +359,7 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
               <ImageTemplate src={sectionOneImg} />
             </div>
           </div>
-          <div className="md:p-6 p-2 md:text-start text-center font-bold leading-[24px] border-[#D9EFE5] border-[1px] text-base md:text-[26px] rounded-[6px]">
+          <div className="md:p-6 p-2 md:text-start text-center font-bold leading-[24px] border-[#D9EFE5] shadow-sm shadow-[#D9EFE5] border-[1px] text-base md:text-[26px] rounded-[6px]">
             <p>
               Hey, based on your responses, you are rated low risk for “Your
               Health and You” section.

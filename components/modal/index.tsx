@@ -27,7 +27,7 @@ const Modal = ({ children, width = 895 }: ModalProps) => {
       >
         <div
           onClick={closeModal}
-          className="md:absolute flex justify-end items-end top-4 right-6 cursor-pointer md:w-8 w-full h-8 z-10"
+          className="md:absolute flex justify-end items-end top-4 right-6 cursor-pointer md:w-8 w-full h-8 z-50"
         >
           <Image
             src="/icons/close_round.svg"

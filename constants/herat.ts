@@ -64,7 +64,7 @@ export const questionData: IQuestion[] = [
         id: 5,
         subQuestion:
           "For example, High Blood Pressure, Diabetes, Asthma, Epilepsy, Cancer, Sickle Cell Carrier",
-        question: "Living with any underlying condition?",
+        question: "Living with any underlying conditions?",
         options: [
           "No condition",
           "1 condition",
@@ -214,6 +214,14 @@ export const questionData: IQuestion[] = [
         previousValue: 0,
       },
     ],
+    correctAnswer: undefined,
+    previousValue: undefined,
+    id: undefined,
+    answerValue: function (): number {
+      throw new Error("Function not implemented.");
+    },
+    answerValueCode: false,
+    options: undefined,
   },
 
   // //   SECTION 2
@@ -244,7 +252,7 @@ export const questionData: IQuestion[] = [
         id: 2,
         subQuestion: "",
         question:
-          "How many hours do you sit or lie down in a 24hr period, inclusive of sleep time?",
+          "How many hours do you sit or lie down in a 24 hour period, inclusive of sleep time?",
         options: ["0-6hrs", "7-13hrs", "13-19hrs", "19-24hrs"],
         correctAnswer: "",
         answerValue: function () {
@@ -262,13 +270,15 @@ export const questionData: IQuestion[] = [
         options: ["Single", "Married"],
         correctAnswer: "",
         answerValue: function () {
-          return this.correctAnswer === "Single" ? 2 : 1;
+          if (this.correctAnswer == "Single") return 2;
+          if (this.correctAnswer == "Married") return 1;
+          return 0;
         },
         previousValue: 0,
       },
       {
         id: 4,
-        question: "Please tick any of the options that apply to you?",
+        question: "Please select any of the options that apply to you",
         subQuestion: "You can select more than one option",
         options: [
           "Frequent alcohol consumption",
@@ -306,7 +316,7 @@ export const questionData: IQuestion[] = [
       },
       {
         id: 6,
-        question: "Do you use your phone while driving?",
+        question: "How often do you drive late at night?",
 
         options: ["Yes", "No"],
         correctAnswer: "",
@@ -317,7 +327,7 @@ export const questionData: IQuestion[] = [
       },
       {
         id: 7,
-        question: "Do you drive after drinking?",
+        question: "Do you drink and drive?",
 
         options: ["Yes", "No"],
         correctAnswer: "",
@@ -328,7 +338,7 @@ export const questionData: IQuestion[] = [
       },
       {
         id: 8,
-        question: "How often do you eat Junk food",
+        question: "How often do you eat Junk food?",
 
         options: ["Frequently", "Sometimes", "Rarely", "Never"],
         correctAnswer: "",
@@ -342,7 +352,7 @@ export const questionData: IQuestion[] = [
       },
       {
         id: 9,
-        question: "Do you do extreme/intense Sports or fitness regimen",
+        question: "Do you do extreme/intense sports or fitness regimen?",
 
         options: ["Frequently", "Sometimes", "Never"],
         correctAnswer: "",
@@ -385,6 +395,14 @@ export const questionData: IQuestion[] = [
         previousValue: 0,
       },
     ],
+    correctAnswer: undefined,
+    previousValue: undefined,
+    id: undefined,
+    answerValue: function (): number {
+      throw new Error("Function not implemented.");
+    },
+    answerValueCode: false,
+    options: undefined,
   },
 
   {
@@ -394,7 +412,7 @@ export const questionData: IQuestion[] = [
     questions: [
       {
         id: 1,
-        question: "Kindly indicate, your average Sleep time per day",
+        question: "Do you frequently operate, drive or commute in:",
         subQuestion: "Kindly select where appropriate",
         options: [
           {
@@ -452,7 +470,7 @@ export const questionData: IQuestion[] = [
         id: 2,
         subQuestion: "For example, Asbestos, dye, radiation, soot",
         question:
-          "Does your work or environment expose you to any of the following hazardous compounds?",
+          "Does your work or environment expose you to harmful chemical compounds?",
         options: ["Yes", "No"],
         correctAnswer: "",
         answerValue: function () {
@@ -481,5 +499,13 @@ export const questionData: IQuestion[] = [
         previousValue: 0,
       },
     ],
+    correctAnswer: undefined,
+    previousValue: undefined,
+    id: undefined,
+    answerValue: function (): number {
+      throw new Error("Function not implemented.");
+    },
+    answerValueCode: false,
+    options: undefined,
   },
 ];
