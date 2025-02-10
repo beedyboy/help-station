@@ -14,9 +14,16 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import Link from "next/link";
 
 function SectionThree() {
-  // { previousSection }: { previousSection: () => void }
-
   const [totalScore, setTotalScore] = useState(0);
+
+  const sectionOne = localStorage.getItem("section 1");
+  const sectionTwo = localStorage.getItem("section 2");
+
+  const scoreOneandTwo =
+    sectionOne && sectionTwo
+      ? JSON.parse(sectionOne) + JSON.parse(sectionTwo)
+      : 0;
+
   const section = "Section 3";
   const [data, setData] = useState<IQuestion[]>(questionData);
   const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
@@ -138,7 +145,6 @@ function SectionThree() {
     // Save to local storage
     if (pickedQuestions[1]?.id == 4) {
       localStorage.setItem("section 3", JSON.stringify(sumFiltered));
-      setTotalScore((prev) => prev + score);
     }
   }, [data, pickedQuestions]);
 
@@ -151,28 +157,6 @@ function SectionThree() {
       setPickedQuestions(questionsToDisplay);
     }
   }, [currentSelectedIndex, activeSection]);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const sectionOne = localStorage.getItem("section 1");
-      const sectionTwo = localStorage.getItem("section 2");
-
-      if (sectionOne && sectionTwo) {
-        console.log(
-          "section 1:",
-          JSON.parse(sectionOne),
-          "section 2:",
-          JSON.parse(sectionTwo)
-        );
-
-        setTotalScore(
-          (prev) => prev + JSON.parse(sectionOne) + JSON.parse(sectionTwo)
-        );
-      } else {
-        console.log("Section One and/or Section Two results not available");
-      }
-    }
-  }, []);
 
   return (
     <>
@@ -331,16 +315,13 @@ function SectionThree() {
 
                     if (currentSelectedIndex + 2 >= 4) {
                       openModal("modal 1");
+                      setTotalScore(scoreOneandTwo + score);
                     } else {
                       setCurrentSelectedIndex((prev) =>
                         prev + 2 >= 4 ? prev : prev + 2
                       );
                     }
                   }}
-                  // disabled={
-                  //   !activeSection ||
-                  //   currentSelectedIndex + 2 >= activeSection.questions.length
-                  // }
                   className="px-4 py-2 bg-primary-4 md:w-[150px] w-[50%] text-white rounded-xl disabled:opacity-50"
                 >
                   {currentSelectedIndex + 2 >= 4 ? "Completed" : "Next"}

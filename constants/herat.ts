@@ -271,8 +271,8 @@ export const questionData: IQuestion[] = [
         correctAnswer: "",
         answerValue: function () {
           if (this.correctAnswer == "Single") return 2;
-          if (this.correctAnswer == "") return 2;
-          return this.correctAnswer === "Single" ? 2 : 1;
+          if (this.correctAnswer == "Married") return 1;
+          return 0;
         },
         previousValue: 0,
       },
