@@ -57,9 +57,9 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
       .replace(/[^a-z0-9-]/g, "");
 
   return (
-    <div className="w-[360px] h-[693px] rounded-2xl border  border-[#c5c7d2] flex-col justify-start items-start inline-flex">
+    <div className="w-[360px] md:h-[723px] h-auto rounded-2xl border md:px-4 border-[#c5c7d2] flex-col justify-start items-start inline-flex">
       {/* Top Section */}
-      <div className="self-stretch h-[296px] pt-10 pb-8 flex-col justify-start items-start gap-4 flex">
+      <div className="self-stretch h-auto pt-10 pb-6 flex-col justify-start items-start gap-4 flex">
         <div className="self-stretch h-[116px] flex-col justify-start items-center gap-4 flex">
           <div className="justify-start items-start inline-flex">
             <div
@@ -103,9 +103,9 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
         </div>
       </div>
       {/* Bottom Section */}
-      <div className="self-stretch  px-8 pb-10 flex-col justify-start items-start gap-8 flex">
-        <div className="w-full h-px bg-[#c5c7d2]"></div>
-        <div className="self-stretch h-[368px] flex-col justify-start items-start gap-4 flex">
+      <div className="self-stretch  px-4 pb-10 flex-col justify-start items-start gap-8 flex">
+        <div className="w-full h-auto bg-[#c5c7d2]"></div>
+        <div className="self-stretch h-auto flex-col justify-start items-start gap-4 flex">
           {benefits.map((benefit, index) => (
             <div
               key={index}

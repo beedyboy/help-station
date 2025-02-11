@@ -109,7 +109,9 @@ function AboutUsPage() {
 
               <div className="-left-36 flex justify-between gap-5 w-full ">
                 <div className="md:w-7 md:h-7 p-4 w-12 h-12 bg-btnColor flex  justify-center items-center rounded-full">
-                  <IoMdEye size={24} color="white" />
+                  <div className="">
+                    <IoMdEye size={24} color="white" />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <h3 className="font-semibold text-lg leading-8 text-[#1B1C20]">
