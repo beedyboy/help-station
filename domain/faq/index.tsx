@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import aboutImg from "@/public/images/help_station_about.svg";
 import FAQDropdown from "@/components/dropdown/faqDropdown";
@@ -13,6 +13,7 @@ import MainLayout from "@/components/layout/MainLayout";
 
 function FAQ() {
   const [faq, setFaq] = useState(faqData);
+  const [query, setQuery] = useState<string>("");
 
   const handleFAQ = (id: number) => {
     const arr = faq.map((faq) => {
@@ -23,6 +24,29 @@ function FAQ() {
 
     setFaq(arr);
   };
+
+  const handleQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const text = event.target.value;
+    setQuery(text);
+  };
+
+  useEffect(() => {
+    const debounce = () => {
+      setFaq((items) =>
+        items.filter((item) =>
+          item.question.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+    };
+    const timer = setTimeout(() => {
+      if (query.length > 2) {
+        debounce();
+      } else return setFaq(faqData);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [query]);
+
   return (
     <MainLayout>
       <main className="w-full flex justify-center flex-col gap-7 md:gap-12 items-center ">
@@ -71,6 +95,7 @@ function FAQ() {
               <input
                 name="search"
                 type="text"
+                onChange={handleQuery}
                 className="rounded-lg outline bg-white px-10 p-3 w-[100%] border-white border-[1px] outline-white placeholder:text-sm text-primary-5"
                 placeholder="Type your question here"
               />

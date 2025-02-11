@@ -13,7 +13,7 @@ import Link from "next/link";
 
 function OurService({ openModal }: { openModal: () => void }) {
   return (
-    <main className="w-full flex justify-center md:gap-6 flex-col items-center md:mt-[50px]">
+    <main className="w-full flex justify-center md:gap-6 flex-col items-center">
       <section className="lg:w-[85%] w-full flex flex-col gap-3 lg:gap-28 items-center">
         {/*  */}
         <ServiceLayout bgColor="white">
@@ -83,7 +83,8 @@ function OurService({ openModal }: { openModal: () => void }) {
                     linkText="Find Out More"
                     linkColor="#DA2750"
                     hasOnclickFn={false}
-                    link="/services/ambulance-form"
+                    // link="/services/ambulance-form"
+                    link="/subscriptions"
                     subHeading=""
                     name=""
                     onClick={() => console.log()}
