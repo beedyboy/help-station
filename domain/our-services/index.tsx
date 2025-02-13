@@ -51,7 +51,7 @@ function OurService({ openModal }: { openModal: () => void }) {
 
         {/*  */}
 
-        <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center md:w-full w-[70%] py-4 md:py-0">
           <div className="lg:w-[55%] w-[90%] text-center">
             <p className="text-btnColor text-sm lg:text-lg leading-6  w-full font-semibold">
               Keep going, we’ve got you covered.

@@ -4,6 +4,7 @@ import Modal from "@/components/modal";
 import Image from "next/image";
 import { useModal } from "@/context/ModalContext";
 import OurService from "@/domain/our-services";
+import Link from "next/link";
 
 function Service() {
   const { openModal } = useModal();
@@ -17,25 +18,33 @@ function Service() {
           <div className="md:w-[50%] -z-0  h-full flex justify-center items-center md:bg-[#5DBA7F] rounded-lg relative">
             <div className="md:w-[74%] bg-white text-center flex flex-col justify-center items-center gap-2 p-6 md:h-[50%] border-[1px] border-red rounded-lg">
               <div className="  cursor-pointer w-8 h-8 z-10">
-                <Image
-                  src="icons/site_training.svg"
-                  width={29}
-                  height={29}
-                  className="py-2 text-white rounded md:block"
-                  alt={"site_training"}
-                />
+                <Link href="/services/ambulance-form">
+                  <Image
+                    src="icons/site_training.svg"
+                    width={29}
+                    height={29}
+                    className="py-2 text-white rounded md:block"
+                    alt={"site_training"}
+                  />
+                </Link>
               </div>
-              <h3 className="font-semibold text-lg text-primary-5">
-                Onsite Training
-              </h3>
-              <p className="font-normal text-sm leading-4 text-[#70727F]">
-                Roll your sleeves and get hands-on with life-saving skills like
-                CPR and AED use in our high-impact, on-site training. Learn from
-                the best, and gain real-world experience that empowers you to
-                act fast when it matters most. Step up, take action, and be the
-                hero when every second counts.
-              </p>
+              <Link href="/services/ambulance-form">
+                <h3 className="font-semibold text-lg text-primary-5">
+                  Onsite Training
+                </h3>
+              </Link>
+              <Link href="/services/ambulance-form">
+                <p className="font-normal text-sm leading-4 text-[#70727F]">
+                  Roll your sleeves and get hands-on with life-saving skills
+                  like CPR and AED use in our high-impact, on-site training.
+                  Learn from the best, and gain real-world experience that
+                  empowers you to act fast when it matters most. Step up, take
+                  action, and be the hero when every second counts.
+                </p>
+              </Link>
             </div>
+
+            {/*  */}
             <div className="hidden md:absolute w-32 h-32 bottom-10  md:flex justify-center items-center bg-white rounded-full -right-20 ">
               <div className="w-[50%] h-[50%] bg-[#5DBA7F] rounded-full"></div>
             </div>

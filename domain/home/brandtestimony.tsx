@@ -19,7 +19,7 @@ function BrandTestimony() {
             <p className="md:text-lg font-semibold leading-10 text-primary-4">
               Testimonials
             </p>
-            <h3 className="text-[34px] font-bold leading-10">
+            <h3 className="text-[32px] md:text-[42px] md:leading-[60px] font-br-firma font-bold leading-10">
               Discover What Our <span className="text-primary-4">Clients</span>{" "}
               Have to Say
             </h3>

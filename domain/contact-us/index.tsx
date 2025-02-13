@@ -1,12 +1,13 @@
 "use client";
-import Image from "next/image";
-import aboutImg from "@/public/images/help_station_about.svg";
+import { useState } from "react";
 import { IoIosCall } from "react-icons/io";
 import { AiOutlineInbox } from "react-icons/ai";
+import { RiSendPlaneFill } from "react-icons/ri";
 import { LuMapPin } from "react-icons/lu";
+import Image from "next/image";
 import getInTouchImg from "@/public/images/help_station_get_in_touch.svg";
+import aboutImg from "@/public/images/help_station_about.svg";
 import MapEmbed from "@/components/map";
-import { useState } from "react";
 const contactInfo = [
   {
     icon: <IoIosCall size={24} fill="white" color="white" />,
@@ -53,11 +54,11 @@ function ContactUsPage() {
       const payload = {
         name: `${form.firstName} ${form.lastName}`,
         email: form.email,
-        message: form.message
-      }
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        message: form.message,
+      };
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
@@ -65,9 +66,9 @@ function ContactUsPage() {
 
       if (result.success) {
         setStatus(false);
-        setForm({ firstName: '', lastName: '', email: '', message: '' });
+        setForm({ firstName: "", lastName: "", email: "", message: "" });
       } else {
-        setStatus(result.message || 'Failed to send message.');
+        setStatus(result.message || "Failed to send message.");
       }
     } catch (error) {
       console.error(error);
@@ -92,11 +93,11 @@ function ContactUsPage() {
         </div>
 
         <div className="z-10 md:w-[55%] w-[90%] text-white text-center flex justify-center items-center flex-col gap-2  md:gap-3">
-          <h2 className="leading-4 pb-3 md:pb-0 font-bold md:text-6xl text-[36px] md:leading-[80px]">
+          <h2 className="leading-10 pb-3 md:pb-0 font-bold font-br-firma md:text-6xl text-[32px] md:leading-[80px]">
             Contact Us
           </h2>
-          <div className="flex text-center flex-col gap-3">
-            <p>
+          <div className="flex text-center flex-col gap-3 md:w-[95%]">
+            <p className="md:text-[20px] md:leading-[30px] font-normal text-base leading-6">
               Our dedicated team are available to assist you. Whether you have
               questions, need support, or simply want to chat, we&apos;re here
               for you 24/7.
@@ -107,11 +108,11 @@ function ContactUsPage() {
 
       <section className="w-full gap-4 md:gap-8 flex justify-center items-center">
         <div className="md:w-[80%] text-center flex justify-center flex-col items-center">
-          <div className="flex flex-col gap-3 py-4 md:py-0">
-            <p className="md:text-lg text-sm text-primary-6 font-semibold leaidng-8">
+          <div className="flex flex-col py-4 ">
+            <p className="md:text-lg  md:leading-[30px] text-base text-primary-6 font-semibold leaidng-6">
               Stay In Touch With Us
             </p>
-            <h3 className="font-bold text-[35px] px-2 md:px-0 md:text-3xl leading-10 text-[#1B1C20]">
+            <h3 className="font-bold text-[28px] leading-[35px] px-2 md:px-0 md:text-[32px] md:leading-10 text-[#1B1C20]">
               We’d love to hear from you
             </h3>
           </div>
@@ -127,14 +128,18 @@ function ContactUsPage() {
                     {info.icon}
                   </div>
                 </div>
-                <h3 className="text-neutral-1 md:text-2xl font-semibold leading-8 text-xl">
+                <h4 className="text-neutral-1 md:text-2xl font-semibold leading-[30px] text-xl">
                   {info.heading}
-                </h3>
-                <p className="text-base font-normal leading-6">
+                </h4>
+                <p className="text-base  font-normal leading-6">
                   {info.description}
                 </p>
                 <p className="text-base font-normal leading-6">
-                  {info.otherText}
+                  {info.otherText === "info@helpstation.ng" ? (
+                    <span className="font-bold">{info.otherText}</span>
+                  ) : (
+                    info.otherText
+                  )}
                 </p>
               </div>
             ))}
@@ -154,17 +159,22 @@ function ContactUsPage() {
             />
           </div>
           <div className="md:w-[45%] flex flex-col w-full gap-2">
-            <p className="text-primary-6 text-base">Contact us</p>
-            <h3 className="text-primary-5 font-semibold md:text-3xl">
+            <p className="text-primary-6 md:text-lg font-semibold md:leading-[30px] text-base leading-6">
+              Contact us
+            </p>
+            <h3 className="text-primary-5 font-br-firma font-semibold md:text-[32px] md:leading-10 text-2xl leading-[30px]">
               Get in touch
             </h3>
-            <p className="text-[#70727F] text-base">
+            <p className="text-neutral-3 font-normal leading-6 text-base">
               We’d love to hear from you. Please fill out this form.
             </p>
-            <form onSubmit={handleSubmit} className="flex flex-col items-center gap-3">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col items-center gap-3 py-2"
+            >
               <div className="flex w-full items-center gap-7">
                 <div className="flex flex-col gap-2 w-[50%]">
-                  <label className="text-base leading-6 text-primary-5">
+                  <label className="text-base font-semibold leading-6 text-primary-5">
                     First name
                   </label>
                   <input
@@ -176,7 +186,7 @@ function ContactUsPage() {
                   />
                 </div>
                 <div className="flex flex-col gap-2 w-[50%]">
-                  <label className="text-base leading-6 text-primary-5">
+                  <label className="text-base font-semibold leading-6 text-primary-5">
                     Last name
                   </label>
                   <input
@@ -190,7 +200,7 @@ function ContactUsPage() {
               </div>
 
               <div className="flex flex-col gap-2 w-full">
-                <label className="text-base leading-6 text-primary-5">
+                <label className="text-base font-semibold leading-6 text-primary-5">
                   Email
                 </label>
                 <input
@@ -204,7 +214,7 @@ function ContactUsPage() {
               </div>
 
               <div className="flex flex-col gap-2 w-full">
-                <label className="text-base leading-6 text-primary-5">
+                <label className="text-base font-semibold leading-6 text-primary-5">
                   Message
                 </label>
                 <textarea
@@ -217,8 +227,17 @@ function ContactUsPage() {
               </div>
 
               <div className="w-[100%]">
-                <button type="submit" disabled={status} className=" w-[100%] bg-primary-4 p-4 rounded-lg text-white text-center">
-                   {status ? 'Sending...' : 'Submit'}
+                <button
+                  type="submit"
+                  disabled={status}
+                  className=" w-[100%] bg-primary-4 p-4 rounded-lg text-white text-center"
+                >
+                  <div className="flex  justify-center items-center gap-1">
+                    <span className="">
+                      <RiSendPlaneFill size={20} color="#fff" />
+                    </span>
+                    <p> {status ? "Sending..." : "Submit"}</p>
+                  </div>
                 </button>
               </div>
             </form>
@@ -228,8 +247,10 @@ function ContactUsPage() {
 
       <section className=" flex justify-center flex-col items-center">
         <div className="md:w-[70%] p-4  md:p-0 text-center gap-2 md:gap-3 flex flex-col justify-center items-center">
-          <p className="text-primary-6 text-base font-semibold">Location Map</p>
-          <h3 className="text-primary-5 text-[24px] leading-8  font-bold md:text-3xl">
+          <p className="text-primary-6 leading-6 text-base md:text-lg md:leading-[30px] font-semibold">
+            Location Map
+          </p>
+          <h3 className="text-[#1B1C20] font-br-firma text-[24px] md:leading-[40px] text-2xl leading-[30px] font-bold md:text-[32px]">
             Find Us On Google Map
           </h3>
           <p className="text-[#70727F] p-2 md:p-0 font-normal text-base">

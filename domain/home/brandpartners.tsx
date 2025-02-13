@@ -13,12 +13,14 @@ function BrandPartners() {
             <FaHandshakeSimple size={24} color="white" />
           </div>
         </div>
-        <h3 className="font-bold md:text-4xl text-4xl leading-9">
+        <h3 className="font-bold md:text-[48px] font-br-firma text-[32px] md:leading-[60px] leading-10">
           Partnership for greater impact
         </h3>
 
-        <div className="md:w-[46%] text-base leading-7 p-2 font-semibold flex flex-col justify-center items-center gap-3">
-          <p>At HELP, we are passionate about </p>
+        <div className="md:w-[46%] text-base md:text-lg md:leading-[30px] leading-6 text-neutral-1 p-2 font-semibold flex flex-col justify-center items-center gap-3">
+          <p className="text-base md:text-lg md:leading-[30px] leading-6">
+            At HELP, we are passionate about{" "}
+          </p>
           <p className="text- md:hidden">
             1. Saving lives by ensuring that prompt pre-hospital care is
             available to all
@@ -48,10 +50,12 @@ function BrandPartners() {
             borderColor="#3BAD6B"
             width="158px"
             paddingX="10px"
-            paddingY="5px"
+            paddingY="3px"
             link="/become-a-partner"
           >
-            <p className="text-white">Become a partner</p>
+            <p className="text-white text-base md:text-lg md:leading-[30px] leading-6 px-2">
+              Become a partner
+            </p>
           </ButtonGroup>
         </div>
 

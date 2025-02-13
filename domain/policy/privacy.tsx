@@ -11,10 +11,10 @@ const PrivacyPolicyPage = () => {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           INTRODUCTION
         </h3>
-        <p className="text-[#383A47] leading-8 text-lg font-normal">
+        <p className="text-[#383A47] md:leading-[30px] leading-6 text-base md:text-lg font-normal">
           We at Help Emergency Services Limited are strongly committed to
           protecting and safeguarding your private information while serving
           you. In other for us to provide you with optimal care and comply with
@@ -27,7 +27,7 @@ const PrivacyPolicyPage = () => {
           partners, customers, drivers, HMOs etc. all over the world
         </p>
 
-        <p className="text-[#383A47] leading-8 text-lg font-normal">
+        <p className="text-[#383A47] md:leading-[30px] py-4 leading-6 text-base md:text-lg font-normal">
           Help Emergency Services Limited is the data controller for the
           personal data obtained on our website or mobile application. Any
           reference to “we”, “us”, or “our” in this Notice refers to Help
@@ -38,10 +38,10 @@ const PrivacyPolicyPage = () => {
 
       {/*  */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           AGE RESTRICTION
         </h3>
-        <p className="text-[#383A47] leading-8 text-lg font-normal">
+        <p className="text-[#383A47] md:leading-[30px] leading-6 text-base md:text-lg font-normal">
           You affirm that you are over the age of majority and have the right to
           contract in your own name, and that you have read this Privacy Notice
           and fully understand its contents. Individuals under the age of
@@ -51,10 +51,10 @@ const PrivacyPolicyPage = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           OUR COMMITMENT
         </h3>
-        <p className="text-[#383A47] leading-8 text-lg font-normal">
+        <p className="text-[#383A47] md:leading-[30px] leading-6 text-base md:text-lg font-normal">
           We comply with relevant data protection laws and regulations. This
           means that the personal information we hold about you shall only be:
         </p>
@@ -71,10 +71,10 @@ const PrivacyPolicyPage = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           DATA COLLECTION
         </h3>
-        <p className="text-[#383A47] leading-8 text-lg font-normal">
+        <p className="text-[#383A47] md:leading-[30px] leading-6 text-base md:text-lg font-normal">
           We use different methods to collect data from you. You may give us
           your data by creating an account on our website or mobile application,
           filing and submitting our online forms, communicating with our contact
@@ -90,7 +90,7 @@ const PrivacyPolicyPage = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           INDIVIDUAL CUSTOMERS
         </h3>
         <div>
@@ -106,7 +106,7 @@ const PrivacyPolicyPage = () => {
 
       {/*  */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           AMBULANCE DRIVERS
         </h3>
         <div>
@@ -122,7 +122,7 @@ const PrivacyPolicyPage = () => {
 
       {/*  */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           AMBULANCE PARTNERS
         </h3>
         <div>
@@ -138,7 +138,7 @@ const PrivacyPolicyPage = () => {
 
       {/*  */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-primary-5 font-semibold text-[28px] leading-[35px]">
+        <h3 className="text-primary-5 font-br-firma font-semibold text-2xl leading-[30px] md:text-[28px] md:leading-[35px]">
           HEALTH MANAGEMENT ORGANIZATIONS (HMOs)
         </h3>
         <div>
