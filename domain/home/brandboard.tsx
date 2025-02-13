@@ -27,7 +27,7 @@ function BrandBoard() {
               borderColor="#3BAD6B"
               link="subscriptions"
             >
-              <div className="flex p-2 gap-4 justify-center items-center ">
+              <div className="flex p-2 gap-4 justify-center items-center md:px-6 ">
                 <p className="text-white font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
                   Get Started
                 </p>
@@ -38,7 +38,7 @@ function BrandBoard() {
 
           <div className="">
             <ButtonGroup bgColor="#fff" borderColor="#3BAD6B">
-              <div className="flex p-2 gap-4 justify-center items-center">
+              <div className="flex p-2 md:px-6 gap-4 justify-center items-center">
                 <IoCall />
                 <p className="text-neutral-1 font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
                   Call Us Now
