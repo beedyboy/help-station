@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function BrandService() {
   return (
-    <div className="md:h-[600px]w-full flex flex-col md:justify-between gap-3 md:flex-row items-center md:p-2 py-3">
+    <div className="md:h-[600px]w-full flex flex-col md:justify-between gap-3 md:flex-row items-center md:p-2 py-3 md:mt-6">
       <div className="md:w-[45%] lg:w-[400] w-full h-[350px] md:h-[400px] flex justify-center items-center">
         <Image
           src={helpServiceImg}
@@ -23,16 +23,16 @@ function BrandService() {
             <Image src="/icons/healthcare.svg" alt="" width={50} height={50} />
           </div>
         </div>
-        <p className="font-bold md:text-4xl text-neutral-1 text-3xl  leading-9">
+        <p className="font-bold font-br-firma md:text-[48px] md:leading-[60px] text-neutral-1 text-[32px] leading-10">
           Our Services
         </p>
         <div>
-          <p className="text-base md:text-lg leading-6 text-neutral-1">
+          <p className="text-base md:text-lg md:leading-[30px] leading-6 text-neutral-1">
             Building safe spaces that are emergency ready is what drives us.
             With our range of services, we provide 360 cover for families,
             individuals and corporates. 
           </p>
-          <p className="py-3 text-sm md:text-base leading-6 text-neutral-2">
+          <p className="py-3 text-base md:text-lg md:leading-[30px] leading-6 text-neutral-1">
             Visit our services page to learn more.
           </p>
         </div>
@@ -40,11 +40,13 @@ function BrandService() {
           <ButtonGroup
             bgColor="#3BAD6B"
             borderColor="#3BAD6B"
-            width="158px"
+            width="168px"
             paddingX="10px"
-            paddingY="5px"
+            paddingY=""
           >
-            <p className="text-white">Services</p>
+            <p className="text-white text-base md:text-lg leading-6 px-2 ">
+              Services
+            </p>
           </ButtonGroup>
         </Link>
       </div>

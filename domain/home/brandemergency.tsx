@@ -13,11 +13,11 @@ function BrandEmergencyAssessment() {
             <FaStarOfLife color="#fff" size={24} />
           </div>
         </div>
-        <p className="font-bold md:text-4xl text-neutral-1 text-3xl  leading-9">
+        <p className="font-bold md:text-[48px] font-br-firma md:leading-[60px]  text-neutral-1 text-[32px]  leading-10">
           Health Emergency Risk Assessment
         </p>
 
-        <p className="text-base md:text-lg leading-6 text-neutral-1">
+        <p className="text-base md:text-lg md:leading-[30px] leading-6 text-neutral-1">
           Emergencies strike unannounced, catching us off guard when we least
           expect them. Having insights to our health status and how our
           lifestyle predisposes us to medical emergencies helps us make informed
@@ -25,18 +25,20 @@ function BrandEmergencyAssessment() {
           eventualities.
         </p>
 
-        <p className="py-3 text-sm md:text-base leading-6 text-[#DA2750]">
+        <p className="py-3 text-base md:text-lg md:leading-[30px] leading-6 text-[#DA2750]">
           Know your risk status.
         </p>
         <Link href="/herat">
           <ButtonGroup
             bgColor="#3BAD6B"
             borderColor="#3BAD6B"
-            width="158px"
+            width="198px"
             paddingX="10px"
             paddingY="5px"
           >
-            <p className="text-white">Take The Survey Now</p>
+            <p className="text-white text-base md:text-[17px] px-2 leading-6  ">
+              Take The Survey Now
+            </p>
           </ButtonGroup>
         </Link>
       </div>

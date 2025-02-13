@@ -31,8 +31,8 @@ function AboutUsPage() {
           <h2 className="leading-4 pb-3 md:pb-0 font-bold md:text-6xl text-[36px] md:leading-[80px]">
             About Our Company
           </h2>
-          <div className="flex text-center flex-col gap-3">
-            <p>
+          <div className="flex text-center flex-col gap-3 md:text-xl text-base font-normal md:leading-7 leading-6">
+            <p className="">
               A healthcare logistics company leveraging smart technology to
               provide quality emergency care and creating synergies between the
               various stakeholders in the healthcare ecosystem. The HELP
@@ -53,8 +53,10 @@ function AboutUsPage() {
       </section>
       <section className="bg-[#D7F1DE] w-full flex justify-center items-center ">
         <div className="py-10 w-[80%] text-center text-[#1B1C20] flex flex-col items-center ">
-          <h3 className="font-bold  text-5xl leading-[60px] ">Our Gallery</h3>
-          <p className="text-lg leading-7 text-[#1B1C20]">
+          <h3 className="font-bold  text-5xl leading-[60px] font-br-firma">
+            Our Gallery
+          </h3>
+          <p className="text-lg leading-[30px] font-normal text-[#1B1C20]">
             Explore moments of excellence and dedication captured in our work.
           </p>
 
@@ -73,16 +75,22 @@ function AboutUsPage() {
       <section className=" w-full flex justify-center items-center pb-4">
         <div className="md:w-[80%] w-[85%] flex flex-col gap-4 py-10">
           {/*  */}
-          <div className="flex   md:flex-row flex-col justify-start gap-3 md:gap-8">
-            <h3 className="font-bold text-2xl leading-10  md:text-5xl md:leading-[60px] ">
-              We are focused on making the world a safer place. HELP is on the
-              way
-            </h3>
-            <p className=" text-[#70727F] text-base text-[20px] leading-6 md:leading-7 ">
-              Here at HELP, we are passionate about easing the bottlenecks
-              around medical emergencies. We are creating better access to
-              ambulances and more visibility for appropriate health facilities
-            </p>
+          <div className="flex W-[100%]   md:flex-row flex-col justify-start gap-3 md:gap-8">
+            <div className="md:w-[50%]">
+              <h3 className="font-bold text-[30px] leading-10  font-br-firma md:text-5xl md:leading-[60px] ">
+                We are focused on making the world a safer place. HELP is on the
+                way
+              </h3>
+            </div>
+
+            {/*  */}
+            <div className="md:w-[50%] md:px-5">
+              <p className=" text-[#70727F] text-base text-[20px] leading-6 md:leading-[30px] ">
+                Here at HELP, we are passionate about easing the bottlenecks
+                around medical emergencies. We are creating better access to
+                ambulances and more visibility for appropriate health facilities
+              </p>
+            </div>
           </div>
           {/*  */}
 
@@ -97,7 +105,7 @@ function AboutUsPage() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-semibold text-lg leading-8 text-[#1B1C20]">
+                  <h3 className="font-semibold text-[20px] leading-8 text-[#1B1C20]">
                     Mission
                   </h3>
                   <p>
@@ -114,7 +122,7 @@ function AboutUsPage() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-semibold text-lg leading-8 text-[#1B1C20]">
+                  <h3 className="font-semibold text-[20px] leading-8 text-[#1B1C20]">
                     Vission
                   </h3>
                   <p>

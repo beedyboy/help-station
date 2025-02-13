@@ -8,7 +8,7 @@ interface ResourceBoardProps {
 
 const ResourceBoard: React.FC<ResourceBoardProps> = ({ posts }) => {
   return (
-    <div className="md:grid md:grid-cols-2 md:gap-10 gap-5 flex flex-col w-full">
+    <div className="md:grid w-[90%] md:grid-cols-2 md:gap-10 gap-5 flex flex-col md:w-full">
       {posts?.length ? (
         posts.map((post) => {
           const featuredImage =
@@ -21,7 +21,7 @@ const ResourceBoard: React.FC<ResourceBoardProps> = ({ posts }) => {
               <ResourceBoardCard
                 title={post.title.rendered}
                 excerpt={post.excerpt.rendered}
-                author={"Author Name"} 
+                author={"Author Name"}
                 date={post.date}
                 slug={post.slug}
                 featuredImage={featuredImage}
@@ -30,7 +30,9 @@ const ResourceBoard: React.FC<ResourceBoardProps> = ({ posts }) => {
           );
         })
       ) : (
-        <p>No resources found.</p>
+        <p className="text-lg font-medium leading-8 md:mt-3">
+          No resources found.
+        </p>
       )}
     </div>
   );

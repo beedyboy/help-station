@@ -32,17 +32,17 @@ const ServiceTextTemplate = ({
   return (
     <div className="h-full w-full flex flex-col justify-start gap-4">
       {subHeading ? (
-        <p className="text-btnColor text-lg md:text-[20px] leading-7  w-full font-semibold">
+        <p className="text-btnColor text-lg md:text-[20px] md:leading-10 leading-7   w-full font-semibold">
           {subHeading}
         </p>
       ) : null}
       {name ? (
-        <p className="font-semibold md:text-[28px] md:leading-[35px] text-[24px] leading-10">
+        <p className="font-semibold md:text-[28px] font-br-firma md:leading-[35px] text-[24px] leading-10">
           {name}
         </p>
       ) : null}
       {heading ? (
-        <h3 className="font-bold md:text-[55px] leading-[50px] text-[32px]">
+        <h3 className="font-bold md:text-[55px] md:leading-[60px] leading-10 text-[32px]">
           {heading.includes("HELP") ? (
             <span>
               {heading.split("HELP").map((part, index, arr) => (
@@ -62,7 +62,7 @@ const ServiceTextTemplate = ({
       {headingText ? (
         <p className="font-semibold leading-7 ">{headingText}</p>
       ) : null}
-      <p className=" md:text-lg text-base text-6 leading-6 md:leading-7 text-neutral-3 font-normal">
+      <p className=" md:text-lg text-base text-6 leading-6 md:leading-[30px] text-neutral-3 font-normal">
         {description}
       </p>
 

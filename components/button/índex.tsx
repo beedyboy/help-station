@@ -30,13 +30,14 @@ function ButtonGroup({
   return (
     <button
       type="submit"
-      className={`rounded-md md:w-[204] w-[167px] `}
+      className={`rounded-md md:w-auto w-[167px] `}
       style={{
         borderColor,
         backgroundColor: bgColor,
         border: `1px solid ${borderColor}`,
         borderRadius: "12px",
         padding: `${paddingX} ${paddingY}`,
+        width: "auto",
       }}
       onClick={handleClick}
     >

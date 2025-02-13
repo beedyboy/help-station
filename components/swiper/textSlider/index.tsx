@@ -34,7 +34,7 @@ function TextSlider() {
                 </span>
               </p>
 
-              <p className="text-primary md:text-base text-sm">
+              <p className="text-[#70727F] font-normal leading-6 md:leading-[30px] md:text-lg text-base">
                 {content.text}
               </p>
             </SwiperSlide>

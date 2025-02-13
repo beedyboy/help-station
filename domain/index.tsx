@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
           <div className="absolute w-[80%] md:w-[61%]  md:top-[30%] md:left-[20%] text-center">
-            <p className="text-3xl font-bold leading-10 md:leading-[48px] md:text-[48px] text-white text-center">
+            <p className="text-[32px] font-br-firma font-bold leading-10 md:leading-[60px] md:text-[48px] text-white text-center">
               Building the largest network of{""}
               <span className="text-[#FFC91A]">
                 {" "}
@@ -102,6 +102,7 @@ const HomePage: React.FC = () => {
           </a>
         </div>
       </main>
+
       <Modal>
         <div className="flex w-full h-full justify-center items-center bg-white rounded-2xl md:shadow relative">
           <div className="hidden md:flex justify-center items-center w-[357px] h-full bg-[#f9f9fc] absolute left-0 top-0">

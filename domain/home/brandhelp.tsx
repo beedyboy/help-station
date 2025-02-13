@@ -54,7 +54,7 @@ export default function BrandHelpBoard() {
               />
             </div>
             <div className="px-8 py-2  w-full ">
-              <p className="  font-bold md:text-5xl pr-8 md:pr-0 md:leading-[50px] text-3xl leading-9">
+              <p className="  font-bold md:text-5xl font-br-firma pr-8 md:pr-0 md:leading-[60px] text-[32px] leading-10">
                 Get help In 4 easy steps
               </p>
               <p className="text-[#70727F] text-sm leading-5">

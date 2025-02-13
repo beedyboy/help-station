@@ -10,6 +10,7 @@ import { IoCall } from "react-icons/io5";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import TextSlider from "@/components/swiper/textSlider";
+// import ImageTemplate from "@/components/image";
 
 function BrandBoard() {
   return (
@@ -26,8 +27,8 @@ function BrandBoard() {
               borderColor="#3BAD6B"
               link="subscriptions"
             >
-              <div className="flex p-2 gap-4 justify-center items-center ">
-                <p className="text-white font-semibold text-lg leading-9">
+              <div className="flex p-2 gap-4 justify-center items-center md:px-6 ">
+                <p className="text-white font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
                   Get Started
                 </p>
                 <FaArrowRightLong size={18} color="white" />
@@ -37,9 +38,9 @@ function BrandBoard() {
 
           <div className="">
             <ButtonGroup bgColor="#fff" borderColor="#3BAD6B">
-              <div className="flex p-2 gap-4 justify-center items-center">
+              <div className="flex p-2 md:px-6 gap-4 justify-center items-center">
                 <IoCall />
-                <p className="text-neutral-1 font-semibold text-lg leading-9">
+                <p className="text-neutral-1 font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
                   Call Us Now
                 </p>
               </div>
@@ -54,7 +55,7 @@ function BrandBoard() {
             height={100}
             alt="satisfied client"
           />
-          <p className="font-semibold text-base leading-6">
+          <p className="font-semibold text-sm leading-[17px]  md:text-base md:leading-6">
             25+ Satisfied Client
           </p>
         </div>
@@ -68,11 +69,11 @@ function BrandBoard() {
                   key={index}
                   className="flex flex-col items-center py-4 md:px-2"
                 >
-                  <p className="md:text-[32px] text-3xl leading-8 text-black font-bold">
+                  <p className="md:text-[32px] text-2xl leading-[30px] md:leading-10 text-[#1B1C20] font-bold">
                     {details.count}
                   </p>
                   <div className="w-[60%] md:w-full text-center">
-                    <p className="text-xs font-normal md:text-base text-[#70727f]">
+                    <p className="text-xs font-normal leading-5 md:leading-6 md:text-base text-[#70727f]">
                       {details.text}
                     </p>
                   </div>
@@ -97,12 +98,15 @@ function BrandBoard() {
                   index: number
                 ) => (
                   <SwiperSlide key={index} className="flex justify-center">
-                    <div className="relative w-full flex justify-center items-center ">
+                    <div className="relative md:h-[650px] flex justify-center rounded-[20px] overflow-hidden items-center ">
+                      {/* <div className="md:w-[95%] h-full rounded-[20px] overflow-hidden">
+                        <ImageTemplate src={image.img} />
+                      </div> */}
                       <Image
                         src={image.img}
                         alt={`Slide image ${index + 1}`}
                         width={544}
-                        height={400}
+                        height={350}
                         style={{
                           objectFit: "cover",
                           maxWidth: "100%",

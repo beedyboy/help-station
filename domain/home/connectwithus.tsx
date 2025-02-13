@@ -14,10 +14,10 @@ function ConnectWithUs() {
         <p className="font-semibold text-base leading-6 md:leading-8 text-btnColor ">
           Stay informed, Stay safe
         </p>
-        <p className="font-bold md:text-4xl text-3xl leading-10 ">
+        <p className="font-bold md:text-[48px] md:leading-[60px] text-[32px] font-br-firma leading-10 ">
           CONNECT WITH US
         </p>
-        <p className="text-base leading-6 md:text-lg md:leading-8 font-normal">
+        <p className="text-base md:text-lg md:leading-[30px] leading-6 text-neutral-1">
           Follow us on our social media pages for the latest updates in
           emergency preparedness, medical insights and more.
         </p>
