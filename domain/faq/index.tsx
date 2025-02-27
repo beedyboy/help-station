@@ -132,8 +132,8 @@ function FAQ() {
                   <ServiceTextTemplate
                     heading="Didn’t Find the Answer You Need"
                     headingText="Swift Medical Evacuation Anytime, Anywhere"
-                    description="For more detailed information and additional resources, please visit our website. Our team is also available to assist you with any further questions you may have."
-                    linkText="www.Helpstationfaq.com"
+                    description=""
+                    linkText="Contact us"
                     linkColor="#32A061"
                     subDescription=""
                     hasOnclickFn={false}

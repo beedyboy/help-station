@@ -42,6 +42,7 @@ function Service() {
                   action, and be the hero when every second counts.
                 </p>
               </Link>
+              {/* Request Quote button */}
             </div>
 
             {/*  */}
@@ -71,6 +72,7 @@ function Service() {
                 the flexibility to build life-saving skills on your terms.
                 Prepare for emergencies anytime, anywhere.
               </p>
+              {/* Start now button */}
             </div>
 
             <div className="hidden md:block md:absolute w-32 h-32 top-10 bg-[#5DBA7F] rounded-full -right-20"></div>
