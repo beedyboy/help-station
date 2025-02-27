@@ -134,11 +134,16 @@ function AboutUsPage() {
             </div>
 
             {/*  */}
-            <div className="md: md:w-[50%] relative flex  flex-col justify-end items-center">
-              <div className="absolute right-4 left-0 ">
-                <ImageTemplate src={helpBgImg} />
+            <div className=" md:w-[50%] relative flex  flex-col justify-end items-center">
+              <div className="absolute right-4  z-10 md:h-[100%] left-[10%] -top-1/2 max-lg:-top-[100%]  ">
+                <Image
+                  src={helpBgImg}
+                  alt=""
+                  className="station-image"
+                  style={{ maxHeight: "500px" }}
+                />
               </div>
-              <div className="w-[40%] top md:-top-10 h-[40%]">
+              <div className="w-[40%] md:w-[20%] top md:-top-10 md:h-[20%] h-[40%]">
                 <ImageTemplate src={helpImg} />
               </div>
             </div>
