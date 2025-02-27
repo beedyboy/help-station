@@ -80,7 +80,7 @@ function OurPartner({ openModal }: { openModal: () => void }) {
 
             <div onClick={() => openModal()}>
               <ButtonGroup bgColor="#3BAD6B">
-                <p className="p-1 text-white leading-10 font-bold">
+                <p className="p-2 text-white leading-10 font-bold">
                   Get Started
                 </p>
               </ButtonGroup>
@@ -122,10 +122,16 @@ function OurPartner({ openModal }: { openModal: () => void }) {
               Step 3
             </h3>
             <p className="md:text-[18px] text-base leading-6 md:leading-[30px]  text-primary-5">
-              A contract will be signed and all the necessary resources will be
-              provided to you.
-              <span className="font-semibold"> You’re all set!</span>
+              A contract will be signed, and <span className="font-semibold"> You’re all set!</span>
             </p>
+
+            <div onClick={() => openModal()}>
+              <ButtonGroup bgColor="#3BAD6B">
+                <p className="p-2 text-white leading-10 font-bold">
+                  Get Started
+                </p>
+              </ButtonGroup>
+            </div>
           </div>
 
           <div className="flex justify-center items-center  md:w-[50%] w-[100%]">

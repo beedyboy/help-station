@@ -8,8 +8,8 @@ import serviceHealthImg from "@/public/images/help_station_health.svg";
 import serviceLabImg from "@/public/images/help_station_laboratory.svg";
 import firstAidImg from "@/public/images/firstaidcpr.svg";
 import hearseImg from "@/public/images/hearse.svg";
-import aboutImg from "@/public/images/help_station_about.svg";
-import Link from "next/link";
+// import aboutImg from "@/public/images/help_station_about.svg";
+// import Link from "next/link";
 
 function OurService({ openModal }: { openModal: () => void }) {
   return (
@@ -80,7 +80,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                     heading="Instant ambulance request."
                     headingText="Swift Medical Evacuation Anytime, Anywhere"
                     description="Trust HelpStation to provide rapid and reliable ambulance services for critical medical emergencies, whether on the ground or in the air. With our fully equipped ambulance or state-of-the-art aircraft and experienced medical personnel, we ensure swift evacuation, following a medical emergency, to the nearest emergency ready facility, no matter where you are. Your safety and well-being are our top priority. Count on HelpStation to be your lifeline in times of urgent medical care."
-                    linkText="Find Out More"
+                    linkText="Call us"
                     linkColor="#DA2750"
                     hasOnclickFn={false}
                     // link="/services/ambulance-form"
@@ -253,7 +253,7 @@ function OurService({ openModal }: { openModal: () => void }) {
         </div>
       </section>
 
-      <section className="relative h-[400px] flex justify-center items-center w-full">
+      {/* <section className="relative h-[400px] flex justify-center items-center w-full">
         <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[362px] md:h-[463px]">
           <ImageTemplate src={aboutImg} />
         </div>
@@ -276,7 +276,7 @@ function OurService({ openModal }: { openModal: () => void }) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

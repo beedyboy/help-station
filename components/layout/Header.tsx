@@ -111,7 +111,7 @@ const Header: React.FC = () => {
             <div className="md:flex hidden md:flex-row flex-col md:items-center md:space-x-8">
               <Menu />
               <Link
-                href="/get-started"
+                href="/become-a-partner"
                 className="mt-4 md:mt-0 text-white bg-primary-4 hover:bg-primary rounded-lg px-4 py-2"
               >
                 Register as Partner

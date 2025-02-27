@@ -25,11 +25,12 @@ export const swiperImages = [
     img: workerImg,
   },
   {
-    header: "Be more than just a bystander, Be an Heron ",
+    header: "Be more than just a bystander, Be an Hero ",
     text: "Master vital skills like first aid, CPR, and other life-saving techniques to react swiftly and effectively in emergencies. That may just be the difference between life and loss.",
     img: firstAidImg,
   },
   {
+    // replace this
     header: "Sharpen your first aid skills with expert training",
     text: "Your knowledge may just be the difference between life and death. With the right skills and quick thinking, you can turn critical moments into opportunities to save lives and provide essential support when needed.",
     img: cprTeamImg,
@@ -49,11 +50,11 @@ export const swiperImages = [
     text: "Our partnership with emergency ready hospitals across the state, ensure you have better access to high quality emergency care and guarantee a seamless transition from pre-hospital care to hospital care.",
     img: hospitalCareImg,
   },
-  {
-    header: "Traffic is no barrier, at HELP we got you covered ",
-    text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
-    img: image7,
-  },
+  // {
+  //   header: "Traffic is no barrier, at HELP we got you covered ",
+  //   text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
+  //   img: image7,
+  // },
   {
     header: "Order a Hearse with Comfort and Ease ",
     text: "Losing a loved one is painful enough. Let us ease the burden with a compassionate, stress-free hearse arrangement.",

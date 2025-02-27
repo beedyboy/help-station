@@ -159,9 +159,9 @@ function ContactUsPage() {
             />
           </div>
           <div className="md:w-[45%] flex flex-col w-full gap-2">
-            <p className="text-primary-6 md:text-lg font-semibold md:leading-[30px] text-base leading-6">
+            {/* <p className="text-primary-6 md:text-lg font-semibold md:leading-[30px] text-base leading-6">
               Contact us
-            </p>
+            </p> */}
             <h3 className="text-primary-5 font-br-firma font-semibold md:text-[32px] md:leading-10 text-2xl leading-[30px]">
               Get in touch
             </h3>

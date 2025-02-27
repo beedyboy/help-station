@@ -9,9 +9,9 @@ function BrandClients() {
   return (
     <div className="flex flex-col w-full justify-center py-10 gap-5 md:justify-between md:flex-row items-center">
       <div className="md:w-[50%] flex flex-col justify-start gap-3 items-start md:pr-36">
-        <p className="font-semibold text-base leading-6 md:leading-8 text-btnColor ">
+        {/* <p className="font-semibold text-base leading-6 md:leading-8 text-btnColor ">
           Meet our clients
-        </p>
+        </p> */}
         <p className="font-bold md:text-[48px] font-br-firma md:leading-[60px] text-[32px] leading-10 ">
           Our Clients{" "}
         </p>
