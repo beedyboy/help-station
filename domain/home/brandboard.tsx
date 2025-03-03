@@ -10,15 +10,34 @@ import { IoCall } from "react-icons/io5";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import TextSlider from "@/components/swiper/textSlider";
-// import ImageTemplate from "@/components/image";
+import { RiAlarmWarningFill } from "react-icons/ri";
 
 function BrandBoard() {
   return (
-    <div className="w-full flex justify-start items-start gap-5 md:flex-row flex-col">
-      <div className="md:w-[50%] w-full  h-auto">
-        <div className="h-auto">
-          <TextSlider />
+    <div className="w-full h-auto flex justify-start items-start gap-5 md:flex-row flex-col">
+      <div className="md:w-[50%] w-full  h-auto flex flex-col">
+        {/* <span
+          className="ml-2 bg-[#DFF7E4] inline-flex items-center justify-center rounded-full align-middle md:w-[50px] md:h-[50px] w-[35px] h-[35px]"
+          style={{ verticalAlign: "middle" }}
+        >
+          <RiAlarmWarningFill size={24} className="text-[#333] text-[14px]" />
+        </span> */}
+        <div className="flex flex-col">
+          <span
+            className="ml-2 bg-[#DFF7E4] inline-flex items-center justify-center rounded-full align-middle md:w-[50px] md:h-[50px] w-[35px] h-[35px]"
+            style={{ verticalAlign: "middle" }}
+          >
+            <RiAlarmWarningFill size={24} className="text-[#333] text-[14px]" />
+          </span>
+          <div className="flex-grow">
+            <TextSlider />
+          </div>
         </div>
+
+        {/* <div className="flex flex-col h-auto">
+          <div className="h-auto">
+            <TextSlider />
+          </div> */}
 
         <div className="w-[100%] flex md:items-center md:justify-start gap-4 py-2">
           <div>
@@ -47,6 +66,7 @@ function BrandBoard() {
             </ButtonGroup>
           </div>
         </div>
+        {/* </div> */}
 
         <div className="flex justify-start items-center gap-5 py-3">
           <Image

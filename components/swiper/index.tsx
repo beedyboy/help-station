@@ -5,6 +5,7 @@ import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
+import "./swiper.css";
 
 interface SwiperComponentProps {
   children: ReactNode;
@@ -24,7 +25,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ children }) => {
         loop={true}
         className="w-full h-auto"
       >
-        <div className="h-auto">{children}</div>
+       {children} 
       </Swiper>
     </div>
   );
