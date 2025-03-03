@@ -86,3 +86,11 @@ html {
     width: 380px;
   }
 }
+
+@media (max-width: 1700px) {
+  .station-image {
+    position: absolute;
+    height: 300px;
+    top: -100%;
+  }
+}

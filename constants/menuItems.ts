@@ -25,10 +25,10 @@ export const menuItems: MenuItem[] = [
 ];
 
 export const companyMenuItems: MenuItem[] = [
-  { name: "Gallery", href: "/gallery" },
+  { name: "Gallery", href: "/contact-us" },
   { name: "About Us", href: "/about-us" },
-  { name: "Partners", href: "/partners" },
-  { name: "Contact Help", href: "/contact" },
+  { name: "Partners", href: "/become-a-partner" },
+  { name: "Contact Help", href: "/contact-us" },
 ];
 
 export const resourcesMenuItems: MenuItem[] = [
@@ -38,7 +38,7 @@ export const resourcesMenuItems: MenuItem[] = [
 
 export const privacyAndSecurityMenuItems: MenuItem[] = [
   { name: "Privacy Policy", href: "/policy" },
-  { name: "Security Policy", href: "/security-policy" },
+  { name: "Security Policy", href: "/policy" },
 ];
 
 export const footerMenuItems: { category: string; menu: MenuItem[] }[] = [
@@ -57,8 +57,24 @@ export const footerMenuItems: { category: string; menu: MenuItem[] }[] = [
 ];
 
 export const socials: Social[] = [
-    { name: "Twitter", href: "https://x.com/help_station_?s=21&t=19V3dJbyyA0Rx0GBcBebsg", icon: "/icons/twitter.svg" },
-    { name: "Facebook", href: "https://www.facebook.com/HelpStation1?mibextid=LQQJ4d", icon: "/icons/facebook.svg" },
-    { name: "Instagram", href: "https://www.instagram.com/helpstation.ng", icon: "/icons/instagram.svg" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/help-station-ng", icon: "/icons/linkedin.svg" },
+  {
+    name: "Twitter",
+    href: "https://x.com/help_station_?s=21&t=19V3dJbyyA0Rx0GBcBebsg",
+    icon: "/icons/twitter.svg",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/HelpStation1?mibextid=LQQJ4d",
+    icon: "/icons/facebook.svg",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/helpstation.ng",
+    icon: "/icons/instagram.svg",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/help-station-ng",
+    icon: "/icons/linkedin.svg",
+  },
 ];
