@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function ConnectWithUs() {
   return (
-    <div className="flex flex-col  md:py-10 gap-5 md:flex-row items-center">
+    <div className="flex flex-col md:w-[90%] md:py-10 gap-5 md:flex-row items-center">
       <div className="md:w-[55%] flex flex-col justify-start gap-3 items-start md:pr-30">
         <p className="font-semibold text-base leading-6 md:leading-8 text-btnColor ">
           Stay informed, Stay safe
