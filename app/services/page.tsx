@@ -1,7 +1,6 @@
 "use client";
 
 import Modal from "@/components/modal";
-import Image from "next/image";
 import { useModal } from "@/context/ModalContext";
 import OurService from "@/domain/our-services";
 import Link from "next/link";
