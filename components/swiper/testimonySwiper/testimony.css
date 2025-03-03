@@ -33,7 +33,7 @@
   left: 25%;
   opacity: 0.3;
   transform: translateX(-50%);
-  height: 69%;
+  height: 66%;
   width: 510px;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
@@ -53,7 +53,7 @@
 
 .item3 {
   left: 75%;
-  height: 69%;
+  height: 66%;
   transform: translateX(-50%);
   opacity: 0.3;
   width: 510px;
