@@ -10,7 +10,7 @@ import Link from "next/link";
 function ConnectWithUs() {
   return (
     <div className="flex flex-col  md:py-10 gap-5 md:flex-row items-center">
-      <div className="md:w-[50%] flex flex-col justify-start gap-3 items-start md:pr-36">
+      <div className="md:w-[55%] flex flex-col justify-start gap-3 items-start md:pr-30">
         <p className="font-semibold text-base leading-6 md:leading-8 text-btnColor ">
           Stay informed, Stay safe
         </p>
@@ -42,7 +42,7 @@ function ConnectWithUs() {
         </div>
       </div>
 
-      <div className="md:w-[50%] flex justify-end items-end">
+      <div className="md:w-[45%] flex justify-end items-end">
         <div className=" w-[100%] h-[100%] md:h-[483px] md:w-[413px]">
           <Image
             src={connectImg}
