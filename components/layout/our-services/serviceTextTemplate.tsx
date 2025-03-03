@@ -30,7 +30,7 @@ const ServiceTextTemplate = ({
   link = "/",
 }: ServiceTextProps) => {
   return (
-    <div className="h-full w-full flex flex-col justify-start gap-4">
+    <div className="h-full w-full flex flex-col justify-start gap-2">
       {subHeading ? (
         <p className="text-btnColor text-lg md:text-[20px] md:leading-10 leading-7   w-full font-semibold">
           {subHeading}

@@ -65,16 +65,16 @@ function OurService({ openModal }: { openModal: () => void }) {
         </div>
 
         {/*  */}
-        <div className="lg:w-[100%] bg-[#ffeaea] lg:px-5  rounded-2xl">
+        <div className="lg:w-[100%] bg-[#ffeaea] lg:p-4   rounded-2xl">
           <ServiceLayout bgColor="#ffeaea">
-            <div className=" p-6 w-full flex rounded-lg flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-center">
-              <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-end items-end w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[386px]  lg:h-[386px]">
+            <div className=" p-6 w-full flex rounded-lg flex-col-reverse items-center lg:flex-row gap-5 lg:gap-10 justify-center">
+              <div className="lg:w-[45%] lg:h-[80%] h-[350px] justify-end items-end w-full rounded-lg overflow-hidden">
+                <div className="lg:w-[100%]  lg:h-[400px]">
                   <ImageTemplate src={serviceCallImg} />
                 </div>
               </div>
-              <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
-                <div className="md:w-[90%] w-full">
+              <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-3 lg:justify-center flex-col ">
+                <div className="md:w-[95%] w-full">
                   <ServiceTextTemplate
                     subDescription=""
                     heading="Instant ambulance request."
@@ -99,8 +99,8 @@ function OurService({ openModal }: { openModal: () => void }) {
         {/*  */}
 
         <ServiceLayout bgColor="white">
-          <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
-            <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
+          <div className=" lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center md:justify-between">
+            <div className="lg:w-[53%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
               <ServiceTextTemplate
                 description=" Creating long lasting memories for your client and guest need not be tainted with mishaps. When you choose us, you’re not just renting an ambulance; you’re choosing peace of mind. Our team of highly skilled and certified paramedics and equipment are ready to provide immediate medical assistance whenever the need arises."
                 headingText="Creating memories with peace of mind, secure that event!"
@@ -116,8 +116,8 @@ function OurService({ openModal }: { openModal: () => void }) {
                 text=""
               />
             </div>
-            <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
-              <div className="lg:w-[500px]  lg:h-[500px]">
+            <div className="lg:w-[40%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
+              <div className="lg:w-[100%] lg:h-[500px] flex justify-end items-end">
                 <ImageTemplate src={serviceEmergencyCenterimg} />
               </div>
             </div>
@@ -126,7 +126,7 @@ function OurService({ openModal }: { openModal: () => void }) {
 
         {/*  */}
 
-        <div className="lg:w-[100%] bg-[#c5e9cf] rounded-2xl">
+        <div className="lg:w-[100%] bg-[#c5e9cf] lg:p-4 rounded-2xl">
           <ServiceLayout bgColor="#c5e9cf">
             <div className=" p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
               <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-2 lg:justify-center flex-col ">
@@ -148,7 +148,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                 </div>
               </div>
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[400px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
+                <div className="lg:w-[480px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={firstAidImg} />
                 </div>
               </div>
@@ -189,7 +189,7 @@ function OurService({ openModal }: { openModal: () => void }) {
         </ServiceLayout>
 
         {/*  */}
-        <div className="lg:w-[100%] bg-[#D7D9E3] rounded-2xl">
+        <div className="lg:w-[100%] bg-[#D7D9E3] lg:p-4 rounded-2xl">
           <ServiceLayout bgColor="[#D7D9E3]">
             <div className="p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
               <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-2 lg:justify-center flex-col ">
@@ -210,8 +210,8 @@ function OurService({ openModal }: { openModal: () => void }) {
                   />
                 </div>
               </div>
-              <div className="lg:w-[40%] lg:h-[70%] h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[400px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
+              <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
+                <div className="lg:w-[480px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={serviceLabImg} />
                 </div>
               </div>
@@ -224,8 +224,8 @@ function OurService({ openModal }: { openModal: () => void }) {
 
         <div className="lg:pb-8">
           <ServiceLayout bgColor="white">
-            <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5 lg:gap-6 justify-center">
-              <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
+            <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5 lg:gap-6 justify-center md:justify-between">
+              <div className="lg:w-[50%] w-full flex justify-start items-center lg:gap-6 flex-col ">
                 <div className="md:w-[95%] w-full">
                   <ServiceTextTemplate
                     subDescription=""
@@ -243,8 +243,8 @@ function OurService({ openModal }: { openModal: () => void }) {
                   />
                 </div>
               </div>
-              <div className="lg:w-[50%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
-                <div className="lg:w-[500px]  lg:h-[500px]">
+              <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
+                <div className="lg:w-[100%] lg:h-[500px] flex justify-end items-end">
                   <ImageTemplate src={hearseImg} />
                 </div>
               </div>

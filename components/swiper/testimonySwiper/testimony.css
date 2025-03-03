@@ -35,8 +35,7 @@
   transform: translateX(-50%);
   height: 65%;
   width: 410px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-  /* background-color: #f9f9fc; */
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
 }
 
@@ -59,7 +58,7 @@
   opacity: 0.3;
   width: 410px;
   z-index: 1;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
   /* background-color: #f9f9fc; */
   padding: 0.5rem;
 }

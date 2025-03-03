@@ -94,8 +94,8 @@ const Header: React.FC = () => {
                 <Image
                   src="/images/help_station_logo.svg"
                   alt="Help Station Logo"
-                  width={50}
-                  height={50}
+                  width={100}
+                  height={100}
                 />
               </Link>{" "}
               <Image
