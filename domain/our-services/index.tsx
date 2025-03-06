@@ -128,9 +128,9 @@ function OurService({ openModal }: { openModal: () => void }) {
 
         <div className="lg:w-[100%] bg-[#c5e9cf] lg:p-4 rounded-2xl">
           <ServiceLayout bgColor="#c5e9cf">
-            <div className=" p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
+            <div className=" p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center md:justify-between">
               <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-2 lg:justify-center flex-col ">
-                <div className="md:w-[90%] w-full">
+                <div className="md:w-[95%] w-full">
                   <ServiceTextTemplate
                     subDescription="Be the difference between panic and action."
                     heading="First Aid Training"
@@ -148,7 +148,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                 </div>
               </div>
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[480px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
+                <div className="lg:w-[100%] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={firstAidImg} />
                 </div>
               </div>
@@ -160,7 +160,7 @@ function OurService({ openModal }: { openModal: () => void }) {
         {/*  */}
 
         <ServiceLayout bgColor="white">
-          <div className="p-6 lg:p-0 w-full flex flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-start ro">
+          <div className="p-6 lg:p-0 w-full flex flex-col-reverse items-center lg:flex-row gap-5 lg:gap-6 justify-start md:justify-between">
             <div className="lg:w-[40%]  lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
               <div className="lg:w-[600px] rounded-lg overflow-hidden lg:h-[500px]">
                 <ImageTemplate src={serviceHealthImg} />
@@ -191,9 +191,9 @@ function OurService({ openModal }: { openModal: () => void }) {
         {/*  */}
         <div className="lg:w-[100%] bg-[#D7D9E3] lg:p-4 rounded-2xl">
           <ServiceLayout bgColor="[#D7D9E3]">
-            <div className="p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center">
+            <div className="p-6 w-full flex rounded-lg flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center md:justify-between">
               <div className="lg:w-[60%] w-full flex justify-start items-center lg:gap-2 lg:justify-center flex-col ">
-                <div className="md:w-[90%] w-full">
+                <div className="md:w-[95%] w-full">
                   <ServiceTextTemplate
                     subDescription=""
                     heading="Food Handlers’ Screening"
@@ -211,7 +211,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                 </div>
               </div>
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
-                <div className="lg:w-[480px] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
+                <div className="lg:w-[100%] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={serviceLabImg} />
                 </div>
               </div>

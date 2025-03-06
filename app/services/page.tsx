@@ -16,7 +16,7 @@ function Service() {
       <Modal>
         <div className="w-full flex md:gap-0 gap-5  md:flex-row flex-col h-[100%] bg-white rounded-2xl shadow relative">
           <div className="md:w-[50%] -z-0  h-full flex justify-center items-center md:bg-[#5DBA7F] rounded-lg relative">
-            <div className="md:w-[74%] bg-white text-center flex flex-col justify-center items-center gap-2 p-6 md:h-[50%] border-[1px] border-red rounded-lg">
+            <div className="md:w-[74%] bg-white shadow-md text-center flex flex-col justify-center items-center gap-2 p-6 md:h-[50%] border-[1px] border-red rounded-lg">
               {/* <div className="  cursor-pointer w-8 h-8 z-10">
                 <Link href="/services/ambulance-form">
                   <Image
@@ -60,7 +60,7 @@ function Service() {
           </div>
 
           <div className="md:w-[50%] z-20 h-full flex justify-center overflow-hidden items-center  relative">
-            <div className="md:w-[74%] text-center flex flex-col justify-center items-center gap-2 p-6 md:h-[50%] border-[1px] border-[#70727F] rounded-lg">
+            <div className="md:w-[74%]  text-center flex flex-col justify-center items-center gap-2 p-6 md:h-[50%] border-[1px] border-[#70727F] shadow-md rounded-lg">
               {/* <div className="  cursor-pointer w-8 h-8 z-10">
                 <Image
                   src="icons/world_wide.svg"

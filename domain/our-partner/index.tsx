@@ -71,7 +71,7 @@ function OurPartner({ openModal }: { openModal: () => void }) {
             <h3 className="text-primary-4 font-br-firma md:p-2 font-bold md:text-[48px] md:leading-[60px] text-[32px] leading-10">
               Step 1
             </h3>
-            <p className="md:text-[18px] text-base leading-6 md:leading-[30px] md:p-2 text-primary-5">
+            <p className="md:text-[18px] font-normal text-base leading-6 md:leading-[30px] md:p-2 text-primary-5">
               Click on this {""}
               <span className="font-semibold">&quot;Get started&quot;</span>
               link below and fill the form, provide information about your
@@ -107,18 +107,10 @@ function OurPartner({ openModal }: { openModal: () => void }) {
             <h3 className="text-primary-4 font-br-firma md:p-2 font-bold md:text-[48px] md:leading-[60px] text-[32px] leading-10">
               Step 2
             </h3>
-            <p className="md:text-[18px] text-base leading-6 md:leading-[30px]  text-primary-5">
+            <p className="md:text-[18px] md:px-2 font-normal text-base leading-6 md:leading-[30px] text-primary-5">
               After submission, an engagement officer will reach out to you to
               ensure you understand the process and finalise the process.
             </p>
-
-            <div>
-              <ButtonGroup bgColor="#3BAD6B">
-                <p className="px-4 text-white leading-10 font-bold">
-                  Get Started
-                </p>
-              </ButtonGroup>
-            </div>
           </div>
         </section>
 

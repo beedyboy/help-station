@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="text-white w-full fixed z-20 top-0 start-0 border-b border-gray-200">
+      <header className="text-white w-[100%] fixed z-20 top-0 start-0 border-b border-gray-200">
         <div className="inline-flex justify-center items-center bg-secondary h-[30px] w-full text-white gap-2 p-2">
           <Image
             src="/icons/ic_outline-emergency.svg"
