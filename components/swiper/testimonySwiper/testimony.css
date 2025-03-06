@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 330px;
+  width: 530px;
   z-index: 0;
   border-radius: 15px;
   background-size: contain;
@@ -33,8 +33,8 @@
   left: 25%;
   opacity: 0.3;
   transform: translateX(-50%);
-  height: 65%;
-  width: 410px;
+  height: 66%;
+  width: 510px;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
 }
@@ -45,7 +45,7 @@
   left: 50%;
   scale: 2rem;
   transform: translateX(-50%);
-  width: 500px;
+  width: 600px;
   z-index: 2;
   background-color: #d7f1de;
   padding: 2rem;
@@ -53,10 +53,10 @@
 
 .item3 {
   left: 75%;
-  height: 65%;
+  height: 66%;
   transform: translateX(-50%);
   opacity: 0.3;
-  width: 410px;
+  width: 510px;
   z-index: 1;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
   /* background-color: #f9f9fc; */

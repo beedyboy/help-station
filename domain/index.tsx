@@ -29,6 +29,8 @@ const HomePage: React.FC = () => {
           <BrandBoard />
         </div>
 
+        {/* Slider Text */}
+
         <div className="w-full md:h-[384px] h-[350px] relative flex justify-center items-center">
           <Image
             src={framer}

@@ -2,11 +2,10 @@
 
 import OurPartner from "@/domain/our-partner";
 import Modal from "@/components/modal";
-import Image from "next/image";
+// import Image from "next/image";
 import { useModal } from "@/context/ModalContext";
-import { RiAlarmWarningFill } from "react-icons/ri";
-import { GiAmbulance } from "react-icons/gi";
 import Link from "next/link";
+import ButtonGroup from "@/components/button/índex";
 
 function BecomeApartner() {
   const { openModal } = useModal();
@@ -22,11 +21,7 @@ function BecomeApartner() {
           <div className=" md:absolute w-[90%] md:w-[90%] h-[100%] md:h-[50%]  md:top-1/4 md:left-[3rem] left-8 grid gap-6 md:grid-flow-col grid-flow-row md:grid-cols-3  z-30">
             <div className=" bg-white text-center flex flex-col justify-center items-center gap-2 p-3  border-[1px] border-red rounded-lg">
               {/* <Link></Link> */}
-              <div className="  cursor-pointer w-8 h-8 z-10">
-                <Link href="/services/ambulance-form">
-                  <GiAmbulance size={24} color="#5DBA7F" />
-                </Link>
-              </div>
+
               <h3 className="font-semibold text-lg text-primary-5">
                 <Link href="/services/ambulance-form">Ambulance Partner</Link>
               </h3>
@@ -36,43 +31,40 @@ function BecomeApartner() {
                   resources to provide access to ambulance care.
                 </Link>
               </p>
+
+              <ButtonGroup bgColor="#3BAD6B">
+                <Link
+                  href="/services/ambulance-form"
+                  className="px-4 text-white leading-10 font-bold"
+                >
+                  Get started
+                </Link>
+              </ButtonGroup>
             </div>
 
             {/* 2 */}
 
             <div className=" bg-white text-center flex flex-col justify-center items-center gap-2 p-3 border-[1px] border-red rounded-lg">
-              <div className="  cursor-pointer w-8 h-8 z-10">
-                <Link href="/services/HSETraining-form">
-                  <RiAlarmWarningFill size={24} color="#5DBA7F" />
-                </Link>
-              </div>
               <h3 className="font-semibold text-lg text-primary-5">
-                <Link href="/services/HSETraining-form">
-                  Emergency-Ready Hospital Partner
-                </Link>
+                Emergency-Ready Partner
               </h3>
               <p className="font-normal text-sm leading-4 text-primary-5">
-                <Link href="/services/HSETraining-form">
-                  Become an emergency hospital partner , we ai, to leverage
-                  existing resources to provide access to quality emergency care
-                  .
-                </Link>
+                We aim to leverage existing resources to provide access to
+                quality emergency care .
               </p>
+
+              <ButtonGroup bgColor="#3BAD6B">
+                <Link
+                  href="/services/emergency-form"
+                  className="px-4 text-white leading-10 font-bold"
+                >
+                  Get started
+                </Link>
+              </ButtonGroup>
             </div>
 
             {/*  */}
             <div className=" bg-white text-center flex flex-col justify-center items-center gap-2 p-3  border-[1px] border-red rounded-lg">
-              <div className="  cursor-pointer w-8 h-8 z-10">
-                <Link href="/services/hearse-form">
-                  <Image
-                    src="icons/site_training.svg"
-                    width={29}
-                    height={29}
-                    className="py-2 text-white rounded md:block"
-                    alt={"site_training"}
-                  />
-                </Link>
-              </div>
               <h3 className="font-semibold text-lg text-primary-5">
                 <Link href="/services/hearse-form">Hearse Partner</Link>
               </h3>
@@ -82,6 +74,15 @@ function BecomeApartner() {
                   to provide access to hearse services.
                 </Link>
               </p>
+
+              <ButtonGroup bgColor="#3BAD6B">
+                <Link
+                  href="/services/HSETraining-form"
+                  className="px-4 text-white leading-10 font-bold"
+                >
+                  Get started
+                </Link>
+              </ButtonGroup>
             </div>
           </div>
           <div className="md:w-[50%] -z-0  h-full flex justify-center items-center md:bg-[#5DBA7F] rounded-lg relative">
