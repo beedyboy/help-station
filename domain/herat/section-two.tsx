@@ -32,7 +32,7 @@ function SectionTwo({
 
   const activeSection = data.find((item) => item.section === section);
 
-  const weights = [1, 1, 1, 2, 3, 3, 3, 1, 1, 2, 2, 2];
+  const weights = [1, 1, 1, 1, 3, 3, 3, 1, 1, 2, 2, 2];
 
   const handleAnswerSelection = (
     questionId: number,
@@ -54,7 +54,16 @@ function SectionTwo({
                         question.answerValue() * questionWeight;
                       return {
                         ...question,
-                        correctAnswer: selectedOption,
+                        //
+                        correctAnswer: Array.isArray(question.correctAnswer)
+                          ? question.correctAnswer.includes(selectedOption)
+                            ? question.correctAnswer.filter(
+                                (correctAnswerOption) =>
+                                  correctAnswerOption != selectedOption
+                              )
+                            : [...question.correctAnswer, selectedOption]
+                          : selectedOption,
+                        //
                         previousValue: +questionPreviousAnswer,
                       };
                     }
@@ -257,11 +266,13 @@ function SectionTwo({
                             className="flex items-center gap-2 cursor-pointer"
                           >
                             <input
-                              type="radio"
+                              type="checkbox"
                               name={`question-${item.id}`}
-                              className="form-radio text-primary focus:ring-primary-light"
+                              className="custom-checkbox"
                               value={option}
-                              checked={item.correctAnswer === option}
+                              checked={
+                                item.correctAnswer?.includes(option) || false
+                              }
                               onChange={() =>
                                 handleAnswerSelection(item.id, option)
                               }
@@ -399,7 +410,7 @@ function SectionTwo({
                 }}
               >
                 <ButtonGroup bgColor="#3BAD6B">
-                  <p className="text-white p-2 text-sm leading-5 font-bold">
+                  <p className="text-white px-4 p-2 text-sm leading-5 font-bold">
                     Proceed to Section 3
                   </p>
                 </ButtonGroup>
