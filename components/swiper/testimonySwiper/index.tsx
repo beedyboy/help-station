@@ -14,6 +14,8 @@ export default function CustomSwiper() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { size } = useWidth();
 
+  const [sliderWidth, setSliderWidth] = useState(size);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(
@@ -24,9 +26,15 @@ export default function CustomSwiper() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    setSliderWidth(size);
+
+    console.log("checking slider width", sliderWidth);
+  }, [size]);
+
   return (
     <>
-      {size && size > 780 ? (
+      {size && size > 800 ? (
         <div className="container md:flex-row flex-col flex h-full ">
           {testimonials.map((testimonial, index: number) => {
             let className = "items flex justify-center items-center flex-col";

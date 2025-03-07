@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
             className="w-[100%] md:h-[100%] h-[100%]"
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
-          <div className="absolute w-[80%] md:w-[61%]  md:top-[30%] md:left-[20%] text-center">
+          <div className="absolute w-[80%] md:w-[70%]  md:top-[30%] md:left-[13%] text-center">
             <p className="text-[32px] font-br-firma font-bold leading-10 md:leading-[60px] md:text-[48px] text-white text-center">
               Building the largest network of{""}
               <span className="text-[#FFC91A]">
@@ -48,7 +48,10 @@ const HomePage: React.FC = () => {
                 first- responders, ambulances
               </span>{" "}
               , and
-              <span className="text-[#FFC91A]">emergency- ready hospitals</span>
+              <span className="text-[#FFC91A]">
+                {" "}
+                emergency- ready hospitals
+              </span>
             </p>
           </div>
         </div>
@@ -69,12 +72,14 @@ const HomePage: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:w-full w-full">
-          <BrandPartners />
+        <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
+          <div className=" flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
+            <BrandPartners />
+          </div>
         </div>
 
         <div className="w-[100%] flex justify-center items-center bg-[#F9F9FC]">
-          <div className="w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
+          <div className="w-[95%] md:w-[90%] flex justify-center items-center px-4 py-8 md:px-0 md:py-0">
             <BrandClients />
           </div>
         </div>
@@ -90,6 +95,7 @@ const HomePage: React.FC = () => {
             <ConnectWithUs />
           </div>
         </div>
+
         <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50">
           <a
             href="tel:+2349132000013"

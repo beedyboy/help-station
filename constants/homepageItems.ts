@@ -3,6 +3,7 @@ import firstAidImg from "@/public/images/help_station_firstaid.svg";
 import cprTeamImg from "@/public/images/help_statiun_cprteam.svg";
 import serviceLineImg from "@/public/images/help_station_serviceline.svg";
 import ambcylceImg from "@/public/images/help_station_ambcycle.svg";
+import rapidResponseImg from "@/public/images/helpStation_rapid_response_image.svg";
 import hospitalCareImg from "@/public/images/help_station_hospitalcare.svg";
 import image7 from "@/public/images/help_station_ambcycle.svg";
 import image8 from "@/public/images/help_station_hearse.svg";
@@ -43,18 +44,18 @@ export const swiperImages = [
   {
     header: "Rapid Response ",
     text: "Whether you need an ambulance or first responder immediately or want to schedule one for a future event, HelpStation streamlines the process for you. Our platform ensures quick and efficient access to emergency services",
-    img: ambcylceImg,
+    img: rapidResponseImg,
   },
   {
     header: "Emergency-Ready Hospitals ",
     text: "Our partnership with emergency ready hospitals across the state, ensure you have better access to high quality emergency care and guarantee a seamless transition from pre-hospital care to hospital care.",
     img: hospitalCareImg,
   },
-  // {
-  //   header: "Traffic is no barrier, at HELP we got you covered ",
-  //   text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
-  //   img: image7,
-  // },
+  {
+    header: "Traffic is no barrier, at HELP we got you covered ",
+    text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
+    img: ambcylceImg,
+  },
   {
     header: "Order a Hearse with Comfort and Ease ",
     text: "Losing a loved one is painful enough. Let us ease the burden with a compassionate, stress-free hearse arrangement.",
