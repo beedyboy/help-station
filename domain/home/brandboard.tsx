@@ -52,12 +52,13 @@ function BrandBoard() {
             </div>
           </div>
         </div>
+        {/* </div> */}
 
         {/* Satisfied Clients Section */}
         <div className="flex justify-start items-center gap-5 py-3">
           <Image
             src="/images/group_avatars.png"
-            width={10}
+            width={120}
             height={120}
             alt="satisfied client"
           />
