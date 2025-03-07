@@ -10,6 +10,7 @@ import { IoCall } from "react-icons/io5";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import TextSlider from "@/components/swiper/textSlider";
+
 import Link from "next/link";
 // import ImageTemplate from "@/components/image";
 
@@ -25,13 +26,19 @@ function BrandBoard() {
         <div className="w-full md:w-[70%] flex md:items-center md:justify-start gap-4 py-2  h-auto">
           <div className="w-[50%]">
             <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4  rounded-xl">
-              <Link href="/subscriptions"></Link>
+              <Link href="/subscriptions">
+              
+              
+              
               <div className="flex  gap-4 justify-center items-center md:px-6">
+
                 <p className="text-white font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
                   Get Started
                 </p>
                 <FaArrowRightLong size={18} color="white" />
               </div>
+                
+                </Link>
             </div>
           </div>
 
@@ -51,6 +58,7 @@ function BrandBoard() {
             </div>
           </div>
         </div>
+        {/* </div> */}
 
         {/* Satisfied Clients Section */}
         <div className="flex justify-start items-center gap-5 py-3">

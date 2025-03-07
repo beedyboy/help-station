@@ -16,7 +16,7 @@ import testimonyThree from "@/public/images/testimoney_three.svg";
 
 export const swiperImages = [
   {
-    header: "Traffic is no barrier, at HELP we got you covered ",
+    header: "Traffic is no barrier, at &nbsp; HELP we got you covered ",
     text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
     img: image7,
   },
@@ -32,8 +32,8 @@ export const swiperImages = [
   },
   {
     // replace this
-    header: "Sharpen your first aid skills with expert training",
-    text: "Your knowledge may just be the difference between life and death. With the right skills and quick thinking, you can turn critical moments into opportunities to save lives and provide essential support when needed.",
+    header: "Our First Aid + CPR Training is now digital!!!",
+    text: "Be trained and ready from the comfort of your home through our new self-paced digital training.",
     img: cprTeamImg,
   },
   {
