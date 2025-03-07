@@ -12,6 +12,7 @@ import { useModal } from "@/context/ModalContext";
 import sectionOneImg from "@/public/images/help_station_section_one.svg";
 import ButtonGroup from "@/components/button/índex";
 import UserForm from "@/components/form";
+import "./css/index.css";
 
 function SectionTwo({
   nextSection,
@@ -78,7 +79,6 @@ function SectionTwo({
                         options: (question.options as IOption[]).map(
                           (opt, i) => {
                             if (i === optionIndex) {
-                              console.log("inside index 6");
                               const questionPreviousAnswer =
                                 questionWeight *
                                 opt.answerValue(selectedOption);

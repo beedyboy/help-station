@@ -30,6 +30,14 @@ function FAQ() {
     setQuery(text);
   };
 
+  const handleSearch = () => {
+    setFaq((items) =>
+      items.filter((item) =>
+        item.question.toLowerCase().includes(query.toLowerCase())
+      )
+    );
+  };
+
   useEffect(() => {
     const debounce = () => {
       setFaq((items) =>
@@ -89,7 +97,10 @@ function FAQ() {
               <div className="absolute left-2 top-3">
                 <RiSearch2Line color="black" fill="black" size={28} />
               </div>
-              <div className="absolute right-2 top-1 p-2 px-3 md:px-8 text-center rounded-lg bg-primary-4 ">
+              <div
+                onClick={handleSearch}
+                className="absolute right-2 top-1 p-2 px-3 md:px-8 text-center rounded-lg bg-primary-4 "
+              >
                 <p className="text-white">Search</p>
               </div>
               <input
