@@ -12,8 +12,9 @@ const contactInfo = [
   {
     icon: <IoIosCall size={24} fill="white" color="white" />,
     heading: "Call Centre  (24/7)",
-    description: "+2349132000013",
-    otherText: "+2349132000014",
+    description: "02013309111",
+    otherText: "",
+    //  "+2349132000014",
   },
   {
     icon: <AiOutlineInbox color="white" size={24} fill="white" />,
@@ -113,7 +114,7 @@ function ContactUsPage() {
               Stay In Touch With Us
             </p>
             <h3 className="font-bold text-[28px] leading-[35px] px-2 md:px-0 md:text-[32px] md:leading-10 text-[#1B1C20]">
-              We’d love to hear from you
+              We&apos;d love to hear from you
             </h3>
           </div>
 
