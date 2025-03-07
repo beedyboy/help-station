@@ -72,7 +72,7 @@ function OurPartner({ openModal }: { openModal: () => void }) {
               Step 1
             </h3>
             <p className="md:text-[18px] font-normal text-base leading-6 md:leading-[30px] md:p-2 text-primary-5">
-              Click on this {""}
+              Click on this
               <span className="font-semibold">&quot;Get started&quot;</span>
               link below and fill the form, provide information about your
               company and all the required information.

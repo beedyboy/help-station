@@ -105,23 +105,33 @@ function FAQ() {
 
         <section className=" w-full flex justify-center items-center p-2">
           <div className="md:w-[85%] w-[90%] flex flex-col gap-3">
-            {faq.map((faq) => (
-              <div key={faq.id}>
-                <FAQDropdown
-                  id={faq.id}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={faq.isOpen}
-                  onClick={(id: number) => handleFAQ(id)}
-                />
+            {faq.length > 0 ? (
+              faq.map((faq) => (
+                <div key={faq.id}>
+                  <FAQDropdown
+                    id={faq.id}
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={faq.isOpen}
+                    onClick={(id: number) => handleFAQ(id)}
+                  />
+                </div>
+              ))
+            ) : (
+              <div className="text-lg font-medium text-primary-5 p-4">
+                <p>
+                  No result from the search , navigate to our contact Us page to
+                  send a direct message.
+                </p>
+                <p>Thanks</p>
               </div>
-            ))}
+            )}
           </div>
         </section>
 
-        <div className="md:w-[85%] w-[90%] bg-[#c5e9cf] rounded-2xl">
+        <div className="md:w-[85%] w-[100%] bg-[#c5e9cf] md:rounded-2xl md:mb-8">
           <ServiceLayout bgColor="#c5e9cf">
-            <div className="py-2 md:p-6  w-full flex rounded-lg flex-col items-center lg:flex-row gap-2  lg:gap-3 justify-center">
+            <div className="py-2 md:p-6  w-full flex rounded-lg flex-col items-center lg:flex-row gap-4  lg:gap-3 justify-center">
               <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
                 <div className=" overflow-hidden md:h-full">
                   <ImageTemplate src={shrugBroImg} />
@@ -131,9 +141,9 @@ function FAQ() {
                 <div className="w-[80%]">
                   <ServiceTextTemplate
                     heading="Didn’t Find the Answer You Need"
-                    headingText="Swift Medical Evacuation Anytime, Anywhere"
-                    description=""
-                    linkText="Contact us"
+                    headingText=""
+                    description="For more detailed information and additional resources, please visit our website. Our team is also available to assist you with any further questions you may have."
+                    linkText="www.Helpstationfaq.com"
                     linkColor="#32A061"
                     subDescription=""
                     hasOnclickFn={false}

@@ -96,7 +96,11 @@ const ServiceTextTemplate = ({
             >
               {linkText}
             </p>
-            <MdOutlineKeyboardDoubleArrowRight color={linkColor} size={24} />
+            {linkText.includes("www") ? (
+              ""
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight color={linkColor} size={24} />
+            )}
           </div>
         </Link>
       )}
