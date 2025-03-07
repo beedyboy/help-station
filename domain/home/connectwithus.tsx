@@ -28,16 +28,19 @@ function ConnectWithUs() {
             </Link>
           </div>
           <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
-            <Link href="https://x.com/help_station_?s=21&t=19V3dJbyyA0Rx0GBcBebsg"></Link>
-            <ImageTemplate src={tikTokImg} />
+            <Link href="https://x.com/help_station_?s=21&t=19V3dJbyyA0Rx0GBcBebsg">
+              <ImageTemplate src={tikTokImg} />
+            </Link>
           </div>
           <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
-            <Link href="https://www.instagram.com/helpstation.ng"></Link>
-            <ImageTemplate src={instargramImg} />
+            <Link href="https://www.instagram.com/helpstation.ng">
+              <ImageTemplate src={instargramImg} />
+            </Link>
           </div>
           <div className="w-8 md:w-10 h-8 md:h-10 cursor-pointer">
-            <Link href="https://www.linkedin.com/company/help-station-ng"></Link>
-            <ImageTemplate src={linkedInImg} />
+            <Link href="https://www.linkedin.com/company/help-station-ng">
+              <ImageTemplate src={linkedInImg} />
+            </Link>
           </div>
         </div>
       </div>

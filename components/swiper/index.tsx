@@ -14,6 +14,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ children }) => {
   return (
     <div className="w-full h-auto">
       <Swiper
+        autoHeight={true}
         modules={[Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
@@ -22,7 +23,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ children }) => {
           disableOnInteraction: false,
         }}
         loop={true}
-        className="w-full h-auto"
+        className="w-full h-auto flex flex-col "
       >
         <div className="h-auto">{children}</div>
       </Swiper>

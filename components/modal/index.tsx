@@ -11,7 +11,6 @@ interface ModalProps {
 
 const Modal = ({ children, width = 895 }: ModalProps) => {
   const { isOpen, closeModal } = useModal();
-
   if (!isOpen) return null;
 
   return (
