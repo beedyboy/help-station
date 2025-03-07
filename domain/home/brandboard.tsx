@@ -25,13 +25,14 @@ function BrandBoard() {
         <div className="w-full md:w-[70%] flex md:items-center md:justify-start gap-4 py-2  h-auto">
           <div className="w-[50%]">
             <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4  rounded-xl">
-              <Link href="/subscriptions"></Link>
-              <div className="flex  gap-4 justify-center items-center md:px-6">
-                <p className="text-white font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
-                  Get Started
-                </p>
-                <FaArrowRightLong size={18} color="white" />
-              </div>
+              <Link href="/subscriptions">
+                <div className="flex  gap-4 justify-center items-center md:px-6">
+                  <p className="text-white font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
+                    Get Started
+                  </p>
+                  <FaArrowRightLong size={18} color="white" />
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -56,7 +57,7 @@ function BrandBoard() {
         <div className="flex justify-start items-center gap-5 py-3">
           <Image
             src="/images/group_avatars.png"
-            width={120}
+            width={10}
             height={120}
             alt="satisfied client"
           />
