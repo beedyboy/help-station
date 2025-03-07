@@ -230,7 +230,7 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
                         {item.id}. {item.question}
                       </p>
                       {item.subQuestion && (
-                        <p className="italic font-normal text-sm leading-4 text-[#383A47]">
+                        <p className="italic font-normal text-sm leading-4 text-[#515254]">
                           {item.subQuestion}
                         </p>
                       )}
@@ -379,7 +379,7 @@ function SectionOne({ nextSection }: { nextSection: () => void }) {
             </p>
             <div className="" onClick={() => nextSection()}>
               <ButtonGroup bgColor="#3BAD6B">
-                <p className="text-white p-2 text-sm leading-5 font-bold">
+                <p className="text-white px-4 p-2 text-sm leading-5 font-bold">
                   Proceed to Section 2
                 </p>
               </ButtonGroup>

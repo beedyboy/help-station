@@ -163,7 +163,7 @@ export interface IQuestionItem {
   subQuestion?: string;
   question: string;
   options: string[] | IOption[];
-  correctAnswer?: string;
+  correctAnswer?: string | string[];
   answerValue: () => number;
   previousValue: number;
 }

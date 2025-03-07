@@ -94,3 +94,31 @@ html {
     top: -100%;
   }
 }
+
+/* Hide default checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #383a47;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* When checkbox is checked, add inner dot */
+input[type="checkbox"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #383a47;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

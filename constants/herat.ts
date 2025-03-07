@@ -283,23 +283,36 @@ export const questionData: IQuestion[] = [
         options: [
           "Frequent alcohol consumption",
           "Cigarette smoking",
-          "Use of  shisha",
+          "Use of shisha",
           "Use of aphrodisiac",
           "Frequent use of herbal concoction",
           "Drug abuse",
           "Use of skin whitening products",
         ],
-        correctAnswer: "",
+        correctAnswer: [],
         answerValue: function () {
-          if (this.correctAnswer == "Frequent alcohol consumption") return 1;
-          if (this.correctAnswer == "Cigarette smoking") return 2;
-          if (this.correctAnswer == "Use of  shisha") return 3;
-          if (this.correctAnswer == "Use of aphrodisiac") return 4;
-          if (this.correctAnswer == "Frequent use of herbal concoction")
-            return 5;
-          if (this.correctAnswer == "Drug abuse") return 6;
-          if (this.correctAnswer == "Use of skin whitening products") return 7;
-          return 0;
+          if (!Array.isArray(this.correctAnswer)) return 0;
+
+          return this.correctAnswer.reduce((total, answer) => {
+            switch (answer) {
+              case "Frequent alcohol consumption":
+                return total + 2;
+              case "Cigarette smoking":
+                return total + 4;
+              case "Use of shisha":
+                return total + 6;
+              case "Use of aphrodisiac":
+                return total + 8;
+              case "Frequent use of herbal concoction":
+                return total + 10;
+              case "Drug abuse":
+                return total + 12;
+              case "Use of skin whitening products":
+                return total + 14;
+              default:
+                return total;
+            }
+          }, 0);
         },
         previousValue: 0,
       },
