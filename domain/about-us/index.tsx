@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutImg from "@/public/images/help_station_about.svg";
+// import aboutImg from "@/public/images/help_station_about.svg";
 import ImageTemplate from "@/components/image";
 import helpBgImg from "@/public/images/about_background_image.svg";
 import helpImg from "@/public/images/help_station_help.svg";
@@ -10,7 +10,7 @@ import { aboutImages } from "@/constants/about";
 function AboutUsPage() {
   return (
     <main className="w-full flex justify-center flex-col md:gap-12 items-center -mt-4 ">
-      <section className="relative h-[600px] flex justify-center items-center w-full">
+      {/* <section className="relative h-[600px] flex justify-center items-center w-full">
         <div className=" absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[600px]">
           <Image
             src={aboutImg}
@@ -50,27 +50,7 @@ function AboutUsPage() {
             </p>
           </div>
         </div>
-      </section>
-      <section className="bg-[#D7F1DE] w-full flex justify-center items-center ">
-        <div className="py-10 w-[80%] text-center text-[#1B1C20] flex flex-col items-center ">
-          <h3 className="font-bold  text-5xl leading-[60px] font-br-firma">
-            Our Gallery
-          </h3>
-          <p className="text-lg leading-[30px] font-normal text-[#1B1C20]">
-            Explore moments of excellence and dedication captured in our work.
-          </p>
-
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 py-10 w-full ">
-            {aboutImages.map((image, i) => {
-              return (
-                <div key={i} className="rounded-xl overflow-hidden">
-                  <ImageTemplate src={image} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      </section> */}
 
       <section className=" w-full flex justify-center items-center pb-4">
         <div className="md:w-[80%] w-[85%] flex flex-col gap-4 py-10">
@@ -123,7 +103,7 @@ function AboutUsPage() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <h3 className="font-semibold text-[20px] leading-8 text-[#1B1C20]">
-                    Vission
+                    Vision
                   </h3>
                   <p>
                     To become a one-stop portal for medical services in Africa
@@ -150,6 +130,28 @@ function AboutUsPage() {
           </div>
         </div>
       </section>
+
+      <section className="bg-[#D7F1DE] w-full flex justify-center items-center ">
+        <div className="py-10 w-[80%] text-center text-[#1B1C20] flex flex-col items-center ">
+          <h3 className="font-bold  text-5xl leading-[60px] font-br-firma">
+            Our Gallery
+          </h3>
+          <p className="text-lg leading-[30px] font-normal text-[#1B1C20]">
+            Explore moments of excellence and dedication captured in our work.
+          </p>
+
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 py-10 w-full ">
+            {aboutImages.map((image, i) => {
+              return (
+                <div key={i} className="rounded-xl overflow-hidden">
+                  <ImageTemplate src={image} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }

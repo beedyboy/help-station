@@ -8,6 +8,15 @@ function TextSlider() {
       <SwiperComponent>
         {swiperImages.map((content, index) => (
           <SwiperSlide key={index} className="!h-auto">
+             <span
+                  className="ml-2 bg-[#DFF7E4] inline-flex items-center justify-center rounded-full align-middle md:w-[50px] md:h-[50px] w-[35px] h-[35px]"
+                  style={{ verticalAlign: "middle" }}
+                >
+                  <RiAlarmWarningFill
+                    size={24}
+                    className="text-[#333] text-[14px]"
+                  />
+                </span>
             <div className="flex flex-col justify-center items-start h-auto">
               <p className="md:text-[64px] text-[32px] leading-10 font-br-firma font-bold md:leading-[80px]">
                 {content.header.includes("HELP") ? (
@@ -19,15 +28,6 @@ function TextSlider() {
                 ) : (
                   <span>{content.header}</span>
                 )}
-                <span
-                  className="ml-2 bg-[#DFF7E4] inline-flex items-center justify-center rounded-full align-middle md:w-[50px] md:h-[50px] w-[35px] h-[35px]"
-                  style={{ verticalAlign: "middle" }}
-                >
-                  <RiAlarmWarningFill
-                    size={24}
-                    className="text-[#333] text-[14px]"
-                  />
-                </span>
               </p>
 
               <p className="text-[#70727F] font-normal leading-6 md:leading-[30px] md:text-lg text-base">
