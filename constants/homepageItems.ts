@@ -19,47 +19,83 @@ export const swiperImages = [
     header: "Traffic is no barrier, at &nbsp; HELP we got you covered ",
     text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
     img: image7,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     header: "Who can you bank on when an emergency happens ?",
     text: " HelpStation is your trusted partner in any medical emergency. We are here to provide you with prompt end-to-end emergency care, ensuring your safety and peaceof mind, always.",
     img: workerImg,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     header: "Be more than just a bystander, Be an Hero ",
     text: "Master vital skills like first aid, CPR, and other life-saving techniques to react swiftly and effectively in emergencies. That may just be the difference between life and loss.",
     img: firstAidImg,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     // replace this
     header: "Our First Aid + CPR Training is now digital!!!",
     text: "Be trained and ready from the comfort of your home through our new self-paced digital training.",
     img: cprTeamImg,
+    action1: {
+      label: "Start Learning",
+      href: '/services/ambulance-form'
+    }
   },
   {
     header: "Swiftly request an ambulance ",
     text: "Prompt Emergency Response When Every Second Counts with our streamlined processes. Enjoy swift coordination, real-time updates, and efficient service to ensure you receive the help you need.",
     img: serviceLineImg,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     header: "Rapid Response ",
     text: "Whether you need an ambulance or first responder immediately or want to schedule one for a future event, HelpStation streamlines the process for you. Our platform ensures quick and efficient access to emergency services",
     img: rapidResponseImg,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     header: "Emergency-Ready Hospitals ",
     text: "Our partnership with emergency ready hospitals across the state, ensure you have better access to high quality emergency care and guarantee a seamless transition from pre-hospital care to hospital care.",
     img: hospitalCareImg,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     header: "Traffic is no barrier, at HELP we got you covered ",
     text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
     img: ambcylceImg,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
   {
     header: "Order a Hearse with Comfort and Ease ",
     text: "Losing a loved one is painful enough. Let us ease the burden with a compassionate, stress-free hearse arrangement.",
     img: image8,
+    action1: {
+      label: "Get Started",
+      href: '/subscription'
+    }
   },
 ];
 

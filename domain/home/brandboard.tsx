@@ -5,12 +5,10 @@ import SwiperComponent from "@/components/swiper";
 import { helpCount, swiperImages } from "@/constants/homepageItems";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-import { FaArrowRightLong } from "react-icons/fa6";
-import { IoCall } from "react-icons/io5";
+
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import TextSlider from "@/components/swiper/textSlider";
-import Link from "next/link";
 // import ImageTemplate from "@/components/image";
 
 function BrandBoard() {
@@ -20,39 +18,6 @@ function BrandBoard() {
         <div>
           <TextSlider />
         </div>
-
-        {/* Adjust spacing dynamically */}
-        <div className="w-full md:w-[70%] flex md:items-center md:justify-start gap-4 py-2  h-auto">
-          <div className="w-[50%]">
-            <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4  rounded-xl">
-              <Link href="/subscriptions">
-                <div className="flex  gap-4 justify-center items-center md:px-6">
-                  <p className="text-white font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
-                    Get Started
-                  </p>
-                  <FaArrowRightLong size={18} color="white" />
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          <div className="w-[50%]">
-            <div
-              className="border-[1px] border-[#3BAD6B] py-3 px-2 rounded-xl bg-[#fff] "
-              // bgColor="#fff" borderColor="#3BAD6B"
-            >
-              <a href="tel:+2349132000013">
-                <div className="flex md:px-6 gap-4 justify-center items-center">
-                  <IoCall />
-                  <p className="text-neutral-1 font-semibold md:text-lg text-base leading-6 md:leading-[30px]">
-                    Call Us Now
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        {/* </div> */}
 
         {/* Satisfied Clients Section */}
         <div className="flex justify-start items-center gap-5 py-3">
