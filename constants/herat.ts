@@ -85,6 +85,7 @@ export const questionData: IQuestion[] = [
         question: "Have you experienced any of the following symptoms lately?",
         options: [
           {
+            id: 0,
             list: "Unexplained weight loss?",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -94,6 +95,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 1,
             list: "Difficulty breathing",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -103,6 +105,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 2,
             list: "Suicidal thoughts?",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -112,6 +115,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 3,
             list: "Excessive bleeding?",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -121,6 +125,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 4,
             list: "Chest pain/palpitations?",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -130,6 +135,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 5,
             list: "Persistent dizziness?",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -429,6 +435,7 @@ export const questionData: IQuestion[] = [
         subQuestion: "Kindly select where appropriate",
         options: [
           {
+            id: 0,
             list: "Car?",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -438,6 +445,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 1,
             list: "Motorbikes",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -447,6 +455,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 2,
             list: "speed boats",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -456,6 +465,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 3,
             list: "heavy duty trucks",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",
@@ -465,6 +475,7 @@ export const questionData: IQuestion[] = [
             previousValue: 0,
           },
           {
+            id: 4,
             list: "Machineries",
             listAnswers: ["Yes", "No"],
             correctAnswer: "",

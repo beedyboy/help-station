@@ -84,7 +84,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                     linkColor="#DA2750"
                     hasOnclickFn={false}
                     // link="/services/ambulance-form"
-                    link="/subscriptions"
+                    link=""
                     subHeading=""
                     name=""
                     onClick={() => console.log()}

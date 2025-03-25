@@ -44,7 +44,7 @@ function Service() {
               {/*  */}
               <ButtonGroup bgColor="#3BAD6B">
                 <Link
-                  href="/services/ambulance-form"
+                  href="/services/firstaid-form"
                   className="px-4 text-white leading-10 font-bold"
                 >
                   Get started
@@ -83,12 +83,9 @@ function Service() {
               </p>
 
               <ButtonGroup bgColor="#3BAD6B">
-                <Link
-                  href="/services/ambulance-form"
-                  className="px-4 text-white leading-10 font-bold"
-                >
+                <p className="px-4 text-white leading-10 font-bold">
                   Get started
-                </Link>
+                </p>
               </ButtonGroup>
             </div>
 

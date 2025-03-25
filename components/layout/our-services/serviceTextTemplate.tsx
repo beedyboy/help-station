@@ -1,3 +1,4 @@
+import ButtonGroup from "@/components/button/índex";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
@@ -87,6 +88,24 @@ const ServiceTextTemplate = ({
           </p>
           <MdOutlineKeyboardDoubleArrowRight color={linkColor} size={24} />
         </div>
+      ) : linkText === "Call us" ? (
+        <a href="tel:+2349132000013">
+          <div className="flex items-center gap-2">
+            <a
+              href="tel:+2349132000013"
+              style={{ color: linkColor }}
+              className="cursor-pointer text-lg font-bold md:text-2xl leading-7"
+              onClick={() => console.log("linkText: ", linkText)}
+            >
+              {linkText}
+            </a>
+            {linkText.includes("www") ? (
+              ""
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight color={linkColor} size={24} />
+            )}
+          </div>
+        </a>
       ) : (
         <Link href={link}>
           <div className="flex items-center gap-2">
@@ -103,6 +122,20 @@ const ServiceTextTemplate = ({
             )}
           </div>
         </Link>
+      )}
+
+      {linkText.includes("www") && (
+        <div className=" w-[50%] my-2">
+          {" "}
+          <ButtonGroup bgColor="#3BAD6B">
+            <Link
+              href="/contact-us"
+              className="px-4 text-white leading-10 font-bold"
+            >
+              Contact Us
+            </Link>
+          </ButtonGroup>
+        </div>
       )}
     </div>
   );

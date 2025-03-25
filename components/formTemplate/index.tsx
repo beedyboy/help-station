@@ -38,8 +38,14 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
         <div
           className="cursor-pointer"
           onClick={() => {
-            console.log("back from ambulance");
-            router.back();
+            if (
+              document.referrer &&
+              document.referrer.includes(window.location.origin)
+            ) {
+              router.back();
+            } else {
+              router.push("/");
+            }
           }}
         >
           <IoIosArrowRoundBack size={34} />

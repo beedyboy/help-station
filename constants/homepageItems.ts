@@ -21,8 +21,8 @@ export const swiperImages = [
     img: image7,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     header: "Who can you bank on when an emergency happens ?",
@@ -30,8 +30,8 @@ export const swiperImages = [
     img: workerImg,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     header: "Be more than just a bystander, Be an Hero ",
@@ -39,8 +39,8 @@ export const swiperImages = [
     img: firstAidImg,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     // replace this
@@ -49,8 +49,8 @@ export const swiperImages = [
     img: cprTeamImg,
     action1: {
       label: "Start Learning",
-      href: '/services/ambulance-form'
-    }
+      href: "/services/ambulance-form",
+    },
   },
   {
     header: "Swiftly request an ambulance ",
@@ -58,8 +58,8 @@ export const swiperImages = [
     img: serviceLineImg,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     header: "Rapid Response ",
@@ -67,8 +67,8 @@ export const swiperImages = [
     img: rapidResponseImg,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     header: "Emergency-Ready Hospitals ",
@@ -76,8 +76,8 @@ export const swiperImages = [
     img: hospitalCareImg,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     header: "Traffic is no barrier, at HELP we got you covered ",
@@ -85,8 +85,8 @@ export const swiperImages = [
     img: ambcylceImg,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
   {
     header: "Order a Hearse with Comfort and Ease ",
@@ -94,13 +94,13 @@ export const swiperImages = [
     img: image8,
     action1: {
       label: "Get Started",
-      href: '/subscription'
-    }
+      href: "/subscription",
+    },
   },
 ];
 
 export const helpCount = [
-  { count: "200+", text: "Total Response" },
+  { count: "200+", text: "Total Responses" },
   { count: "60+", text: "Emergency Ready Hospital" },
   { count: "190+", text: "Number Of Ambulance " },
 ];
@@ -133,7 +133,7 @@ export const testimonials = [
     title: "Walure Capital Partners with HelpStation",
     content:
       "Walure Capital partnered with HelpStation for the WalureFit Event, impressed by their dedication and medical support. Their team provided essential care, ensuring peace of mind and a successful event. We look forward to future collaborations.",
-     author: "GM",
+    author: "GM",
     role: "(Walure Capital)",
   },
 ];

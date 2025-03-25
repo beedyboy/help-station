@@ -77,7 +77,7 @@ function BecomeApartner() {
 
               <ButtonGroup bgColor="#3BAD6B">
                 <Link
-                  href="/services/HSETraining-form"
+                  href="/services/hearse-form"
                   className="px-4 text-white leading-10 font-bold"
                 >
                   Get started
