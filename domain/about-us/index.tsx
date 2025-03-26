@@ -1,15 +1,16 @@
-import Image from "next/image";
+// import Image from "next/image";
 // import aboutImg from "@/public/images/help_station_about.svg";
 import ImageTemplate from "@/components/image";
-import helpBgImg from "@/public/images/about_background_image.svg";
-import helpImg from "@/public/images/help_station_help.svg";
+// import helpBgImg from "@/public/images/about_background_image.svg";
+// import helpImg from "@/public/images/help_station_help.svg";
+import aboutImg from "@/public/images/about_help_station_image.svg";
 import { MdOutlineAirplanemodeActive } from "react-icons/md";
 import { IoMdEye } from "react-icons/io";
 import { aboutImages } from "@/constants/about";
 
 function AboutUsPage() {
   return (
-    <main className="w-full flex justify-center flex-col md:gap-12 items-center -mt-4 ">
+    <main className="w-full flex justify-center flex-col items-center -mt-4 ">
       {/* <section className="relative h-[600px] flex justify-center items-center w-full">
         <div className=" absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[600px]">
           <Image
@@ -53,7 +54,7 @@ function AboutUsPage() {
       </section> */}
 
       <section className=" w-full flex justify-center items-center pb-4">
-        <div className="md:w-[80%] w-[85%] flex flex-col gap-4 py-10">
+        <div className="md:w-[80%] w-[85%] flex flex-col py-10">
           {/*  */}
           <div className="flex W-[100%]   md:flex-row flex-col justify-start gap-3 md:gap-8">
             <div className="md:w-[50%]">
@@ -74,7 +75,7 @@ function AboutUsPage() {
           </div>
           {/*  */}
 
-          <div className="flex  md:flex-row flex-col md:justify-between items-center gap-32 md:gap-7 ">
+          <div className=" flex  md:flex-row flex-col md:justify-between items-center gap-7 ">
             {/*  */}
             <div className="relative md:w-[40%] flex flex-col gap-5 items-center justity-center mt-7">
               <div className="absolute md:-top-2 left-5 md:left-4 -z-10 bottom-0 border-dashed border-2 border-btnColor h-[200px] "></div>
@@ -95,7 +96,7 @@ function AboutUsPage() {
                 </div>
               </div>
 
-              <div className="-left-36 flex justify-between gap-5 w-full ">
+              <div className="-left-36 flex gap-5 w-full ">
                 <div className="md:w-7 md:h-7 p-4 w-12 h-12 bg-btnColor flex  justify-center items-center rounded-full">
                   <div className="">
                     <IoMdEye size={24} color="white" />
@@ -114,17 +115,18 @@ function AboutUsPage() {
             </div>
 
             {/*  */}
-            <div className=" md:w-[50%] relative flex  flex-col justify-end items-center">
-              <div className="absolute right-4  z-10 md:h-[100%] left-[10%] -top-1/2 max-lg:-top-[100%]  ">
+            <div className=" md:w-[50%] h--100% relative flex  flex-col items-center">
+              {/* absolute right-4  z-10 md:h-[100%] left-[10%] -top-1/2 max-lg:-top-[100%] */}
+              {/* <div className=" flex  justify-center items-center  ">
                 <Image
-                  src={helpBgImg}
+                  src={aboutImg}
                   alt=""
                   className="station-image"
-                  style={{ maxHeight: "500px" }}
+                  // style={{ maxHeight: "100%" }}
                 />
-              </div>
-              <div className="w-[40%] md:w-[20%] top md:-top-10 md:h-[20%] h-[40%]">
-                <ImageTemplate src={helpImg} />
+              </div> */}
+              <div className="md:-top-[20rem] w-full md:w-full top ">
+                <ImageTemplate src={aboutImg} />
               </div>
             </div>
           </div>
@@ -151,7 +153,6 @@ function AboutUsPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

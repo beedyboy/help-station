@@ -151,6 +151,7 @@ export type FirstAidProps = {
 };
 
 export type IOption = {
+  id: number;
   list: string;
   listAnswers: string[];
   correctAnswer: string;

@@ -98,6 +98,46 @@ function SectionThree() {
     );
   };
 
+  const checkAnsweredQuestionOne = (): boolean => {
+    const question = pickedQuestions?.[0];
+    const options = question?.options as IOption[];
+
+    if (Array.isArray(options) && typeof options[0] === "object") {
+      const nestedAnswer = options[0].correctAnswer;
+      return nestedAnswer !== undefined && nestedAnswer !== "";
+    }
+
+    if (typeof question?.correctAnswer === "string") {
+      return question.correctAnswer !== "";
+    }
+
+    if (Array.isArray(question?.correctAnswer)) {
+      return question.correctAnswer.length > 0;
+    }
+
+    return false;
+  };
+
+  const checkAnsweredQuestionTwo = (): boolean => {
+    const question = pickedQuestions[1];
+    const options = question?.options as IOption[];
+
+    if (Array.isArray(options) && typeof options[0] === "object") {
+      const nestedAnswer = options[0].correctAnswer;
+      return nestedAnswer !== undefined && nestedAnswer !== "";
+    }
+
+    if (typeof question?.correctAnswer === "string") {
+      return question.correctAnswer !== "";
+    }
+
+    if (Array.isArray(question?.correctAnswer)) {
+      return question.correctAnswer.length > 0;
+    }
+
+    return false;
+  };
+
   useEffect(() => {
     const arr: number[] = [];
     const sectionData = data.find((index) => index.section === section);
@@ -307,6 +347,9 @@ function SectionThree() {
                 </button>
 
                 <button
+                  disabled={
+                    !checkAnsweredQuestionOne() || !checkAnsweredQuestionTwo()
+                  }
                   onClick={() => {
                     setPaginationNumber((prev) => {
                       if (prev == activeSection?.questions.length) return 4;
