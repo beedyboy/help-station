@@ -83,9 +83,12 @@ function Service() {
               </p>
 
               <ButtonGroup bgColor="#3BAD6B">
-                <p className="px-4 text-white leading-10 font-bold">
-                  Get started
-                </p>
+              <Link
+                  href="/contact-us"
+                  className="px-4 text-white leading-10 font-bold"
+                >
+                Start Learning
+                </Link>
               </ButtonGroup>
             </div>
 

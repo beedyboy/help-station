@@ -21,7 +21,7 @@ export const swiperImages = [
     img: image7,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -30,7 +30,7 @@ export const swiperImages = [
     img: workerImg,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -39,7 +39,7 @@ export const swiperImages = [
     img: firstAidImg,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -58,7 +58,7 @@ export const swiperImages = [
     img: serviceLineImg,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -67,7 +67,7 @@ export const swiperImages = [
     img: rapidResponseImg,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -76,7 +76,7 @@ export const swiperImages = [
     img: hospitalCareImg,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -85,7 +85,7 @@ export const swiperImages = [
     img: ambcylceImg,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
   {
@@ -94,7 +94,7 @@ export const swiperImages = [
     img: image8,
     action1: {
       label: "Get Started",
-      href: "/subscription",
+      href: "/subscriptions",
     },
   },
 ];

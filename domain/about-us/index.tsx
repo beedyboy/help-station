@@ -1,8 +1,8 @@
-// import Image from "next/image";
-// import aboutImg from "@/public/images/help_station_about.svg";
+import Image from "next/image";
 import ImageTemplate from "@/components/image";
 // import helpBgImg from "@/public/images/about_background_image.svg";
 // import helpImg from "@/public/images/help_station_help.svg";
+import aboutBannerImg from "@/public/images/help_station_about.svg";
 import aboutImg from "@/public/images/about_help_station_image.svg";
 import { MdOutlineAirplanemodeActive } from "react-icons/md";
 import { IoMdEye } from "react-icons/io";
@@ -11,10 +11,10 @@ import { aboutImages } from "@/constants/about";
 function AboutUsPage() {
   return (
     <main className="w-full flex justify-center flex-col items-center -mt-4 ">
-      {/* <section className="relative h-[600px] flex justify-center items-center w-full">
+      <section className="relative h-[600px] flex justify-center items-center w-full">
         <div className=" absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-[600px]">
           <Image
-            src={aboutImg}
+            src={aboutBannerImg}
             alt="about_us"
             style={{
               width: "100%",
@@ -26,9 +26,7 @@ function AboutUsPage() {
         </div>
 
         <div className="z-10 md:w-[55%] w-[90%] text-white text-center flex justify-center items-center flex-col gap-2  md:gap-3">
-          <h4 className="md:text-2xl text-base font-semibold md:leading-7 ">
-            About{" "}
-          </h4>
+         
           <h2 className="leading-4 pb-3 md:pb-0 font-bold md:text-6xl text-[36px] md:leading-[80px]">
             About Our Company
           </h2>
@@ -51,9 +49,9 @@ function AboutUsPage() {
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      <section className=" w-full flex justify-center items-center pb-4">
+      <section className="w-full flex justify-center items-center pb-4">
         <div className="md:w-[80%] w-[85%] flex flex-col py-10">
           {/*  */}
           <div className="flex W-[100%]   md:flex-row flex-col justify-start gap-3 md:gap-8">
