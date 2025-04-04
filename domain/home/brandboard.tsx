@@ -18,19 +18,6 @@ function BrandBoard() {
           <TextSlider />
         </div>
 
-        {/* Satisfied Clients Section */}
-        {/* <div className="flex justify-start items-center gap-5 py-3">
-          <Image
-            src="/images/group_avatars.png"
-            width={120}
-            height={120}
-            alt="satisfied client"
-          />
-          {/* <p className="font-semibold text-sm leading-[17px] md:text-base md:leading-6">
-            25+ Satisfied Clients
-          </p> */}
-        {/* </div> */}
-
         {/* Stats Section */}
         <div className="flex justify-around md:w-[90%] w-full bg-[#B0B7C338] items-center md:mt-5 p-2 rounded-lg shadow-[0px_40px_70px_0px_rgba(0,0,0,0.2)]">
           {helpCount.map(

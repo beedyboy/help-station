@@ -12,9 +12,9 @@ const TextSlider = () => {
       setActiveIndex((prev) => (prev + 1) % data.length);
     }, 3000);
 
-    console.log(data[activeIndex]);
     return () => clearInterval(timer);
   }, []);
+
   return (
     <div>
       <h3>{data[activeIndex].header}</h3>

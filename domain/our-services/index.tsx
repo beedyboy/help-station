@@ -233,8 +233,8 @@ function OurService({ openModal }: { openModal: () => void }) {
                     headingText="Honoring Your Loved One with Dignity and Respect"
                     heading="Hearse Services"
                     linkColor="#F7C027"
-                    linkText="Request a quote"
-                    link="/services/hearse-form"
+                    linkText="Contact Us"
+                    link="/contact-us"
                     hasOnclickFn={false}
                     name=""
                     onClick={() => console.log()}
