@@ -1,0 +1,96 @@
+import { FaClock } from "react-icons/fa6";
+import { RiMotorbikeFill, RiHospitalFill } from "react-icons/ri";
+import { GiAmbulance } from "react-icons/gi";
+import Image from "next/image";
+
+export const helpDetails = [
+  {
+    icon: <FaClock size={24} color="black" />,
+    header: "24/7 Access To HELP Centre",
+    text: "This provide professional phone first- aid support & and comfort to the patient.",
+  },
+  {
+    icon: <RiMotorbikeFill size={24} color="black" />,
+    header: "Ambucycle Dispatch ",
+    text: "Highly trained and equipped paramedics on motorcycle to deliver world class first-aid  intervention at the sites of incident. it is designed to beat traffic and get you help fast!    ",
+  },
+  {
+    icon: <GiAmbulance size={24} color="black" />,
+    header: "Ambulance Evacuation",
+    text: "Prompt and efficient access to nearby ambulance leveraging our GPS-Based mobile/ web application.",
+  },
+  {
+    icon: <RiHospitalFill size={24} color="black" />,
+    header: "Emergency-Ready Hospital ",
+    text: "Access to verified & tiered ERH that ensure  a seamless transition from emergency incident sites to hospital care  ",
+  },
+];
+
+export default function BrandHelpBoard() {
+  return (
+    <div className="relative py-7 w-full flex justify-center items-center">
+      <div className="absolute -z-20 h-[100%] bg-[#e1efe6] md:w-[380px] w-[200px] right-0 top-0"></div>
+      <div className="absolute -z-10 h-[100%] bg-[#c4d9cc] md:w-[170px] w-[75px] right-12 md:right-[6rem] top-0"></div>
+
+      <div className="z-[1] md:w-[90%] flex flex-col  justify-center items-center md:flex-row gap-3 w-full">
+        <div className="md:w-[40%] w-full ">
+          <div className="w-full relative">
+            <div className=" absolute right-5 -top-24 -z-10 md:w-[111px] md:h-[111px] rotate-3">
+              <Image
+                src="/icons/Arrow_07.svg"
+                alt="Help Station Logo"
+                width={100}
+                height={100}
+                className="rotate-45"
+              />
+            </div>
+            <div className=" absolute -z-10 right-5 -bottom-24 md:w-[111px] md:h-[111px] rotate-180">
+              <Image
+                src="/icons/Arrow_07.svg"
+                alt="Help Station Logo"
+                width={100}
+                height={100}
+                className="rotate-45"
+              />
+            </div>
+            <div className="px-8 py-2  w-full ">
+              <p className="  font-bold md:text-5xl font-br-firma pr-8 md:pr-0 md:leading-[60px] text-[32px] leading-10">
+                Get help In 4 easy steps
+              </p>
+              <p className="text-[#70727F] text-sm leading-5">
+                Get help in 4 easy steps with our 24/7 helpline. Quick, simple,
+                and always available!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:w-[60%] w-full md:p-4 p-6  grid grid-cols-1 md:items-end md:justify-end md:grid-cols-[1fr_2fr] gap-6">
+          {helpDetails.map(
+            (
+              content: { icon: React.ReactNode; header: string; text: string },
+              index: number
+            ) => {
+              return (
+                <div
+                  key={index}
+                  className="hover:text-[#fff] text-black hover:bg-btnColor cursor-pointer w-full p-4 h-[259px] md:w-[264px] md:h-[230px] md:p-4 flex md:gap-2 gap-4 flex-col rounded-xl shadow-md md:shadow-[0px_10px_10px_10px_rgba(0,0,0,0.2)] bg-[#fff] "
+                >
+                  <div className="bg-btnColor hover:bg-[#AEDEBC] h-[45px] w-[45px] rounded-md flex justify-center items-center">
+                    {content.icon}
+                  </div>
+                  <p className="text-xl hover:text-[#fff]  font-semibold">
+                    {content.header}
+                  </p>
+                  <p className="hover:text-[#fff] text-sm text-[#70727F]">
+                    {content.text}
+                  </p>
+                </div>
+              );
+            }
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}

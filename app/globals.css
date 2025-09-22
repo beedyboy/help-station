@@ -8,5 +8,89 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+  /* height: 100vh; */
+}
+@font-face {
+  font-family: "BR Firma";
+  src: url("/fonts/br-firma/BR-Firma-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "BR Firma";
+  src: url("/fonts/br-firma/BR-Firma-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  font-family: "Source Sans Pro", ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+}
+
+/* .source-sans-3-<uniquifier > {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .brandboard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brandbox {
+  width: 50%;
+  color: red;
+} */
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.swipper-image {
+  transition: all 0.5s ease-in;
+}
+
+@media (max-width: 500px) {
+  .swipper-image {
+    width: 380px;
+  }
+}
+
+@media (max-width: 400px) {
+  .swipper-image {
+    width: 345px;
+  }
+}
+@media (max-width: 370px) {
+  .swipper-image {
+    width: 320px;
+  }
+}
+
+@media (max-width: 920px) {
+  .client-swiper {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .station-image {
+    position: absolute;
+    height: 300px;
+    top: -100%;
+  }
+}
