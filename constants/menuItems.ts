@@ -2,7 +2,7 @@ export const menuItems: MenuItem[] = [
   { name: "Home", href: "/" },
   { name: "Our Services", href: "/services" },
   { name: "Emergency Store", href: "https://helpstationng.bumpa.shop" },
-  { name: "Subscription Plan", href: "/subscriptions" },
+  // { name: "Subscription Plan", href: "/subscriptions" },
   {
     name: "About Help",
     href: "#",
@@ -38,7 +38,7 @@ export const resourcesMenuItems: MenuItem[] = [
 
 export const privacyAndSecurityMenuItems: MenuItem[] = [
   { name: "Privacy Policy", href: "/policy" },
-  { name: "Security Policy", href: "/policy" },
+  // { name: "Security Policy", href: "/policy" },
 ];
 
 export const footerMenuItems: { category: string; menu: MenuItem[] }[] = [
