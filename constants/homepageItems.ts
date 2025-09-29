@@ -7,7 +7,7 @@ import rapidResponseImg from "@/public/images/helpStation_rapid_response_image.s
 import hospitalCareImg from "@/public/images/help_station_hospitalcare.svg";
 import image7 from "@/public/images/help_station_ambcycle.svg";
 import image8 from "@/public/images/help_station_hearse.svg";
-import partnersImageOne from "@/public/images/help_clients_one.svg";
+import partnersImageOne from "@/public/images/help_station_companies_logos.svg";
 import partnersImageTwo from "@/public/images/help_client_two.svg";
 import partnersImageThree from "@/public/images/help_client_three.svg";
 import testimonyOne from "@/public/images/testimony_one.svg";

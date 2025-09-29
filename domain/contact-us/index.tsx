@@ -5,7 +5,7 @@ import { AiOutlineInbox } from "react-icons/ai";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { LuMapPin } from "react-icons/lu";
 import Image from "next/image";
-import getInTouchImg from "@/public/images/help_station_get_in_touch.svg";
+import getInTouchImg from "@/public/images/help_station_contact_image.svg";
 import aboutImg from "@/public/images/help_station_about.svg";
 import MapEmbed from "@/components/map";
 const contactInfo = [

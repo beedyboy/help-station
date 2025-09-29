@@ -3,11 +3,11 @@ import ServiceLayout from "@/components/layout/our-services/serviceLayout";
 import ServiceTextTemplate from "@/components/layout/our-services/serviceTextTemplate";
 import serviceHelpTeamImg from "@/public/images/help_station_servicehelp.svg";
 import serviceCallImg from "@/public/images/help_station_call_center.svg";
-import serviceEmergencyCenterimg from "@/public/images/help_station_emergency_station.svg";
-import serviceHealthImg from "@/public/images/help_station_health.svg";
-import serviceLabImg from "@/public/images/help_station_laboratory.svg";
-import firstAidImg from "@/public/images/First-aid.png";
-import hearseImg from "@/public/images/hearse.svg";
+import serviceEmergencyCenterimg from "@/public/images/help_station_event.svg";
+import serviceHealthImg from "@/public/images/help-station-health-and-safety.svg";
+import serviceLabImg from "@/public/images/help_station_food_handler.svg";
+import firstAidImg from "@/public/images/First-aid-image.svg";
+import hearseImg from "@/public/images/help_station_hearse.svg";
 // import aboutImg from "@/public/images/help_station_about.svg";
 // import Link from "next/link";
 
@@ -99,7 +99,7 @@ function OurService({ openModal }: { openModal: () => void }) {
         {/*  */}
 
         <ServiceLayout bgColor="white">
-          <div className=" lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5  lg:gap-6 justify-center md:justify-between">
+          <div className="p-6 lg:p-0 w-full flex flex-col items-center lg:flex-row gap-5 lg:gap-6 justify-start md:justify-between">
             <div className="lg:w-[53%] w-full flex justify-start items-center lg:gap-6 lg:justify-center flex-col ">
               <ServiceTextTemplate
                 description=" Creating long lasting memories for your client and guest need not be tainted with mishaps. When you choose us, you’re not just renting an ambulance; you’re choosing peace of mind. Our team of highly skilled and certified paramedics and equipment are ready to provide immediate medical assistance whenever the need arises."
@@ -243,8 +243,8 @@ function OurService({ openModal }: { openModal: () => void }) {
                   />
                 </div>
               </div>
-              <div className="lg:w-[45%] lg:h-fit h-[350px] w-full flex justify-center items-center rounded-lg overflow-hidden">
-                <div className="lg:w-[100%] lg:h-[500px] flex justify-end items-end">
+              <div className="lg:w-[40%] lg:h-[70%]  h-[350px] justify-center items-center w-full rounded-lg overflow-hidden">
+                <div className="lg:w-[100%] w-full overflow-hidden h-full lg:h-[386px] rounded-lg ">
                   <ImageTemplate src={hearseImg} />
                 </div>
               </div>
