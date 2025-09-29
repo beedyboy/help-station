@@ -11,7 +11,7 @@ const Menu = () => {
   const isActiveLink = (href: string) => pathname === href;
 
   return (
-    <ul className="flex flex-col md:flex-row md:space-x-8">
+    <ul className="flex flex-col md:flex-row md:space-x-10">
       {menuItems.map((item) => (
         <li key={item.name} className="relative group">
           {item.dropdownItems ? (

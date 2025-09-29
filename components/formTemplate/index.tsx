@@ -42,7 +42,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
               document.referrer &&
               document.referrer.includes(window.location.origin)
             ) {
-              router.back();
+              router.push("/");
             } else {
               router.push("/");
             }

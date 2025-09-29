@@ -105,7 +105,6 @@ export type FoodHandlerFormProps = {
     HepatitisBTest: string;
     HepatitisCTest: string;
     SerumTuberculosisTest: string;
-    PregnancyTest: string;
     UrinalysisTest: string;
     WidalTest: string;
     StoolAnalysisTest: string;
@@ -170,13 +169,13 @@ export interface IQuestionItem {
 }
 
 export interface IQuestion {
-  [x: string]: any;
-  correctAnswer: any;
-  previousValue: any;
-  id: any;
+  [x: string]: unknown;
+  correctAnswer: unknown;
+  previousValue: unknown;
+  id: unknown;
   answerValue: () => number;
   answerValueCode: boolean;
-  options: any;
+  options: unknown;
   section: string;
   questions: IQuestionItem[];
   tractAnswersIndex: number[];

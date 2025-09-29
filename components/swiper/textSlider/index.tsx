@@ -8,7 +8,7 @@ import Link from "next/link";
 function TextSlider() {
   return (
     <div className="w-full h-auto">
-      <SwiperComponent>
+      <SwiperComponent paginate={false} navigate={false}>
         {swiperImages.map((content, index) => (
           <SwiperSlide key={index} className="!h-auto">
             <span

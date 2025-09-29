@@ -50,12 +50,6 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
                 onchange={onchange}
               />
               <RadioInputTemplate
-                labelName="Pregnancy Test"
-                name="PregnancyTest"
-                value={formInput.testsinterestedIn.PregnancyTest}
-                onchange={onchange}
-              />
-              <RadioInputTemplate
                 labelName="Hepatitis B"
                 name="HepatitisBTest"
                 value={formInput.testsinterestedIn.HepatitisBTest}

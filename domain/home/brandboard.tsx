@@ -41,7 +41,7 @@ function BrandBoard() {
       </div>
 
       <div className="md:w-[45%] w-full md:justify-end items-end flex md:min-h-[544px] ">
-        <SwiperComponent>
+        <SwiperComponent paginate={true} navigate={false}>
           {swiperImages.map(
             (
               image: {

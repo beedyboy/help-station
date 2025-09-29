@@ -5,14 +5,14 @@ import { AiOutlineInbox } from "react-icons/ai";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { LuMapPin } from "react-icons/lu";
 import Image from "next/image";
-import getInTouchImg from "@/public/images/help_station_get_in_touch.svg";
+import getInTouchImg from "@/public/images/help_station_contact_image.svg";
 import aboutImg from "@/public/images/help_station_about.svg";
 import MapEmbed from "@/components/map";
 const contactInfo = [
   {
     icon: <IoIosCall size={24} fill="white" color="white" />,
     heading: "Call Centre  (24/7)",
-    description: "02013309111",
+    description: "09132000013 or 09132000014",
     otherText: "",
     //  "+2349132000014",
   },
@@ -118,7 +118,7 @@ function ContactUsPage() {
             </h3>
           </div>
 
-          <div className="flex flex-col md:flex-row py-4 gap-3 w-[80%] md:w-full">
+          <div className="flex flex-col md:flex-row py-4 gap-3 w-[90%] md:w-full">
             {contactInfo.map((info, i) => (
               <div
                 key={i}

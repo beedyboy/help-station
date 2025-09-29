@@ -38,10 +38,8 @@ function BrandPartners() {
         <p className="md:w-[74%] text-center">
           We are doing this, one partner at a time, aggregating emergency ready
           hospitals, first responders and ambulance service providers across
-          Africa within a tech ecosystem that breaks the silos and improves
-          interconnectivity for better patient outcomes. We are constantly
-          looking out for equally passionate partners willing to join us in
-          creating this future.
+          Africa. We are constantly looking out for equally passionate partners
+          willing to join us increating this future.
         </p>
 
         <div className="py-4">
@@ -58,15 +56,6 @@ function BrandPartners() {
             </p>
           </ButtonGroup>
         </div>
-
-        <video
-          className="rounded-lg md:h-[300px] h-[450px] w-full"
-          width="100%"
-          controls
-        >
-          <source src="/video/sample-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </div>
     </div>
   );

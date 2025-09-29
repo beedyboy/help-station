@@ -14,6 +14,7 @@ import MainLayout from "@/components/layout/MainLayout";
 function FAQ() {
   const [faq, setFaq] = useState(faqData);
   const [query, setQuery] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleFAQ = (id: number) => {
     const arr = faq.map((faq) => {
@@ -46,9 +47,17 @@ function FAQ() {
         )
       );
     };
+
+    if (query.length > 2) {
+      setLoading(true);
+    } else {
+      setLoading(false);
+    }
+
     const timer = setTimeout(() => {
       if (query.length > 2) {
         debounce();
+        setLoading(false);
       } else return setFaq(faqData);
     }, 3000);
 
@@ -101,7 +110,9 @@ function FAQ() {
                 onClick={handleSearch}
                 className="absolute right-2 top-1 p-2 px-3 md:px-8 text-center rounded-lg bg-primary-4 "
               >
-                <p className="text-white">Search</p>
+                <p className={`${loading ? "animate-pulse" : ""} text-white`}>
+                  {loading ? "Searching..." : "Search"}
+                </p>
               </div>
               <input
                 name="search"
@@ -153,7 +164,8 @@ function FAQ() {
                   <ServiceTextTemplate
                     heading="Didn’t Find the Answer You Need"
                     headingText=""
-                    description="For more detailed information and additional resources, please visit our website. Our team is also available to assist you with any further questions you may have."
+                    description=" For more detailed information and additional resources, please Contact
+          Us , our team is available to assist you with further questions."
                     linkText="www.Helpstationfaq.com"
                     linkColor="#32A061"
                     subDescription=""
