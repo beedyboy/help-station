@@ -118,7 +118,7 @@ function ContactUsPage() {
             </h3>
           </div>
 
-          <div className="flex flex-col md:flex-row py-4 gap-3 w-[80%] md:w-full">
+          <div className="flex flex-col md:flex-row py-4 gap-3 w-[90%] md:w-full">
             {contactInfo.map((info, i) => (
               <div
                 key={i}
