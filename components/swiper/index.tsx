@@ -2,25 +2,29 @@
 
 import React, { ReactNode } from "react";
 import { Swiper } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, Controller } from "swiper/modules";
 
 interface SwiperComponentProps {
   children: ReactNode;
   paginate?: boolean;
   navigate?: boolean;
+  controlledSwiper?: SwiperType | null;
+  onSwiperInit?: (swiper: SwiperType) => void;
 }
 
 const SwiperComponent: React.FC<SwiperComponentProps> = ({
   children,
   paginate = false,
   navigate = false,
+  controlledSwiper,
+  onSwiperInit,
 }) => {
-  // Build modules dynamically
-  const modules = [Autoplay];
+  const modules = [Autoplay, Controller];
   if (paginate) modules.push(Pagination);
   if (navigate) modules.push(Navigation);
 
@@ -32,12 +36,14 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
         spaceBetween={30}
         slidesPerView={1}
         autoplay={{
-          delay: 2000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         loop
-        navigation={navigate || undefined} // only add if true
-        pagination={paginate ? { clickable: true } : undefined} // only add if true
+        pagination={paginate ? { clickable: true } : false}
+        navigation={navigate || undefined}
+        controller={{ control: controlledSwiper }}
+        onSwiper={onSwiperInit}
         className="w-full h-auto flex flex-col"
       >
         {children}

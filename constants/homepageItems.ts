@@ -21,7 +21,7 @@ export const swiperImages = [
     img: image7,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/ambulance-form",
     },
   },
   {
@@ -30,7 +30,7 @@ export const swiperImages = [
     img: workerImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/emergency-form",
     },
   },
   {
@@ -39,7 +39,7 @@ export const swiperImages = [
     img: firstAidImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/firstaid-form",
     },
   },
   {
@@ -49,7 +49,7 @@ export const swiperImages = [
     img: cprTeamImg,
     action1: {
       label: "Start Learning",
-      href: "/services/ambulance-form",
+      href: "/services/firstaid-form",
     },
   },
   {
@@ -58,7 +58,7 @@ export const swiperImages = [
     img: serviceLineImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/ambulance-form",
     },
   },
   {
@@ -67,7 +67,7 @@ export const swiperImages = [
     img: rapidResponseImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/firstaid-form",
     },
   },
   {
@@ -76,7 +76,7 @@ export const swiperImages = [
     img: hospitalCareImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/emergency-form",
     },
   },
   {
@@ -85,7 +85,7 @@ export const swiperImages = [
     img: ambcylceImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/ambulance-form",
     },
   },
   {
@@ -94,7 +94,7 @@ export const swiperImages = [
     img: image8,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: "/services/hearse-form",
     },
   },
 ];
