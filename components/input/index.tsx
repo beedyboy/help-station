@@ -5,6 +5,7 @@ type InputProps = {
   labelName: string;
   type: "text" | "number" | "email" | "password" | "date";
   onchange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  min?: number | null;
 };
 
 const InputTemplate: React.FC<InputProps> = ({
@@ -27,6 +28,7 @@ const InputTemplate: React.FC<InputProps> = ({
         value={value as string}
         className="rounded-lg placeholder:text-background-2 placeholder:text-sm py-2 px-4 border-[#CCCEDB] border-[1px] outline-none"
         onChange={onchange}
+        min={type === "text" ? undefined : 0}
       />
     </div>
   );

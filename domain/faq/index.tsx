@@ -166,8 +166,8 @@ function FAQ() {
                     headingText=""
                     description=" For more detailed information and additional resources, please Contact
           Us , our team is available to assist you with further questions."
-                    linkText="www.Helpstationfaq.com"
-                    linkColor="#32A061"
+                    linkText=""
+                    linkColor="#c5e9cf"
                     subDescription=""
                     hasOnclickFn={false}
                     link=""

@@ -27,12 +27,12 @@ function FoodHandlerFormTwo({ formInput, onchange }: FoodHandleFormTwoProps) {
           </div>
           <div>
             <InputTemplate
-              value={formInput.phoneNumber}
-              labelName="Phone number"
-              name="phoneNumber"
+              value={formInput.preferredTime}
+              labelName="Preferred Test Time ( Between 0:00am - 24:00pm )"
+              name="preferredTime"
               onchange={onchange}
               placeholder="Enter preferred test time"
-              type="number"
+              type="text"
             />
           </div>
 

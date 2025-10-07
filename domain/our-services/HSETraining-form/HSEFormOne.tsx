@@ -44,7 +44,7 @@ function HSEFormOne({ formInput, onchange }: HSEFormTwoProps) {
               name="phoneNumber"
               onchange={onchange}
               placeholder="Enter phone number (+234)"
-              type="number"
+              type="text"
             />
           </div>
 
