@@ -30,6 +30,31 @@ html {
     sans-serif;
 }
 
+@layer components {
+  .swiper-pagination-bullet {
+    @apply bg-gray-300 opacity-100;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #3bad6b !important;
+  }
+}
+
+/* Default bullet color */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #d1d5db; /* gray-300 */
+  opacity: 1;
+}
+
+/* Active bullet color */
+.swiper-pagination-bullet-active {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #3bad6b !important; /* your green */
+}
+
 /* .source-sans-3-<uniquifier > {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
