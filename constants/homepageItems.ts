@@ -13,6 +13,7 @@ import partnersImageThree from "@/public/images/help_client_three.svg";
 import testimonyOne from "@/public/images/testimony_one.svg";
 import testimonyTwo from "@/public/images/testomony_two.svg";
 import testimonyThree from "@/public/images/testimoney_three.svg";
+import { ROUTES } from "@/constant";
 
 export const swiperImages = [
   {
@@ -21,7 +22,7 @@ export const swiperImages = [
     img: image7,
     action1: {
       label: "Get Started",
-      href: "/services/ambulance-form",
+      href: `${ROUTES.services}/ambulance-form`,
     },
   },
   {
@@ -30,7 +31,7 @@ export const swiperImages = [
     img: workerImg,
     action1: {
       label: "Get Started",
-      href: "/services/emergency-form",
+      href: `${ROUTES.services}/emergency-form`,
     },
   },
   {
@@ -39,7 +40,7 @@ export const swiperImages = [
     img: firstAidImg,
     action1: {
       label: "Get Started",
-      href: "/services/firstaid-form",
+      href: `${ROUTES.services}/firstaid-form`,
     },
   },
   {
@@ -49,7 +50,7 @@ export const swiperImages = [
     img: cprTeamImg,
     action1: {
       label: "Start Learning",
-      href: "/services/firstaid-form",
+      href: `${ROUTES.services}/firstaid-form`,
     },
   },
   {
@@ -58,7 +59,7 @@ export const swiperImages = [
     img: serviceLineImg,
     action1: {
       label: "Get Started",
-      href: "/services/ambulance-form",
+      href: `${ROUTES.services}/ambulance-form`,
     },
   },
   {
@@ -67,7 +68,7 @@ export const swiperImages = [
     img: rapidResponseImg,
     action1: {
       label: "Get Started",
-      href: "/services/firstaid-form",
+      href: `${ROUTES.services}/firstaid-form`,
     },
   },
   {
@@ -76,7 +77,7 @@ export const swiperImages = [
     img: hospitalCareImg,
     action1: {
       label: "Get Started",
-      href: "/services/emergency-form",
+      href: `${ROUTES.services}/emergency-form`,
     },
   },
   {
@@ -85,7 +86,7 @@ export const swiperImages = [
     img: ambcylceImg,
     action1: {
       label: "Get Started",
-      href: "/services/ambulance-form",
+      href: `${ROUTES.services}/ambulance-form`,
     },
   },
   {
@@ -94,7 +95,7 @@ export const swiperImages = [
     img: image8,
     action1: {
       label: "Get Started",
-      href: "/services/hearse-form",
+      href: `${ROUTES.services}/hearse-form`,
     },
   },
 ];

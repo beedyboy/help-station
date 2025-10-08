@@ -1,5 +1,6 @@
 "use client";
 
+import { ROUTES } from "@/constant";
 import { menuItems } from "@/constants/menuItems";
 import Image from "next/image";
 import Link from "next/link";
@@ -83,7 +84,7 @@ const Header: React.FC = () => {
             height={20}
           />
           <span>How prepared are you for an emergency</span>
-          <Link href="/" className="text-primary-4 space-x-3">
+          <Link href={ROUTES.home} className="text-primary-4 space-x-3">
             Find Out
           </Link>
         </div>
@@ -111,7 +112,7 @@ const Header: React.FC = () => {
             <div className="md:flex hidden md:flex-row flex-col md:items-center md:space-x-8">
               <Menu />
               <Link
-                href="/become-a-partner"
+                href={ROUTES.becomeApartner}
                 className="mt-4 md:mt-0 text-white bg-primary-4 hover:bg-primary rounded-lg px-4 py-2"
               >
                 Register as Partner
@@ -122,7 +123,7 @@ const Header: React.FC = () => {
               <div className="flex md:hidden flex-col">
                 <Menu />
                 <Link
-                  href="/get-started"
+                  href={ROUTES.becomeApartner}
                   className="mt-4 md:mt-0 text-white bg-primary-4 hover:bg-primary rounded-lg px-4 py-2"
                 >
                   Register as Partner

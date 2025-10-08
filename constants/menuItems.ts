@@ -1,43 +1,45 @@
+import { ROUTES } from "@/constant";
+
 export const menuItems: MenuItem[] = [
   { name: "Home", href: "/" },
-  { name: "Our Services", href: "/services" },
+  { name: "Our Services", href: `${ROUTES.services} ` },
   { name: "Emergency Store", href: "https://helpstationng.bumpa.shop" },
   // { name: "Subscription Plan", href: "/subscriptions" },
   {
     name: "About Help",
     href: "#",
     dropdownItems: [
-      { name: "About Us", href: "/about-us" },
-      { name: "Contact Us", href: "/contact-us" },
-      { name: "FAQ", href: "/faq" },
+      { name: "About Us", href: `${ROUTES.about}` },
+      { name: "Contact Us", href: `${ROUTES.contact}` },
+      { name: "FAQ", href: `${ROUTES.faq}` },
     ],
   },
   {
     name: "Resources",
     href: "#",
     dropdownItems: [
-      { name: "Blog", href: "/blog" },
+      { name: "Blog", href: `${ROUTES.blog}` },
       { name: "Press", href: "/press" },
       { name: "Report", href: "/case-studies" },
-      { name: "HERAT", href: "/herat" },
+      { name: "HERAT", href: `${ROUTES.herat}` },
     ],
   },
 ];
 
 export const companyMenuItems: MenuItem[] = [
-  { name: "Gallery", href: "/contact-us" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Partners", href: "/become-a-partner" },
-  { name: "Contact Help", href: "/contact-us" },
+  { name: "Gallery", href: `${ROUTES.contact}` },
+  { name: "About Us", href: `${ROUTES.about}` },
+  { name: "Partners", href: `${ROUTES.becomeApartner}` },
+  { name: "Contact Help", href: `${ROUTES.contact}` },
 ];
 
 export const resourcesMenuItems: MenuItem[] = [
-  { name: "Blog", href: "/blog" },
-  { name: "F.A.Qs", href: "/faq" },
+  { name: "Blog", href: `${ROUTES.blog}` },
+  { name: "F.A.Qs", href: `${ROUTES.faq}` },
 ];
 
 export const privacyAndSecurityMenuItems: MenuItem[] = [
-  { name: "Privacy Policy", href: "/policy" },
+  { name: "Privacy Policy", href: `${ROUTES.policy}` },
   // { name: "Security Policy", href: "/policy" },
 ];
 

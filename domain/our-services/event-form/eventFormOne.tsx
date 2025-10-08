@@ -30,7 +30,7 @@ function EventFormOne({
             <InputTemplate
               labelName="Phone Number"
               name="phoneNumber"
-              type="text"
+              type="tel"
               value={eventForm.phoneNumber}
               onchange={handleChange}
               placeholder="Enter phone number"
