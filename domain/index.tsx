@@ -131,7 +131,7 @@ const HomePage: React.FC = () => {
                 Take our risk assessment to find out.
               </p>
             </div>
-            <Link href={ROUTES.heart}>
+            <Link href={ROUTES.herat}>
               <button className="w-[158px] h-14 bg-[#3bad6b] text-white text-lg font-bold rounded-xl">
                 Find out
               </button>
