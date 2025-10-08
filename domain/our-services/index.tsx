@@ -196,7 +196,7 @@ function OurService({ openModal }: { openModal: () => void }) {
                   <ServiceTextTemplate
                     subDescription=""
                     heading="Food Handlers’ Screening"
-                    headingText="Norem ipsum dolor sit amet, consectetur "
+                    headingText="Ensuring safe hands for safer food "
                     description="Your customers trust you to keep their food safe and delicious. Our food handlers screening ensures you’re equipped with the knowledge and skills to protect their health and your reputation. Take the step towards excellence and show your commitment to safety. Discover how our screening can help you make a difference."
                     linkText="Book Now"
                     linkColor="#1B1C20"
