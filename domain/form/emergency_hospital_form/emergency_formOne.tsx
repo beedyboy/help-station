@@ -64,7 +64,7 @@ function EmergencyFormOne({
 
           <div>
             <InputTemplate
-              type="number"
+              type="text"
               labelName="Contact Phone Number"
               name="contactPhoneNumber"
               value={emergencyInput.contactPhoneNumber}

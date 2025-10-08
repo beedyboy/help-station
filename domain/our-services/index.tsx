@@ -31,7 +31,7 @@ function OurService({ openModal }: { openModal: () => void }) {
             situations"
                   subDescription=""
                   hasOnclickFn={false}
-                  linkColor=""
+                  linkColor="#fff"
                   linkText=""
                   onClick={() => console.log("")}
                   headingText=""
