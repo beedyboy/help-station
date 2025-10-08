@@ -15,14 +15,14 @@ function FAQDropdown({
 }) {
   return (
     <div className="bg-[#F9F9FC] border-[0.5px] border-[#CCCEDB] w-full p-4 flex flex-col rounded-lg">
-      <div className="flex justify-between ">
+      <div
+        className="flex justify-between cursor-pointer"
+        onClick={() => onClick(id)}
+      >
         <p className="md:font-semibold font-bold  md:text-[18px] text-sm md:leading-10 leading-5 ">
           {question}
         </p>
-        <div
-          className="w-[20px] h-[20px] bg-primary-4 rounded-full  flex justify-center items-center"
-          onClick={() => onClick(id)}
-        >
+        <div className="w-[20px] h-[20px] bg-primary-4 rounded-full  flex justify-center items-center">
           {isOpen ? (
             <IoIosArrowDown color="white" size={15} />
           ) : (
