@@ -26,8 +26,16 @@ const InputTemplate: React.FC<InputProps> = ({
       "ArrowRight",
       "Delete",
     ];
-
+    const input = evt.currentTarget;
     if (allowedKeys.includes(evt.key)) return;
+
+    if (evt.key === "+") {
+      if (input.selectionStart !== 0 || input.value.includes("+")) {
+        evt.preventDefault();
+      }
+      return;
+    }
+
     if (!/^[0-9]$/.test(evt.key)) {
       evt.preventDefault();
     }
@@ -51,6 +59,7 @@ const InputTemplate: React.FC<InputProps> = ({
         className="rounded-lg placeholder:text-background-2 placeholder:text-sm py-2 px-4 border-[#CCCEDB] border-[1px] outline-none"
         onChange={onchange}
         min={type === "number" ? 0 : undefined}
+        maxLength={type === "tel" || type === "number" ? 14 : undefined}
       />
     </div>
   );
