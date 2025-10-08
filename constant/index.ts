@@ -15,3 +15,15 @@ export const swiperImages = [
   image6,
   image7,
 ];
+
+export const ROUTES = {
+  home: "/",
+  about: "/about-us",
+  becomeApartner: "/become-a-partner",
+  faq: "/faq",
+  services: "/services",
+  contact: "/contact-us",
+  herat: "/herat",
+  policy: "/privacy",
+  blog: "/blog",
+};

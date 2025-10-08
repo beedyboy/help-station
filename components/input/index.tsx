@@ -28,7 +28,6 @@ const InputTemplate: React.FC<InputProps> = ({
     ];
 
     if (allowedKeys.includes(evt.key)) return;
-
     if (!/^[0-9]$/.test(evt.key)) {
       evt.preventDefault();
     }

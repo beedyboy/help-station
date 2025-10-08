@@ -6,6 +6,7 @@ import Modal from "@/components/modal";
 import { useModal } from "@/context/ModalContext";
 import Link from "next/link";
 import ButtonGroup from "@/components/button/índex";
+import { ROUTES } from "@/constant";
 
 function BecomeApartner() {
   const { openModal } = useModal();
@@ -23,10 +24,12 @@ function BecomeApartner() {
               {/* <Link></Link> */}
 
               <h3 className="font-semibold text-lg text-primary-5">
-                <Link href="/services/ambulance-form">Ambulance Partner</Link>
+                <Link href={`${ROUTES.services}/ambulance-form`}>
+                  Ambulance Partner
+                </Link>
               </h3>
               <p className="font-normal text-sm leading-4 text-primary-5">
-                <Link href="/services/ambulance-form">
+                <Link href={`${ROUTES.services}/ambulance-form`}>
                   Become an ambulance partner, We aim to leverage existing
                   resources to provide access to ambulance care.
                 </Link>
@@ -34,7 +37,7 @@ function BecomeApartner() {
 
               <ButtonGroup bgColor="#3BAD6B">
                 <Link
-                  href="/services/ambulance-form"
+                  href={`${ROUTES.services}/ambulance-form`}
                   className="px-4 text-white leading-10 font-bold"
                 >
                   Get started
@@ -55,7 +58,7 @@ function BecomeApartner() {
 
               <ButtonGroup bgColor="#3BAD6B">
                 <Link
-                  href="/services/emergency-form"
+                  href={`${ROUTES.services}/emergency-form`}
                   className="px-4 text-white leading-10 font-bold"
                 >
                   Get started
@@ -66,10 +69,12 @@ function BecomeApartner() {
             {/*  */}
             <div className=" bg-white text-center flex flex-col justify-center items-center gap-2 p-3  border-[1px] border-red rounded-lg">
               <h3 className="font-semibold text-lg text-primary-5">
-                <Link href="/services/hearse-form">Hearse Partner</Link>
+                <Link href={`${ROUTES.services}/hearse-form`}>
+                  Hearse Partner
+                </Link>
               </h3>
               <p className="font-normal text-sm leading-4 text-primary-5">
-                <Link href="/services/hearse-form">
+                <Link href={`${ROUTES.services}/hearse-form`}>
                   Become a hearse partner We aim to leverage existing resources
                   to provide access to hearse services.
                 </Link>
@@ -77,7 +82,7 @@ function BecomeApartner() {
 
               <ButtonGroup bgColor="#3BAD6B">
                 <Link
-                  href="/services/hearse-form"
+                  href={`${ROUTES.services}/hearse-form`}
                   className="px-4 text-white leading-10 font-bold"
                 >
                   Get started
