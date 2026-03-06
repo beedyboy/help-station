@@ -75,7 +75,7 @@ function AmbulanceFormOne({
 
           <div>
             <InputTemplate
-              type="number"
+              type="tel"
               labelName="Contact Phone Number"
               name="contactPhoneNumber"
               value={ambulanceInput.contactPhoneNumber}

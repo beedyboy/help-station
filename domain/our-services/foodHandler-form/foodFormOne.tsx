@@ -32,7 +32,7 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
               name="phoneNumber"
               onchange={onchange}
               placeholder="Enter phone number"
-              type="number"
+              type="tel"
             />
           </div>
 
@@ -47,12 +47,6 @@ function FoodHandlerFormOne({ formInput, onchange }: FoodHandleFormOneProps) {
                 labelName="HIV"
                 name="HIVTest"
                 value={formInput.testsinterestedIn.HIVTest}
-                onchange={onchange}
-              />
-              <RadioInputTemplate
-                labelName="Pregnancy Test"
-                name="PregnancyTest"
-                value={formInput.testsinterestedIn.PregnancyTest}
                 onchange={onchange}
               />
               <RadioInputTemplate

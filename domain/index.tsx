@@ -14,6 +14,7 @@ import Modal from "@/components/modal";
 import { useEffect } from "react";
 import { useModal } from "@/context/ModalContext";
 import Link from "next/link";
+import { ROUTES } from "@/constant";
 
 const HomePage: React.FC = () => {
   const { openModal } = useModal();
@@ -95,7 +96,6 @@ const HomePage: React.FC = () => {
             <ConnectWithUs />
           </div>
         </div>
-
       </main>
 
       <Modal>
@@ -112,7 +112,10 @@ const HomePage: React.FC = () => {
           <div className="md:h-[268px] h-[300px]  flex flex-col gap-6 md:absolute left-[369px] top-[101px]">
             <div className="flex flex-col gap-2">
               <div className="">
-                <Link href="/" className="flex items-center space-x-3">
+                <Link
+                  href={ROUTES.home}
+                  className="flex items-center space-x-3"
+                >
                   <Image
                     src="/images/help_station_logo.svg"
                     alt="Help Station Logo"
@@ -128,7 +131,7 @@ const HomePage: React.FC = () => {
                 Take our risk assessment to find out.
               </p>
             </div>
-            <Link href="/herat">
+            <Link href={ROUTES.herat}>
               <button className="w-[158px] h-14 bg-[#3bad6b] text-white text-lg font-bold rounded-xl">
                 Find out
               </button>

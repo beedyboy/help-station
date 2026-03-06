@@ -44,7 +44,7 @@ const FormTemplate: React.FC<FormTemplateProps> = ({
             ) {
               router.back();
             } else {
-              router.push("/");
+              router.back();
             }
           }}
         >

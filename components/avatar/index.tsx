@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import client1 from "@/public/images/help_station_hearse.svg";
 import clientAvatarOne from "@/public/images/help_station_clientAvatar.svg";
 
 const ClientAvatars = () => {

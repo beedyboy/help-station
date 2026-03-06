@@ -1,4 +1,5 @@
 import ButtonGroup from "@/components/button/índex";
+import { ROUTES } from "@/constant";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
@@ -129,7 +130,7 @@ const ServiceTextTemplate = ({
           {" "}
           <ButtonGroup bgColor="#3BAD6B">
             <Link
-              href="/contact-us"
+              href={ROUTES.contact}
               className="px-4 text-white leading-10 font-bold"
             >
               Contact Us

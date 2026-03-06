@@ -18,10 +18,10 @@ function FirstAidFormTwo({ input, onchange }: FirstAidFormProps) {
           <div>
             <InputTemplate
               value={input.trainingDate}
-              labelName="Preferred Training DateEmail Address"
+              labelName="Preferred Training Date"
               name="trainingDate"
               onchange={onchange}
-              placeholder="Selectt a Date"
+              placeholder="Select a Date"
               type="date"
             />
           </div>

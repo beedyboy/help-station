@@ -1,40 +1,75 @@
 export const commitmentText = [
-  "Used lawfully; fairly and in a transparent way;",
-  "Collected only for valid purposes that we have clearly explained to you in this Notice and not used in any way that is incompatible with those purposes;",
-  "Kept only as long as necessary for the purposes we have informed you; and",
-  "Kept securely",
+  "Used lawfully, fairly, and transparently",
+  "Collected for specific, explicit, and legitimate purposes.",
+  "Retained only as long as necessary.",
+  "Kept accurate and up to date.",
+];
+
+export const applicatants = [
+  "Customers and patients",
+  "Ambulance drivers",
+  "Ambulance partners",
+  "Health Management Organizations (HMOs)",
+  "Other partners and service providers",
 ];
 
 export const individualCustomer = [
-  "Identity data including first name, last name, username or similar identifier, password, gender, date of birth etc.;",
-  "Contact data including phone number, email address, location, billing address etc",
-  "Health data including existing medical information, health history, dietary requirements, medications, disabilities (if any) etc.;",
-  "Emergency contact information;",
-  "Financial data including bank account details, payment information, etc.;",
-  "Technical data including internet protocol (IP) address, login data, browser type and version, browser plug-in types and versions, operating system and platform, the average time spent on our website, pages viewed, information searched for, access times, and other relevant statistics. We may also collect your location information, including location information automatically provided by your computer or device.",
+  "Identity Data: name, username, password, gender, date of birth",
+  "Contact Data: phone number, email address, billing address, location.",
+  "Health Data: medical history, dietary requirements, medications, disabilities (if any).",
+  "Emergency Contact Data",
+  "Financial Data: bank details, payment information.",
+  "Technical Data: IP address, login data, browser details, operating system, platform, usage statistics, device location.",
 ];
 
 export const ambulanceDrivers = [
-  "Identity data including first name, last name, username or similar identifier, password, gender, date of birth etc. driver history, driver’s license and other means of identification, details of employer etc.;",
-  "Contact data including phone number, email address, location, billing address etc.;",
-  "Technical data including internet protocol (IP) address, login data, browser type and version, browser plug-in types and versions, operating system and platform, the average time spent on our website, pages viewed, information searched for, access times, and other relevant statistics. We may also collect your location information, including location information automatically provided by your computer or device.",
+  "Identity Data: name, username, password, gender, date of birth, driver history, license details, employer details.",
+  "Contact Data: phone number, email address, billing address, location.",
+  "Technical Data: same as above.",
 ];
 
 export const ambulancePartners = [
-  "Identity data including registered name, registration number, username or similar identifier, password etc;",
-  "Contact data including registered address, principal place of business or corporate headquarters, phone numbers, email address, billing address etc.;",
-  "Ambulance data including vehicle information, insurance information, drivers information etc.",
-  "Financial data including bank account details and preferred payment methods.",
-  "Technical data including internet protocol (IP) address, login data, browser type and version, browser plug-in types and versions, operating system and platform, the average time spent on our website, pages viewed, information searched for, access times, and other relevant statistics. We may also collect your location information, including location information automatically provided by your computer or device",
+  "Identity Data: registered name, registration number, username, password.",
+  "Contact Data: business address, email, phone, billing address.",
+  "Ambulance Data: vehicle details, insurance information, driver information.",
+  "Financial Data: bank details, preferred payment method.",
+  "Technical Data: same as above.",
 ];
 
 export const HMOs = [
-  "Identity data including registered name, registration number, username or similar identifier, password etc.;",
-  "Contact data including registered address, principal place of business or corporate headquarters, phone numbers, email address, billing address etc.",
-  "Information about HMO including membership size, network of hospitals and health care providers etc",
-  "Health data including existing medical information, health history, dietary requirements, medications, disabilities (if any) etc. of members;",
-  "Emergency contact information of members;",
-  "Financial data including bank account details, payment information, etc.;",
-  "Transaction Data including payment history and other details of payments received from you etc",
-  "Technical data including internet protocol (IP) address, login data, browser type and version, browser plug-in types and versions, operating system and platform, the average time spent on our website, pages viewed, information searched for, access times, and other relevant statistics. We may also collect your location information, including location information automatically provided by your computer or device",
+  "Identity Data: registered name, registration number, username, password.",
+  "Contact Data: address, email, phone, billing address.",
+  "Organizational Data: membership size, network of hospitals/providers.",
+  "Member Health Data: medical history, dietary requirements, medications, disabilities (if any).",
+  "Emergency Contact Data of members.",
+  "Financial Data: bank details, payment information.",
+  "Transaction Data: payment history.",
+  "Technical Data: same as above.",
+];
+
+export const how_to_your_data = [
+  "Provide and manage our services.",
+  "Personalize your user experience.",
+  "Process payments and financial transactions.",
+  "Communicate with you (e.g., service updates, feedback, complaints).",
+  "Verify identity and eligibility.",
+  "Ensure safety, quality, and compliance.",
+  "Comply with legal obligations.",
+];
+
+export const data_sharing = [
+  "Authorized service providers and contractors.",
+  "Ambulance partners and drivers (for emergency service provision).",
+  "HMOs and healthcare providers (for coordination of care).",
+  "Financial institutions and payment processors.",
+  "Regulators, law enforcement, or government agencies, where required by law.",
+];
+
+export const your_right = [
+  "Access to your personal data.",
+  "Correction of inaccurate or incomplete data.",
+  "Deletion of your personal data (“right to be forgotten”).",
+  "Restriction of processing.",
+  "Objection to processing.",
+  "Data portability.",
 ];

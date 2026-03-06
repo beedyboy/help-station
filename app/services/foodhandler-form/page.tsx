@@ -15,7 +15,6 @@ function FoodHandleForm() {
       HepatitisBTest: "No",
       HepatitisCTest: "No",
       SerumTuberculosisTest: "No",
-      PregnancyTest: "No",
       UrinalysisTest: "No",
       WidalTest: "No",
       StoolAnalysisTest: "No",
@@ -58,7 +57,6 @@ function FoodHandleForm() {
           HepatitisBTest: "No",
           HepatitisCTest: "No",
           SerumTuberculosisTest: "No",
-          PregnancyTest: "No",
           UrinalysisTest: "No",
           WidalTest: "No",
           StoolAnalysisTest: "No",
@@ -173,7 +171,7 @@ function FoodHandleForm() {
           heading="Request Form For Food Handlers Test"
           headingText="Thank you for choosing HelpStation for your Food Handlers Test. To streamline the process and ensure we fulfil your requirements accurately, please fill out the following request form."
           formHeading="Food Handlers’ Screening "
-          formText="Be more than just a bystander"
+          formText="Ensuring safe hands for safer food"
         />
       </div>
     </div>

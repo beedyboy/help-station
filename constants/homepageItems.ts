@@ -7,12 +7,13 @@ import rapidResponseImg from "@/public/images/helpStation_rapid_response_image.s
 import hospitalCareImg from "@/public/images/help_station_hospitalcare.svg";
 import image7 from "@/public/images/help_station_ambcycle.svg";
 import image8 from "@/public/images/help_station_hearse.svg";
-import partnersImageOne from "@/public/images/help_clients_one.svg";
+import partnersImageOne from "@/public/images/help_station_companies_logos.svg";
 import partnersImageTwo from "@/public/images/help_client_two.svg";
 import partnersImageThree from "@/public/images/help_client_three.svg";
 import testimonyOne from "@/public/images/testimony_one.svg";
 import testimonyTwo from "@/public/images/testomony_two.svg";
 import testimonyThree from "@/public/images/testimoney_three.svg";
+import { ROUTES } from "@/constant";
 
 export const swiperImages = [
   {
@@ -21,7 +22,7 @@ export const swiperImages = [
     img: image7,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/ambulance-form`,
     },
   },
   {
@@ -30,7 +31,7 @@ export const swiperImages = [
     img: workerImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/emergency-form`,
     },
   },
   {
@@ -39,7 +40,7 @@ export const swiperImages = [
     img: firstAidImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/firstaid-form`,
     },
   },
   {
@@ -49,7 +50,7 @@ export const swiperImages = [
     img: cprTeamImg,
     action1: {
       label: "Start Learning",
-      href: "/services/ambulance-form",
+      href: `${ROUTES.services}/firstaid-form`,
     },
   },
   {
@@ -58,7 +59,7 @@ export const swiperImages = [
     img: serviceLineImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/ambulance-form`,
     },
   },
   {
@@ -67,7 +68,7 @@ export const swiperImages = [
     img: rapidResponseImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/firstaid-form`,
     },
   },
   {
@@ -76,7 +77,7 @@ export const swiperImages = [
     img: hospitalCareImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/emergency-form`,
     },
   },
   {
@@ -85,7 +86,7 @@ export const swiperImages = [
     img: ambcylceImg,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/ambulance-form`,
     },
   },
   {
@@ -94,13 +95,13 @@ export const swiperImages = [
     img: image8,
     action1: {
       label: "Get Started",
-      href: "/subscriptions",
+      href: `${ROUTES.services}/hearse-form`,
     },
   },
 ];
 
 export const helpCount = [
-  { count: "200+", text: "Total Responses" },
+  { count: "5000+", text: "Total Responses" },
   { count: "60+", text: "Emergency Ready Hospital" },
   { count: "190+", text: "Number Of Ambulance " },
 ];
