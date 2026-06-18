@@ -2,7 +2,7 @@ import workerImg from "@/public/images/help_station_workers.svg";
 import firstAidImg from "@/public/images/help_station_firstaid.svg";
 import cprTeamImg from "@/public/images/help_statiun_cprteam.svg";
 import serviceLineImg from "@/public/images/help_station_serviceline.svg";
-import ambcylceImg from "@/public/images/help_station_ambcycle.svg";
+// import ambcylceImg from "@/public/images/help_station_ambcycle.svg";
 import rapidResponseImg from "@/public/images/helpStation_rapid_response_image.svg";
 import hospitalCareImg from "@/public/images/help_station_hospitalcare.svg";
 import image7 from "@/public/images/help_station_ambcycle.svg";
@@ -22,7 +22,7 @@ export const swiperImages = [
     img: image7,
     action1: {
       label: "Get Started",
-      href: `${ROUTES.services}/ambulance-form`,
+      href: `${ROUTES.services}`,
     },
   },
   {
@@ -31,7 +31,7 @@ export const swiperImages = [
     img: workerImg,
     action1: {
       label: "Get Started",
-      href: `${ROUTES.services}/emergency-form`,
+      href: `${ROUTES.services}`,
     },
   },
   {
@@ -57,19 +57,19 @@ export const swiperImages = [
     header: "Swiftly request an ambulance ",
     text: "Prompt Emergency Response When Every Second Counts with our streamlined processes. Enjoy swift coordination, real-time updates, and efficient service to ensure you receive the help you need.",
     img: serviceLineImg,
-    action1: {
-      label: "Get Started",
-      href: `${ROUTES.services}/ambulance-form`,
-    },
+    // action1: {
+    //   label: "Get Started",
+    //   href: `${ROUTES.services}/ambulance-form`,
+    // },
   },
   {
     header: "Rapid Response ",
     text: "Whether you need an ambulance or first responder immediately or want to schedule one for a future event, HelpStation streamlines the process for you. Our platform ensures quick and efficient access to emergency services",
     img: rapidResponseImg,
-    action1: {
-      label: "Get Started",
-      href: `${ROUTES.services}/firstaid-form`,
-    },
+    // action1: {
+    //   label: "Get Started",
+    //   href: `${ROUTES.services}/firstaid-form`,
+    // },
   },
   {
     header: "Emergency-Ready Hospitals ",
@@ -77,33 +77,33 @@ export const swiperImages = [
     img: hospitalCareImg,
     action1: {
       label: "Get Started",
-      href: `${ROUTES.services}/emergency-form`,
+      href: `${ROUTES.services}`,
     },
   },
-  {
-    header: "Traffic is no barrier, at HELP we got you covered ",
-    text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
-    img: ambcylceImg,
-    action1: {
-      label: "Get Started",
-      href: `${ROUTES.services}/ambulance-form`,
-    },
-  },
+  // {
+  //   header: "Traffic is no barrier, at HELP we got you covered ",
+  //   text: "Subscribe to the Ambucycle Plan for swift emergency response whenever you need it, ensuring immediate access to expert care and assistance in critical situations.",
+  //   img: ambcylceImg,
+  //   action1: {
+  //     label: "Get Started",
+  //     href: `${ROUTES.services}/ambulance-form`,
+  //   },
+  // },
   {
     header: "Order a Hearse with Comfort and Ease ",
     text: "Losing a loved one is painful enough. Let us ease the burden with a compassionate, stress-free hearse arrangement.",
     img: image8,
     action1: {
       label: "Get Started",
-      href: `${ROUTES.services}/hearse-form`,
+      href: `${ROUTES.services}`,
     },
   },
 ];
 
 export const helpCount = [
   { count: "5000+", text: "Total Responses" },
-  { count: "60+", text: "Emergency Ready Hospital" },
-  { count: "190+", text: "Number Of Ambulance " },
+  { count: "60+", text: "Emergency Ready Hospital(s)" },
+  { count: "190+", text: "Number Of Ambulance(s)" },
 ];
 
 export const clientsImages = [

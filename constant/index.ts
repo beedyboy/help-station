@@ -24,6 +24,6 @@ export const ROUTES = {
   services: "/services",
   contact: "/contact-us",
   herat: "/herat",
-  policy: "/privacy",
+  policy: "/policy",
   blog: "/blog",
 };

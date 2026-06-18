@@ -3,7 +3,7 @@ import { ROUTES } from "@/constant";
 export const menuItems: MenuItem[] = [
   { name: "Home", href: "/" },
   { name: "Our Services", href: `${ROUTES.services} ` },
-  { name: "Emergency Store", href: "https://helpstationng.bumpa.shop" },
+  // { name: "Emergency Store", href: "https://helpstationng.bumpa.shop" },
   // { name: "Subscription Plan", href: "/subscriptions" },
   {
     name: "About Help",

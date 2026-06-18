@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Help-station",
   description:
     "We connect patients with the nearest and available ambulances at affordable price options. We also provide health facility navigation support.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
