@@ -47,18 +47,20 @@ function TextSlider({ controlledSwiper, onSwiperInit }: TextSliderProps) {
             </div>
 
             <div className="w-full md:w-[70%] flex md:items-center md:justify-start gap-4 py-2 h-auto">
-              <div className="w-[54%]">
-                <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4 rounded-xl">
-                  {content.action1 && (<Link href={content.action1.href}>
-                    <div className="flex gap-4 justify-center items-center md:px-6">
-                      <p className="text-white font-semibold md:text-lg text-base">
-                        {content.action1.label}
-                      </p>
-                      <FaArrowRightLong size={18} color="white" />
-                    </div>
-                  </Link>)}
+              {content.action1 && (
+                <div className="w-[54%]">
+                  <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4 rounded-xl">
+                    <Link href={content.action1.href}>
+                      <div className="flex gap-4 justify-center items-center md:px-6">
+                        <p className="text-white font-semibold md:text-lg text-base">
+                          {content.action1.label}
+                        </p>
+                        <FaArrowRightLong size={18} color="white" />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="w-[50%]">
                 <div className="border-[1px] border-[#3BAD6B] py-3 px-2 rounded-xl bg-[#fff]">
