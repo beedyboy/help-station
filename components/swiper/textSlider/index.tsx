@@ -7,6 +7,7 @@ import SwiperComponent from "..";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import Link from "next/link";
+import { useModal } from "@/context/ModalContext";
 
 import type { Swiper as SwiperType } from "swiper";
 
@@ -16,6 +17,14 @@ interface TextSliderProps {
 }
 
 function TextSlider({ controlledSwiper, onSwiperInit }: TextSliderProps) {
+  const { openModal } = useModal();
+
+  const handleAction = (actionType?: string) => {
+    if (actionType === "modal") {
+      openModal("training");
+    }
+  };
+
   return (
     <div className="w-full h-auto">
       <SwiperComponent
@@ -49,15 +58,29 @@ function TextSlider({ controlledSwiper, onSwiperInit }: TextSliderProps) {
             <div className="w-full md:w-[70%] flex md:items-center md:justify-start gap-4 py-2 h-auto">
               {content.action1 && (
                 <div className="w-[54%]">
-                  <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4 rounded-xl">
-                    <Link href={content.action1.href}>
-                      <div className="flex gap-4 justify-center items-center md:px-6">
-                        <p className="text-white font-semibold md:text-lg text-base">
-                          {content.action1.label}
-                        </p>
-                        <FaArrowRightLong size={18} color="white" />
-                      </div>
-                    </Link>
+                  <div className="border-[1px] border-[#3BAD6B] py-3 px-2 bg-primary-4 rounded-xl cursor-pointer">
+                    {("actionType" in content.action1 && content.action1.actionType === "modal") ? (
+                      <button
+                        onClick={() => handleAction(content.action1.actionType)}
+                        className="w-full"
+                      >
+                        <div className="flex gap-4 justify-center items-center md:px-6">
+                          <p className="text-white font-semibold md:text-lg text-base">
+                            {content.action1.label}
+                          </p>
+                          <FaArrowRightLong size={18} color="white" />
+                        </div>
+                      </button>
+                    ) : (
+                      <Link href={content.action1.href}>
+                        <div className="flex gap-4 justify-center items-center md:px-6">
+                          <p className="text-white font-semibold md:text-lg text-base">
+                            {content.action1.label}
+                          </p>
+                          <FaArrowRightLong size={18} color="white" />
+                        </div>
+                      </Link>
+                    )}
                   </div>
                 </div>
               )}

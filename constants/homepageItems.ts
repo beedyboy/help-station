@@ -17,7 +17,7 @@ import { ROUTES } from "@/constant";
 
 export const swiperImages = [
   {
-    header: "Who can you bank on when an emergency happens ?",
+    header: "Who can you bank on when an emergency happens?",
     text: " HelpStation is your trusted partner in any medical emergency. We are here to provide you with prompt end-to-end emergency care, ensuring your safety and peaceof mind, always.",
     img: workerImg,
     action1: {
@@ -69,6 +69,7 @@ export const swiperImages = [
     action1: {
       label: "Get Started",
       href: `${ROUTES.services}/firstaid-form`,
+      actionType: "modal",
     },
   },
   {
