@@ -20,8 +20,12 @@ const HomePage: React.FC = () => {
   const { openModal } = useModal();
 
   useEffect(() => {
-    openModal("modal 1");
-  }, []);
+    const hasShownModal = sessionStorage.getItem("homeModalShown");
+    if (!hasShownModal) {
+      openModal("modal 1");
+      sessionStorage.setItem("homeModalShown", "true");
+    }
+  }, [openModal]);
 
   return (
     <MainLayout>
